@@ -5,54 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
-    <script>
-      var getCurrentPages = function () {
-        return [];
-      };
-      var getApp = function () {};
-      var requirePlugin = function () {};
-      var _Page = (path,config) => {
-        debugger
-        console.log("page",path,config);
-      };
-      var _App = (path, config) => {
-        debugger
-        console.log("app", path,config);
-        // console.log('app初始12312312化', config)
-        // new VueRouter({
-        //     routes: config.pages.map((e) => {
-        //         return {
-        //             e: require(e)
-        //         }
-        //     })
-        // })
-      };
-      var Component = (path,config) => {
-        console.log("components",path, config);
-        return config;
-      };
-      var __wxRoute = "pages/home/index";
-      var wx = {
-        webpackJsonp:[],
-        getCurrentPages,
-        getSystemInfoSync: () => {
-          console.log("getSystemInfoSync");
-          return {
-            system: "android",
-          };
-        },
-        getNetworkType: () => {
-          console.log("getNetworkType");
-        },
-      };
-      wx.webpackJsonp.App = ()=>{
-        console.log('APP被打开')
-      }
-    </script>
-    <script src="./dist.js"></script>
   </head>
-
-  <body></body>
+    <body>
+      <div id='app'>
+        <router-view></router-view>
+      </div>
+      <script>
+        window = null
+        document = null
+        var getCurrentPages = function () {
+          return [];
+        };
+        var getApp = function () { };
+        var requirePlugin = function () { };
+        var _pageObj = {}
+        var _Page = (path, config,template) => {
+          const pagePath = path.replace('.js', '').split('/').slice(-3).join('/')
+          _pageObj[pagePath] = {
+            path,
+            config,
+            template
+          }
+        };
+        var _global = {}
+        var _App = (path, appData) => {
+          _global['appConfig'] = appData.config
+        };
+        var Component = (path, config) => {
+          return config;
+        };
+        var __wxRoute = "pages/home/index";
+        var getCurrentInstance = () => {
+          return {
+            router: _global['router']
+          }
+        }
+        var wx = jd = {
+          webpackJsonp: [],
+          getCurrentPages,
+          getCurrentInstance,
+          navigateTo:(data)=>{
+            _global['router'].push(data.url)
+          },
+          getSystemInfoSync: () => {
+            return {
+              system: "android",
+            };
+          },
+          getNetworkType: () => {
+            console.log("getNetworkType");
+          },
+        };
+        wx.webpackJsonp.App = () => {
+          console.log('APP被打开')
+        }
+      </script>
+      <script src="./dist.js"></script>
+    </body>
 </html>
