@@ -3,7 +3,8 @@ var fs = require("fs");
 var htmlparser2 = require("htmlparser2");
 var path = require("path");
 var prettier = require("prettier");
-var rootPath = path.join(process.cwd(), "/taro/dist/");
+var rootPath = path.join(process.cwd(), "/remax/dist/");
+var uglifyjs = require('uglify-js')
 
 // 添加对应的模板数据
 function addTemplate(templateList, item) {
@@ -178,6 +179,7 @@ module.exports = function (files, opts) {
             }
         `;
     let text = temp + data.toString().replace(/require\('\//g, `require('./`)
+    text = uglifyjs.minify(text).code
     if (fileCache[files]) {
       this.queue(fileCache[files])
       this.queue(null);
