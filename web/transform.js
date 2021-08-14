@@ -3,7 +3,6 @@ var fs = require("fs");
 var htmlparser2 = require("htmlparser2");
 var path = require("path");
 var prettier = require("prettier");
-
 var rootPath = path.join(process.cwd(), "/taro/dist/");
 
 // 添加对应的模板数据
@@ -149,6 +148,7 @@ function getPageTemplate(file) {
   }
 }
 
+var fileCache = {}
 module.exports = function (files, opts) {
   console.log('files',files)
   var data = "";
@@ -177,7 +177,14 @@ module.exports = function (files, opts) {
                 return _globalComponent("${files}",config,template)
             }
         `;
-    this.queue(temp + data.toString().replace("require('/", "require('./"));
-    this.queue(null);
+    let text = temp + data.toString().replace(/require\('\//g, `require('./`)
+    if (fileCache[files]) {
+      this.queue(fileCache[files])
+      this.queue(null);
+    }else {
+      fileCache[files] = text
+      this.queue(text);
+      this.queue(null);
+    }
   }
 }; 
