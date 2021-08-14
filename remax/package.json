@@ -19,7 +19,7 @@
   ],
   "browserify": {
     "transform": [
-      "../transform"
+      "../web/transform"
     ]
   },
   "dependencies": {
