@@ -12,6 +12,16 @@
     "build": "cross-env NODE_ENV=production remax build -t wechat",
     "remax": "browserify dist/app.js  dist/pages/index/index.js  -o dist.js"
   },
+  "browserslist": [
+    "last 3 versions",
+    "Android >= 4.1",
+    "ios >= 8"
+  ],
+  "browserify": {
+    "transform": [
+      "../transform"
+    ]
+  },
   "dependencies": {
     "react": "^16.14.0",
     "remax": "^2.9.1"

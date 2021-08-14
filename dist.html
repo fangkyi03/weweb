@@ -5,23 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
+    <link href="./app.css" rel="stylesheet" type="text/css"></link>
+    <script src="./lib/vue.js"></script>
+    <script src="./lib/vueRouter.js"></script>
   </head>
     <body>
       <div id='app'>
         <router-view></router-view>
       </div>
       <script>
-        window = null
-        document = null
         var getCurrentPages = function () {
-          return [];
+          return [{ route:'pages/home/index'}];
         };
         var getApp = function () { };
         var requirePlugin = function () { };
         var _pageObj = {}
-        var _Page = (path, config,template) => {
+        var _globalPage = (pagePath, config,template) => {
+          _pageObj[pagePath] = {
+            path: pagePath,
+            config,
+            template
+          }
+        };
+        var _global = {}
+        var _globalApp = (path, _appConfig) => {
+          _global['appConfig'] = _appConfig
+        };
+        var _globalComponent = (path, config, template) => {
           const pagePath = path.replace('.js', '').split('/').slice(-3).join('/')
           _pageObj[pagePath] = {
             path,
@@ -29,14 +39,7 @@
             template
           }
         };
-        var _global = {}
-        var _App = (path, appData) => {
-          _global['appConfig'] = appData.config
-        };
-        var Component = (path, config) => {
-          return config;
-        };
-        var __wxRoute = "pages/home/index";
+        var __wxRoute = "";
         var getCurrentInstance = () => {
           return {
             router: _global['router']
@@ -58,10 +61,8 @@
             console.log("getNetworkType");
           },
         };
-        wx.webpackJsonp.App = () => {
-          console.log('APP被打开')
-        }
       </script>
       <script src="./dist.js"></script>
+      <script src="./engine.js"></script>
     </body>
 </html>
