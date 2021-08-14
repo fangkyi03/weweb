@@ -2,8 +2,6 @@ var gulp = require('gulp')
 var path = require('path')
 var through = require('through')
 var fs = require('fs')
-var obfuscate = require('gulp-obfuscate');
-var uglify = require('gulp-uglify');//js压缩
 var JsConfuser = require("js-confuser");
 function buildCSS() {
     var data = '';
@@ -28,6 +26,7 @@ function end() {
     }
 }
 
+// 加密js代码
 function confuser(filePath) {
     let data = ''
     return through(write, end);
