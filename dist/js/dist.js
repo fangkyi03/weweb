@@ -12,6 +12,19 @@
             var Component = (config) => {
                 return _globalComponent("/Users/lv/Desktop/tarodemo/remax/dist/__remax_runtime_options__.js",config,template)
             }
+        
+            var _appConfig = null
+            
+            var App = (appData)=> {
+                return _globalApp("/Users/lv/Desktop/tarodemo/remax/dist/__remax_runtime_options__.js",_appConfig)
+            }
+            var Page = (config) => {
+                const path = "/Users/lv/Desktop/tarodemo/remax/dist/__remax_runtime_options__.js".replace('.js', '').split('/').slice(-3).join('/')
+                return _globalPage(path,config,'<div class="app" v-bind:data="{root: root}">123123</div>')
+            }
+            var Component = (config) => {
+                return _globalComponent("/Users/lv/Desktop/tarodemo/remax/dist/__remax_runtime_options__.js",config,template)
+            }
         module.exports = {
       hostComponents: {
   "ad": {
@@ -961,7 +974,36 @@
     }
 },{}],2:[function(require,module,exports){
 
-            var _appConfig = {"pages":["pages/index/index"],"window":{"backgroundTextStyle":"light","navigationBarBackgroundColor":"#fff","navigationBarTitleText":"WeChat","navigationBarTextStyle":"black"}}
+            var _appConfig = {
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "Remax Wechat Template",
+    "navigationBarBackgroundColor": "#282c34"
+  }
+}
+            
+            var App = (appData)=> {
+                return _globalApp("/Users/lv/Desktop/tarodemo/remax/dist/app.js",_appConfig)
+            }
+            var Page = (config) => {
+                const path = "/Users/lv/Desktop/tarodemo/remax/dist/app.js".replace('.js', '').split('/').slice(-3).join('/')
+                return _globalPage(path,config,'<div class="app" v-bind:data="{root: root}">123123</div>')
+            }
+            var Component = (config) => {
+                return _globalComponent("/Users/lv/Desktop/tarodemo/remax/dist/app.js",config,template)
+            }
+        
+            var _appConfig = {
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "Remax Wechat Template",
+    "navigationBarBackgroundColor": "#282c34"
+  }
+}
             
             var App = (appData)=> {
                 return _globalApp("/Users/lv/Desktop/tarodemo/remax/dist/app.js",_appConfig)
@@ -1164,7 +1206,7 @@ var esm = __webpack_require__(1);
 
 // CONCATENATED MODULE: ./node_modules/_remax@2.15.4@remax/runtime.js
 
-// EXTERNAL MODULE: external "require('/__remax_runtime_options__')"
+// EXTERNAL MODULE: external "require('./__remax_runtime_options__')"
 var _remax_runtime_options_ = __webpack_require__(7);
 
 // CONCATENATED MODULE: ./node_modules/@remax/apply-runtime-options.js
@@ -1193,6 +1235,21 @@ __webpack_require__(9);App(Object(esm["c" /* createAppConfig */])(src_app));
 ],[[14,1,0]]]);
 },{"./__remax_runtime_options__":1,"./remax-vendors.js":4,"./runtime.js":5}],3:[function(require,module,exports){
 
+            var _appConfig = null
+            var xs = eval(`var module = {exports:{}};
+`);
+
+            var App = (appData)=> {
+                return _globalApp("/Users/lv/Desktop/tarodemo/remax/dist/pages/index/index.js",_appConfig)
+            }
+            var Page = (config) => {
+                const path = "/Users/lv/Desktop/tarodemo/remax/dist/pages/index/index.js".replace('.js', '').split('/').slice(-3).join('/')
+                return _globalPage(path,config,'<div class="app" v-bind:data="{root: root}">123123</div>')
+            }
+            var Component = (config) => {
+                return _globalComponent("/Users/lv/Desktop/tarodemo/remax/dist/pages/index/index.js",config,template)
+            }
+        
             var _appConfig = null
             var xs = eval(`var module = {exports:{}};
 `);
@@ -1266,6 +1323,19 @@ module.exports = {"app":"app___2lhPP","logo":"logo___Al4Xb","logo-spin":"logo-sp
 },[[24,1,0]]]);
 },{"./../../remax-vendors.js":4,"./../../runtime.js":5}],4:[function(require,module,exports){
 
+            var _appConfig = null
+            
+            var App = (appData)=> {
+                return _globalApp("/Users/lv/Desktop/tarodemo/remax/dist/remax-vendors.js",_appConfig)
+            }
+            var Page = (config) => {
+                const path = "/Users/lv/Desktop/tarodemo/remax/dist/remax-vendors.js".replace('.js', '').split('/').slice(-3).join('/')
+                return _globalPage(path,config,'<div class="app" v-bind:data="{root: root}">123123</div>')
+            }
+            var Component = (config) => {
+                return _globalComponent("/Users/lv/Desktop/tarodemo/remax/dist/remax-vendors.js",config,template)
+            }
+        
             var _appConfig = null
             
             var App = (appData)=> {
@@ -2122,6 +2192,19 @@ var __read=this&&this.__read||function(o,n){var m=typeof Symbol==="function"&&o[
 ]]);
 },{}],5:[function(require,module,exports){
 
+            var _appConfig = null
+            
+            var App = (appData)=> {
+                return _globalApp("/Users/lv/Desktop/tarodemo/remax/dist/runtime.js",_appConfig)
+            }
+            var Page = (config) => {
+                const path = "/Users/lv/Desktop/tarodemo/remax/dist/runtime.js".replace('.js', '').split('/').slice(-3).join('/')
+                return _globalPage(path,config,'<div class="app" v-bind:data="{root: root}">123123</div>')
+            }
+            var Component = (config) => {
+                return _globalComponent("/Users/lv/Desktop/tarodemo/remax/dist/runtime.js",config,template)
+            }
+        
             var _appConfig = null
             
             var App = (appData)=> {

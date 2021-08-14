@@ -150,6 +150,7 @@ function getPageTemplate(file) {
 }
 
 module.exports = function (files, opts) {
+  console.log('files',files)
   var data = "";
   return through(write, end);
   function write(buf) {
@@ -159,7 +160,7 @@ module.exports = function (files, opts) {
     var template = getPageTemplate(files);
     var _appConfig = null;
     if (files.indexOf("app.js") != -1) {
-      _appConfig = fs.readFileSync(path.join(process.cwd(),'taro/dist/app.json'), "utf-8");
+      _appConfig = fs.readFileSync(path.join(process.cwd(),'remax/dist/app.json'), "utf-8");
       // _appConfig = fs.readFileSync('../ztesa-wechat-ynx/dist/app.json','utf-8')
     }
     var temp = `
@@ -179,4 +180,4 @@ module.exports = function (files, opts) {
     this.queue(temp + data.toString().replace("require('/", "require('./"));
     this.queue(null);
   }
-};
+}; 

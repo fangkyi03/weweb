@@ -5,9 +5,10 @@
   "main": "dist.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "remax": "node gulp.js && browserify remax/dist/app.js remax/dist/pages/index/index.js -o dist/js/dist.js",
+    "remax": "browserify remax/dist/app.js remax/dist/pages/index/index.js -o dist/js/dist.js",
     "taro": "browserify taro/dist/app.js taro/dist/pages/index/index.js -o dist/js/dist.js",
-    "ynx": "browserify ../ztesa-wechat-ynx/dist/app.js ../ztesa-wechat-ynx/dist/pages/home/index.js ../ztesa-wechat-ynx/dist/pages/class/index.js ../ztesa-wechat-ynx/dist/pages/shoppingCart/index.js ../ztesa-wechat-ynx/dist/pages/my/index.js ../ztesa-wechat-ynx/dist/pages/shopDetails/index.js ../ztesa-wechat-ynx/dist/pages/goodsDetails/index.js ../ztesa-wechat-ynx/dist/pages/massInformation/index.js -o dist/js/dist.js"
+    "ynx": "browserify ../ztesa-wechat-ynx/dist/app.js ../ztesa-wechat-ynx/dist/pages/home/index.js ../ztesa-wechat-ynx/dist/pages/class/index.js ../ztesa-wechat-ynx/dist/pages/shoppingCart/index.js ../ztesa-wechat-ynx/dist/pages/my/index.js ../ztesa-wechat-ynx/dist/pages/shopDetails/index.js ../ztesa-wechat-ynx/dist/pages/goodsDetails/index.js ../ztesa-wechat-ynx/dist/pages/massInformation/index.js -o dist/js/dist.js",
+    "gulp": "gulp remax"
   },
   "browserslist": [
     "last 3 versions",
@@ -30,7 +31,11 @@
   },
   "homepage": "https://github.com/fangkyi03/weweb#readme",
   "dependencies": {
+    "browserify": "^17.0.0",
     "gulp": "^4.0.2",
+    "gulp-browserify": "^0.5.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
     "gulp-uglify": "^3.0.2",
     "htmlparser2": "^6.1.0",
     "js-confuser": "^1.3.0",
