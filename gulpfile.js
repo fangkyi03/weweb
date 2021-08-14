@@ -70,14 +70,14 @@ function browserifyTask() {
 }
 
 // 引入所有js文件
-gulp.task('importAllJS',(data)=>{
+gulp.task('importAllJS',()=>{
     const pageConfig = ['app.js','pages/**/*.js']
     const pagePath = pageConfig.map((e)=> path.join(rootPath,'dist',e))
     return gulp.src(pagePath)
     .pipe(browserifyTask())
 })
 
-gulp.task('bundleJS',(data)=>{
+gulp.task('bundleJS',()=>{
     const tempOutPATH = path.join(outPath,'js','dist.js')
     return b.transform('./web/transform.js')
     .bundle()

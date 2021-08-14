@@ -1,6 +1,8 @@
 .app {
   text-align: center;
   padding: 0 24px;
+  background-color: red;
+  color: white;
 }
 
 .logo {

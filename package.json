@@ -5,7 +5,7 @@
   "main": "dist.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "remax": "browserify remax/dist/app.js remax/dist/pages/index/index.js -o dist/js/dist.js",
+    "remax": "cd remax && npm run build && gulp remax",
     "taro": "browserify taro/dist/app.js taro/dist/pages/index/index.js -o dist/js/dist.js",
     "ynx": "browserify ../ztesa-wechat-ynx/dist/app.js ../ztesa-wechat-ynx/dist/pages/home/index.js ../ztesa-wechat-ynx/dist/pages/class/index.js ../ztesa-wechat-ynx/dist/pages/shoppingCart/index.js ../ztesa-wechat-ynx/dist/pages/my/index.js ../ztesa-wechat-ynx/dist/pages/shopDetails/index.js ../ztesa-wechat-ynx/dist/pages/goodsDetails/index.js ../ztesa-wechat-ynx/dist/pages/massInformation/index.js -o dist/js/dist.js",
     "gulp": "gulp remax"
