@@ -1,4 +1,4 @@
-// 生命周期 - didMount - render
+// 生命周期 - will - did - render
 function onLoad(config) {
     if (config.onLoad) {
         config.onLoad(config)

@@ -4,7 +4,7 @@ var htmlparser2 = require('htmlparser2')
 var path = require('path')
 var prettier = require("prettier");
 
-var rootPath = path.join(__dirname, '/remax/dist/')
+var rootPath = path.join(__dirname, '/taro/dist/')
 
 // 添加对应的模板数据
 function addTemplate(templateList,item) {
@@ -18,7 +18,12 @@ function getPageChildren({filePath,templateList = []} = {}) {
     const dom = htmlparser2.parseDocument(fileContent)
     dom.children.forEach((e)=>{
         if (e.name == 'import') {
-            const importPath = path.join(rootPath,e.attribs.src)
+            let importPath = ''
+            if (e.attribs.src[0] == '/') {
+                importPath = path.join(rootPath,e.attribs.src)
+            }else {
+                importPath = path.join(filePath, '../',e.attribs.src)
+            }
             addTemplate(templateList,e)
             getPageChildren({filePath:importPath,templateList})
         }else {
@@ -146,7 +151,7 @@ module.exports = function (files, opts) {
         var template = getPageTemplate(files)
         var _appConfig = null
         if (files.indexOf('app.js') != -1 ) {
-            _appConfig = fs.readFileSync('./remax/dist/app.json','utf-8')
+            _appConfig = fs.readFileSync('./taro/dist/app.json','utf-8')
             // _appConfig = fs.readFileSync('../ztesa-wechat-ynx/dist/app.json','utf-8')
         }
         var temp = `
