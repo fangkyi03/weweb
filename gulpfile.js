@@ -54,7 +54,7 @@ gulp.src(path.join(__dirname,'/remax/dist/**/*.wxss'))
 .pipe(end())
 
 gulp.src(path.join(__dirname,'/web/engine.js'))
-.pipe(confuser(path.join(__dirname,'/dist/js/enginecode.js')))
+.pipe(confuser(path.join(__dirname,'/dist/js/enginecode.js')))``
 
 gulp.src(path.join(__dirname,'/web/app.js'))
 .pipe(confuser(path.join(__dirname,'/dist/js/appcode.js')))
