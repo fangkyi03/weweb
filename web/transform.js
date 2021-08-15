@@ -133,22 +133,22 @@ function getFileContent(filePath) {
   return content
 }
 
+function getChildren(children = [],templateList,files) {
+    children.forEach((e)=>{
+    if (e.name == 'import') {
+      getChildren(e.children,templateList,wxmlPathConvert(e.attribs.src,files))
+      scanImport(wxmlPathConvert(e.attribs.src,files), templateList)
+    }else if ((e.name == 'template') || e.name == 'wxs') {
+      templateList.push(e)
+      getChildren(e.children,templateList)
+    }
+  })
+}
 // 获取模板数据
 function scanImport(files, templateList) {
   const fileContent = getFileContent(files)
   const dom = htmlparser2.parseDocument(fileContent)
-  dom.children.forEach((e)=>{
-    if (e.name == 'import') {
-      e.children.forEach((el)=>{
-        if (el.name == 'template') {
-          templateList.push(el)
-        }
-      })
-      scanImport(wxmlPathConvert(e.attribs.src,files), templateList)
-    }else if (e.type == 'tag') {
-      templateList.push(e)
-    }
-  })
+  getChildren(dom.children,templateList,files)
 }
 
 // 获取wxs文件模板
@@ -164,7 +164,7 @@ function getComponentTemplateText(item) {
   const { attribs = {}, children = [] } = item || {};
   const { name } = attribs || {};
   return `
-    registerComponent('${name}','<div class="app">11111</div>');
+    registerComponent('${name}','<div class="app">1111123123121</div>');
   `
 }
 
@@ -195,7 +195,8 @@ module.exports = function (files, opts) {
       scanImport(wxmlPathConvert(files), templateList)
       scanParentTemplate(templateList, templateTextList)
       if (templateList.length > 0) {
-        firstTemplate = templateList[0]
+        const index = templateList.findIndex((e)=>e.name == 'template')
+        firstTemplate = templateList[index]
       }
     }
     if (fileCache[files]) {
