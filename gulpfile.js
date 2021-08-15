@@ -102,13 +102,14 @@ gulp.task('initTARO_PATH',(cb)=> {
 // 初始化remax路径
 gulp.task('initREMAX_PATH',(cb)=> {
     rootPath = path.join(process.cwd(),'remax')
+    process.env.rootPath = path.join(rootPath,'dist')
     cb()
 })
 
 // 注入文件
 gulp.task('inject',()=>{
     return gulp.src(['web/*.js','!web/transform.js'])
-    .pipe(confuser())
+    // .pipe(confuser())
     .pipe(gulp.dest(path.join(outPath,'js')))
 })
 
