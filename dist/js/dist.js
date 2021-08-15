@@ -2,7 +2,8 @@
 
     var _appConfig = {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/test/index"
   ],
   "window": {
     "navigationBarTitleText": "Remax Wechat Template",
@@ -969,7 +970,8 @@ module.exports = {
   }
 },
       pageEvents: {
-  "pages/index/index": []
+  "pages/index/index": [],
+  "pages/test/index": []
 },
       appEvents: []
     }
@@ -977,7 +979,8 @@ module.exports = {
 
     var _appConfig = {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/test/index"
   ],
   "window": {
     "navigationBarTitleText": "Remax Wechat Template",
@@ -1011,20 +1014,22 @@ require('./remax-vendors.js');
 /* 4 */,
 /* 5 */,
 /* 6 */,
-/* 7 */
+/* 7 */,
+/* 8 */,
+/* 9 */
 /***/ (function(module, exports) {
 
 module.exports = require('./__remax_runtime_options__');
 
 /***/ }),
-/* 8 */,
-/* 9 */
+/* 10 */,
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
-/* 10 */
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1109,7 +1114,7 @@ var WebView=createHostComponent('web-view',null);/* harmony default export */ va
 // CONCATENATED MODULE: ./node_modules/_@remax_one@2.15.4@@remax/one/esm/hostComponents/index.js
 
 // EXTERNAL MODULE: ./node_modules/_@remax_wechat@2.15.4@@remax/wechat/esm/index.js + 53 modules
-var wechat_esm = __webpack_require__(3);
+var wechat_esm = __webpack_require__(4);
 
 // CONCATENATED MODULE: ./node_modules/_@remax_one@2.15.4@@remax/one/esm/api/index.wechat.js
 
@@ -1128,16 +1133,16 @@ function Modal(_a){var children=_a.children;var inst=Object(runtime_esm["h" /* u
 
 
 /***/ }),
-/* 11 */,
-/* 12 */
+/* 13 */,
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* istanbul ignore next */
-var __createBinding=this&&this.__createBinding||(Object.create?function(o,m,k,k2){if(k2===undefined)k2=k;Object.defineProperty(o,k2,{enumerable:true,get:function get(){return m[k];}});}:function(o,m,k,k2){if(k2===undefined)k2=k;o[k2]=m[k];});var __setModuleDefault=this&&this.__setModuleDefault||(Object.create?function(o,v){Object.defineProperty(o,"default",{enumerable:true,value:v});}:function(o,v){o["default"]=v;});var __importStar=this&&this.__importStar||function(mod){if(mod&&mod.__esModule)return mod;var result={};if(mod!=null)for(var k in mod){if(k!=="default"&&Object.prototype.hasOwnProperty.call(mod,k))__createBinding(result,mod,k);}__setModuleDefault(result,mod);return result;};Object.defineProperty(exports,"__esModule",{value:true});var React=__importStar(__webpack_require__(2));var one_1=__webpack_require__(10);var styles={screen:{height:'100vh',backgroundColor:'#fff',lineHeight:1.4,textAlign:'center'},text:{color:'#999',fontSize:'16PX'}};var ErrorScreen=function ErrorScreen(){return React.createElement(one_1.View,{style:styles.screen},React.createElement(one_1.View,{style:styles.text},"\u9875\u9762\u9047\u5230\u4E00\u4E9B\u95EE\u9898"));};exports.default=ErrorScreen;
+var __createBinding=this&&this.__createBinding||(Object.create?function(o,m,k,k2){if(k2===undefined)k2=k;Object.defineProperty(o,k2,{enumerable:true,get:function get(){return m[k];}});}:function(o,m,k,k2){if(k2===undefined)k2=k;o[k2]=m[k];});var __setModuleDefault=this&&this.__setModuleDefault||(Object.create?function(o,v){Object.defineProperty(o,"default",{enumerable:true,value:v});}:function(o,v){o["default"]=v;});var __importStar=this&&this.__importStar||function(mod){if(mod&&mod.__esModule)return mod;var result={};if(mod!=null)for(var k in mod){if(k!=="default"&&Object.prototype.hasOwnProperty.call(mod,k))__createBinding(result,mod,k);}__setModuleDefault(result,mod);return result;};Object.defineProperty(exports,"__esModule",{value:true});var React=__importStar(__webpack_require__(2));var one_1=__webpack_require__(12);var styles={screen:{height:'100vh',backgroundColor:'#fff',lineHeight:1.4,textAlign:'center'},text:{color:'#999',fontSize:'16PX'}};var ErrorScreen=function ErrorScreen(){return React.createElement(one_1.View,{style:styles.screen},React.createElement(one_1.View,{style:styles.text},"\u9875\u9762\u9047\u5230\u4E00\u4E9B\u95EE\u9898"));};exports.default=ErrorScreen;
 
 /***/ }),
-/* 13 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1145,23 +1150,23 @@ var __createBinding=this&&this.__createBinding||(Object.create?function(o,m,k,k2
 function _typeof(obj){"@babel/helpers - typeof";if(typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"){_typeof=function _typeof(obj){return typeof obj;};}else{_typeof=function _typeof(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};}return _typeof(obj);}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}function _createClass(Constructor,protoProps,staticProps){if(protoProps)_defineProperties(Constructor.prototype,protoProps);if(staticProps)_defineProperties(Constructor,staticProps);return Constructor;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function");}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,writable:true,configurable:true}});if(superClass)_setPrototypeOf(subClass,superClass);}function _setPrototypeOf(o,p){_setPrototypeOf=Object.setPrototypeOf||function _setPrototypeOf(o,p){o.__proto__=p;return o;};return _setPrototypeOf(o,p);}function _createSuper(Derived){var hasNativeReflectConstruct=_isNativeReflectConstruct();return function _createSuperInternal(){var Super=_getPrototypeOf(Derived),result;if(hasNativeReflectConstruct){var NewTarget=_getPrototypeOf(this).constructor;result=Reflect.construct(Super,arguments,NewTarget);}else{result=Super.apply(this,arguments);}return _possibleConstructorReturn(this,result);};}function _possibleConstructorReturn(self,call){if(call&&(_typeof(call)==="object"||typeof call==="function")){return call;}else if(call!==void 0){throw new TypeError("Derived constructors may only return object or undefined");}return _assertThisInitialized(self);}function _assertThisInitialized(self){if(self===void 0){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return self;}function _isNativeReflectConstruct(){if(typeof Reflect==="undefined"||!Reflect.construct)return false;if(Reflect.construct.sham)return false;if(typeof Proxy==="function")return true;try{Boolean.prototype.valueOf.call(Reflect.construct(Boolean,[],function(){}));return true;}catch(e){return false;}}function _getPrototypeOf(o){_getPrototypeOf=Object.setPrototypeOf?Object.getPrototypeOf:function _getPrototypeOf(o){return o.__proto__||Object.getPrototypeOf(o);};return _getPrototypeOf(o);}var __createBinding=this&&this.__createBinding||(Object.create?function(o,m,k,k2){if(k2===undefined)k2=k;Object.defineProperty(o,k2,{enumerable:true,get:function get(){return m[k];}});}:function(o,m,k,k2){if(k2===undefined)k2=k;o[k2]=m[k];});var __setModuleDefault=this&&this.__setModuleDefault||(Object.create?function(o,v){Object.defineProperty(o,"default",{enumerable:true,value:v});}:function(o,v){o["default"]=v;});var __importStar=this&&this.__importStar||function(mod){if(mod&&mod.__esModule)return mod;var result={};if(mod!=null)for(var k in mod){if(k!=="default"&&Object.prototype.hasOwnProperty.call(mod,k))__createBinding(result,mod,k);}__setModuleDefault(result,mod);return result;};Object.defineProperty(exports,"__esModule",{value:true});var React=__importStar(__webpack_require__(2));var ErrorScreen=/*#__PURE__*/function(_React$Component){_inherits(ErrorScreen,_React$Component);var _super=_createSuper(ErrorScreen);function ErrorScreen(){var _this;_classCallCheck(this,ErrorScreen);_this=_super.apply(this,arguments);_this.state={error:null};return _this;}_createClass(ErrorScreen,[{key:"componentDidCatch",value:function componentDidCatch(error){console.error(error);}},{key:"render",value:function render(){var error=this.state.error;var errorScreen=this.props.errorScreen;if(error){return React.createElement(errorScreen,{error:error});}return this.props.children;}}],[{key:"getDerivedStateFromError",value:function getDerivedStateFromError(error){return{error:error};}}]);return ErrorScreen;}(React.Component);exports.default=ErrorScreen;
 
 /***/ }),
-/* 14 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(27);
-module.exports = __webpack_require__(28);
+__webpack_require__(30);
+module.exports = __webpack_require__(31);
 
 
 /***/ }),
-/* 15 */,
-/* 16 */,
 /* 17 */,
 /* 18 */,
 /* 19 */,
 /* 20 */,
 /* 21 */,
 /* 22 */,
-/* 23 */
+/* 23 */,
+/* 24 */,
+/* 25 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1169,18 +1174,19 @@ module.exports = __webpack_require__(28);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var remax_one__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(10);
-/* harmony import */ var _Users_lv_Desktop_tarodemo_remax_node_modules_remax_plugin_error_screen_2_15_4_remax_plugin_error_screen_lib_ErrorScreen_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(12);
+/* harmony import */ var remax_one__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(12);
+/* harmony import */ var _Users_lv_Desktop_tarodemo_remax_node_modules_remax_plugin_error_screen_2_15_4_remax_plugin_error_screen_lib_ErrorScreen_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(14);
 /* harmony import */ var _Users_lv_Desktop_tarodemo_remax_node_modules_remax_plugin_error_screen_2_15_4_remax_plugin_error_screen_lib_ErrorScreen_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Users_lv_Desktop_tarodemo_remax_node_modules_remax_plugin_error_screen_2_15_4_remax_plugin_error_screen_lib_ErrorScreen_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Users_lv_Desktop_tarodemo_remax_node_modules_remax_plugin_error_screen_2_15_4_remax_plugin_error_screen_lib_ErrorBoundary_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(13);
+/* harmony import */ var _Users_lv_Desktop_tarodemo_remax_node_modules_remax_plugin_error_screen_2_15_4_remax_plugin_error_screen_lib_ErrorBoundary_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(15);
 /* harmony import */ var _Users_lv_Desktop_tarodemo_remax_node_modules_remax_plugin_error_screen_2_15_4_remax_plugin_error_screen_lib_ErrorBoundary_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_Users_lv_Desktop_tarodemo_remax_node_modules_remax_plugin_error_screen_2_15_4_remax_plugin_error_screen_lib_ErrorBoundary_js__WEBPACK_IMPORTED_MODULE_3__);
 function ownKeys(object,enumerableOnly){var keys=Object.keys(object);if(Object.getOwnPropertySymbols){var symbols=Object.getOwnPropertySymbols(object);if(enumerableOnly){symbols=symbols.filter(function(sym){return Object.getOwnPropertyDescriptor(object,sym).enumerable;});}keys.push.apply(keys,symbols);}return keys;}function _objectSpread(target){for(var i=1;i<arguments.length;i++){var source=arguments[i]!=null?arguments[i]:{};if(i%2){ownKeys(Object(source),true).forEach(function(key){_defineProperty(target,key,source[key]);});}else if(Object.getOwnPropertyDescriptors){Object.defineProperties(target,Object.getOwnPropertyDescriptors(source));}else{ownKeys(Object(source)).forEach(function(key){Object.defineProperty(target,key,Object.getOwnPropertyDescriptor(source,key));});}}return target;}function _defineProperty(obj,key,value){if(key in obj){Object.defineProperty(obj,key,{value:value,enumerable:true,configurable:true,writable:true});}else{obj[key]=value;}return obj;}/* harmony default export */ __webpack_exports__["default"] = ({onPageComponent:function onPageComponent(_ref){var component=_ref.component;function ErrorBoundaryWrap(props,ref){return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Users_lv_Desktop_tarodemo_remax_node_modules_remax_plugin_error_screen_2_15_4_remax_plugin_error_screen_lib_ErrorBoundary_js__WEBPACK_IMPORTED_MODULE_3___default.a,{errorScreen:_Users_lv_Desktop_tarodemo_remax_node_modules_remax_plugin_error_screen_2_15_4_remax_plugin_error_screen_lib_ErrorScreen_js__WEBPACK_IMPORTED_MODULE_2___default.a},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(component,_objectSpread(_objectSpread({},props),{},{ref:ref})));}ErrorBoundaryWrap.displayName='ErrorBoundary';return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.forwardRef(ErrorBoundaryWrap);}});
 
 /***/ }),
-/* 24 */,
-/* 25 */,
 /* 26 */,
-/* 27 */
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1193,13 +1199,13 @@ var esm = __webpack_require__(1);
 // CONCATENATED MODULE: ./node_modules/_remax@2.15.4@remax/runtime.js
 
 // EXTERNAL MODULE: external "require('./__remax_runtime_options__')"
-var _remax_runtime_options_ = __webpack_require__(7);
+var _remax_runtime_options_ = __webpack_require__(9);
 
 // CONCATENATED MODULE: ./node_modules/@remax/apply-runtime-options.js
-var pluginDriver=new esm["a" /* PluginDriver */]([__webpack_require__(23)].map(function(p){return p.default||p;}));esm["b" /* RuntimeOptions */].apply({platform:"wechat",debug:false,pxToRpx:true,pluginDriver:pluginDriver,hostComponents:_remax_runtime_options_["hostComponents"],pageEvents:_remax_runtime_options_["pageEvents"],appEvents:_remax_runtime_options_["appEvents"]});
+var pluginDriver=new esm["a" /* PluginDriver */]([__webpack_require__(25)].map(function(p){return p.default||p;}));esm["b" /* RuntimeOptions */].apply({platform:"wechat",debug:false,pxToRpx:true,pluginDriver:pluginDriver,hostComponents:_remax_runtime_options_["hostComponents"],pageEvents:_remax_runtime_options_["pageEvents"],appEvents:_remax_runtime_options_["appEvents"]});
 
 /***/ }),
-/* 28 */
+/* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1210,20 +1216,21 @@ __webpack_require__.r(__webpack_exports__);
 var esm = __webpack_require__(1);
 
 // EXTERNAL MODULE: ./src/app.css
-var app = __webpack_require__(9);
+var app = __webpack_require__(11);
 
 // CONCATENATED MODULE: ./src/app.js
 var app_App=function App(props){return props.children;};/* harmony default export */ var src_app = (app_App);
 // CONCATENATED MODULE: ./src/app.entry.js
-__webpack_require__(9);App(Object(esm["c" /* createAppConfig */])(src_app));
+__webpack_require__(11);App(Object(esm["c" /* createAppConfig */])(src_app));
 
 /***/ })
-],[[14,1,0]]]);
-},{"./__remax_runtime_options__":1,"./remax-vendors.js":4,"./runtime.js":5}],3:[function(require,module,exports){
+],[[16,1,0]]]);
+},{"./__remax_runtime_options__":1,"./remax-vendors.js":5,"./runtime.js":6}],3:[function(require,module,exports){
 
     var _appConfig = {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/test/index"
   ],
   "window": {
     "navigationBarTitleText": "Remax Wechat Template",
@@ -1249,26 +1256,1226 @@ __webpack_require__(9);App(Object(esm["c" /* createAppConfig */])(src_app));
       return _globalComponent(pagePath,config,templateText)
     }
   
+
+    Vue.component('REMAX_TPL',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    var _h = eval(`var module = {exports:{}}; var elements = {}; module.exports = { v: function(value) { return value !== undefined ? value : ''; }, tid: function (type, ancestor) { var items = ancestor.split(','); var depth = 1; for (var i = 0; i < items.length; i++) { if (type === items[i]) { depth = depth + 1; } } var id = 'REMAX_TPL_' + depth + '_' + type; return id; } }; `)
+  
+
+    Vue.component('REMAX_TPL_1_ad',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_ad-custom',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_audio',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_button',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_camera',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_canvas',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_checkbox',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_checkbox-group',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_cover-image',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_2_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_3_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_4_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_5_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_6_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_7_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_8_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_9_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_10_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_11_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_12_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_13_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_14_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_15_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_16_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_17_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_18_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_19_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_20_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_editor',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_form',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_2_form',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_3_form',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_4_form',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_5_form',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_functional-page-navigator',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_icon',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_2_icon',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_image',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_input',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_keyboard-accessory',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_label',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_2_label',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_3_label',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_4_label',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_5_label',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_live-player',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_live-pusher',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_map',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_match-media',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_movable-area',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_2_movable-area',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_3_movable-area',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_4_movable-area',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_5_movable-area',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_6_movable-area',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_7_movable-area',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_8_movable-area',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_9_movable-area',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_10_movable-area',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_movable-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_2_movable-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_3_movable-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_4_movable-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_5_movable-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_6_movable-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_7_movable-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_8_movable-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_9_movable-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_10_movable-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_navigation-bar',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_navigator',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_official-account',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_open-data',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_page-container',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_page-meta',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_picker',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_picker-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_picker-view-column',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_progress',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_radio',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_radio-group',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_rich-text',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_scroll-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_2_scroll-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_3_scroll-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_4_scroll-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_5_scroll-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_share-element',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_slider',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_swiper',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_switch',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_2_switch',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_3_switch',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_4_switch',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_5_switch',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_6_switch',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_7_switch',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_8_switch',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_9_switch',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_10_switch',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_text',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_2_text',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_3_text',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_4_text',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_5_text',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_textarea',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_video',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_2_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_3_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_4_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_5_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_6_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_7_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_8_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_9_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_10_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_11_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_12_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_13_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_14_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_15_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_16_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_17_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_18_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_19_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_20_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_voip-room',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_web-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_plain-text',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_CONTAINER',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
 require('./../../runtime.js');
 require('./../../remax-vendors.js');
 (wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([[3],{
 
-/***/ 24:
+/***/ 26:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(26);
+module.exports = __webpack_require__(32);
 
 
 /***/ }),
 
-/***/ 25:
+/***/ 27:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
 
 /***/ }),
 
-/***/ 26:
+/***/ 32:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1281,23 +2488,21 @@ var esm = __webpack_require__(1);
 // EXTERNAL MODULE: ./node_modules/_react@16.14.0@react/index.js
 var _react_16_14_0_react = __webpack_require__(2);
 
-// EXTERNAL MODULE: ./node_modules/_@remax_wechat@2.15.4@@remax/wechat/esm/index.js + 53 modules
-var wechat_esm = __webpack_require__(3);
-
-// CONCATENATED MODULE: ./node_modules/_remax@2.15.4@remax/wechat.js
+// EXTERNAL MODULE: ./node_modules/_remax@2.15.4@remax/wechat.js
+var wechat = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/pages/index/index.css?modules
-var indexmodules = __webpack_require__(5);
+var indexmodules = __webpack_require__(6);
 var indexmodules_default = /*#__PURE__*/__webpack_require__.n(indexmodules);
 
 // CONCATENATED MODULE: ./src/pages/index/index.js
-function _slicedToArray(arr,i){return _arrayWithHoles(arr)||_iterableToArrayLimit(arr,i)||_unsupportedIterableToArray(arr,i)||_nonIterableRest();}function _nonIterableRest(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o,minLen){if(!o)return;if(typeof o==="string")return _arrayLikeToArray(o,minLen);var n=Object.prototype.toString.call(o).slice(8,-1);if(n==="Object"&&o.constructor)n=o.constructor.name;if(n==="Map"||n==="Set")return Array.from(o);if(n==="Arguments"||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))return _arrayLikeToArray(o,minLen);}function _arrayLikeToArray(arr,len){if(len==null||len>arr.length)len=arr.length;for(var i=0,arr2=new Array(len);i<len;i++){arr2[i]=arr[i];}return arr2;}function _iterableToArrayLimit(arr,i){var _i=arr==null?null:typeof Symbol!=="undefined"&&arr[Symbol.iterator]||arr["@@iterator"];if(_i==null)return;var _arr=[];var _n=true;var _d=false;var _s,_e;try{for(_i=_i.call(arr);!(_n=(_s=_i.next()).done);_n=true){_arr.push(_s.value);if(i&&_arr.length===i)break;}}catch(err){_d=true;_e=err;}finally{try{if(!_n&&_i["return"]!=null)_i["return"]();}finally{if(_d)throw _e;}}return _arr;}function _arrayWithHoles(arr){if(Array.isArray(arr))return arr;}/* harmony default export */ var index = (function(props){var _React$useState=_react_16_14_0_react["useState"]('测试'),_React$useState2=_slicedToArray(_React$useState,2),text=_React$useState2[0],setText=_React$useState2[1];_react_16_14_0_react["useEffect"](function(){console.log('输出当前值',text);setInterval(function(){setText('当前奥术大师大所啊');},2000);});return/*#__PURE__*/_react_16_14_0_react["createElement"](wechat_esm["c" /* View */],{className:indexmodules_default.a.app},/*#__PURE__*/_react_16_14_0_react["createElement"](wechat_esm["c" /* View */],{className:indexmodules_default.a.header},/*#__PURE__*/_react_16_14_0_react["createElement"](wechat_esm["a" /* Image */],{src:"https://gw.alipayobjects.com/mdn/rms_b5fcc5/afts/img/A*OGyZSI087zkAAAAAAAAAAABkARQnAQ",className:indexmodules_default.a.logo,alt:"logo"}),/*#__PURE__*/_react_16_14_0_react["createElement"](wechat_esm["c" /* View */],{className:indexmodules_default.a.text},"\u7F16\u8F91 ",/*#__PURE__*/_react_16_14_0_react["createElement"](wechat_esm["b" /* Text */],{className:indexmodules_default.a.path},text),"\u5F00\u59CB")));});
+function _slicedToArray(arr,i){return _arrayWithHoles(arr)||_iterableToArrayLimit(arr,i)||_unsupportedIterableToArray(arr,i)||_nonIterableRest();}function _nonIterableRest(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o,minLen){if(!o)return;if(typeof o==="string")return _arrayLikeToArray(o,minLen);var n=Object.prototype.toString.call(o).slice(8,-1);if(n==="Object"&&o.constructor)n=o.constructor.name;if(n==="Map"||n==="Set")return Array.from(o);if(n==="Arguments"||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))return _arrayLikeToArray(o,minLen);}function _arrayLikeToArray(arr,len){if(len==null||len>arr.length)len=arr.length;for(var i=0,arr2=new Array(len);i<len;i++){arr2[i]=arr[i];}return arr2;}function _iterableToArrayLimit(arr,i){var _i=arr==null?null:typeof Symbol!=="undefined"&&arr[Symbol.iterator]||arr["@@iterator"];if(_i==null)return;var _arr=[];var _n=true;var _d=false;var _s,_e;try{for(_i=_i.call(arr);!(_n=(_s=_i.next()).done);_n=true){_arr.push(_s.value);if(i&&_arr.length===i)break;}}catch(err){_d=true;_e=err;}finally{try{if(!_n&&_i["return"]!=null)_i["return"]();}finally{if(_d)throw _e;}}return _arr;}function _arrayWithHoles(arr){if(Array.isArray(arr))return arr;}/* harmony default export */ var index = (function(props){var _React$useState=_react_16_14_0_react["useState"]('测试'),_React$useState2=_slicedToArray(_React$useState,2),text=_React$useState2[0],setText=_React$useState2[1];_react_16_14_0_react["useEffect"](function(){console.log('输出当前值',text);setInterval(function(){setText('当前奥术大师大所啊');},2000);});return/*#__PURE__*/_react_16_14_0_react["createElement"](wechat["c" /* View */],{className:indexmodules_default.a.app},/*#__PURE__*/_react_16_14_0_react["createElement"](wechat["c" /* View */],{className:indexmodules_default.a.header},/*#__PURE__*/_react_16_14_0_react["createElement"](wechat["a" /* Image */],{src:"https://gw.alipayobjects.com/mdn/rms_b5fcc5/afts/img/A*OGyZSI087zkAAAAAAAAAAABkARQnAQ",className:indexmodules_default.a.logo,alt:"logo"}),/*#__PURE__*/_react_16_14_0_react["createElement"](wechat["c" /* View */],{className:indexmodules_default.a.text},"\u7F16\u8F91 ",/*#__PURE__*/_react_16_14_0_react["createElement"](wechat["b" /* Text */],{className:indexmodules_default.a.path},text),"\u5F00\u59CB")));});
 // CONCATENATED MODULE: ./src/pages/index/index.entry.js
-__webpack_require__(25);Page(Object(esm["e" /* createPageConfig */])(index,'pages/index/index'));
+__webpack_require__(27);Page(Object(esm["e" /* createPageConfig */])(index,'pages/index/index'));
 
 /***/ }),
 
-/***/ 5:
+/***/ 6:
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
@@ -1305,12 +2510,1299 @@ module.exports = {"app":"app___2lhPP","logo":"logo___Al4Xb","logo-spin":"logo-sp
 
 /***/ })
 
-},[[24,1,0]]]);
-},{"./../../remax-vendors.js":4,"./../../runtime.js":5}],4:[function(require,module,exports){
+},[[26,1,0]]]);
+},{"./../../remax-vendors.js":5,"./../../runtime.js":6}],4:[function(require,module,exports){
 
     var _appConfig = {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/test/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "Remax Wechat Template",
+    "navigationBarBackgroundColor": "#282c34"
+  }
+}
+    var pagePath = `pages/test/index`
+  var templateText = `
+    <REMAX_TPL :data="{root: root}"/>
+  `
+
+    var App = (appData)=> {
+      return _globalApp(_appConfig)
+    }
+  
+
+    var Page = (config) => {
+      return _globalPage(pagePath,config,templateText)
+    }
+  
+
+    var Component = (config) => {
+      return _globalComponent(pagePath,config,templateText)
+    }
+  
+
+    Vue.component('REMAX_TPL',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    var _h = eval(`var module = {exports:{}}; var elements = {}; module.exports = { v: function(value) { return value !== undefined ? value : ''; }, tid: function (type, ancestor) { var items = ancestor.split(','); var depth = 1; for (var i = 0; i < items.length; i++) { if (type === items[i]) { depth = depth + 1; } } var id = 'REMAX_TPL_' + depth + '_' + type; return id; } }; `)
+  
+
+    Vue.component('REMAX_TPL_1_ad',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_ad-custom',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_audio',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_button',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_camera',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_canvas',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_checkbox',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_checkbox-group',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_cover-image',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_2_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_3_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_4_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_5_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_6_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_7_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_8_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_9_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_10_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_11_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_12_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_13_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_14_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_15_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_16_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_17_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_18_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_19_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_20_cover-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_editor',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_form',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_2_form',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_3_form',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_4_form',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_5_form',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_functional-page-navigator',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_icon',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_2_icon',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_image',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_input',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_keyboard-accessory',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_label',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_2_label',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_3_label',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_4_label',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_5_label',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_live-player',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_live-pusher',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_map',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_match-media',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_movable-area',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_2_movable-area',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_3_movable-area',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_4_movable-area',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_5_movable-area',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_6_movable-area',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_7_movable-area',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_8_movable-area',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_9_movable-area',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_10_movable-area',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_movable-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_2_movable-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_3_movable-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_4_movable-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_5_movable-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_6_movable-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_7_movable-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_8_movable-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_9_movable-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_10_movable-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_navigation-bar',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_navigator',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_official-account',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_open-data',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_page-container',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_page-meta',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_picker',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_picker-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_picker-view-column',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_progress',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_radio',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_radio-group',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_rich-text',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_scroll-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_2_scroll-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_3_scroll-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_4_scroll-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_5_scroll-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_share-element',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_slider',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_swiper',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_switch',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_2_switch',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_3_switch',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_4_switch',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_5_switch',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_6_switch',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_7_switch',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_8_switch',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_9_switch',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_10_switch',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_text',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_2_text',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_3_text',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_4_text',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_5_text',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_textarea',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_video',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_2_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_3_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_4_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_5_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_6_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_7_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_8_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_9_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_10_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_11_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_12_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_13_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_14_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_15_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_16_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_17_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_18_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_19_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_20_view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_voip-room',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_web-view',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_plain-text',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+
+    Vue.component('REMAX_TPL_1_CONTAINER',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  
+require('./../../runtime.js');
+require('./../../remax-vendors.js');
+(wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([[4],{
+
+/***/ 28:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(33);
+
+
+/***/ }),
+
+/***/ 29:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+
+/***/ 33:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXTERNAL MODULE: ./node_modules/_@remax_runtime@2.15.4@@remax/runtime/esm/index.js + 25 modules
+var esm = __webpack_require__(1);
+
+// EXTERNAL MODULE: ./node_modules/_react@16.14.0@react/index.js
+var _react_16_14_0_react = __webpack_require__(2);
+
+// EXTERNAL MODULE: ./node_modules/_remax@2.15.4@remax/wechat.js
+var wechat = __webpack_require__(3);
+
+// EXTERNAL MODULE: ./src/pages/test/index.css?modules
+var testmodules = __webpack_require__(7);
+var testmodules_default = /*#__PURE__*/__webpack_require__.n(testmodules);
+
+// CONCATENATED MODULE: ./src/pages/test/index.js
+function _slicedToArray(arr,i){return _arrayWithHoles(arr)||_iterableToArrayLimit(arr,i)||_unsupportedIterableToArray(arr,i)||_nonIterableRest();}function _nonIterableRest(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o,minLen){if(!o)return;if(typeof o==="string")return _arrayLikeToArray(o,minLen);var n=Object.prototype.toString.call(o).slice(8,-1);if(n==="Object"&&o.constructor)n=o.constructor.name;if(n==="Map"||n==="Set")return Array.from(o);if(n==="Arguments"||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))return _arrayLikeToArray(o,minLen);}function _arrayLikeToArray(arr,len){if(len==null||len>arr.length)len=arr.length;for(var i=0,arr2=new Array(len);i<len;i++){arr2[i]=arr[i];}return arr2;}function _iterableToArrayLimit(arr,i){var _i=arr==null?null:typeof Symbol!=="undefined"&&arr[Symbol.iterator]||arr["@@iterator"];if(_i==null)return;var _arr=[];var _n=true;var _d=false;var _s,_e;try{for(_i=_i.call(arr);!(_n=(_s=_i.next()).done);_n=true){_arr.push(_s.value);if(i&&_arr.length===i)break;}}catch(err){_d=true;_e=err;}finally{try{if(!_n&&_i["return"]!=null)_i["return"]();}finally{if(_d)throw _e;}}return _arr;}function _arrayWithHoles(arr){if(Array.isArray(arr))return arr;}/* harmony default export */ var test = (function(props){var _React$useState=_react_16_14_0_react["useState"]('测试'),_React$useState2=_slicedToArray(_React$useState,2),text=_React$useState2[0],setText=_React$useState2[1];_react_16_14_0_react["useEffect"](function(){console.log('123456',text);setInterval(function(){setText('当前奥术549879897898大师大所啊');},2000);});return/*#__PURE__*/_react_16_14_0_react["createElement"](wechat["c" /* View */],{className:testmodules_default.a.app},/*#__PURE__*/_react_16_14_0_react["createElement"](wechat["c" /* View */],{className:testmodules_default.a.header},/*#__PURE__*/_react_16_14_0_react["createElement"](wechat["a" /* Image */],{src:"https://gw.alipayobjects.com/mdn/rms_b5fcc5/afts/img/A*OGyZSI087zkAAAAAAAAAAABkARQnAQ",className:testmodules_default.a.logo,alt:"logo"}),/*#__PURE__*/_react_16_14_0_react["createElement"](wechat["c" /* View */],{className:testmodules_default.a.text},"\u7F16\u8F91 ",/*#__PURE__*/_react_16_14_0_react["createElement"](wechat["b" /* Text */],{className:testmodules_default.a.path},text),"\u5F00\u59CB")));});
+// CONCATENATED MODULE: ./src/pages/test/index.entry.js
+__webpack_require__(29);Page(Object(esm["e" /* createPageConfig */])(test,'pages/test/index'));
+
+/***/ }),
+
+/***/ 7:
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"app":"app___NLqrL","logo":"logo___evJnK","logo-spin":"logo-spin___2IW1V","text":"text___HQHxw","header":"header___1qPt3"};
+
+/***/ })
+
+},[[28,1,0]]]);
+},{"./../../remax-vendors.js":5,"./../../runtime.js":6}],5:[function(require,module,exports){
+
+    var _appConfig = {
+  "pages": [
+    "pages/index/index",
+    "pages/test/index"
   ],
   "window": {
     "navigationBarTitleText": "Remax Wechat Template",
@@ -1379,7 +3871,7 @@ var PageInstanceContext=/*#__PURE__*/_react_16_14_0_react["createContext"](null)
 // CONCATENATED MODULE: ./node_modules/_@remax_framework-shared@2.15.4@@remax/framework-shared/esm/ComponentInstanceContext.js
 var ComponentInstanceContext=/*#__PURE__*/_react_16_14_0_react["createContext"](null);/* harmony default export */ var esm_ComponentInstanceContext = (ComponentInstanceContext);
 // EXTERNAL MODULE: ./node_modules/_react-is@16.13.1@react-is/index.js
-var _react_is_16_13_1_react_is = __webpack_require__(4);
+var _react_is_16_13_1_react_is = __webpack_require__(5);
 
 // CONCATENATED MODULE: ./node_modules/_@remax_framework-shared@2.15.4@@remax/framework-shared/esm/utils/isClassComponent.js
 function isClassComponent(Component){return Component.prototype&&typeof Component.prototype.render==='function';}
@@ -1424,11 +3916,11 @@ __webpack_require__.d(__webpack_exports__, "g", function() { return /* binding *
 // UNUSED EXPORTS: render, createComponentConfig, createNativeComponent, usePageEvent, useAppEvent, useComponentInstance, useNativeEffect, useQuery
 
 // EXTERNAL MODULE: ./node_modules/_react-reconciler@0.26.2@react-reconciler/index.js
-var _react_reconciler_0_26_2_react_reconciler = __webpack_require__(11);
+var _react_reconciler_0_26_2_react_reconciler = __webpack_require__(13);
 var _react_reconciler_0_26_2_react_reconciler_default = /*#__PURE__*/__webpack_require__.n(_react_reconciler_0_26_2_react_reconciler);
 
 // EXTERNAL MODULE: ./node_modules/_scheduler@0.19.1@scheduler/index.js
-var _scheduler_0_19_1_scheduler = __webpack_require__(6);
+var _scheduler_0_19_1_scheduler = __webpack_require__(8);
 
 // CONCATENATED MODULE: ./node_modules/_@remax_runtime@2.15.4@@remax/runtime/esm/constants.js
 var REMAX_ROOT_BACKUP='$$REMAX_ROOT_BACKUP';var REMAX_METHOD='$$REMAX_METHOD';var TYPE_TEXT='plain-text';
@@ -1500,13 +3992,13 @@ var ReactReconcilerInst=_react_reconciler_0_26_2_react_reconciler_default()(host
 if(!container._rootContainer){container._rootContainer=ReactReconcilerInst.createContainer(container,0,false,null);}ReactReconcilerInst.updateContainer(rootElement,container._rootContainer,null,function(){// ignore
 });return getPublicRootInstance(container._rootContainer);}
 // EXTERNAL MODULE: ./node_modules/_@remax_runtime@2.15.4@@remax/runtime/esm/polyfills/Function.js
-var Function = __webpack_require__(22);
+var Function = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./node_modules/_react@16.14.0@react/index.js
 var _react_16_14_0_react = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./node_modules/_react-is@16.13.1@react-is/index.js
-var _react_is_16_13_1_react_is = __webpack_require__(4);
+var _react_is_16_13_1_react_is = __webpack_require__(5);
 
 // CONCATENATED MODULE: ./node_modules/_@remax_runtime@2.15.4@@remax/runtime/esm/AppContainer.js
 var AppContainer_AppContainer=function(){function AppContainer(){this.updateQueue=[];this.root=new esm_VNode({id:generate(),type:'root',container:this});this.root.mounted=true;}AppContainer.prototype.requestUpdate=function(path,start,deleteCount){var items=[];for(var _i=3;_i<arguments.length;_i++){items[_i-3]=arguments[_i];}// ignore
@@ -1575,10 +4067,25 @@ var unstable_batchedUpdates=ReactReconcilerInst.batchedUpdates;/* harmony defaul
 
 "use strict";
 /* istanbul ignore next */
-if(true){module.exports=__webpack_require__(17);}else{}
+if(true){module.exports=__webpack_require__(19);}else{}
 
 /***/ }),
 /* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* istanbul ignore next */
+/* harmony import */ var _remax_wechat__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _remax_wechat__WEBPACK_IMPORTED_MODULE_0__["a"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "b", function() { return _remax_wechat__WEBPACK_IMPORTED_MODULE_0__["b"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "c", function() { return _remax_wechat__WEBPACK_IMPORTED_MODULE_0__["c"]; });
+
+
+
+/***/ }),
+/* 4 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1813,25 +4320,26 @@ var canIUse=wx.canIUse;var base64ToArrayBuffer=wx.base64ToArrayBuffer;var arrayB
 
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* istanbul ignore next */
-if(true){module.exports=__webpack_require__(21);}else{}
+if(true){module.exports=__webpack_require__(23);}else{}
 
 /***/ }),
-/* 5 */,
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* istanbul ignore next */
-if(true){module.exports=__webpack_require__(20);}else{}
-
-/***/ }),
+/* 6 */,
 /* 7 */,
 /* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* istanbul ignore next */
+if(true){module.exports=__webpack_require__(22);}else{}
+
+/***/ }),
+/* 9 */,
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1849,9 +4357,9 @@ var test3={};'abcdefghijklmnopqrst'.split('').forEach(function(letter){test3[let
 return false;}}module.exports=shouldUseNative()?Object.assign:function(target,source){var from;var to=toObject(target);var symbols;for(var s=1;s<arguments.length;s++){from=Object(arguments[s]);for(var key in from){if(hasOwnProperty.call(from,key)){to[key]=from[key];}}if(getOwnPropertySymbols){symbols=getOwnPropertySymbols(from);for(var i=0;i<symbols.length;i++){if(propIsEnumerable.call(from,symbols[i])){to[symbols[i]]=from[symbols[i]];}}}}return to;};
 
 /***/ }),
-/* 9 */,
-/* 10 */,
-/* 11 */
+/* 11 */,
+/* 12 */,
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1859,15 +4367,15 @@ return false;}}module.exports=shouldUseNative()?Object.assign:function(target,so
 
 
 if (true) {
-  module.exports = __webpack_require__(15);
+  module.exports = __webpack_require__(17);
 } else {}
 
 
 /***/ }),
-/* 12 */,
-/* 13 */,
 /* 14 */,
-/* 15 */
+/* 15 */,
+/* 16 */,
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* istanbul ignore next */
@@ -1881,7 +4389,7 @@ if (true) {
  */
 module.exports = function $$$reconciler($$$hostConfig) {
     var exports = {};
-'use strict';var aa=__webpack_require__(8),ba=__webpack_require__(2),m=__webpack_require__(18);function q(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}
+'use strict';var aa=__webpack_require__(10),ba=__webpack_require__(2),m=__webpack_require__(20);function q(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}
 var ca=ba.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED,da=60103,ea=60106,fa=60107,ha=60108,ia=60114,ja=60109,ka=60110,la=60112,ma=60113,na=60120,oa=60115,pa=60116,qa=60121,ra=60129,sa=60130,ta=60131;
 if("function"===typeof Symbol&&Symbol.for){var r=Symbol.for;da=r("react.element");ea=r("react.portal");fa=r("react.fragment");ha=r("react.strict_mode");ia=r("react.profiler");ja=r("react.provider");ka=r("react.context");la=r("react.forward_ref");ma=r("react.suspense");na=r("react.suspense_list");oa=r("react.memo");pa=r("react.lazy");qa=r("react.block");r("react.scope");ra=r("react.debug_trace_mode");sa=r("react.offscreen");ta=r("react.legacy_hidden")}var ua="function"===typeof Symbol&&Symbol.iterator;
 function va(a){if(null===a||"object"!==typeof a)return null;a=ua&&a[ua]||a["@@iterator"];return"function"===typeof a?a:null}
@@ -2088,10 +4596,10 @@ d?null:d;null!==d&&(b.callback=d);md(e,b);ud(e,g,f);return g};
     return exports;
 };
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(16)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(18)(module)))
 
 /***/ }),
-/* 16 */
+/* 18 */
 /***/ (function(module, exports) {
 
 /* istanbul ignore next */
@@ -2099,7 +4607,7 @@ module.exports=function(module){if(!module.webpackPolyfill){module.deprecate=fun
 if(!module.children)module.children=[];Object.defineProperty(module,"loaded",{enumerable:true,get:function get(){return module.l;}});Object.defineProperty(module,"id",{enumerable:true,get:function get(){return module.i;}});module.webpackPolyfill=1;}return module;};
 
 /***/ }),
-/* 17 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2111,18 +4619,18 @@ if(!module.children)module.children=[];Object.defineProperty(module,"loaded",{en
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- */function _typeof(obj){"@babel/helpers - typeof";if(typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"){_typeof=function _typeof(obj){return typeof obj;};}else{_typeof=function _typeof(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};}return _typeof(obj);}var l=__webpack_require__(8),n="function"===typeof Symbol&&Symbol.for,p=n?Symbol.for("react.element"):60103,q=n?Symbol.for("react.portal"):60106,r=n?Symbol.for("react.fragment"):60107,t=n?Symbol.for("react.strict_mode"):60108,u=n?Symbol.for("react.profiler"):60114,v=n?Symbol.for("react.provider"):60109,w=n?Symbol.for("react.context"):60110,x=n?Symbol.for("react.forward_ref"):60112,y=n?Symbol.for("react.suspense"):60113,z=n?Symbol.for("react.memo"):60115,A=n?Symbol.for("react.lazy"):60116,B="function"===typeof Symbol&&Symbol.iterator;function C(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++){b+="&args[]="+encodeURIComponent(arguments[c]);}return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.";}var D={isMounted:function isMounted(){return!1;},enqueueForceUpdate:function enqueueForceUpdate(){},enqueueReplaceState:function enqueueReplaceState(){},enqueueSetState:function enqueueSetState(){}},E={};function F(a,b,c){this.props=a;this.context=b;this.refs=E;this.updater=c||D;}F.prototype.isReactComponent={};F.prototype.setState=function(a,b){if("object"!==_typeof(a)&&"function"!==typeof a&&null!=a)throw Error(C(85));this.updater.enqueueSetState(this,a,b,"setState");};F.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate");};function G(){}G.prototype=F.prototype;function H(a,b,c){this.props=a;this.context=b;this.refs=E;this.updater=c||D;}var I=H.prototype=new G();I.constructor=H;l(I,F.prototype);I.isPureReactComponent=!0;var J={current:null},K=Object.prototype.hasOwnProperty,L={key:!0,ref:!0,__self:!0,__source:!0};function M(a,b,c){var e,d={},g=null,k=null;if(null!=b)for(e in void 0!==b.ref&&(k=b.ref),void 0!==b.key&&(g=""+b.key),b){K.call(b,e)&&!L.hasOwnProperty(e)&&(d[e]=b[e]);}var f=arguments.length-2;if(1===f)d.children=c;else if(1<f){for(var h=Array(f),m=0;m<f;m++){h[m]=arguments[m+2];}d.children=h;}if(a&&a.defaultProps)for(e in f=a.defaultProps,f){void 0===d[e]&&(d[e]=f[e]);}return{$$typeof:p,type:a,key:g,ref:k,props:d,_owner:J.current};}function N(a,b){return{$$typeof:p,type:a.type,key:b,ref:a.ref,props:a.props,_owner:a._owner};}function O(a){return"object"===_typeof(a)&&null!==a&&a.$$typeof===p;}function escape(a){var b={"=":"=0",":":"=2"};return"$"+(""+a).replace(/[=:]/g,function(a){return b[a];});}var P=/\/+/g,Q=[];function R(a,b,c,e){if(Q.length){var d=Q.pop();d.result=a;d.keyPrefix=b;d.func=c;d.context=e;d.count=0;return d;}return{result:a,keyPrefix:b,func:c,context:e,count:0};}function S(a){a.result=null;a.keyPrefix=null;a.func=null;a.context=null;a.count=0;10>Q.length&&Q.push(a);}function T(a,b,c,e){var d=_typeof(a);if("undefined"===d||"boolean"===d)a=null;var g=!1;if(null===a)g=!0;else switch(d){case"string":case"number":g=!0;break;case"object":switch(a.$$typeof){case p:case q:g=!0;}}if(g)return c(e,a,""===b?"."+U(a,0):b),1;g=0;b=""===b?".":b+":";if(Array.isArray(a))for(var k=0;k<a.length;k++){d=a[k];var f=b+U(d,k);g+=T(d,f,c,e);}else if(null===a||"object"!==_typeof(a)?f=null:(f=B&&a[B]||a["@@iterator"],f="function"===typeof f?f:null),"function"===typeof f)for(a=f.call(a),k=0;!(d=a.next()).done;){d=d.value,f=b+U(d,k++),g+=T(d,f,c,e);}else if("object"===d)throw c=""+a,Error(C(31,"[object Object]"===c?"object with keys {"+Object.keys(a).join(", ")+"}":c,""));return g;}function V(a,b,c){return null==a?0:T(a,"",b,c);}function U(a,b){return"object"===_typeof(a)&&null!==a&&null!=a.key?escape(a.key):b.toString(36);}function W(a,b){a.func.call(a.context,b,a.count++);}function aa(a,b,c){var e=a.result,d=a.keyPrefix;a=a.func.call(a.context,b,a.count++);Array.isArray(a)?X(a,e,c,function(a){return a;}):null!=a&&(O(a)&&(a=N(a,d+(!a.key||b&&b.key===a.key?"":(""+a.key).replace(P,"$&/")+"/")+c)),e.push(a));}function X(a,b,c,e,d){var g="";null!=c&&(g=(""+c).replace(P,"$&/")+"/");b=R(b,g,e,d);V(a,aa,b);S(b);}var Y={current:null};function Z(){var a=Y.current;if(null===a)throw Error(C(321));return a;}var ba={ReactCurrentDispatcher:Y,ReactCurrentBatchConfig:{suspense:null},ReactCurrentOwner:J,IsSomeRendererActing:{current:!1},assign:l};exports.Children={map:function map(a,b,c){if(null==a)return a;var e=[];X(a,e,null,b,c);return e;},forEach:function forEach(a,b,c){if(null==a)return a;b=R(null,null,b,c);V(a,W,b);S(b);},count:function count(a){return V(a,function(){return null;},null);},toArray:function toArray(a){var b=[];X(a,b,null,function(a){return a;});return b;},only:function only(a){if(!O(a))throw Error(C(143));return a;}};exports.Component=F;exports.Fragment=r;exports.Profiler=u;exports.PureComponent=H;exports.StrictMode=t;exports.Suspense=y;exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED=ba;exports.cloneElement=function(a,b,c){if(null===a||void 0===a)throw Error(C(267,a));var e=l({},a.props),d=a.key,g=a.ref,k=a._owner;if(null!=b){void 0!==b.ref&&(g=b.ref,k=J.current);void 0!==b.key&&(d=""+b.key);if(a.type&&a.type.defaultProps)var f=a.type.defaultProps;for(h in b){K.call(b,h)&&!L.hasOwnProperty(h)&&(e[h]=void 0===b[h]&&void 0!==f?f[h]:b[h]);}}var h=arguments.length-2;if(1===h)e.children=c;else if(1<h){f=Array(h);for(var m=0;m<h;m++){f[m]=arguments[m+2];}e.children=f;}return{$$typeof:p,type:a.type,key:d,ref:g,props:e,_owner:k};};exports.createContext=function(a,b){void 0===b&&(b=null);a={$$typeof:w,_calculateChangedBits:b,_currentValue:a,_currentValue2:a,_threadCount:0,Provider:null,Consumer:null};a.Provider={$$typeof:v,_context:a};return a.Consumer=a;};exports.createElement=M;exports.createFactory=function(a){var b=M.bind(null,a);b.type=a;return b;};exports.createRef=function(){return{current:null};};exports.forwardRef=function(a){return{$$typeof:x,render:a};};exports.isValidElement=O;exports.lazy=function(a){return{$$typeof:A,_ctor:a,_status:-1,_result:null};};exports.memo=function(a,b){return{$$typeof:z,type:a,compare:void 0===b?null:b};};exports.useCallback=function(a,b){return Z().useCallback(a,b);};exports.useContext=function(a,b){return Z().useContext(a,b);};exports.useDebugValue=function(){};exports.useEffect=function(a,b){return Z().useEffect(a,b);};exports.useImperativeHandle=function(a,b,c){return Z().useImperativeHandle(a,b,c);};exports.useLayoutEffect=function(a,b){return Z().useLayoutEffect(a,b);};exports.useMemo=function(a,b){return Z().useMemo(a,b);};exports.useReducer=function(a,b,c){return Z().useReducer(a,b,c);};exports.useRef=function(a){return Z().useRef(a);};exports.useState=function(a){return Z().useState(a);};exports.version="16.14.0";
+ */function _typeof(obj){"@babel/helpers - typeof";if(typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"){_typeof=function _typeof(obj){return typeof obj;};}else{_typeof=function _typeof(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};}return _typeof(obj);}var l=__webpack_require__(10),n="function"===typeof Symbol&&Symbol.for,p=n?Symbol.for("react.element"):60103,q=n?Symbol.for("react.portal"):60106,r=n?Symbol.for("react.fragment"):60107,t=n?Symbol.for("react.strict_mode"):60108,u=n?Symbol.for("react.profiler"):60114,v=n?Symbol.for("react.provider"):60109,w=n?Symbol.for("react.context"):60110,x=n?Symbol.for("react.forward_ref"):60112,y=n?Symbol.for("react.suspense"):60113,z=n?Symbol.for("react.memo"):60115,A=n?Symbol.for("react.lazy"):60116,B="function"===typeof Symbol&&Symbol.iterator;function C(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++){b+="&args[]="+encodeURIComponent(arguments[c]);}return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.";}var D={isMounted:function isMounted(){return!1;},enqueueForceUpdate:function enqueueForceUpdate(){},enqueueReplaceState:function enqueueReplaceState(){},enqueueSetState:function enqueueSetState(){}},E={};function F(a,b,c){this.props=a;this.context=b;this.refs=E;this.updater=c||D;}F.prototype.isReactComponent={};F.prototype.setState=function(a,b){if("object"!==_typeof(a)&&"function"!==typeof a&&null!=a)throw Error(C(85));this.updater.enqueueSetState(this,a,b,"setState");};F.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate");};function G(){}G.prototype=F.prototype;function H(a,b,c){this.props=a;this.context=b;this.refs=E;this.updater=c||D;}var I=H.prototype=new G();I.constructor=H;l(I,F.prototype);I.isPureReactComponent=!0;var J={current:null},K=Object.prototype.hasOwnProperty,L={key:!0,ref:!0,__self:!0,__source:!0};function M(a,b,c){var e,d={},g=null,k=null;if(null!=b)for(e in void 0!==b.ref&&(k=b.ref),void 0!==b.key&&(g=""+b.key),b){K.call(b,e)&&!L.hasOwnProperty(e)&&(d[e]=b[e]);}var f=arguments.length-2;if(1===f)d.children=c;else if(1<f){for(var h=Array(f),m=0;m<f;m++){h[m]=arguments[m+2];}d.children=h;}if(a&&a.defaultProps)for(e in f=a.defaultProps,f){void 0===d[e]&&(d[e]=f[e]);}return{$$typeof:p,type:a,key:g,ref:k,props:d,_owner:J.current};}function N(a,b){return{$$typeof:p,type:a.type,key:b,ref:a.ref,props:a.props,_owner:a._owner};}function O(a){return"object"===_typeof(a)&&null!==a&&a.$$typeof===p;}function escape(a){var b={"=":"=0",":":"=2"};return"$"+(""+a).replace(/[=:]/g,function(a){return b[a];});}var P=/\/+/g,Q=[];function R(a,b,c,e){if(Q.length){var d=Q.pop();d.result=a;d.keyPrefix=b;d.func=c;d.context=e;d.count=0;return d;}return{result:a,keyPrefix:b,func:c,context:e,count:0};}function S(a){a.result=null;a.keyPrefix=null;a.func=null;a.context=null;a.count=0;10>Q.length&&Q.push(a);}function T(a,b,c,e){var d=_typeof(a);if("undefined"===d||"boolean"===d)a=null;var g=!1;if(null===a)g=!0;else switch(d){case"string":case"number":g=!0;break;case"object":switch(a.$$typeof){case p:case q:g=!0;}}if(g)return c(e,a,""===b?"."+U(a,0):b),1;g=0;b=""===b?".":b+":";if(Array.isArray(a))for(var k=0;k<a.length;k++){d=a[k];var f=b+U(d,k);g+=T(d,f,c,e);}else if(null===a||"object"!==_typeof(a)?f=null:(f=B&&a[B]||a["@@iterator"],f="function"===typeof f?f:null),"function"===typeof f)for(a=f.call(a),k=0;!(d=a.next()).done;){d=d.value,f=b+U(d,k++),g+=T(d,f,c,e);}else if("object"===d)throw c=""+a,Error(C(31,"[object Object]"===c?"object with keys {"+Object.keys(a).join(", ")+"}":c,""));return g;}function V(a,b,c){return null==a?0:T(a,"",b,c);}function U(a,b){return"object"===_typeof(a)&&null!==a&&null!=a.key?escape(a.key):b.toString(36);}function W(a,b){a.func.call(a.context,b,a.count++);}function aa(a,b,c){var e=a.result,d=a.keyPrefix;a=a.func.call(a.context,b,a.count++);Array.isArray(a)?X(a,e,c,function(a){return a;}):null!=a&&(O(a)&&(a=N(a,d+(!a.key||b&&b.key===a.key?"":(""+a.key).replace(P,"$&/")+"/")+c)),e.push(a));}function X(a,b,c,e,d){var g="";null!=c&&(g=(""+c).replace(P,"$&/")+"/");b=R(b,g,e,d);V(a,aa,b);S(b);}var Y={current:null};function Z(){var a=Y.current;if(null===a)throw Error(C(321));return a;}var ba={ReactCurrentDispatcher:Y,ReactCurrentBatchConfig:{suspense:null},ReactCurrentOwner:J,IsSomeRendererActing:{current:!1},assign:l};exports.Children={map:function map(a,b,c){if(null==a)return a;var e=[];X(a,e,null,b,c);return e;},forEach:function forEach(a,b,c){if(null==a)return a;b=R(null,null,b,c);V(a,W,b);S(b);},count:function count(a){return V(a,function(){return null;},null);},toArray:function toArray(a){var b=[];X(a,b,null,function(a){return a;});return b;},only:function only(a){if(!O(a))throw Error(C(143));return a;}};exports.Component=F;exports.Fragment=r;exports.Profiler=u;exports.PureComponent=H;exports.StrictMode=t;exports.Suspense=y;exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED=ba;exports.cloneElement=function(a,b,c){if(null===a||void 0===a)throw Error(C(267,a));var e=l({},a.props),d=a.key,g=a.ref,k=a._owner;if(null!=b){void 0!==b.ref&&(g=b.ref,k=J.current);void 0!==b.key&&(d=""+b.key);if(a.type&&a.type.defaultProps)var f=a.type.defaultProps;for(h in b){K.call(b,h)&&!L.hasOwnProperty(h)&&(e[h]=void 0===b[h]&&void 0!==f?f[h]:b[h]);}}var h=arguments.length-2;if(1===h)e.children=c;else if(1<h){f=Array(h);for(var m=0;m<h;m++){f[m]=arguments[m+2];}e.children=f;}return{$$typeof:p,type:a.type,key:d,ref:g,props:e,_owner:k};};exports.createContext=function(a,b){void 0===b&&(b=null);a={$$typeof:w,_calculateChangedBits:b,_currentValue:a,_currentValue2:a,_threadCount:0,Provider:null,Consumer:null};a.Provider={$$typeof:v,_context:a};return a.Consumer=a;};exports.createElement=M;exports.createFactory=function(a){var b=M.bind(null,a);b.type=a;return b;};exports.createRef=function(){return{current:null};};exports.forwardRef=function(a){return{$$typeof:x,render:a};};exports.isValidElement=O;exports.lazy=function(a){return{$$typeof:A,_ctor:a,_status:-1,_result:null};};exports.memo=function(a,b){return{$$typeof:z,type:a,compare:void 0===b?null:b};};exports.useCallback=function(a,b){return Z().useCallback(a,b);};exports.useContext=function(a,b){return Z().useContext(a,b);};exports.useDebugValue=function(){};exports.useEffect=function(a,b){return Z().useEffect(a,b);};exports.useImperativeHandle=function(a,b,c){return Z().useImperativeHandle(a,b,c);};exports.useLayoutEffect=function(a,b){return Z().useLayoutEffect(a,b);};exports.useMemo=function(a,b){return Z().useMemo(a,b);};exports.useReducer=function(a,b,c){return Z().useReducer(a,b,c);};exports.useRef=function(a){return Z().useRef(a);};exports.useState=function(a){return Z().useState(a);};exports.version="16.14.0";
 
 /***/ }),
-/* 18 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* istanbul ignore next */
-if(true){module.exports=__webpack_require__(19);}else{}
+if(true){module.exports=__webpack_require__(21);}else{}
 
 /***/ }),
-/* 19 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2137,7 +4645,7 @@ if(true){module.exports=__webpack_require__(19);}else{}
  */function _typeof(obj){"@babel/helpers - typeof";if(typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"){_typeof=function _typeof(obj){return typeof obj;};}else{_typeof=function _typeof(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};}return _typeof(obj);}var _f,g,h,k;if("object"===(typeof performance==="undefined"?"undefined":_typeof(performance))&&"function"===typeof performance.now){var l=performance;exports.unstable_now=function(){return l.now();};}else{var p=Date,q=p.now();exports.unstable_now=function(){return p.now()-q;};}if("undefined"===typeof window||"function"!==typeof MessageChannel){var t=null,u=null,w=function w(){if(null!==t)try{var a=exports.unstable_now();t(!0,a);t=null;}catch(b){throw setTimeout(w,0),b;}};_f=function f(a){null!==t?setTimeout(_f,0,a):(t=a,setTimeout(w,0));};g=function g(a,b){u=setTimeout(a,b);};h=function h(){clearTimeout(u);};exports.unstable_shouldYield=function(){return!1;};k=exports.unstable_forceFrameRate=function(){};}else{var x=window.setTimeout,y=window.clearTimeout;if("undefined"!==typeof console){var z=window.cancelAnimationFrame;"function"!==typeof window.requestAnimationFrame&&console.error("This browser doesn't support requestAnimationFrame. Make sure that you load a polyfill in older browsers. https://reactjs.org/link/react-polyfills");"function"!==typeof z&&console.error("This browser doesn't support cancelAnimationFrame. Make sure that you load a polyfill in older browsers. https://reactjs.org/link/react-polyfills");}var A=!1,B=null,C=-1,D=5,E=0;exports.unstable_shouldYield=function(){return exports.unstable_now()>=E;};k=function k(){};exports.unstable_forceFrameRate=function(a){0>a||125<a?console.error("forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported"):D=0<a?Math.floor(1E3/a):5;};var F=new MessageChannel(),G=F.port2;F.port1.onmessage=function(){if(null!==B){var a=exports.unstable_now();E=a+D;try{B(!0,a)?G.postMessage(null):(A=!1,B=null);}catch(b){throw G.postMessage(null),b;}}else A=!1;};_f=function _f(a){B=a;A||(A=!0,G.postMessage(null));};g=function g(a,b){C=x(function(){a(exports.unstable_now());},b);};h=function h(){y(C);C=-1;};}function H(a,b){var c=a.length;a.push(b);a:for(;;){var d=c-1>>>1,e=a[d];if(void 0!==e&&0<I(e,b))a[d]=b,a[c]=e,c=d;else break a;}}function J(a){a=a[0];return void 0===a?null:a;}function K(a){var b=a[0];if(void 0!==b){var c=a.pop();if(c!==b){a[0]=c;a:for(var d=0,e=a.length;d<e;){var m=2*(d+1)-1,n=a[m],v=m+1,r=a[v];if(void 0!==n&&0>I(n,c))void 0!==r&&0>I(r,n)?(a[d]=r,a[v]=c,d=v):(a[d]=n,a[m]=c,d=m);else if(void 0!==r&&0>I(r,c))a[d]=r,a[v]=c,d=v;else break a;}}return b;}return null;}function I(a,b){var c=a.sortIndex-b.sortIndex;return 0!==c?c:a.id-b.id;}var L=[],M=[],N=1,O=null,P=3,Q=!1,R=!1,S=!1;function T(a){for(var b=J(M);null!==b;){if(null===b.callback)K(M);else if(b.startTime<=a)K(M),b.sortIndex=b.expirationTime,H(L,b);else break;b=J(M);}}function U(a){S=!1;T(a);if(!R)if(null!==J(L))R=!0,_f(V);else{var b=J(M);null!==b&&g(U,b.startTime-a);}}function V(a,b){R=!1;S&&(S=!1,h());Q=!0;var c=P;try{T(b);for(O=J(L);null!==O&&(!(O.expirationTime>b)||a&&!exports.unstable_shouldYield());){var d=O.callback;if("function"===typeof d){O.callback=null;P=O.priorityLevel;var e=d(O.expirationTime<=b);b=exports.unstable_now();"function"===typeof e?O.callback=e:O===J(L)&&K(L);T(b);}else K(L);O=J(L);}if(null!==O)var m=!0;else{var n=J(M);null!==n&&g(U,n.startTime-b);m=!1;}return m;}finally{O=null,P=c,Q=!1;}}var W=k;exports.unstable_IdlePriority=5;exports.unstable_ImmediatePriority=1;exports.unstable_LowPriority=4;exports.unstable_NormalPriority=3;exports.unstable_Profiling=null;exports.unstable_UserBlockingPriority=2;exports.unstable_cancelCallback=function(a){a.callback=null;};exports.unstable_continueExecution=function(){R||Q||(R=!0,_f(V));};exports.unstable_getCurrentPriorityLevel=function(){return P;};exports.unstable_getFirstCallbackNode=function(){return J(L);};exports.unstable_next=function(a){switch(P){case 1:case 2:case 3:var b=3;break;default:b=P;}var c=P;P=b;try{return a();}finally{P=c;}};exports.unstable_pauseExecution=function(){};exports.unstable_requestPaint=W;exports.unstable_runWithPriority=function(a,b){switch(a){case 1:case 2:case 3:case 4:case 5:break;default:a=3;}var c=P;P=a;try{return b();}finally{P=c;}};exports.unstable_scheduleCallback=function(a,b,c){var d=exports.unstable_now();"object"===_typeof(c)&&null!==c?(c=c.delay,c="number"===typeof c&&0<c?d+c:d):c=d;switch(a){case 1:var e=-1;break;case 2:e=250;break;case 5:e=1073741823;break;case 4:e=1E4;break;default:e=5E3;}e=c+e;a={id:N++,callback:b,priorityLevel:a,startTime:c,expirationTime:e,sortIndex:-1};c>d?(a.sortIndex=c,H(M,a),null===J(L)&&a===J(M)&&(S?h():S=!0,g(U,c-d))):(a.sortIndex=e,H(L,a),R||Q||(R=!0,_f(V)));return a;};exports.unstable_wrapCallback=function(a){var b=P;return function(){var c=P;P=b;try{return a.apply(this,arguments);}finally{P=c;}};};
 
 /***/ }),
-/* 20 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2152,7 +4660,7 @@ if(true){module.exports=__webpack_require__(19);}else{}
  */function _typeof(obj){"@babel/helpers - typeof";if(typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"){_typeof=function _typeof(obj){return typeof obj;};}else{_typeof=function _typeof(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};}return _typeof(obj);}var _f,g,h,k,l;if("undefined"===typeof window||"function"!==typeof MessageChannel){var p=null,q=null,t=function t(){if(null!==p)try{var a=exports.unstable_now();p(!0,a);p=null;}catch(b){throw setTimeout(t,0),b;}},u=Date.now();exports.unstable_now=function(){return Date.now()-u;};_f=function f(a){null!==p?setTimeout(_f,0,a):(p=a,setTimeout(t,0));};g=function g(a,b){q=setTimeout(a,b);};h=function h(){clearTimeout(q);};k=function k(){return!1;};l=exports.unstable_forceFrameRate=function(){};}else{var w=window.performance,x=window.Date,y=window.setTimeout,z=window.clearTimeout;if("undefined"!==typeof console){var A=window.cancelAnimationFrame;"function"!==typeof window.requestAnimationFrame&&console.error("This browser doesn't support requestAnimationFrame. Make sure that you load a polyfill in older browsers. https://fb.me/react-polyfills");"function"!==typeof A&&console.error("This browser doesn't support cancelAnimationFrame. Make sure that you load a polyfill in older browsers. https://fb.me/react-polyfills");}if("object"===_typeof(w)&&"function"===typeof w.now)exports.unstable_now=function(){return w.now();};else{var B=x.now();exports.unstable_now=function(){return x.now()-B;};}var C=!1,D=null,E=-1,F=5,G=0;k=function k(){return exports.unstable_now()>=G;};l=function l(){};exports.unstable_forceFrameRate=function(a){0>a||125<a?console.error("forceFrameRate takes a positive int between 0 and 125, forcing framerates higher than 125 fps is not unsupported"):F=0<a?Math.floor(1E3/a):5;};var H=new MessageChannel(),I=H.port2;H.port1.onmessage=function(){if(null!==D){var a=exports.unstable_now();G=a+F;try{D(!0,a)?I.postMessage(null):(C=!1,D=null);}catch(b){throw I.postMessage(null),b;}}else C=!1;};_f=function _f(a){D=a;C||(C=!0,I.postMessage(null));};g=function g(a,b){E=y(function(){a(exports.unstable_now());},b);};h=function h(){z(E);E=-1;};}function J(a,b){var c=a.length;a.push(b);a:for(;;){var d=c-1>>>1,e=a[d];if(void 0!==e&&0<K(e,b))a[d]=b,a[c]=e,c=d;else break a;}}function L(a){a=a[0];return void 0===a?null:a;}function M(a){var b=a[0];if(void 0!==b){var c=a.pop();if(c!==b){a[0]=c;a:for(var d=0,e=a.length;d<e;){var m=2*(d+1)-1,n=a[m],v=m+1,r=a[v];if(void 0!==n&&0>K(n,c))void 0!==r&&0>K(r,n)?(a[d]=r,a[v]=c,d=v):(a[d]=n,a[m]=c,d=m);else if(void 0!==r&&0>K(r,c))a[d]=r,a[v]=c,d=v;else break a;}}return b;}return null;}function K(a,b){var c=a.sortIndex-b.sortIndex;return 0!==c?c:a.id-b.id;}var N=[],O=[],P=1,Q=null,R=3,S=!1,T=!1,U=!1;function V(a){for(var b=L(O);null!==b;){if(null===b.callback)M(O);else if(b.startTime<=a)M(O),b.sortIndex=b.expirationTime,J(N,b);else break;b=L(O);}}function W(a){U=!1;V(a);if(!T)if(null!==L(N))T=!0,_f(X);else{var b=L(O);null!==b&&g(W,b.startTime-a);}}function X(a,b){T=!1;U&&(U=!1,h());S=!0;var c=R;try{V(b);for(Q=L(N);null!==Q&&(!(Q.expirationTime>b)||a&&!k());){var d=Q.callback;if(null!==d){Q.callback=null;R=Q.priorityLevel;var e=d(Q.expirationTime<=b);b=exports.unstable_now();"function"===typeof e?Q.callback=e:Q===L(N)&&M(N);V(b);}else M(N);Q=L(N);}if(null!==Q)var m=!0;else{var n=L(O);null!==n&&g(W,n.startTime-b);m=!1;}return m;}finally{Q=null,R=c,S=!1;}}function Y(a){switch(a){case 1:return-1;case 2:return 250;case 5:return 1073741823;case 4:return 1E4;default:return 5E3;}}var Z=l;exports.unstable_IdlePriority=5;exports.unstable_ImmediatePriority=1;exports.unstable_LowPriority=4;exports.unstable_NormalPriority=3;exports.unstable_Profiling=null;exports.unstable_UserBlockingPriority=2;exports.unstable_cancelCallback=function(a){a.callback=null;};exports.unstable_continueExecution=function(){T||S||(T=!0,_f(X));};exports.unstable_getCurrentPriorityLevel=function(){return R;};exports.unstable_getFirstCallbackNode=function(){return L(N);};exports.unstable_next=function(a){switch(R){case 1:case 2:case 3:var b=3;break;default:b=R;}var c=R;R=b;try{return a();}finally{R=c;}};exports.unstable_pauseExecution=function(){};exports.unstable_requestPaint=Z;exports.unstable_runWithPriority=function(a,b){switch(a){case 1:case 2:case 3:case 4:case 5:break;default:a=3;}var c=R;R=a;try{return b();}finally{R=c;}};exports.unstable_scheduleCallback=function(a,b,c){var d=exports.unstable_now();if("object"===_typeof(c)&&null!==c){var e=c.delay;e="number"===typeof e&&0<e?d+e:d;c="number"===typeof c.timeout?c.timeout:Y(a);}else c=Y(a),e=d;c=e+c;a={id:P++,callback:b,priorityLevel:a,startTime:e,expirationTime:c,sortIndex:-1};e>d?(a.sortIndex=e,J(O,a),null===L(N)&&a===L(O)&&(U?h():U=!0,g(W,e-d))):(a.sortIndex=c,J(N,a),T||S||(T=!0,_f(X)));return a;};exports.unstable_shouldYield=function(){var a=exports.unstable_now();V(a);var b=L(N);return b!==Q&&null!==Q&&null!==b&&null!==b.callback&&b.startTime<=a&&b.expirationTime<Q.expirationTime||k();};exports.unstable_wrapCallback=function(a){var b=R;return function(){var c=R;R=b;try{return a.apply(this,arguments);}finally{R=c;}};};
 
 /***/ }),
-/* 21 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2167,7 +4675,7 @@ if(true){module.exports=__webpack_require__(19);}else{}
  */function _typeof(obj){"@babel/helpers - typeof";if(typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"){_typeof=function _typeof(obj){return typeof obj;};}else{_typeof=function _typeof(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};}return _typeof(obj);}var b="function"===typeof Symbol&&Symbol.for,c=b?Symbol.for("react.element"):60103,d=b?Symbol.for("react.portal"):60106,e=b?Symbol.for("react.fragment"):60107,f=b?Symbol.for("react.strict_mode"):60108,g=b?Symbol.for("react.profiler"):60114,h=b?Symbol.for("react.provider"):60109,k=b?Symbol.for("react.context"):60110,l=b?Symbol.for("react.async_mode"):60111,m=b?Symbol.for("react.concurrent_mode"):60111,n=b?Symbol.for("react.forward_ref"):60112,p=b?Symbol.for("react.suspense"):60113,q=b?Symbol.for("react.suspense_list"):60120,r=b?Symbol.for("react.memo"):60115,t=b?Symbol.for("react.lazy"):60116,v=b?Symbol.for("react.block"):60121,w=b?Symbol.for("react.fundamental"):60117,x=b?Symbol.for("react.responder"):60118,y=b?Symbol.for("react.scope"):60119;function z(a){if("object"===_typeof(a)&&null!==a){var u=a.$$typeof;switch(u){case c:switch(a=a.type,a){case l:case m:case e:case g:case f:case p:return a;default:switch(a=a&&a.$$typeof,a){case k:case n:case t:case r:case h:return a;default:return u;}}case d:return u;}}}function A(a){return z(a)===m;}exports.AsyncMode=l;exports.ConcurrentMode=m;exports.ContextConsumer=k;exports.ContextProvider=h;exports.Element=c;exports.ForwardRef=n;exports.Fragment=e;exports.Lazy=t;exports.Memo=r;exports.Portal=d;exports.Profiler=g;exports.StrictMode=f;exports.Suspense=p;exports.isAsyncMode=function(a){return A(a)||z(a)===l;};exports.isConcurrentMode=A;exports.isContextConsumer=function(a){return z(a)===k;};exports.isContextProvider=function(a){return z(a)===h;};exports.isElement=function(a){return"object"===_typeof(a)&&null!==a&&a.$$typeof===c;};exports.isForwardRef=function(a){return z(a)===n;};exports.isFragment=function(a){return z(a)===e;};exports.isLazy=function(a){return z(a)===t;};exports.isMemo=function(a){return z(a)===r;};exports.isPortal=function(a){return z(a)===d;};exports.isProfiler=function(a){return z(a)===g;};exports.isStrictMode=function(a){return z(a)===f;};exports.isSuspense=function(a){return z(a)===p;};exports.isValidElementType=function(a){return"string"===typeof a||"function"===typeof a||a===e||a===m||a===g||a===f||a===p||a===q||"object"===_typeof(a)&&null!==a&&(a.$$typeof===t||a.$$typeof===r||a.$$typeof===h||a.$$typeof===k||a.$$typeof===n||a.$$typeof===w||a.$$typeof===x||a.$$typeof===y||a.$$typeof===v);};exports.typeOf=z;
 
 /***/ }),
-/* 22 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2176,11 +4684,12 @@ var __read=this&&this.__read||function(o,n){var m=typeof Symbol==="function"&&o[
 
 /***/ })
 ]]);
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 
     var _appConfig = {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/test/index"
   ],
   "window": {
     "navigationBarTitleText": "Remax Wechat Template",
@@ -2358,4 +4867,4 @@ var __read=this&&this.__read||function(o,n){var m=typeof Symbol==="function"&&o[
 /******/ })
 /************************************************************************/
 /******/ ([]);
-},{}]},{},[2,3]);
+},{}]},{},[2,3,4]);

@@ -6,10 +6,13 @@ function onLoad(config) {
     config.methods.onLoad(config);
   }
 }
+
 // 生命周期 - 初始化
 function onCreate(config) {
   config.created && config.created(config);
 }
+
+// 获取路由
 function getRouter() {
   return _global["appConfig"].pages.map((e) => {
     return {
@@ -34,7 +37,11 @@ function getRouter() {
     };
   });
 }
+
+// 返回路由数据
 const routerData = getRouter();
+
+// 初始化vue
 var app = new Vue({
   el: "#app",
   router: new VueRouter({

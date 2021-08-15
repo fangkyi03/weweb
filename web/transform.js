@@ -151,6 +151,40 @@ function scanImport(files, templateList) {
   })
 }
 
+// 获取wxs文件模板
+function getWXS(wxs) {
+  const data = "`var module = {exports:{}};" + wxs.children[0].data + "`";
+  return `
+    var ${wxs.attribs.module} = eval(${data})
+  `;
+}
+
+// 获取组件模板数据
+function getComponentTemplateText(item) {
+  const { attribs = {}, children = [] } = item || {};
+  const { name } = attribs || {};
+  return `
+    Vue.component('${name}',{
+      props:['data'],
+      data(){
+          return this.$props.data
+      },
+      template:'<div class="app">13123</div>'
+    });
+  `
+}
+
+// 扫描顶级模板数据
+function scanParentTemplate(templateList, templateTextList) {
+  templateList.forEach((e)=>{
+    if (e.name == 'wxs') {
+      templateTextList.push(getWXS(e))
+    }else if (e.name == 'template' && e.attribs.name) {
+      templateTextList.push(getComponentTemplateText(e))
+    }
+  })
+}
+
 module.exports = function (files, opts) {
   var data = "";
   return through(write, end);
@@ -165,6 +199,7 @@ module.exports = function (files, opts) {
     let firstTemplate = null
     if (isPage) {
       scanImport(wxmlPathConvert(files), templateList)
+      scanParentTemplate(templateList, templateTextList)
       if (templateList.length > 0) {
         firstTemplate = templateList[0]
       }
@@ -179,6 +214,7 @@ module.exports = function (files, opts) {
       addAppConfig(),
       addPageConfig(files),
       addComponentConfig(files),
+      templateTextList.length > 0 && templateTextList.join('\n').toString(),
       data.replace(/require\('\//g, `require('./`)
     ])
     fileCache[files] = text.join('\n').toString()
