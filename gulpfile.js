@@ -96,6 +96,7 @@ gulp.task('css',()=>{
 // 初始化taro路径
 gulp.task('initTARO_PATH',(cb)=> {
     rootPath = path.join(process.cwd(),'taro')
+    process.env.rootPath = path.join(rootPath,'dist')
     cb()
 })
 

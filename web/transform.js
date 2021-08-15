@@ -116,7 +116,7 @@ function wxmlPathConvert(filePath,parent) {
     if (filePath[0] == '/') {
      return path.join(getRootPATH(),filePath) 
     }else {
-      return path.join(parent,filePath)
+      return path.join(parent,'../',filePath)
     }
   }else {
     return currentPATH
@@ -164,13 +164,7 @@ function getComponentTemplateText(item) {
   const { attribs = {}, children = [] } = item || {};
   const { name } = attribs || {};
   return `
-    Vue.component('${name}',{
-      props:['data'],
-      data(){
-          return this.$props.data
-      },
-      template:'<div class="app">13123</div>'
-    });
+    registerComponent('${name}','<div class="app">11111</div>');
   `
 }
 
@@ -215,9 +209,9 @@ module.exports = function (files, opts) {
       addPageConfig(files),
       addComponentConfig(files),
       templateTextList.length > 0 && templateTextList.join('\n').toString(),
-      data.replace(/require\('\//g, `require('./`)
     ])
-    fileCache[files] = text.join('\n').toString()
+    const content = data.replace(/require\('\//g, `require('./`)
+    fileCache[files] = text.join('\n').toString() + content
     this.queue(fileCache[files])
     this.queue(null)
   }

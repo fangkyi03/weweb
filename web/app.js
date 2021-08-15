@@ -1,3 +1,13 @@
+var registerComponent = (name,template) => {
+  Vue.component(name,{
+    props:['data'],
+    data(){
+        return this.$props.data
+    },
+    template,
+  })
+}
+
 var getCurrentPages = function () {
   return [{ route: "pages/home/index" }];
 };
