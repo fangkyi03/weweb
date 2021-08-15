@@ -12,12 +12,11 @@ var _globalPage = (pagePath, config, template) => {
   };
 };
 var _global = {};
-var _globalApp = (path, _appConfig) => {
+var _globalApp = (_appConfig) => {
   _global["appConfig"] = _appConfig;
 };
 var _globalComponent = (path, config, template) => {
-  const pagePath = path.replace(".js", "").split("/").slice(-3).join("/");
-  _pageObj[pagePath] = {
+  _pageObj[path] = {
     path,
     config,
     template,

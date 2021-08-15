@@ -164,18 +164,18 @@ module.exports = function (files, opts) {
       _appConfig = fs.readFileSync(path.join(process.cwd(),'remax/dist/app.json'), "utf-8");
       // _appConfig = fs.readFileSync('../ztesa-wechat-ynx/dist/app.json','utf-8')
     }
+    const filesPath = files.replace('.js', '').split('/').slice(-3).join('/')
     var temp = `
             var _appConfig = ${_appConfig}
             ${prettier.format(template)}
             var App = (appData)=> {
-                return _globalApp("${files}",_appConfig)
+                return _globalApp(_appConfig)
             }
             var Page = (config) => {
-                const path = "${files}".replace('.js', '').split('/').slice(-3).join('/')
-                return _globalPage(path,config,'<div class="app" v-bind:data="{root: root}">123123</div>')
+                return _globalPage("${filesPath}",config,'<div class="app" v-bind:data="{root: root}">123123</div>')
             }
             var Component = (config) => {
-                return _globalComponent("${files}",config,template)
+                return _globalComponent("${filesPath}",config,template)
             }
         `;
     let text = temp + data.toString().replace(/require\('\//g, `require('./`)
