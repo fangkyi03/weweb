@@ -202,6 +202,7 @@ function getTemplateFile() {
 
 module.exports = function (files, opts) {
   var data = "";
+  console.log('files',files)
   return through(write, end);
   function write(buf) {
     data += buf;
@@ -214,32 +215,24 @@ module.exports = function (files, opts) {
     const templateList = []
     const templateTextList = []
     let firstTemplate = null
-    if (fileCache[files]) {
-      this.queue(fileCache[files])
-      this.queue(null)
-      return
-    }
-    console.log('files',files)
     if (isJson) {
-      fileCache[files] =  data
-      this.queue(fileCache[files])
+      this.queue(data)
       this.queue(null)
       return
     }
     if (isWxml) {
-      fileCache[files] =  getTemplateFile(files,data)
-      this.queue(fileCache[files])
+      this.queue(getTemplateFile(files,data))
       this.queue(null)
       return
     }
-    if (isPage) {
-      scanImport(wxmlPathConvert(files), templateList)
-      scanParentTemplate(templateList, templateTextList)
-      if (templateList.length > 0) {
-        const index = templateList.findIndex((e)=>e.name == 'template')
-        firstTemplate = templateList[index]
-      }
-    }
+    // if (isPage) {
+    //   scanImport(wxmlPathConvert(files), templateList)
+    //   scanParentTemplate(templateList, templateTextList)
+    //   if (templateList.length > 0) {
+    //     const index = templateList.findIndex((e)=>e.name == 'template')
+    //     firstTemplate = templateList[index]
+    //   }
+    // }
     const text = execute([
       addInitConfig(files,firstTemplate),
       isApp && addAppConfig(),
@@ -247,9 +240,8 @@ module.exports = function (files, opts) {
       addComponentConfig(files),
       templateTextList.length > 0 && templateTextList.join('\n').toString(),
     ])
-    const content = data.replace(/require\('\//g, `require('./`)
-    fileCache[files] = text.join('\n').toString() + content
-    this.queue(fileCache[files])
+    const content = text.join('\n').toString()  + data.replace(/require\('\//g, `require('./`)
+    this.queue(content)
     this.queue(null)
   }
 }; 

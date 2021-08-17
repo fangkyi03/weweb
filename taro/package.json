@@ -33,11 +33,6 @@
     "Android >= 4.1",
     "ios >= 8"
   ],
-  "browserify": {
-    "transform": [
-      "../web/transform"
-    ]
-  },
   "author": "",
   "dependencies": {
     "@babel/runtime": "^7.7.7",

@@ -4,7 +4,7 @@ var through = require('through')
 var fs = require('fs')
 var JsConfuser = require("js-confuser");
 var browserify = require('browserify')
-const b = browserify()
+const b = browserify({basedir:process.cwd(),commondir:true,browserField:false})
 // var browserify = require('gulp-browserify');
 var uglify = require('gulp-uglify')
 //调用js文件合并插件
@@ -73,12 +73,13 @@ function browserifyTask() {
 gulp.task('importAllJS',()=>{
     const pageConfig = ['app.js','pages/**/*.js']
     const pagePath = pageConfig.map((e)=> path.join(rootPath,'dist',e))
-    return gulp.src(pagePath)
+    return gulp.src(pagePath,{ since: gulp.lastRun('importAllJS') })
     .pipe(browserifyTask())
 })
 
 gulp.task('bundleJS',()=>{
     const tempOutPATH = path.join(outPath,'js','dist.js')
+    console.log('文件转换')
     return b.transform('./web/transform.js')
     .bundle()
     .pipe(out(tempOutPATH))
@@ -109,7 +110,7 @@ gulp.task('initREMAX_PATH',(cb)=> {
 
 // 注入文件
 gulp.task('inject',()=>{
-    return gulp.src(['web/*.js','!web/transform.js'])
+    return gulp.src(['web/*.js','!web/transform.js'],{ since: gulp.lastRun('inject') })
     // .pipe(confuser())
     .pipe(gulp.dest(path.join(outPath,'js')))
 })

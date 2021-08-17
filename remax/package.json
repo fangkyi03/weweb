@@ -17,11 +17,6 @@
     "Android >= 4.1",
     "ios >= 8"
   ],
-  "browserify": {
-    "transform": [
-      "../web/transform"
-    ]
-  },
   "dependencies": {
     "react": "^16.14.0",
     "remax": "^2.9.1"
