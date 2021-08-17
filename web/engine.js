@@ -12,6 +12,11 @@ function onCreate(config) {
   config.created && config.created(config);
 }
 
+// 生命周期 - 每次页面显示时候调用
+function onShow(config) {
+  config.onShow && config.onShow(config)
+}
+
 // 获取路由
 function getRouter() {
   return _global["appConfig"].pages.map((e) => {
@@ -32,6 +37,7 @@ function getRouter() {
           const config = _pageObj[e].config;
           onCreate(config);
           onLoad(config);
+          onShow(config)
         },
       },
     };

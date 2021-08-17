@@ -18,11 +18,6 @@
     }
   
 
-    var Page = (config) => {
-      return _globalPage(pagePath,config,templateText)
-    }
-  
-
     var Component = (config) => {
       return _globalComponent(pagePath,config,templateText)
     }
@@ -991,11 +986,6 @@
 
     var App = (appData)=> {
       return _globalApp(_appConfig)
-    }
-  
-
-    var Page = (config) => {
-      return _globalPage(pagePath,config,templateText)
     }
   
 
@@ -15055,7 +15045,11 @@ module.exports = __webpack_require__(/*! /Users/lv/Desktop/tarodemo/remax/src/ap
 /***/ })
 
 },[[0,"runtime","remax-vendors"]]]);
-},{"./__remax_runtime_options__":1,"./remax-vendors.js":5,"./runtime.js":6}],3:[function(require,module,exports){
+},{"./__remax_runtime_options__":1,"./remax-vendors.js":9,"./runtime.js":10}],3:[function(require,module,exports){
+module.exports={
+  "usingComponents": {}
+}
+},{}],4:[function(require,module,exports){
 
     var _appConfig = {
   "pages": [
@@ -15077,6 +15071,9 @@ module.exports = __webpack_require__(/*! /Users/lv/Desktop/tarodemo/remax/src/ap
     }
   
 
+    var pageConfig = require('./index.json')
+    var wxml = require('./index.wxml')
+    console.log('pageConfig',pageConfig)
     var Page = (config) => {
       return _globalPage(pagePath,config,templateText)
     }
@@ -15681,7 +15678,13 @@ module.exports = __webpack_require__(/*! /Users/lv/Desktop/tarodemo/remax/src/pa
 /***/ })
 
 },[[1,"runtime","remax-vendors"]]]);
-},{"./../../remax-vendors.js":5,"./../../runtime.js":6}],4:[function(require,module,exports){
+},{"./../../remax-vendors.js":9,"./../../runtime.js":10,"./index.json":3,"./index.wxml":5}],5:[function(require,module,exports){
+
+    console.log('wxml执行')
+  
+},{}],6:[function(require,module,exports){
+arguments[4][3][0].apply(exports,arguments)
+},{"dup":3}],7:[function(require,module,exports){
 
     var _appConfig = {
   "pages": [
@@ -15703,6 +15706,9 @@ module.exports = __webpack_require__(/*! /Users/lv/Desktop/tarodemo/remax/src/pa
     }
   
 
+    var pageConfig = require('./index.json')
+    var wxml = require('./index.wxml')
+    console.log('pageConfig',pageConfig)
     var Page = (config) => {
       return _globalPage(pagePath,config,templateText)
     }
@@ -16307,7 +16313,9 @@ module.exports = __webpack_require__(/*! /Users/lv/Desktop/tarodemo/remax/src/pa
 /***/ })
 
 },[[2,"runtime","remax-vendors"]]]);
-},{"./../../remax-vendors.js":5,"./../../runtime.js":6}],5:[function(require,module,exports){
+},{"./../../remax-vendors.js":9,"./../../runtime.js":10,"./index.json":6,"./index.wxml":8}],8:[function(require,module,exports){
+arguments[4][5][0].apply(exports,arguments)
+},{"dup":5}],9:[function(require,module,exports){
 
     var _appConfig = {
   "pages": [
@@ -16324,11 +16332,6 @@ module.exports = __webpack_require__(/*! /Users/lv/Desktop/tarodemo/remax/src/pa
 
     var App = (appData)=> {
       return _globalApp(_appConfig)
-    }
-  
-
-    var Page = (config) => {
-      return _globalPage(pagePath,config,templateText)
     }
   
 
@@ -46026,7 +46029,7 @@ module.exports = function (module) {
 /***/ })
 
 }]);
-},{}],6:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 
     var _appConfig = {
   "pages": [
@@ -46043,11 +46046,6 @@ module.exports = function (module) {
 
     var App = (appData)=> {
       return _globalApp(_appConfig)
-    }
-  
-
-    var Page = (config) => {
-      return _globalPage(pagePath,config,templateText)
     }
   
 
@@ -46208,4 +46206,4 @@ module.exports = function (module) {
 /******/ })
 /************************************************************************/
 /******/ ([]);
-},{}]},{},[2,3,4]);
+},{}]},{},[2,4,7]);

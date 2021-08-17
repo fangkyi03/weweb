@@ -5,7 +5,7 @@ import './index.less'
 export default class Index extends Component {
 
   componentWillMount () {
-    console.log('componentWillMount')
+    console.log('componentWillMount',window)
    }
 
   componentDidMount () {

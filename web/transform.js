@@ -12,6 +12,9 @@ var fileCache = {}
 // 添加页面模板
 function addPageConfig(files) {
   return `
+    var pageConfig = require('./index.json')
+    var wxml = require('./index.wxml')
+    console.log('pageConfig',pageConfig)
     var Page = (config) => {
       return _globalPage(pagePath,config,templateText)
     }
@@ -125,12 +128,13 @@ function wxmlPathConvert(filePath,parent) {
 
 // 获取文件内容
 function getFileContent(filePath) {
-  if (fileCache[filePath]) {
-    return fileCache[filePath]
-  }
-  var content = fs.readFileSync(filePath, 'utf8')
-  fileCache[filePath] = content
-  return content
+  return fs.readFileSync(filePath, 'utf8')
+  // if (fileCache[filePath]) {
+  //   return fileCache[filePath]
+  // }
+  // var content = fs.readFileSync(filePath, 'utf8')
+  // fileCache[filePath] = content
+  // return content
 }
 
 function getChildren(children = [],templateList,files) {
@@ -139,6 +143,14 @@ function getChildren(children = [],templateList,files) {
       getChildren(e.children,templateList,wxmlPathConvert(e.attribs.src,files))
       scanImport(wxmlPathConvert(e.attribs.src,files), templateList)
     }else if ((e.name == 'template') || e.name == 'wxs') {
+      if (e.name == 'wxs') {
+        if (e.attribs.src) {
+          const contenxt = fs.readFileSync(path.join(files,'../',e.attribs.src), 'utf8')
+          e.attribs.src = contenxt
+        }else {
+          e.attribs.src = e.children[0].data
+        }
+      }
       templateList.push(e)
       getChildren(e.children,templateList)
     }
@@ -153,7 +165,7 @@ function scanImport(files, templateList) {
 
 // 获取wxs文件模板
 function getWXS(wxs) {
-  const data = "`var module = {exports:{}};" + wxs.children[0].data + "`";
+  const data = "`var module = {exports:{}};" + wxs.attribs.src + "`";
   return `
     var ${wxs.attribs.module} = eval(${data})
   `;
@@ -179,18 +191,47 @@ function scanParentTemplate(templateList, templateTextList) {
   })
 }
 
+function getTemplateFile() {
+  return `
+    console.log('wxml执行')
+  `
+}
+
 module.exports = function (files, opts) {
   var data = "";
+  console.log('files',files)
   return through(write, end);
   function write(buf) {
     data += buf;
   }
-  function end() {
+  function end() {  
     const isPage = files.indexOf('pages') != -1
     const isApp = files.indexOf('app.js') != -1
+    const isJson = path.extname(files) == '.json'
+    const isWxml = path.extname(files) == '.wxml'
+    if (isWxml) {
+      console.log('wxml')
+    }
     const templateList = []
     const templateTextList = []
     let firstTemplate = null
+    if (fileCache[files]) {
+      this.queue(fileCache[files])
+      this.queue(null)
+      return
+    }
+    if (isJson) {
+      fileCache[files] =  data
+      this.queue(fileCache[files])
+      this.queue(null)
+      return
+    }
+    if (isWxml) {
+      fileCache[files] =  getTemplateFile(files,data)
+      this.queue(fileCache[files])
+      this.queue(null)
+      return
+    }
     if (isPage) {
       scanImport(wxmlPathConvert(files), templateList)
       scanParentTemplate(templateList, templateTextList)
@@ -199,15 +240,10 @@ module.exports = function (files, opts) {
         firstTemplate = templateList[index]
       }
     }
-    if (fileCache[files]) {
-      this.queue(fileCache[files])
-      this.queue(null)
-      return
-    }
     const text = execute([
       addInitConfig(files,firstTemplate),
       addAppConfig(),
-      addPageConfig(files),
+      isPage && addPageConfig(files),
       addComponentConfig(files),
       templateTextList.length > 0 && templateTextList.join('\n').toString(),
     ])
