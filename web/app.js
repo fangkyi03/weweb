@@ -8,7 +8,7 @@ window['registerComponent'] = (name,template) => {
   })
 }
 
-var getCurrentPages = function () {
+window['getCurrentPages'] = function () {
   return [{ route: "pages/home/index" }];
 };
 window['getApp'] = function () {};

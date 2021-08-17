@@ -202,7 +202,6 @@ function getTemplateFile() {
 
 module.exports = function (files, opts) {
   var data = "";
-  console.log('files',files)
   return through(write, end);
   function write(buf) {
     data += buf;
@@ -212,9 +211,6 @@ module.exports = function (files, opts) {
     const isApp = files.indexOf('app.js') != -1
     const isJson = path.extname(files) == '.json'
     const isWxml = path.extname(files) == '.wxml'
-    if (isWxml) {
-      console.log('wxml')
-    }
     const templateList = []
     const templateTextList = []
     let firstTemplate = null
@@ -223,6 +219,7 @@ module.exports = function (files, opts) {
       this.queue(null)
       return
     }
+    console.log('files',files)
     if (isJson) {
       fileCache[files] =  data
       this.queue(fileCache[files])
