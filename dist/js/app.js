@@ -1,4 +1,4 @@
-var registerComponent = (name,template) => {
+window['registerComponent'] = (name,template) => {
   Vue.component(name,{
     props:['data'],
     data(){
@@ -11,34 +11,34 @@ var registerComponent = (name,template) => {
 var getCurrentPages = function () {
   return [{ route: "pages/home/index" }];
 };
-var getApp = function () {};
-var requirePlugin = function () {};
-var _pageObj = {};
-var _globalPage = (pagePath, config, template) => {
+window['getApp'] = function () {};
+window['requirePlugin'] = function () {};
+window['_pageObj'] = {};
+window['_globalPage'] = ({pagePath, config,pageConfig,template}) => {
   _pageObj[pagePath] = {
     path: pagePath,
     config,
     template,
   };
 };
-var _global = {};
-var _globalApp = (_appConfig) => {
-  _global["appConfig"] = _appConfig;
+window['_global'] = {};
+window['_globalApp'] = ({appConfig}) => {
+  _global["appConfig"] = appConfig;
 };
-var _globalComponent = (path, config, template) => {
+window['_globalComponent'] = ({path, config, template}) => {
   _pageObj[path] = {
     path,
     config,
     template,
   };
 };
-var __wxRoute = "";
+window['__wxRoute'] = "";
 var getCurrentInstance = () => {
   return {
     router: _global["router"],
   };
 };
-var wx = (jd = {
+window['wx'] = (window['jd'] = {
   webpackJsonp: [],
   getCurrentPages,
   getCurrentInstance,

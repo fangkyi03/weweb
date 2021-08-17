@@ -10,13 +10,12 @@ var uglifyjs = require('uglify-js')
 var fileCache = {}
 
 // 添加页面模板
-function addPageConfig(files) {
+function addPageConfig() {
   return `
     var pageConfig = require('./index.json')
     var wxml = require('./index.wxml')
-    console.log('pageConfig',pageConfig)
     var Page = (config) => {
-      return _globalPage(pagePath,config,templateText)
+      return _globalPage({pagePath,config,pageConfig,template:'<div class="app">12312</div>'})
     }
   `
 }
@@ -25,17 +24,20 @@ function addPageConfig(files) {
 function addComponentConfig(files) {
   return `
     var Component = (config) => {
-      return _globalComponent(pagePath,config,templateText)
+      return _globalComponent({pagePath,config,templateText})
     }
   `
 }
 
 // 添加app模板
 function addAppConfig() {
+  const appContent = fs.readFileSync(path.join(process.cwd(),'/web/app.js'),'utf-8')
   return `
+    var appConfig = require('./app.json')
     var App = (appData)=> {
-      return _globalApp(_appConfig)
+      return _globalApp({appConfig})
     }
+    ${appContent}
   `
 }
 
@@ -93,10 +95,8 @@ function getFirstTemplateText(item) {
 
 // 添加配置模板
 function addInitConfig(files,firstTemplate) {
-  var str = fs.readFileSync(path.join(getRootPATH(),'app.json'), 'utf8')
   const pagePath = "`" + files.replace('.js', '').split('/').slice(-3).join('/') + "`"
   let text = `
-    var _appConfig = ${str}
     var pagePath = ${pagePath || files}
   `
   if (firstTemplate) {
@@ -194,6 +194,9 @@ function scanParentTemplate(templateList, templateTextList) {
 function getTemplateFile() {
   return `
     console.log('wxml执行')
+    module.exports = {
+      test:123123123
+    }
   `
 }
 
@@ -242,7 +245,7 @@ module.exports = function (files, opts) {
     }
     const text = execute([
       addInitConfig(files,firstTemplate),
-      addAppConfig(),
+      isApp && addAppConfig(),
       isPage && addPageConfig(files),
       addComponentConfig(files),
       templateTextList.length > 0 && templateTextList.join('\n').toString(),

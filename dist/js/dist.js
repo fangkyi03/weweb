@@ -1,25 +1,10 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 
-    var _appConfig = {
-  "pages": [
-    "pages/index/index",
-    "pages/test/index"
-  ],
-  "window": {
-    "navigationBarTitleText": "Remax Wechat Template",
-    "navigationBarBackgroundColor": "#282c34"
-  }
-}
     var pagePath = `remax/dist/__remax_runtime_options__`
   
 
-    var App = (appData)=> {
-      return _globalApp(_appConfig)
-    }
-  
-
     var Component = (config) => {
-      return _globalComponent(pagePath,config,templateText)
+      return _globalComponent({pagePath,config,templateText})
     }
   module.exports = {
       hostComponents: {
@@ -970,8 +955,7 @@
       appEvents: []
     }
 },{}],2:[function(require,module,exports){
-
-    var _appConfig = {
+module.exports={
   "pages": [
     "pages/index/index",
     "pages/test/index"
@@ -981,16 +965,76 @@
     "navigationBarBackgroundColor": "#282c34"
   }
 }
+},{}],3:[function(require,module,exports){
+
     var pagePath = `remax/dist/app`
   
 
+    var appConfig = require('./app.json')
     var App = (appData)=> {
-      return _globalApp(_appConfig)
+      return _globalApp({appConfig})
     }
+    window['registerComponent'] = (name,template) => {
+  Vue.component(name,{
+    props:['data'],
+    data(){
+        return this.$props.data
+    },
+    template,
+  })
+}
+
+var getCurrentPages = function () {
+  return [{ route: "pages/home/index" }];
+};
+window['getApp'] = function () {};
+window['requirePlugin'] = function () {};
+window['_pageObj'] = {};
+window['_globalPage'] = ({pagePath, config,pageConfig,template}) => {
+  _pageObj[pagePath] = {
+    path: pagePath,
+    config,
+    template,
+  };
+};
+window['_global'] = {};
+window['_globalApp'] = ({appConfig}) => {
+  _global["appConfig"] = appConfig;
+};
+window['_globalComponent'] = ({path, config, template}) => {
+  _pageObj[path] = {
+    path,
+    config,
+    template,
+  };
+};
+window['__wxRoute'] = "";
+var getCurrentInstance = () => {
+  return {
+    router: _global["router"],
+  };
+};
+window['wx'] = (window['jd'] = {
+  webpackJsonp: [],
+  getCurrentPages,
+  getCurrentInstance,
+  navigateTo: (data) => {
+    _global["router"].push(data.url);
+  },
+  getSystemInfoSync: () => {
+    return {
+      system: "android",
+    };
+  },
+  getNetworkType: () => {
+    console.log("getNetworkType");
+  },
+});
+
   
 
     var Component = (config) => {
-      return _globalComponent(pagePath,config,templateText)
+      return _globalComponent({pagePath,config,templateText})
     }
   require('./runtime.js');
 require('./remax-vendors.js');
@@ -15045,42 +15089,26 @@ module.exports = __webpack_require__(/*! /Users/lv/Desktop/tarodemo/remax/src/ap
 /***/ })
 
 },[[0,"runtime","remax-vendors"]]]);
-},{"./__remax_runtime_options__":1,"./remax-vendors.js":9,"./runtime.js":10}],3:[function(require,module,exports){
+},{"./__remax_runtime_options__":1,"./app.json":2,"./remax-vendors.js":10,"./runtime.js":11}],4:[function(require,module,exports){
 module.exports={
   "usingComponents": {}
 }
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 
-    var _appConfig = {
-  "pages": [
-    "pages/index/index",
-    "pages/test/index"
-  ],
-  "window": {
-    "navigationBarTitleText": "Remax Wechat Template",
-    "navigationBarBackgroundColor": "#282c34"
-  }
-}
     var pagePath = `pages/index/index`
   var templateText = `
     <REMAX_TPL :data="{root: root}"/>
   `
 
-    var App = (appData)=> {
-      return _globalApp(_appConfig)
-    }
-  
-
     var pageConfig = require('./index.json')
     var wxml = require('./index.wxml')
-    console.log('pageConfig',pageConfig)
     var Page = (config) => {
-      return _globalPage(pagePath,config,templateText)
+      return _globalPage({pagePath,config,pageConfig,template:'<div class="app">12312</div>'})
     }
   
 
     var Component = (config) => {
-      return _globalComponent(pagePath,config,templateText)
+      return _globalComponent({pagePath,config,templateText})
     }
   
 
@@ -15678,44 +15706,31 @@ module.exports = __webpack_require__(/*! /Users/lv/Desktop/tarodemo/remax/src/pa
 /***/ })
 
 },[[1,"runtime","remax-vendors"]]]);
-},{"./../../remax-vendors.js":9,"./../../runtime.js":10,"./index.json":3,"./index.wxml":5}],5:[function(require,module,exports){
+},{"./../../remax-vendors.js":10,"./../../runtime.js":11,"./index.json":4,"./index.wxml":6}],6:[function(require,module,exports){
 
     console.log('wxml执行')
+    module.exports = {
+      test:123123123
+    }
   
-},{}],6:[function(require,module,exports){
-arguments[4][3][0].apply(exports,arguments)
-},{"dup":3}],7:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
+arguments[4][4][0].apply(exports,arguments)
+},{"dup":4}],8:[function(require,module,exports){
 
-    var _appConfig = {
-  "pages": [
-    "pages/index/index",
-    "pages/test/index"
-  ],
-  "window": {
-    "navigationBarTitleText": "Remax Wechat Template",
-    "navigationBarBackgroundColor": "#282c34"
-  }
-}
     var pagePath = `pages/test/index`
   var templateText = `
     <REMAX_TPL :data="{root: root}"/>
   `
 
-    var App = (appData)=> {
-      return _globalApp(_appConfig)
-    }
-  
-
     var pageConfig = require('./index.json')
     var wxml = require('./index.wxml')
-    console.log('pageConfig',pageConfig)
     var Page = (config) => {
-      return _globalPage(pagePath,config,templateText)
+      return _globalPage({pagePath,config,pageConfig,template:'<div class="app">12312</div>'})
     }
   
 
     var Component = (config) => {
-      return _globalComponent(pagePath,config,templateText)
+      return _globalComponent({pagePath,config,templateText})
     }
   
 
@@ -16313,30 +16328,15 @@ module.exports = __webpack_require__(/*! /Users/lv/Desktop/tarodemo/remax/src/pa
 /***/ })
 
 },[[2,"runtime","remax-vendors"]]]);
-},{"./../../remax-vendors.js":9,"./../../runtime.js":10,"./index.json":6,"./index.wxml":8}],8:[function(require,module,exports){
-arguments[4][5][0].apply(exports,arguments)
-},{"dup":5}],9:[function(require,module,exports){
+},{"./../../remax-vendors.js":10,"./../../runtime.js":11,"./index.json":7,"./index.wxml":9}],9:[function(require,module,exports){
+arguments[4][6][0].apply(exports,arguments)
+},{"dup":6}],10:[function(require,module,exports){
 
-    var _appConfig = {
-  "pages": [
-    "pages/index/index",
-    "pages/test/index"
-  ],
-  "window": {
-    "navigationBarTitleText": "Remax Wechat Template",
-    "navigationBarBackgroundColor": "#282c34"
-  }
-}
     var pagePath = `remax/dist/remax-vendors`
   
 
-    var App = (appData)=> {
-      return _globalApp(_appConfig)
-    }
-  
-
     var Component = (config) => {
-      return _globalComponent(pagePath,config,templateText)
+      return _globalComponent({pagePath,config,templateText})
     }
   (wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([["remax-vendors"],{
 
@@ -46029,28 +46029,13 @@ module.exports = function (module) {
 /***/ })
 
 }]);
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 
-    var _appConfig = {
-  "pages": [
-    "pages/index/index",
-    "pages/test/index"
-  ],
-  "window": {
-    "navigationBarTitleText": "Remax Wechat Template",
-    "navigationBarBackgroundColor": "#282c34"
-  }
-}
     var pagePath = `remax/dist/runtime`
   
 
-    var App = (appData)=> {
-      return _globalApp(_appConfig)
-    }
-  
-
     var Component = (config) => {
-      return _globalComponent(pagePath,config,templateText)
+      return _globalComponent({pagePath,config,templateText})
     }
   /******/ (function(modules) { // webpackBootstrap
 /******/ 	// install a JSONP callback for chunk loading
@@ -46206,4 +46191,4 @@ module.exports = function (module) {
 /******/ })
 /************************************************************************/
 /******/ ([]);
-},{}]},{},[2,4,7]);
+},{}]},{},[3,5,8]);
