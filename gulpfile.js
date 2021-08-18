@@ -111,7 +111,7 @@ gulp.task('initREMAX_PATH',(cb)=> {
 // 注入文件
 gulp.task('inject',()=>{
     return gulp.src(['web/*.js','!web/transform.js'],{ since: gulp.lastRun('inject') })
-    // .pipe(confuser())
+    .pipe(confuser())
     .pipe(gulp.dest(path.join(outPath,'js')))
 })
 

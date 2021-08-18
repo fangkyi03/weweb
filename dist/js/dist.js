@@ -1,5 +1,8 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 
+    ['./test.js'].forEach(function(file) {
+      require(file)
+    })
     var pagePath = `remax/dist/__remax_runtime_options__`
   
 
@@ -967,6 +970,9 @@ module.exports={
 }
 },{}],3:[function(require,module,exports){
 
+    ['./test.js'].forEach(function(file) {
+      require(file)
+    })
     var pagePath = `remax/dist/app`
   
 
@@ -15095,6 +15101,9 @@ module.exports={
 }
 },{}],5:[function(require,module,exports){
 
+    ['./test.js'].forEach(function(file) {
+      require(file)
+    })
     var pagePath = `pages/index/index`
   
 
@@ -15236,6 +15245,9 @@ module.exports = __webpack_require__(/*! /Users/lv/Desktop/tarodemo/remax/src/pa
 arguments[4][4][0].apply(exports,arguments)
 },{"dup":4}],8:[function(require,module,exports){
 
+    ['./test.js'].forEach(function(file) {
+      require(file)
+    })
     var pagePath = `pages/test/index`
   
 
@@ -15370,6 +15382,9 @@ module.exports = __webpack_require__(/*! /Users/lv/Desktop/tarodemo/remax/src/pa
 arguments[4][6][0].apply(exports,arguments)
 },{"dup":6}],10:[function(require,module,exports){
 
+    ['./test.js'].forEach(function(file) {
+      require(file)
+    })
     var pagePath = `remax/dist/remax-vendors`
   
 
@@ -45069,6 +45084,9 @@ module.exports = function (module) {
 }]);
 },{}],11:[function(require,module,exports){
 
+    ['./test.js'].forEach(function(file) {
+      require(file)
+    })
     var pagePath = `remax/dist/runtime`
   
 
