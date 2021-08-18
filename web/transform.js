@@ -11,11 +11,26 @@ var fileCache = {}
 
 // 添加页面模板
 function addPageConfig(files) {
-  const pagePath = "`" + files.replace('.js', '').split('/').slice(-3).join('/') + "`"
+  const pagePath = files.replace('.js', '').split('/').slice(-3).join('/')
+  const fileName = pagePath.split('/').slice(-1)[0]
+  const jsonExist = fs.existsSync(path.join(files,`../${fileName}.json`))
+  const wxmlExist = fs.existsSync(path.join(files,`../${fileName}.wxml`))
+  let pageConfigText = ''
+  let wxmlText = ''
+  if (jsonExist) {
+    pageConfigText = `require('./${fileName}.json')`
+  }else {
+    pageConfigText = '{}' 
+  }
+  if (wxmlExist) {
+    wxmlText = `require('./${fileName}.wxml')`
+  }else {
+    wxmlText = ''
+  }
   return `
-    var pageConfig = require('./index.json')
-    var wxml = require('./index.wxml')
-    var pagePath = ${pagePath}
+    var pageConfig = ${pageConfigText}
+    ${wxmlText}
+    var pagePath = '${pagePath}'
     var Page = (config) => {
       return _globalPage({pagePath,config,pageConfig,template:'<div class="app">12312</div>'})
     }
@@ -239,7 +254,7 @@ module.exports = function (files, opts) {
     data += buf;
   }
   function end() { 
-    const isPage = files.indexOf('pages') != -1
+    const isPage = files.indexOf('page') != -1
     const isApp = files.indexOf('app.js') != -1
     const isJson = path.extname(files) == '.json'
     const isWxml = path.extname(files) == '.wxml'
