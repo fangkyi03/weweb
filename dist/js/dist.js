@@ -1,15 +1,5 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-
-    ['./test.js'].forEach(function(file) {
-      require(file)
-    })
-    var pagePath = `remax/dist/__remax_runtime_options__`
-  
-
-    var Component = (config) => {
-      return _globalComponent({pagePath,config,templateText})
-    }
-  module.exports = {
+module.exports = {
       hostComponents: {
   "ad": {
     "alias": {
@@ -970,12 +960,6 @@ module.exports={
 }
 },{}],3:[function(require,module,exports){
 
-    ['./test.js'].forEach(function(file) {
-      require(file)
-    })
-    var pagePath = `remax/dist/app`
-  
-
     var appConfig = require('./app.json')
     var App = (appData)=> {
       return _globalApp({appConfig})
@@ -1037,11 +1021,9 @@ window['wx'] = (window['jd'] = {
   },
 });
 
-  
+    require('./pages/index/index')
+require('./pages/test/index')
 
-    var Component = (config) => {
-      return _globalComponent({pagePath,config,templateText})
-    }
   require('./runtime.js');
 require('./remax-vendors.js');
 (wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([["app"],{
@@ -15095,20 +15077,15 @@ module.exports = __webpack_require__(/*! /Users/lv/Desktop/tarodemo/remax/src/ap
 /***/ })
 
 },[[0,"runtime","remax-vendors"]]]);
-},{"./__remax_runtime_options__":1,"./app.json":2,"./remax-vendors.js":10,"./runtime.js":11}],4:[function(require,module,exports){
+},{"./__remax_runtime_options__":1,"./app.json":2,"./pages/index/index":5,"./pages/test/index":8,"./remax-vendors.js":10,"./runtime.js":11}],4:[function(require,module,exports){
 module.exports={
   "usingComponents": {}
 }
 },{}],5:[function(require,module,exports){
 
-    ['./test.js'].forEach(function(file) {
-      require(file)
-    })
-    var pagePath = `pages/index/index`
-  
-
     var pageConfig = require('./index.json')
     var wxml = require('./index.wxml')
+    var pagePath = `pages/index/index`
     var Page = (config) => {
       return _globalPage({pagePath,config,pageConfig,template:'<div class="app">12312</div>'})
     }
@@ -15245,14 +15222,9 @@ module.exports = __webpack_require__(/*! /Users/lv/Desktop/tarodemo/remax/src/pa
 arguments[4][4][0].apply(exports,arguments)
 },{"dup":4}],8:[function(require,module,exports){
 
-    ['./test.js'].forEach(function(file) {
-      require(file)
-    })
-    var pagePath = `pages/test/index`
-  
-
     var pageConfig = require('./index.json')
     var wxml = require('./index.wxml')
+    var pagePath = `pages/test/index`
     var Page = (config) => {
       return _globalPage({pagePath,config,pageConfig,template:'<div class="app">12312</div>'})
     }
@@ -15381,17 +15353,7 @@ module.exports = __webpack_require__(/*! /Users/lv/Desktop/tarodemo/remax/src/pa
 },{"./../../remax-vendors.js":10,"./../../runtime.js":11,"./index.json":7,"./index.wxml":9}],9:[function(require,module,exports){
 arguments[4][6][0].apply(exports,arguments)
 },{"dup":6}],10:[function(require,module,exports){
-
-    ['./test.js'].forEach(function(file) {
-      require(file)
-    })
-    var pagePath = `remax/dist/remax-vendors`
-  
-
-    var Component = (config) => {
-      return _globalComponent({pagePath,config,templateText})
-    }
-  (wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([["remax-vendors"],{
+(wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([["remax-vendors"],{
 
 /***/ "./node_modules/_@remax_framework-shared@2.15.4@@remax/framework-shared/esm/AppInstanceContext.js":
 /*!********************************************************************************************************!*\
@@ -45083,17 +45045,7 @@ module.exports = function (module) {
 
 }]);
 },{}],11:[function(require,module,exports){
-
-    ['./test.js'].forEach(function(file) {
-      require(file)
-    })
-    var pagePath = `remax/dist/runtime`
-  
-
-    var Component = (config) => {
-      return _globalComponent({pagePath,config,templateText})
-    }
-  /******/ (function(modules) { // webpackBootstrap
+/******/ (function(modules) { // webpackBootstrap
 /******/ 	// install a JSONP callback for chunk loading
 /******/ 	function webpackJsonpCallback(data) {
 /******/ 		var chunkIds = data[0];
@@ -45247,4 +45199,4 @@ module.exports = function (module) {
 /******/ })
 /************************************************************************/
 /******/ ([]);
-},{}]},{},[3,5,8]);
+},{}]},{},[3]);

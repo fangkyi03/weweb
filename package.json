@@ -7,8 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "remax": "cd remax && npm run build && gulp remax",
     "taro": "cd taro && npm run build:weapp && gulp taro",
+    "wepy": "cd wepy && npm run build && gulp wepy",
+    "kbone": "cd kbone && npm run build:mp && gulp kbone",
     "gulp:remax": "gulp remax",
-    "gulp:taro": "gulp taro"
+    "gulp:taro": "gulp taro",
+    "gulp:wepy": "gulp wepy",
+    "gulp:kbone": "gulp kbone",
+    "gulp:mini": "gulp mini"
   },
   "browserslist": [
     "last 3 versions",
@@ -31,6 +36,10 @@
   },
   "homepage": "https://github.com/fangkyi03/weweb#readme",
   "dependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/traverse": "^7.15.0",
+    "babelify": "^10.0.0",
     "browserify": "^17.0.0",
     "gulp": "^4.0.2",
     "gulp-browserify": "^0.5.1",

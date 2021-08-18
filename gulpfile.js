@@ -71,15 +71,14 @@ function browserifyTask() {
 
 // 引入所有js文件
 gulp.task('importAllJS',()=>{
-    const pageConfig = ['app.js','pages/**/*.js']
-    const pagePath = pageConfig.map((e)=> path.join(rootPath,'dist',e))
+    const pageConfig = ['app.js']
+    const pagePath = pageConfig.map((e)=> path.join(process.env.rootPath,e))
     return gulp.src(pagePath,{ since: gulp.lastRun('importAllJS') })
     .pipe(browserifyTask())
 })
 
 gulp.task('bundleJS',()=>{
     const tempOutPATH = path.join(outPath,'js','dist.js')
-    console.log('文件转换')
     return b.transform('./web/transform.js')
     .bundle()
     .pipe(out(tempOutPATH))
@@ -108,10 +107,31 @@ gulp.task('initREMAX_PATH',(cb)=> {
     cb()
 })
 
+// 初始化remax路径
+gulp.task('initWEPY_PATH',(cb)=> {
+    rootPath = path.join(process.cwd(),'wepy')
+    process.env.rootPath = path.join(rootPath,'weapp')
+    cb()
+})
+
+// 初始化remax路径
+gulp.task('initKONE_PATH',(cb)=> {
+    rootPath = path.join(process.cwd(),'kbone')
+    process.env.rootPath = path.join(rootPath,'dist/mp')
+    cb()
+})
+
+// 初始化remax路径
+gulp.task('initMINI_PATH',(cb)=> {
+    rootPath = path.join(process.cwd(),'miniprogram-demo')
+    process.env.rootPath = path.join(rootPath,'miniprogram')
+    cb()
+})
+
 // 注入文件
 gulp.task('inject',()=>{
     return gulp.src(['web/*.js','!web/transform.js'],{ since: gulp.lastRun('inject') })
-    .pipe(confuser())
+    // .pipe(confuser())
     .pipe(gulp.dest(path.join(outPath,'js')))
 })
 
@@ -120,3 +140,13 @@ gulp.task('remax',gulp.series('initREMAX_PATH',gulp.parallel(['js','css','inject
 
 // 定义taro执行队列
 gulp.task('taro',gulp.series('initTARO_PATH',gulp.parallel(['js','css','inject'])))
+
+// 定义wepy执行队列
+gulp.task('wepy',gulp.series('initWEPY_PATH',gulp.parallel(['js','css','inject'])))
+
+// 定义kbone执行队列
+gulp.task('kbone',gulp.series('initKONE_PATH',gulp.parallel(['js','css','inject'])))
+
+// 定义mini执行队列
+gulp.task('mini',gulp.series('initMINI_PATH',gulp.parallel(['js','css','inject'])))
+

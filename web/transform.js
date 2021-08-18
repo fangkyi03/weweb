@@ -5,15 +5,17 @@ var path = require("path");
 var prettier = require("prettier");
 var rootPath = path.join(process.cwd(), "/remax/dist/");
 var uglifyjs = require('uglify-js')
-
-
+const { parseSync, transformFromAstSync, types, transformAsync, transformSync } = require('@babel/core')
+const traverse = require("@babel/traverse").default;
 var fileCache = {}
 
 // 添加页面模板
-function addPageConfig() {
+function addPageConfig(files) {
+  const pagePath = "`" + files.replace('.js', '').split('/').slice(-3).join('/') + "`"
   return `
     var pageConfig = require('./index.json')
     var wxml = require('./index.wxml')
+    var pagePath = ${pagePath}
     var Page = (config) => {
       return _globalPage({pagePath,config,pageConfig,template:'<div class="app">12312</div>'})
     }
@@ -30,14 +32,20 @@ function addComponentConfig(files) {
 }
 
 // 添加app模板
-function addAppConfig() {
+function addAppConfig(files) {
   const appContent = fs.readFileSync(path.join(process.cwd(),'/web/app.js'),'utf-8')
+  const pageJSON = JSON.parse(fs.readFileSync(path.join(files,'../app.json'),'utf-8'))
+  let pageText = ''
+  pageJSON.pages.forEach((e)=>{
+    pageText += `require('./${e}')\n`
+  })
   return `
     var appConfig = require('./app.json')
     var App = (appData)=> {
       return _globalApp({appConfig})
     }
     ${appContent}
+    ${pageText}
   `
 }
 
@@ -91,20 +99,6 @@ function getFirstTemplateText(item) {
   return `
     <${attribs.is} :data="${attribs.data.replace('{','').replace('}','')}"/>
   `
-}
-
-// 添加配置模板
-function addInitConfig(files,firstTemplate) {
-  const pagePath = "`" + files.replace('.js', '').split('/').slice(-3).join('/') + "`"
-  let text = `
-    var pagePath = ${pagePath || files}
-  `
-  if (firstTemplate) {
-    text += 'var templateText = `' + getFirstTemplateText(firstTemplate) + '`'
-    return text
-  }else {
-    return text
-  }
 }
 
 // 获取顶级文件夹路径
@@ -191,15 +185,52 @@ function scanParentTemplate(templateList, templateTextList) {
   })
 }
 
-function getTemplateFile() {
+function getWXMLFile() {
   return `
-    console.log('wxml执行')
-    module.exports = {
-      test:123123123
-    }
+    // console.log('wxml执行')
+    // module.exports = {
+    //   test:123123123
+    // }
   `
 }
 
+function getJSONFile(files,data) {
+  if (files.indexOf('app.json') > -1) {
+    const json = JSON.parse(data)
+    return data
+  }else {
+    return data
+  }
+}
+
+function parseBabel(data) {
+  // const result = parseSync(data,{
+  //   presets:[    
+  //     [
+  //       "@babel/preset-env",
+  //       {
+  //         "targets":{
+  //           "node": "current"
+  //         }
+  //         // "useBuiltIns": "entry"
+  //       }
+  //     ]
+  //   ]
+  // })  
+  return transformSync(data,{
+    presets:[    
+      [
+        "@babel/preset-env",
+        {
+          "targets":{
+            "node": "current"
+          }
+          // "useBuiltIns": "entry"
+        }
+      ]
+    ]
+  })
+}
 module.exports = function (files, opts) {
   var data = "";
   console.log('files',files)
@@ -207,7 +238,7 @@ module.exports = function (files, opts) {
   function write(buf) {
     data += buf;
   }
-  function end() {  
+  function end() { 
     const isPage = files.indexOf('pages') != -1
     const isApp = files.indexOf('app.js') != -1
     const isJson = path.extname(files) == '.json'
@@ -215,32 +246,21 @@ module.exports = function (files, opts) {
     const templateList = []
     const templateTextList = []
     let firstTemplate = null
-    if (isJson) {
-      this.queue(data)
-      this.queue(null)
-      return
+    let content = ''
+    if (isJson) { // 判断是否是json
+      content = getJSONFile(files,data)
+    }else if (isWxml){ // 判断是否是wxml
+      content = getWXMLFile(files,data)
+    }else { // 判断是否是js
+      data = parseBabel(data).code
+      const text = execute([
+          isApp && addAppConfig(files),
+          isPage && addPageConfig(files),
+          isPage && addComponentConfig(files),
+          templateTextList.length > 0 && templateTextList.join('\n').toString(),
+        ])
+      content = text.join('\n').toString()  + data.replace(/require\('\//g, `require('./`)
     }
-    if (isWxml) {
-      this.queue(getTemplateFile(files,data))
-      this.queue(null)
-      return
-    }
-    // if (isPage) {
-    //   scanImport(wxmlPathConvert(files), templateList)
-    //   scanParentTemplate(templateList, templateTextList)
-    //   if (templateList.length > 0) {
-    //     const index = templateList.findIndex((e)=>e.name == 'template')
-    //     firstTemplate = templateList[index]
-    //   }
-    // }
-    const text = execute([
-      addInitConfig(files,firstTemplate),
-      isApp && addAppConfig(),
-      isPage && addPageConfig(files),
-      addComponentConfig(files),
-      templateTextList.length > 0 && templateTextList.join('\n').toString(),
-    ])
-    const content = text.join('\n').toString()  + data.replace(/require\('\//g, `require('./`)
     this.queue(content)
     this.queue(null)
   }
