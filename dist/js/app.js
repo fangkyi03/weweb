@@ -1,3 +1,6 @@
+window['Behavior'] = function (config) {
+  return config
+};
 window['registerComponent'] = (name,template) => {
   Vue.component(name,{
     props:['data'],
@@ -11,23 +14,35 @@ window['registerComponent'] = (name,template) => {
 window['getCurrentPages'] = function () {
   return [{ route: "pages/home/index" }];
 };
-window['getApp'] = function () {};
+window['getApp'] = function () {
+  return {
+    globalData:{}
+  }
+};
 window['requirePlugin'] = function () {};
 window['_pageObj'] = {};
-window['_globalPage'] = ({pagePath, config,pageConfig,template}) => {
-  _pageObj[pagePath] = {
-    path: pagePath,
-    config,
-    template,
-  };
-};
 window['_global'] = {};
+window['_pages'] = {}
+
+window['Page'] = (viewConfig) => {
+  const page = getPage(window['__wxRoute']);
+  page.view = viewConfig
+};
+
+window['getPage'] = (files) => {
+  if (_pageObj[files]) {
+    return _pageObj[files]
+  }else {
+    _pageObj[files] = {json:{},template:'',view:{}}
+    return _pageObj[files]
+  }
+}
+
 window['_globalApp'] = ({appConfig}) => {
   _global["appConfig"] = appConfig;
 };
-window['_globalComponent'] = ({path, config, template}) => {
-  _pageObj[path] = {
-    path,
+window['_globalComponent'] = ({config, template}) => {
+  _pageObj[window['__wxRoute']] = {
     config,
     template,
   };
@@ -41,6 +56,9 @@ var getCurrentInstance = () => {
 window['wx'] = (window['jd'] = {
   webpackJsonp: [],
   getCurrentPages,
+  reportAnalytics:function(){
+    console.log('reportAnalytics',arguments)
+  },
   getCurrentInstance,
   navigateTo: (data) => {
     _global["router"].push(data.url);

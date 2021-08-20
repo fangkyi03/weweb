@@ -4,6 +4,13 @@ var through = require('through')
 var fs = require('fs')
 var JsConfuser = require("js-confuser");
 var browserify = require('browserify')
+var less = require('less')
+const syntax = require('postcss-less');
+var postcss = require('postcss')
+var through2 = require('through2')
+var prettier = require('prettier')
+var LessAutoprefix = require('less-plugin-autoprefix');
+var autoprefix = new LessAutoprefix({ browsers: ['Chrome > 20'] });
 const b = browserify({basedir:process.cwd(),commondir:true,browserField:false})
 // var browserify = require('gulp-browserify');
 var uglify = require('gulp-uglify')
@@ -13,16 +20,49 @@ var uglify = require('gulp-uglify')
 var rootPath = null
 var outPath = path.join(process.cwd(),'dist')
 
-function buildCSS() {
-    var data = '';
-    return through(write, end);
-    function write (buf) { 
-        return data += buf._contents ? buf._contents : buf
-     }
-    function end () {
-        this.queue(data)
-        this.queue(null)
-    }
+function buildCSS(data) {
+    return through2.obj((file, enc, cb)=>{
+        if (file.isNull()) {
+         return cb(null, file);
+        }
+
+        if (file.isStream()) {
+        return cb(new PluginError('gulp-less', 'Streaming not supported'));
+        }
+
+        var str = file.contents.toString();
+        function AutoprefixProcessor(options) {
+            this.options = options || {};
+        };
+        AutoprefixProcessor.prototype = {
+            process: function(css, extra) {
+                return prettier.format(css,{parser:'less'})
+            }
+        }
+        var lessPlugin = {
+            install: function(less, pluginManager) {
+                pluginManager.addPreProcessor(new AutoprefixProcessor())
+                // var AutoprefixProcessor = getAutoprefixProcessor(less);
+                // pluginManager.addPostProcessor(new AutoprefixProcessor(this.options));
+            },
+            printUsage: function () {
+                // usage.printUsage();
+            },
+            setOptions: function(options) {
+                this.options = {}
+            },
+            minVersion: [2, 0, 0]
+        };
+        less.render(str,{plugins:[lessPlugin],paths:[path.join(file.path,'../')]},(err, res)=>{
+            if (!err){
+                file.contents = new Buffer(res.css)
+                cb(null, file)
+            }else {
+                console.log('object',file.path)
+                cb(null,err)
+            }
+        })
+    })
 }
 
 // 汇总所有数据
@@ -88,7 +128,7 @@ gulp.task('js',gulp.series(['importAllJS','bundleJS']))
 
 gulp.task('css',()=>{
     const tempOutPath = path.join(outPath,'css','app.css')
-    return gulp.src(path.join(rootPath,'dist','/**/*.wxss'),{ since: gulp.lastRun('css') })
+    return gulp.src(path.join(process.env.rootPath,'/**/*.wxss'),{ since: gulp.lastRun('css') })
     .pipe(buildCSS())
     .pipe(out(tempOutPath))
 })

@@ -2,7 +2,7 @@
 function onLoad(config) {
   if (config.onLoad) {
     config.onLoad(config);
-  } else if (config.methods.onLoad) {
+  } else if (config.methods && config.methods.onLoad) {
     config.methods.onLoad(config);
   }
 }
@@ -26,18 +26,18 @@ function getRouter() {
         name: e.split("/").join("-"),
         template: _pageObj[e].template,
         data() {
-          return _pageObj[e].config.data;
+          return _pageObj[e].view.data;
         },
         mounted() {
-          _pageObj[e].config.setData = (data) => {
+          _pageObj[e].view.setData = (data) => {
             Object.keys(data).forEach((e) => {
               this.$data[e] = data[e];
             });
           };
-          const config = _pageObj[e].config;
-          onCreate(config);
-          onLoad(config);
-          onShow(config)
+          const view = _pageObj[e].view;
+          onCreate(view);
+          onLoad(view);
+          onShow(view)
         },
       },
     };

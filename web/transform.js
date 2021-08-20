@@ -11,37 +11,28 @@ var fileCache = {}
 
 // 添加页面模板
 function addPageConfig(files) {
-  const pagePath = files.replace('.js', '').split('/').slice(-3).join('/')
+  const pagePath = files.replace(process.env.rootPath,'').replace('.js', '').slice(1)
   const fileName = pagePath.split('/').slice(-1)[0]
-  const jsonExist = fs.existsSync(path.join(files,`../${fileName}.json`))
-  const wxmlExist = fs.existsSync(path.join(files,`../${fileName}.wxml`))
-  let pageConfigText = ''
-  let wxmlText = ''
-  if (jsonExist) {
-    pageConfigText = `require('./${fileName}.json')`
-  }else {
-    pageConfigText = '{}' 
-  }
-  if (wxmlExist) {
-    wxmlText = `require('./${fileName}.wxml')`
-  }else {
-    wxmlText = ''
-  }
+  const wxmlPath = path.join(files,`../${fileName}.wxml`)
+  const jsonPath = path.join(files,`../${fileName}.json`)
+  const jsonContent = fs.existsSync(jsonPath) ? fs.readFileSync(jsonPath, 'utf8') : ''
+  const wxmlContent = fs.existsSync(wxmlPath) ? fs.readFileSync(wxmlPath, 'utf8') : ''
   return `
-    var pageConfig = ${pageConfigText}
-    ${wxmlText}
-    var pagePath = '${pagePath}'
-    var Page = (config) => {
-      return _globalPage({pagePath,config,pageConfig,template:'<div class="app">12312</div>'})
-    }
+    const page = getPage('${pagePath}')
+    page.template = $wxmlContent$
+    page.json = $jsonContent$
+    window['__wxRoute'] = '${pagePath}'
   `
+  .replace('$wxmlContent$',`'<test>测试</test>'`)
+  // .replace('$wxmlContent$','`' + wxmlContent + '`')
+  .replace('$jsonContent$','`' + jsonContent + '`')
 }
 
 // 添加组件模板
 function addComponentConfig(files) {
   return `
     var Component = (config) => {
-      return _globalComponent({pagePath,config,templateText})
+      return _globalComponent({config,template:'<div class="app">12312</div>'})
     }
   `
 }
@@ -202,10 +193,7 @@ function scanParentTemplate(templateList, templateTextList) {
 
 function getWXMLFile() {
   return `
-    // console.log('wxml执行')
-    // module.exports = {
-    //   test:123123123
-    // }
+    module.exports = '<div>123123</div>'
   `
 }
 
@@ -218,20 +206,7 @@ function getJSONFile(files,data) {
   }
 }
 
-function parseBabel(data) {
-  // const result = parseSync(data,{
-  //   presets:[    
-  //     [
-  //       "@babel/preset-env",
-  //       {
-  //         "targets":{
-  //           "node": "current"
-  //         }
-  //         // "useBuiltIns": "entry"
-  //       }
-  //     ]
-  //   ]
-  // })  
+function parseBabel(data) {  
   return transformSync(data,{
     presets:[    
       [
@@ -240,7 +215,6 @@ function parseBabel(data) {
           "targets":{
             "node": "current"
           }
-          // "useBuiltIns": "entry"
         }
       ]
     ]
