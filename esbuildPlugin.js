@@ -1,40 +1,6 @@
 
 const fs = require('fs')
-const less = require('less')
 const path = require('path')
-const esbuild = require('esbuild')
-const prettier = require('prettier')
-function AutoprefixProcessor(options) {
-    this.options = options || {};
-};
-AutoprefixProcessor.prototype = {
-    process: function(css, extra) {
-        return prettier.format(css,{parser:'less'})
-    }
-}
-var lessPlugin = {
-    install: function(less, pluginManager) {
-        pluginManager.addPreProcessor(new AutoprefixProcessor())
-    },
-    printUsage: function () {
-    },
-    setOptions: function(options) {
-        this.options = {}
-    },
-    minVersion: [2, 0, 0]
-};
-
-function readCSS(str,file) {
-  return new Promise((resolve, reject) => {
-    less.render(str,{plugins:[lessPlugin],paths:[path.join(file.path,'../')]},(err, res)=>{
-      if (!err){
-        resolve(res.css)
-      }else {
-        reject()
-      }
-    }) 
-  });
-}
 
 function readFile(file) {
   return fs.readFileSync(file.path, 'utf8')
@@ -42,23 +8,46 @@ function readFile(file) {
 
 module.exports = options => {
   return {
-    name: "auto-delete-console",
+    name: "weweb",
     setup(build) {
       build.onLoad({ filter: /\.js$/ }, async (args) => {
         let text = fs.readFileSync(args.path, 'utf8')
         if (args.path.includes('app.js')) {
-          text += `\nconst config = require('./app.json');console.log(config);config.pages.forEach((e)=>require('./' + e + '.js'))\n`
+          const pageJSON = JSON.parse(fs.readFileSync(path.join(args.path,'../app.json'),'utf-8'))
+          path.toNamespacedPath
+          let pageText = ''
+          pageJSON.pages.forEach((e)=>{
+            pageText += `require('./${e}')\n`
+          })
+          text += `\n
+            const appJSON = require('./app.json');
+            ${pageText}
+          `
+        }else {
+          const wxssFileName = args.path.split('/').slice(-1)[0].split('.')[0] + '.wxss'
+          const wxmlFileName = args.path.split('/').slice(-1)[0].split('.')[0] + '.wxml'
+          if (fs.existsSync(path.join(args.path,'../',wxssFileName))) {
+            text = `require('./${wxssFileName}')\n` + text
+          }
+          if (fs.existsSync(path.join(args.path,'../',wxmlFileName))) {
+            text = `require('./${wxmlFileName}')\n` + text
+          }
         }
         return {
-          contents: text,
+          contents: text.replace(/require\('\//g, `require('./`),
           loader: "js"
         }
       })
       build.onLoad({ filter: /\.wxss$/ }, async (args) => {
         const str = readFile(args)
-        // const context = await readCSS(str,args)
         return {
           contents: str,
+          loader: "css"
+        }
+      })
+      build.onLoad({ filter: /\.wxml$/ }, async (args) => {
+        return {
+          contents: 'console.log(123)',
           loader: "css"
         }
       })
