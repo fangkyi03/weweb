@@ -1,7 +1,3 @@
-/* remax/dist/pages/index/index.wxml */
-console.log(123) {
-}
-
 /* remax/dist/pages/index/index.wxss */
 .app {
   text-align: center;
@@ -60,10 +56,6 @@ console.log(123) {
   to {
     transform: rotate(360deg);
   }
-}
-
-/* remax/dist/pages/test/index.wxml */
-console.log(123) {
 }
 
 /* remax/dist/pages/test/index.wxss */

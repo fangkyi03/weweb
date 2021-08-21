@@ -48,7 +48,7 @@ module.exports = options => {
       build.onLoad({ filter: /\.wxml$/ }, async (args) => {
         return {
           contents: 'console.log(123)',
-          loader: "css"
+          loader: "js"
         }
       })
     }

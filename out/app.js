@@ -23331,24 +23331,24 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
   });
 
   // remax/dist/pages/index/index.wxml
-  var require_ = __commonJS({
-    "remax/dist/pages/index/index.wxml"(exports, module) {
-      module.exports = {};
+  var require_index = __commonJS({
+    "remax/dist/pages/index/index.wxml"() {
+      console.log(123);
     }
   });
 
   // remax/dist/pages/index/index.wxss
-  var require_2 = __commonJS({
+  var require_ = __commonJS({
     "remax/dist/pages/index/index.wxss"(exports, module) {
       module.exports = {};
     }
   });
 
   // remax/dist/pages/index/index.js
-  var require_index = __commonJS({
+  var require_index2 = __commonJS({
     "remax/dist/pages/index/index.js"() {
+      require_index();
       require_();
-      require_2();
       require_runtime();
       require_remax_vendors();
       (wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([["pages/index/index"], {
@@ -23463,24 +23463,24 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
   });
 
   // remax/dist/pages/test/index.wxml
-  var require_3 = __commonJS({
-    "remax/dist/pages/test/index.wxml"(exports, module) {
-      module.exports = {};
+  var require_test = __commonJS({
+    "remax/dist/pages/test/index.wxml"() {
+      console.log(123);
     }
   });
 
   // remax/dist/pages/test/index.wxss
-  var require_4 = __commonJS({
+  var require_2 = __commonJS({
     "remax/dist/pages/test/index.wxss"(exports, module) {
       module.exports = {};
     }
   });
 
   // remax/dist/pages/test/index.js
-  var require_test = __commonJS({
+  var require_test2 = __commonJS({
     "remax/dist/pages/test/index.js"() {
-      require_3();
-      require_4();
+      require_test();
+      require_2();
       require_runtime();
       require_remax_vendors();
       (wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([["pages/test/index"], {
@@ -34198,8 +34198,8 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
     }
   }, [[0, "runtime", "remax-vendors"]]]);
   var appJSON = require_app();
-  require_index();
-  require_test();
+  require_index2();
+  require_test2();
 })();
 /*
 object-assign
