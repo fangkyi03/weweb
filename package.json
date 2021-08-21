@@ -13,7 +13,8 @@
     "gulp:taro": "gulp taro",
     "gulp:wepy": "gulp wepy",
     "gulp:kbone": "gulp kbone",
-    "gulp:mini": "gulp mini"
+    "gulp:mini": "gulp mini",
+    "esbuild":"node esbuild.js"
   },
   "browserslist": [
     "last 3 versions",
@@ -41,6 +42,7 @@
     "@babel/traverse": "^7.15.0",
     "babelify": "^10.0.0",
     "browserify": "^17.0.0",
+    "esbuild": "^0.12.22",
     "gulp": "^4.0.2",
     "gulp-browserify": "^0.5.1",
     "gulp-clean-css": "^4.3.0",
