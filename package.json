@@ -14,7 +14,7 @@
     "gulp:wepy": "gulp wepy",
     "gulp:kbone": "gulp kbone",
     "gulp:mini": "gulp mini",
-    "esbuild":"node esbuild.js"
+    "esbuild":"node esbuild"
   },
   "browserslist": [
     "last 3 versions",
