@@ -1,8 +1,9 @@
 const esbuild = require('esbuild')
+const gulp = require('gulp')
+const path = require('path')
 const esbuildPlugin = require('../plugin/esbuildPlugin')
 const file = require('./file')
 var rootPath = ''
-
 function getPageConfig (outDir) {
     const appJSON = file.getAppJSON(rootPath) || {}
     const pages = [
@@ -14,7 +15,7 @@ function getPageConfig (outDir) {
             return {
                 path:e.root,
                 children:e.pages,
-                outfile:outDir + e.root + '/app.js'
+                outfile:outDir + '/' + e.root + '/app.js'
             }
         })
     ]
@@ -40,7 +41,7 @@ function getPageConfig (outDir) {
     })
 }
 
-const init = ({targetPath,outDir = './out/',minify = false} = {}) => {
+const init = ({targetPath,outDir = './out',minify = false} = {}) => {
     rootPath = targetPath
     // 获取所有可以被遍历的页面
     const pages = getPageConfig(outDir)
@@ -51,6 +52,10 @@ const init = ({targetPath,outDir = './out/',minify = false} = {}) => {
             format:'esm',
             plugins:[esbuildPlugin()],
             outfile:e.outfile
+        })
+        .then(()=>{
+            gulp.src(path.join(__dirname,'../publish/**/*'))
+            .pipe(gulp.dest(path.join(e.outfile,'../')))
         })
     })
 }
