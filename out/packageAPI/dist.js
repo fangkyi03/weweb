@@ -31,6 +31,9 @@ var require_login = __commonJS({
         });
       }
     });
+    fetch("./css/pages/login/login.css").then((res) => res.text()).then((e) => {
+      console.log("pages/login/login", e);
+    });
   }
 });
 
@@ -60,6 +63,9 @@ var require_get_user_info = __commonJS({
           userInfo: {}
         });
       }
+    });
+    fetch("./css/pages/get-user-info/get-user-info.css").then((res) => res.text()).then((e) => {
+      console.log("pages/get-user-info/get-user-info", e);
     });
   }
 });
@@ -124,6 +130,9 @@ var require_request_payment = __commonJS({
         });
       }
     });
+    fetch("./css/pages/request-payment/request-payment.css").then((res) => res.text()).then((e) => {
+      console.log("pages/request-payment/request-payment", e);
+    });
   }
 });
 
@@ -141,6 +150,9 @@ var require_share = __commonJS({
       onShareAppMessage() {
         return this.data.shareData;
       }
+    });
+    fetch("./css/pages/share/share.css").then((res) => res.text()).then((e) => {
+      console.log("pages/share/share", e);
     });
   }
 });
@@ -165,6 +177,9 @@ var require_share_button = __commonJS({
         }
       }
     });
+    fetch("./css/pages/share-button/share-button.css").then((res) => res.text()).then((e) => {
+      console.log("pages/share-button/share-button", e);
+    });
   }
 });
 
@@ -178,6 +193,9 @@ var require_custom_message = __commonJS({
           path: "packageAPI/pages/custom-message/custom-message"
         };
       }
+    });
+    fetch("./css/pages/custom-message/custom-message.css").then((res) => res.text()).then((e) => {
+      console.log("pages/custom-message/custom-message", e);
     });
   }
 });
@@ -258,6 +276,9 @@ var require_template_message = __commonJS({
         });
       }
     });
+    fetch("./css/pages/template-message/template-message.css").then((res) => res.text()).then((e) => {
+      console.log("pages/template-message/template-message", e);
+    });
   }
 });
 
@@ -286,6 +307,9 @@ var require_set_navigation_bar_title = __commonJS({
         return false;
       }
     });
+    fetch("./css/pages/set-navigation-bar-title/set-navigation-bar-title.css").then((res) => res.text()).then((e) => {
+      console.log("pages/set-navigation-bar-title/set-navigation-bar-title", e);
+    });
   }
 });
 
@@ -305,6 +329,9 @@ var require_navigation_bar_loading = __commonJS({
       hideNavigationBarLoading() {
         wx.hideNavigationBarLoading();
       }
+    });
+    fetch("./css/pages/navigation-bar-loading/navigation-bar-loading.css").then((res) => res.text()).then((e) => {
+      console.log("pages/navigation-bar-loading/navigation-bar-loading", e);
     });
   }
 });
@@ -335,6 +362,9 @@ var require_navigator = __commonJS({
         wx.reLaunch({ url: "/page/component/index" });
       }
     });
+    fetch("./css/pages/navigator/navigator.css").then((res) => res.text()).then((e) => {
+      console.log("pages/navigator/navigator", e);
+    });
   }
 });
 
@@ -363,6 +393,9 @@ var require_pull_down_refresh = __commonJS({
           }
         });
       }
+    });
+    fetch("./css/pages/pull-down-refresh/pull-down-refresh.css").then((res) => res.text()).then((e) => {
+      console.log("pages/pull-down-refresh/pull-down-refresh", e);
     });
   }
 });
@@ -413,6 +446,9 @@ var require_animation = __commonJS({
         }.bind(this));
       }
     });
+    fetch("./css/pages/animation/animation.css").then((res) => res.text()).then((e) => {
+      console.log("pages/animation/animation", e);
+    });
   }
 });
 
@@ -434,6 +470,9 @@ var require_action_sheet = __commonJS({
           }
         });
       }
+    });
+    fetch("./css/pages/action-sheet/action-sheet.css").then((res) => res.text()).then((e) => {
+      console.log("pages/action-sheet/action-sheet", e);
     });
   }
 });
@@ -467,6 +506,9 @@ var require_modal = __commonJS({
           cancelText: "\u53D6\u6D88"
         });
       }
+    });
+    fetch("./css/pages/modal/modal.css").then((res) => res.text()).then((e) => {
+      console.log("pages/modal/modal", e);
     });
   }
 });
@@ -503,6 +545,9 @@ var require_toast = __commonJS({
         wx.hideToast();
       }
     });
+    fetch("./css/pages/toast/toast.css").then((res) => res.text()).then((e) => {
+      console.log("pages/toast/toast", e);
+    });
   }
 });
 
@@ -537,6 +582,9 @@ var require_get_network_type = __commonJS({
           networkType: ""
         });
       }
+    });
+    fetch("./css/pages/get-network-type/get-network-type.css").then((res) => res.text()).then((e) => {
+      console.log("pages/get-network-type/get-network-type", e);
     });
   }
 });
@@ -575,6 +623,9 @@ var require_on_network_status_change = __commonJS({
         });
       }
     });
+    fetch("./css/pages/on-network-status-change/on-network-status-change.css").then((res) => res.text()).then((e) => {
+      console.log("pages/on-network-status-change/on-network-status-change", e);
+    });
   }
 });
 
@@ -601,6 +652,9 @@ var require_get_system_info = __commonJS({
           }
         });
       }
+    });
+    fetch("./css/pages/get-system-info/get-system-info.css").then((res) => res.text()).then((e) => {
+      console.log("pages/get-system-info/get-system-info", e);
     });
   }
 });
@@ -654,6 +708,9 @@ var require_on_compass_change = __commonJS({
         });
       }
     });
+    fetch("./css/pages/on-compass-change/on-compass-change.css").then((res) => res.text()).then((e) => {
+      console.log("pages/on-compass-change/on-compass-change", e);
+    });
   }
 });
 
@@ -691,6 +748,9 @@ var require_make_phone_call = __commonJS({
         });
       }
     });
+    fetch("./css/pages/make-phone-call/make-phone-call.css").then((res) => res.text()).then((e) => {
+      console.log("pages/make-phone-call/make-phone-call", e);
+    });
   }
 });
 
@@ -719,6 +779,9 @@ var require_scan_code = __commonJS({
           }
         });
       }
+    });
+    fetch("./css/pages/scan-code/scan-code.css").then((res) => res.text()).then((e) => {
+      console.log("pages/scan-code/scan-code", e);
     });
   }
 });
@@ -765,6 +828,9 @@ var require_request = __commonJS({
           }
         });
       }
+    });
+    fetch("./css/pages/request/request.css").then((res) => res.text()).then((e) => {
+      console.log("pages/request/request", e);
     });
   }
 });
@@ -863,6 +929,9 @@ var require_web_socket = __commonJS({
         }
       }
     });
+    fetch("./css/pages/web-socket/web-socket.css").then((res) => res.text()).then((e) => {
+      console.log("pages/web-socket/web-socket", e);
+    });
   }
 });
 
@@ -926,6 +995,9 @@ var require_upload_file = __commonJS({
         }
       }
     });
+    fetch("./css/pages/upload-file/upload-file.css").then((res) => res.text()).then((e) => {
+      console.log("pages/upload-file/upload-file", e);
+    });
   }
 });
 
@@ -953,6 +1025,9 @@ var require_download_file = __commonJS({
           fail: console.error
         });
       }
+    });
+    fetch("./css/pages/download-file/download-file.css").then((res) => res.text()).then((e) => {
+      console.log("pages/download-file/download-file", e);
     });
   }
 });
@@ -1014,6 +1089,9 @@ var require_image = __commonJS({
           urls: this.data.imageList
         });
       }
+    });
+    fetch("./css/pages/image/image.css").then((res) => res.text()).then((e) => {
+      console.log("pages/image/image", e);
     });
   }
 });
@@ -1244,6 +1322,9 @@ var require_voice = __commonJS({
         });
       }
     });
+    fetch("./css/pages/voice/voice.css").then((res) => res.text()).then((e) => {
+      console.log("pages/voice/voice", e);
+    });
   }
 });
 
@@ -1322,6 +1403,9 @@ var require_file = __commonJS({
           "dialog.hidden": true
         });
       }
+    });
+    fetch("./css/pages/file/file.css").then((res) => res.text()).then((e) => {
+      console.log("pages/file/file", e);
     });
   }
 });
@@ -1440,6 +1524,9 @@ var require_on_accelerometer_change = __commonJS({
       onUnload() {
         clearInterval(this.interval);
       }
+    });
+    fetch("./css/pages/on-accelerometer-change/on-accelerometer-change.css").then((res) => res.text()).then((e) => {
+      console.log("pages/on-accelerometer-change/on-accelerometer-change", e);
     });
   }
 });
@@ -1684,6 +1771,9 @@ var require_example = __commonJS({
       });
     };
     module.exports = example;
+    fetch("./css/pages/canvas/example.css").then((res) => res.text()).then((e) => {
+      console.log("pages/canvas/example", e);
+    });
   }
 });
 
@@ -1727,6 +1817,9 @@ var require_canvas = __commonJS({
           }
         });
       }
+    });
+    fetch("./css/pages/canvas/canvas.css").then((res) => res.text()).then((e) => {
+      console.log("pages/canvas/canvas", e);
     });
   }
 });
@@ -1836,6 +1929,9 @@ var require_background_audio = __commonJS({
         clearInterval(updateInterval);
       }
     });
+    fetch("./css/pages/background-audio/background-audio.css").then((res) => res.text()).then((e) => {
+      console.log("pages/background-audio/background-audio", e);
+    });
   }
 });
 
@@ -1894,6 +1990,9 @@ var require_video = __commonJS({
         });
       }
     });
+    fetch("./css/pages/video/video.css").then((res) => res.text()).then((e) => {
+      console.log("pages/video/video", e);
+    });
   }
 });
 
@@ -1930,6 +2029,9 @@ var require_get_location = __commonJS({
         });
       }
     });
+    fetch("./css/pages/get-location/get-location.css").then((res) => res.text()).then((e) => {
+      console.log("pages/get-location/get-location", e);
+    });
   }
 });
 
@@ -1954,6 +2056,9 @@ var require_open_location = __commonJS({
           address: value.address
         });
       }
+    });
+    fetch("./css/pages/open-location/open-location.css").then((res) => res.text()).then((e) => {
+      console.log("pages/open-location/open-location", e);
     });
   }
 });
@@ -1991,6 +2096,9 @@ var require_choose_location = __commonJS({
           hasLocation: false
         });
       }
+    });
+    fetch("./css/pages/choose-location/choose-location.css").then((res) => res.text()).then((e) => {
+      console.log("pages/choose-location/choose-location", e);
     });
   }
 });
@@ -2089,6 +2197,9 @@ var require_storage = __commonJS({
         });
       }
     });
+    fetch("./css/pages/storage/storage.css").then((res) => res.text()).then((e) => {
+      console.log("pages/storage/storage", e);
+    });
   }
 });
 
@@ -2126,6 +2237,9 @@ var require_get_wxml_node_info = __commonJS({
           }
         });
       }
+    });
+    fetch("./css/pages/get-wxml-node-info/get-wxml-node-info.css").then((res) => res.text()).then((e) => {
+      console.log("pages/get-wxml-node-info/get-wxml-node-info", e);
     });
   }
 });
@@ -2169,6 +2283,9 @@ var require_load_font_face = __commonJS({
       clear() {
         this.setData({ loaded: false });
       }
+    });
+    fetch("./css/pages/load-font-face/load-font-face.css").then((res) => res.text()).then((e) => {
+      console.log("pages/load-font-face/load-font-face", e);
     });
   }
 });
@@ -2219,6 +2336,9 @@ var require_clipboard_data = __commonJS({
           }
         });
       }
+    });
+    fetch("./css/pages/clipboard-data/clipboard-data.css").then((res) => res.text()).then((e) => {
+      console.log("pages/clipboard-data/clipboard-data", e);
     });
   }
 });
@@ -2460,6 +2580,9 @@ var require_bluetooth = __commonJS({
         this._discoveryStarted = false;
       }
     });
+    fetch("./css/pages/bluetooth/bluetooth.css").then((res) => res.text()).then((e) => {
+      console.log("pages/bluetooth/bluetooth", e);
+    });
   }
 });
 
@@ -2502,6 +2625,9 @@ var require_screen_brightness = __commonJS({
         });
       }
     });
+    fetch("./css/pages/screen-brightness/screen-brightness.css").then((res) => res.text()).then((e) => {
+      console.log("pages/screen-brightness/screen-brightness", e);
+    });
   }
 });
 
@@ -2542,6 +2668,9 @@ var require_vibrate = __commonJS({
         });
       }
     });
+    fetch("./css/pages/vibrate/vibrate.css").then((res) => res.text()).then((e) => {
+      console.log("pages/vibrate/vibrate", e);
+    });
   }
 });
 
@@ -2571,6 +2700,9 @@ var require_add_contact = __commonJS({
           }
         });
       }
+    });
+    fetch("./css/pages/add-contact/add-contact.css").then((res) => res.text()).then((e) => {
+      console.log("pages/add-contact/add-contact", e);
     });
   }
 });
@@ -2647,6 +2779,9 @@ var require_wifi = __commonJS({
         });
       }
     });
+    fetch("./css/pages/wifi/wifi.css").then((res) => res.text()).then((e) => {
+      console.log("pages/wifi/wifi", e);
+    });
   }
 });
 
@@ -2672,6 +2807,9 @@ var require_page_scroll = __commonJS({
           duration: 300
         });
       }
+    });
+    fetch("./css/pages/page-scroll/page-scroll.css").then((res) => res.text()).then((e) => {
+      console.log("pages/page-scroll/page-scroll", e);
     });
   }
 });
@@ -2703,6 +2841,9 @@ var require_intersection_observer = __commonJS({
           this._observer.disconnect();
       }
     });
+    fetch("./css/pages/intersection-observer/intersection-observer.css").then((res) => res.text()).then((e) => {
+      console.log("pages/intersection-observer/intersection-observer", e);
+    });
   }
 });
 
@@ -2726,6 +2867,9 @@ var require_capture_screen = __commonJS({
           });
         });
       }
+    });
+    fetch("./css/pages/capture-screen/capture-screen.css").then((res) => res.text()).then((e) => {
+      console.log("pages/capture-screen/capture-screen", e);
     });
   }
 });
@@ -2851,6 +2995,9 @@ var require_worker = __commonJS({
         });
       }
     });
+    fetch("./css/pages/worker/worker.css").then((res) => res.text()).then((e) => {
+      console.log("pages/worker/worker", e);
+    });
   }
 });
 
@@ -2900,6 +3047,9 @@ var require_ibeacon = __commonJS({
         wx.stopBeaconDiscovery();
       }
     });
+    fetch("./css/pages/ibeacon/ibeacon.css").then((res) => res.text()).then((e) => {
+      console.log("pages/ibeacon/ibeacon", e);
+    });
   }
 });
 
@@ -2929,6 +3079,9 @@ var require_choose_address = __commonJS({
         });
       }
     });
+    fetch("./css/pages/choose-address/choose-address.css").then((res) => res.text()).then((e) => {
+      console.log("pages/choose-address/choose-address", e);
+    });
   }
 });
 
@@ -2953,6 +3106,9 @@ var require_setting = __commonJS({
           }
         });
       }
+    });
+    fetch("./css/pages/setting/setting.css").then((res) => res.text()).then((e) => {
+      console.log("pages/setting/setting", e);
     });
   }
 });
@@ -2994,6 +3150,9 @@ var require_choose_invoice_title = __commonJS({
           }
         });
       }
+    });
+    fetch("./css/pages/choose-invoice-title/choose-invoice-title.css").then((res) => res.text()).then((e) => {
+      console.log("pages/choose-invoice-title/choose-invoice-title", e);
     });
   }
 });
@@ -3075,6 +3234,9 @@ var require_soter_authentication = __commonJS({
         });
       }
     });
+    fetch("./css/pages/soter-authentication/soter-authentication.css").then((res) => res.text()).then((e) => {
+      console.log("pages/soter-authentication/soter-authentication", e);
+    });
   }
 });
 
@@ -3142,6 +3304,9 @@ var require_subscribe_message = __commonJS({
         };
       }
     });
+    fetch("./css/pages/subscribe-message/subscribe-message.css").then((res) => res.text()).then((e) => {
+      console.log("pages/subscribe-message/subscribe-message", e);
+    });
   }
 });
 
@@ -3155,6 +3320,9 @@ var require_doc_web_view = __commonJS({
           path: "packageAPI/pages/doc-web-view/doc-web-view"
         };
       }
+    });
+    fetch("./css/pages/doc-web-view/doc-web-view.css").then((res) => res.text()).then((e) => {
+      console.log("pages/doc-web-view/doc-web-view", e);
     });
   }
 });
@@ -3190,6 +3358,9 @@ var require_audio = __commonJS({
         this.audioCtx.seek(0);
       }
     });
+    fetch("./css/pages/audio/audio.css").then((res) => res.text()).then((e) => {
+      console.log("pages/audio/audio", e);
+    });
   }
 });
 
@@ -3215,6 +3386,9 @@ var require_get_battery_info = __commonJS({
           }
         });
       }
+    });
+    fetch("./css/pages/get-battery-info/get-battery-info.css").then((res) => res.text()).then((e) => {
+      console.log("pages/get-battery-info/get-battery-info", e);
     });
   }
 });
@@ -3281,6 +3455,9 @@ var require_util2 = __commonJS({
       return date.Format("yyyy-MM-dd hh:mm:ss");
     };
     module.exports = util;
+    fetch("./css/pages/get-performance/util.css").then((res) => res.text()).then((e) => {
+      console.log("pages/get-performance/util", e);
+    });
   }
 });
 
@@ -3332,6 +3509,9 @@ var require_get_performance = __commonJS({
       stopObserver() {
         performanceObserver.disconnect();
       }
+    });
+    fetch("./css/pages/get-performance/get-performance.css").then((res) => res.text()).then((e) => {
+      console.log("pages/get-performance/get-performance", e);
     });
   }
 });
@@ -3447,6 +3627,9 @@ var require_mdns = __commonJS({
         });
       }
     });
+    fetch("./css/pages/mdns/mdns.css").then((res) => res.text()).then((e) => {
+      console.log("pages/mdns/mdns", e);
+    });
   }
 });
 
@@ -3537,6 +3720,9 @@ var require_udp_socket = __commonJS({
         });
       }
     });
+    fetch("./css/pages/udp-socket/udp-socket.css").then((res) => res.text()).then((e) => {
+      console.log("pages/udp-socket/udp-socket", e);
+    });
   }
 });
 
@@ -3567,6 +3753,9 @@ var require_two_way_bindings = __commonJS({
           path: "packageAPI/pages/make-phone-call/make-phone-call"
         };
       }
+    });
+    fetch("./css/pages/two-way-bindings/two-way-bindings.css").then((res) => res.text()).then((e) => {
+      console.log("pages/two-way-bindings/two-way-bindings", e);
     });
   }
 });
@@ -3651,6 +3840,9 @@ var require_media_container = __commonJS({
         }
       }
     });
+    fetch("./css/pages/media-container/media-container.css").then((res) => res.text()).then((e) => {
+      console.log("pages/media-container/media-container", e);
+    });
   }
 });
 
@@ -3708,6 +3900,9 @@ var require_get_background_fetch_data = __commonJS({
           });
         }
       }
+    });
+    fetch("./css/pages/get-background-fetch-data/get-background-fetch-data.css").then((res) => res.text()).then((e) => {
+      console.log("pages/get-background-fetch-data/get-background-fetch-data", e);
     });
   }
 });
@@ -3775,6 +3970,9 @@ var require_get_background_prefetch_data = __commonJS({
         }
       }
     });
+    fetch("./css/pages/get-background-prefetch-data/get-background-prefetch-data.css").then((res) => res.text()).then((e) => {
+      console.log("pages/get-background-prefetch-data/get-background-prefetch-data", e);
+    });
   }
 });
 
@@ -3794,6 +3992,9 @@ var require_wxs = __commonJS({
           url: `/packageAPI/pages/wxs/${e.currentTarget.dataset.nav}`
         });
       }
+    });
+    fetch("./css/pages/wxs/wxs.css").then((res) => res.text()).then((e) => {
+      console.log("pages/wxs/wxs", e);
     });
   }
 });
@@ -4037,6 +4238,9 @@ var require_slave = __commonJS({
         });
       }
     });
+    fetch("./css/pages/bluetooth/slave/slave.css").then((res) => res.text()).then((e) => {
+      console.log("pages/bluetooth/slave/slave", e);
+    });
   }
 });
 
@@ -4058,6 +4262,9 @@ var require_resizable = __commonJS({
           status: e.currentTarget.dataset.status
         });
       }
+    });
+    fetch("./css/pages/resizable/resizable.css").then((res) => res.text()).then((e) => {
+      console.log("pages/resizable/resizable", e);
     });
   }
 });
@@ -4094,6 +4301,9 @@ var require_movable = __commonJS({
         });
       }
     });
+    fetch("./css/pages/wxs/movable.css").then((res) => res.text()).then((e) => {
+      console.log("pages/wxs/movable", e);
+    });
   }
 });
 
@@ -4123,6 +4333,9 @@ var require_sidebar = __commonJS({
         ];
         this.setData({ tabs });
       }
+    });
+    fetch("./css/pages/wxs/sidebar.css").then((res) => res.text()).then((e) => {
+      console.log("pages/wxs/sidebar", e);
     });
   }
 });
@@ -4181,6 +4394,9 @@ var require_stick_top = __commonJS({
         ];
         this.setData({ tabs });
       }
+    });
+    fetch("./css/pages/wxs/stick-top.css").then((res) => res.text()).then((e) => {
+      console.log("pages/wxs/stick-top", e);
     });
   }
 });
@@ -4247,6 +4463,9 @@ var require_nearby = __commonJS({
           duration: e.detail.value
         });
       }
+    });
+    fetch("./css/pages/wxs/nearby.css").then((res) => res.text()).then((e) => {
+      console.log("pages/wxs/nearby", e);
     });
   }
 });

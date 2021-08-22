@@ -121,6 +121,9 @@ var require_component = __commonJS({
         wx.reportAnalytics("click_view_programmatically", {});
       }
     });
+    fetch("./css/component/index.css").then((res) => res.text()).then((e) => {
+      console.log("component/index", e);
+    });
   }
 });
 
@@ -134,6 +137,9 @@ var require_view = __commonJS({
           path: "page/component/pages/view/view"
         };
       }
+    });
+    fetch("./css/component/pages/view/view.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/view/view", e);
     });
   }
 });
@@ -248,6 +254,9 @@ var require_scroll_view = __commonJS({
         });
       }
     });
+    fetch("./css/component/pages/scroll-view/scroll-view.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/scroll-view/scroll-view", e);
+    });
   }
 });
 
@@ -289,6 +298,9 @@ var require_swiper = __commonJS({
           duration: e.detail.value
         });
       }
+    });
+    fetch("./css/component/pages/swiper/swiper.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/swiper/swiper", e);
     });
   }
 });
@@ -353,6 +365,9 @@ var require_text = __commonJS({
         }, 0);
       }
     });
+    fetch("./css/component/pages/text/text.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/text/text", e);
+    });
   }
 });
 
@@ -367,6 +382,9 @@ var require_icon = __commonJS({
         };
       }
     });
+    fetch("./css/component/pages/icon/icon.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/icon/icon", e);
+    });
   }
 });
 
@@ -380,6 +398,9 @@ var require_progress = __commonJS({
           path: "page/component/pages/progress/progress"
         };
       }
+    });
+    fetch("./css/component/pages/progress/progress.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/progress/progress", e);
     });
   }
 });
@@ -442,6 +463,9 @@ var require_button = __commonJS({
       })(types[i]);
     }
     Page(pageObject);
+    fetch("./css/component/pages/button/button.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/button/button", e);
+    });
   }
 });
 
@@ -482,6 +506,9 @@ var require_checkbox = __commonJS({
           items
         });
       }
+    });
+    fetch("./css/component/pages/checkbox/checkbox.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/checkbox/checkbox", e);
     });
   }
 });
@@ -528,6 +555,9 @@ var require_form = __commonJS({
         });
       }
     });
+    fetch("./css/component/pages/form/form.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/form/form", e);
+    });
   }
 });
 
@@ -568,6 +598,9 @@ var require_input = __commonJS({
           wx.hideKeyboard();
         }
       }
+    });
+    fetch("./css/component/pages/input/input.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/input/input", e);
     });
   }
 });
@@ -621,6 +654,9 @@ var require_label = __commonJS({
         console.log("\u6309\u94AE\u88AB\u70B9\u51FB");
       }
     });
+    fetch("./css/component/pages/label/label.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/label/label", e);
+    });
   }
 });
 
@@ -657,6 +693,9 @@ var require_picker = __commonJS({
         });
       }
     });
+    fetch("./css/component/pages/picker/picker.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/picker/picker", e);
+    });
   }
 });
 
@@ -691,6 +730,9 @@ var require_radio = __commonJS({
         });
       }
     });
+    fetch("./css/component/pages/radio/radio.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/radio/radio", e);
+    });
   }
 });
 
@@ -713,6 +755,9 @@ var require_slider = __commonJS({
       })(i);
     }
     Page(pageData);
+    fetch("./css/component/pages/slider/slider.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/slider/slider", e);
+    });
   }
 });
 
@@ -732,6 +777,9 @@ var require_switch = __commonJS({
       switch2Change(e) {
         console.log("switch2 \u53D1\u751F change \u4E8B\u4EF6\uFF0C\u643A\u5E26\u503C\u4E3A", e.detail.value);
       }
+    });
+    fetch("./css/component/pages/switch/switch.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/switch/switch", e);
     });
   }
 });
@@ -753,6 +801,9 @@ var require_textarea = __commonJS({
         console.log(e.detail.value);
       }
     });
+    fetch("./css/component/pages/textarea/textarea.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/textarea/textarea", e);
+    });
   }
 });
 
@@ -766,6 +817,9 @@ var require_navigator = __commonJS({
           path: "page/component/pages/navigator/navigator"
         };
       }
+    });
+    fetch("./css/component/pages/navigator/navigator.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/navigator/navigator", e);
     });
   }
 });
@@ -787,6 +841,9 @@ var require_navigate = __commonJS({
         });
       }
     });
+    fetch("./css/component/pages/navigator/navigate.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/navigator/navigate", e);
+    });
   }
 });
 
@@ -806,6 +863,9 @@ var require_redirect = __commonJS({
           title: options.title
         });
       }
+    });
+    fetch("./css/component/pages/navigator/redirect.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/navigator/redirect", e);
     });
   }
 });
@@ -839,6 +899,9 @@ var require_image = __commonJS({
         imageUrl: "cloud://release-b86096.7265-release-b86096-1258211818/demo.jpg",
         webpImageURL: ""
       }
+    });
+    fetch("./css/component/pages/image/image.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/image/image", e);
     });
   }
 });
@@ -921,6 +984,9 @@ var require_video = __commonJS({
           enableAutoRotation: e.detail.value
         });
       }
+    });
+    fetch("./css/component/pages/video/video.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/video/video", e);
     });
   }
 });
@@ -1026,6 +1092,9 @@ var require_map = __commonJS({
           enableTraffic: !this.data.enableTraffic
         });
       }
+    });
+    fetch("./css/component/pages/map/map.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/map/map", e);
     });
   }
 });
@@ -1215,6 +1284,9 @@ var init_canvas = __esm({
         clearInterval(this.interval);
       }
     });
+    fetch("./css/component/pages/canvas/canvas.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/canvas/canvas", e);
+    });
   }
 });
 
@@ -1232,6 +1304,9 @@ var require_ad = __commonJS({
       data: {
         platform: info.platform
       }
+    });
+    fetch("./css/component/pages/ad/ad.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/ad/ad", e);
     });
   }
 });
@@ -1269,6 +1344,9 @@ var require_movable_view = __commonJS({
         console.log(e.detail);
       }
     });
+    fetch("./css/component/pages/movable-view/movable-view.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/movable-view/movable-view", e);
+    });
   }
 });
 
@@ -1286,6 +1364,9 @@ var require_cover_view = __commonJS({
         latitude: 23.099994,
         longitude: 113.32452
       }
+    });
+    fetch("./css/component/pages/cover-view/cover-view.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/cover-view/cover-view", e);
     });
   }
 });
@@ -1358,6 +1439,9 @@ var require_rich_text = __commonJS({
         });
       }
     });
+    fetch("./css/component/pages/rich-text/rich-text.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/rich-text/rich-text", e);
+    });
   }
 });
 
@@ -1403,6 +1487,9 @@ var require_picker_view = __commonJS({
           isDaytime: !val[3]
         });
       }
+    });
+    fetch("./css/component/pages/picker-view/picker-view.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/picker-view/picker-view", e);
     });
   }
 });
@@ -1613,6 +1700,9 @@ var require_camera = __commonJS({
         });
       }
     });
+    fetch("./css/component/pages/camera/camera.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/camera/camera", e);
+    });
   }
 });
 
@@ -1649,6 +1739,9 @@ var require_camera_scan_code = __commonJS({
         console.log(e.detail);
       }
     });
+    fetch("./css/component/pages/camera-scan-code/camera-scan-code.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/camera-scan-code/camera-scan-code", e);
+    });
   }
 });
 
@@ -1662,6 +1755,9 @@ var require_map_styles = __commonJS({
           path: "page/component/pages/map-styles/map-styles"
         };
       }
+    });
+    fetch("./css/component/pages/map-styles/map-styles.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/map-styles/map-styles", e);
     });
   }
 });
@@ -1754,6 +1850,9 @@ var require_live_player = __commonJS({
         });
       }
     });
+    fetch("./css/component/pages/live-player/live-player.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/live-player/live-player", e);
+    });
   }
 });
 
@@ -1845,6 +1944,9 @@ var require_live_pusher = __commonJS({
         });
       }
     });
+    fetch("./css/component/pages/live-pusher/live-pusher.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/live-pusher/live-pusher", e);
+    });
   }
 });
 
@@ -1858,6 +1960,9 @@ var require_aria_component = __commonJS({
           path: "page/component/pages/aria-component/aria-component"
         };
       }
+    });
+    fetch("./css/component/pages/aria-component/aria-component.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/aria-component/aria-component", e);
     });
   }
 });
@@ -2239,6 +2344,9 @@ var require_API = __commonJS({
         });
       }
     });
+    fetch("./css/API/index.css").then((res) => res.text()).then((e) => {
+      console.log("API/index", e);
+    });
   }
 });
 
@@ -2370,6 +2478,9 @@ var require_cloud = __commonJS({
         });
       }
     });
+    fetch("./css/cloud/index.css").then((res) => res.text()).then((e) => {
+      console.log("cloud/index", e);
+    });
   }
 });
 
@@ -2383,6 +2494,9 @@ var require_doc_web_view = __commonJS({
           path: "page/component/pages/doc-web-view/doc-web-view"
         };
       }
+    });
+    fetch("./css/component/pages/doc-web-view/doc-web-view.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/doc-web-view/doc-web-view", e);
     });
   }
 });
@@ -2398,6 +2512,9 @@ var require_open_data = __commonJS({
         };
       }
     });
+    fetch("./css/component/pages/open-data/open-data.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/open-data/open-data", e);
+    });
   }
 });
 
@@ -2411,6 +2528,9 @@ var require_web_view = __commonJS({
           path: "page/component/pages/web-view/web-view"
         };
       }
+    });
+    fetch("./css/component/pages/web-view/web-view.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/web-view/web-view", e);
     });
   }
 });
@@ -2561,6 +2681,9 @@ var require_editor = __commonJS({
         });
       }
     });
+    fetch("./css/component/pages/editor/editor.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/editor/editor", e);
+    });
   }
 });
 
@@ -2578,6 +2701,9 @@ var require_theme = __commonJS({
           });
         }
       }
+    });
+    fetch("./css/weui/base/behaviors/theme.css").then((res) => res.text()).then((e) => {
+      console.log("weui/base/behaviors/theme", e);
     });
   }
 });
@@ -2608,6 +2734,9 @@ var init_CustomPage = __esm({
       }));
     };
     CustomPage_default = CustomPage;
+    fetch("./css/weui/base/CustomPage.css").then((res) => res.text()).then((e) => {
+      console.log("weui/base/CustomPage", e);
+    });
   }
 });
 
@@ -2738,6 +2867,9 @@ var init_example = __esm({
         }
       }
     });
+    fetch("./css/weui/example/index.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/index", e);
+    });
   }
 });
 
@@ -2748,6 +2880,9 @@ var require_base64 = __commonJS({
       icon20: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII=",
       icon60: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAeFBMVEUAwAD///+U5ZTc9twOww7G8MYwzDCH4YcfyR9x23Hw+/DY9dhm2WZG0kbT9NP0/PTL8sux7LFe115T1VM+zz7i+OIXxhes6qxr2mvA8MCe6J6M4oz6/frr+us5zjn2/fa67rqB4IF13XWn6ad83nxa1loqyirn+eccHxx4AAAC/klEQVRo3u2W2ZKiQBBF8wpCNSCyLwri7v//4bRIFVXoTBBB+DAReV5sG6lTXDITiGEYhmEYhmEYhmEYhmEY5v9i5fsZGRx9PyGDne8f6K9cfd+mKXe1yNG/0CcqYE86AkBMBh66f20deBc7wA/1WFiTwvSEpBMA2JJOBsSLxe/4QEEaJRrASP8EVF8Q74GbmevKg0saa0B8QbwBdjRyADYxIhqxAZ++IKYtciPXLQVG+imw+oo4Bu56rjEJ4GYsvPmKOAB+xlz7L5aevqUXuePWVhvWJ4eWiwUQ67mK51qPj4dFDMlRLBZTqF3SDvmr4BwtkECu5gHWPkmDfQh02WLxXuvbvC8ku8F57GsI5e0CmUwLz1kq3kD17R1In5816rGvQ5VMk5FEtIiWislTffuDpl/k/PzscdQsv8r9qWq4LRWX6tQYtTxvI3XyrwdyQxChXioOngH3dLgOFjk0all56XRi/wDFQrGQU3Os5t0wJu1GNtNKHdPqYaGYQuRDfbfDf26AGLYSyGS3ZAK4S8XuoAlxGSdYMKwqZKM9XJMtyqXi7HX/CiAZS6d8bSVUz5J36mEMFDTlAFQzxOT1dzLRljjB6+++ejFqka+mXIe6F59mw22OuOw1F4T6lg/9VjL1rLDoI9Xzl1MSYDNHnPQnt3D1EE7PrXjye/3pVpr1Z45hMUdcACc5NVQI0bOdS1WA0wuz73e7/5TNqBPhQXPEFGJNV2zNqWI7QKBd2Gn6AiBko02zuAOXeWIXjV0jNqdKegaE/kJQ6Bfs4aju04lMLkA2T5wBSYPKDGF3RKhFYEa6A1L1LG2yacmsaZ6YPOSAMKNsO+N5dNTfkc5Aqe26uxHpx7ZirvgCwJpWq/lmX1hA7LyabQ34tt5RiJKXSwQ+0KU0V5xg+hZrd4Bn1n4EID+WkQdgLfRNtvil9SPfwy+WQ7PFBWQz6dGWZBLkeJFXZGCfLUjCgGgqXo5TuSu3cugdcTv/HjqnBTEMwzAMwzAMwzAMwzAMw/zf/AFbXiOA6frlMAAAAABJRU5ErkJggg=="
     };
+    fetch("./css/weui/example/images/base64.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/images/base64", e);
+    });
   }
 });
 
@@ -2788,6 +2923,9 @@ var init_cell = __esm({
         console.log("slide button tap", e.detail);
       }
     });
+    fetch("./css/weui/example/cell/cell.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/cell/cell", e);
+    });
   }
 });
 
@@ -2827,6 +2965,9 @@ var init_slideview = __esm({
       slideButtonTap(e) {
         console.log("slide button tap", e.detail);
       }
+    });
+    fetch("./css/weui/example/slideview/slideview.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/slideview/slideview", e);
     });
   }
 });
@@ -2985,6 +3126,9 @@ var init_form = __esm({
         });
       }
     });
+    fetch("./css/weui/example/form/form.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/form/form", e);
+    });
   }
 });
 
@@ -3048,6 +3192,9 @@ var init_uploader = __esm({
         console.log("upload success", e.detail);
       }
     });
+    fetch("./css/weui/example/uploader/uploader.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/uploader/uploader", e);
+    });
   }
 });
 
@@ -3064,6 +3211,9 @@ var init_article = __esm({
           path: "page/weui/example/article/article"
         };
       }
+    });
+    fetch("./css/weui/example/article/article.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/article/article", e);
     });
   }
 });
@@ -3083,6 +3233,9 @@ var init_badge = __esm({
         };
       }
     });
+    fetch("./css/weui/example/badge/badge.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/badge/badge", e);
+    });
   }
 });
 
@@ -3100,6 +3253,9 @@ var init_flex = __esm({
         };
       }
     });
+    fetch("./css/weui/example/flex/flex.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/flex/flex", e);
+    });
   }
 });
 
@@ -3116,6 +3272,9 @@ var init_footer = __esm({
           path: "page/weui/example/footer/footer"
         };
       }
+    });
+    fetch("./css/weui/example/footer/footer.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/footer/footer", e);
     });
   }
 });
@@ -3156,6 +3315,9 @@ var init_gallery = __esm({
           });
         }, 1e3);
       }
+    });
+    fetch("./css/weui/example/gallery/gallery.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/gallery/gallery", e);
     });
   }
 });
@@ -3226,6 +3388,9 @@ var init_grid = __esm({
         ]
       }
     });
+    fetch("./css/weui/example/grid/grid.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/grid/grid", e);
+    });
   }
 });
 
@@ -3242,6 +3407,9 @@ var init_loadmore = __esm({
           path: "page/weui/example/loadmore/loadmore"
         };
       }
+    });
+    fetch("./css/weui/example/loadmore/loadmore.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/loadmore/loadmore", e);
     });
   }
 });
@@ -3274,6 +3442,9 @@ var init_panel = __esm({
         });
       }
     });
+    fetch("./css/weui/example/panel/panel.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/panel/panel", e);
+    });
   }
 });
 
@@ -3290,6 +3461,9 @@ var init_preview = __esm({
           path: "page/weui/example/preview/preview"
         };
       }
+    });
+    fetch("./css/weui/example/preview/preview.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/preview/preview", e);
     });
   }
 });
@@ -3330,6 +3504,9 @@ var init_dialog = __esm({
         });
       }
     });
+    fetch("./css/weui/example/dialog/dialog.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/dialog/dialog", e);
+    });
   }
 });
 
@@ -3367,6 +3544,9 @@ var init_msg = __esm({
         });
       }
     });
+    fetch("./css/weui/example/msg/msg.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/msg/msg", e);
+    });
   }
 });
 
@@ -3383,6 +3563,9 @@ var init_msg_text = __esm({
           path: "page/weui/example/msg_text/msg_text"
         };
       }
+    });
+    fetch("./css/weui/example/msg/msg_text.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/msg/msg_text", e);
     });
   }
 });
@@ -3401,6 +3584,9 @@ var init_msg_text_primary = __esm({
         };
       }
     });
+    fetch("./css/weui/example/msg/msg_text_primary.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/msg/msg_text_primary", e);
+    });
   }
 });
 
@@ -3418,6 +3604,9 @@ var init_msg_success = __esm({
         };
       }
     });
+    fetch("./css/weui/example/msg/msg_success.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/msg/msg_success", e);
+    });
   }
 });
 
@@ -3434,6 +3623,9 @@ var init_msg_fail = __esm({
           path: "page/weui/example/msg_fail/msg_fail"
         };
       }
+    });
+    fetch("./css/weui/example/msg/msg_fail.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/msg/msg_fail", e);
     });
   }
 });
@@ -3472,6 +3664,9 @@ var require_navbar = __commonJS({
           activeIndex: e.currentTarget.id
         });
       }
+    });
+    fetch("./css/weui/example/navbar/navbar.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/navbar/navbar", e);
     });
   }
 });
@@ -3527,6 +3722,9 @@ var init_tabbar = __esm({
       tabChange(e) {
         console.log("tab change", e);
       }
+    });
+    fetch("./css/weui/example/tabbar/tabbar.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/tabbar/tabbar", e);
     });
   }
 });
@@ -4052,6 +4250,9 @@ var init_icons = __esm({
         });
       }
     });
+    fetch("./css/weui/example/icons/icons.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/icons/icons", e);
+    });
   }
 });
 
@@ -4067,6 +4268,9 @@ var require_form_page = __commonJS({
       },
       data: {},
       methods: {}
+    });
+    fetch("./css/weui/example/form-page/form-page.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/form-page/form-page", e);
     });
   }
 });
@@ -4122,6 +4326,9 @@ var init_half_screen_dialog = __esm({
         console.log(e.detail);
       }
     });
+    fetch("./css/weui/example/half-screen-dialog/half-screen-dialog.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/half-screen-dialog/half-screen-dialog", e);
+    });
   }
 });
 
@@ -4171,6 +4378,9 @@ var init_actionsheet = __esm({
         this.closeDialog();
       }
     });
+    fetch("./css/weui/example/actionsheet/actionsheet.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/actionsheet/actionsheet", e);
+    });
   }
 });
 
@@ -4209,6 +4419,9 @@ var require_toptips = __commonJS({
           });
         }
       }
+    });
+    fetch("./css/weui/example/toptips/toptips.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/toptips/toptips", e);
     });
   }
 });
@@ -4255,6 +4468,9 @@ var init_searchbar = __esm({
       selectResult: function(e) {
         console.log("select result", e.detail);
       }
+    });
+    fetch("./css/weui/example/searchbar/searchbar.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/searchbar/searchbar", e);
     });
   }
 });
@@ -4422,6 +4638,9 @@ var init_emoji = __esm({
         });
       }
     });
+    fetch("./css/weui/example/emoji/emoji.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/emoji/emoji", e);
+    });
   }
 });
 
@@ -4487,6 +4706,9 @@ var init_video_swiper = __esm({
         console.log("LoadedMetaData", e);
       }
     });
+    fetch("./css/weui/example/video-swiper/video-swiper.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/video-swiper/video-swiper", e);
+    });
   }
 });
 
@@ -4545,6 +4767,9 @@ var init_index_list = __esm({
         });
       }
     });
+    fetch("./css/weui/example/index-list/index-list.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/index-list/index-list", e);
+    });
   }
 });
 
@@ -4572,6 +4797,9 @@ var init_sticky = __esm({
       onScroll(e) {
         console.log("onScroll", e);
       }
+    });
+    fetch("./css/weui/example/sticky/sticky.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/sticky/sticky", e);
     });
   }
 });
@@ -4646,6 +4874,9 @@ var init_tabs = __esm({
         });
       }
     });
+    fetch("./css/weui/example/tabs/tabs.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/tabs/tabs", e);
+    });
   }
 });
 
@@ -4715,6 +4946,9 @@ var init_vtabs = __esm({
         });
       }
     });
+    fetch("./css/weui/example/vtabs/vtabs.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/vtabs/vtabs", e);
+    });
   }
 });
 
@@ -4761,6 +4995,9 @@ var init_select_text = __esm({
         });
       }
     });
+    fetch("./css/weui/example/select-text/select-text.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/select-text/select-text", e);
+    });
   }
 });
 
@@ -4795,6 +5032,9 @@ var require_utils = __commonJS({
     module.exports = {
       mockData: mockData2
     };
+    fetch("./css/weui/example/barrage/utils.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/barrage/utils", e);
+    });
   }
 });
 
@@ -4882,6 +5122,9 @@ var init_barrage = __esm({
         this.barrage.hideTunnel();
       }
     });
+    fetch("./css/weui/example/barrage/barrage.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/barrage/barrage", e);
+    });
   }
 });
 
@@ -4926,6 +5169,9 @@ var require_demo = __commonJS({
       wxml,
       style
     };
+    fetch("./css/weui/example/wxml-to-canvas/demo.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/wxml-to-canvas/demo", e);
+    });
   }
 });
 
@@ -4976,6 +5222,9 @@ var require_wxml_to_canvas = __commonJS({
         });
       }
     });
+    fetch("./css/weui/example/wxml-to-canvas/wxml-to-canvas.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/wxml-to-canvas/wxml-to-canvas", e);
+    });
   }
 });
 
@@ -4993,6 +5242,9 @@ var require_telescopic = __commonJS({
         };
       }
     });
+    fetch("./css/weui/example/telescopic/telescopic.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/telescopic/telescopic", e);
+    });
   }
 });
 
@@ -5009,6 +5261,9 @@ var require_linebreak = __commonJS({
           path: "page/weui/example/linebreak/linebreak"
         };
       }
+    });
+    fetch("./css/weui/example/linebreak/linebreak.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/linebreak/linebreak", e);
     });
   }
 });
@@ -5044,6 +5299,9 @@ var require_sidenavigation = __commonJS({
         };
       }
     });
+    fetch("./css/weui/example/sidenavigation/sidenavigation.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/sidenavigation/sidenavigation", e);
+    });
   }
 });
 
@@ -5060,6 +5318,9 @@ var require_pagination = __commonJS({
           path: "page/weui/example/pagination/pagination"
         };
       }
+    });
+    fetch("./css/weui/example/pagination/pagination.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/pagination/pagination", e);
     });
   }
 });
@@ -5087,6 +5348,9 @@ var require_freelayout = __commonJS({
           path: "page/weui/example/freelayout/freelayout"
         };
       }
+    });
+    fetch("./css/weui/example/freelayout/freelayout.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/freelayout/freelayout", e);
     });
   }
 });
@@ -5120,6 +5384,9 @@ var require_layeredpresentation = __commonJS({
         };
       }
     });
+    fetch("./css/weui/example/layeredpresentation/layeredpresentation.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/layeredpresentation/layeredpresentation", e);
+    });
   }
 });
 
@@ -5146,6 +5413,9 @@ var require_horizontalexpansion = __commonJS({
           path: "page/weui/example/horizontalexpansion/horizontalexpansion"
         };
       }
+    });
+    fetch("./css/weui/example/horizontalexpansion/horizontalexpansion.css").then((res) => res.text()).then((e) => {
+      console.log("weui/example/horizontalexpansion/horizontalexpansion", e);
     });
   }
 });
@@ -5265,6 +5535,9 @@ var init_canvas_2d = __esm({
       onUnload() {
       }
     });
+    fetch("./css/component/pages/canvas-2d/canvas-2d.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/canvas-2d/canvas-2d", e);
+    });
   }
 });
 
@@ -5377,6 +5650,9 @@ var init_webgl = __esm({
         };
         canvas.requestAnimationFrame(draw);
       }
+    });
+    fetch("./css/component/pages/webgl/webgl.css").then((res) => res.text()).then((e) => {
+      console.log("component/pages/webgl/webgl", e);
     });
   }
 });

@@ -3,22 +3,21 @@ const gulp = require('gulp')
 const path = require('path')
 const esbuildPlugin = require('../plugin/esbuildPlugin')
 const file = require('./file')
-var rootPath = ''
-function getPageConfig (outDir) {
-    const appJSON = file.getAppJSON(rootPath) || {}
+function getPageConfig (config) {
+    const appJSON = file.getAppJSON(config.targetPath) || {}
     const pages = [
         {
             path:'/',
-            outfile:`${outDir}/index/dist.js`,
-            outdir:'./out/index',
+            outfile:`${config.outdir}/index/dist.js`,
+            outdir:'./out/index/css',
             children:appJSON.pages
         },
         ...(appJSON.subpackages || []).map((e)=>{
             return {
                 path:e.root,
                 children:e.pages,
-                outdir:outDir + '/' + e.root ,
-                outfile:outDir + '/' + e.root + '/dist.js'
+                outdir:config.outdir + '/' + e.root + '/css/pages',
+                outfile:config.outdir + '/' + e.root + '/dist.js'
             }
         })
     ]
@@ -26,9 +25,9 @@ function getPageConfig (outDir) {
         let text = ''
         e.children.forEach((el)=>{
             if (e.path == '/' ) {
-                text += `require('${rootPath}/${el}')\n`
+                text += `require('${config.targetPath}/${el}')\n`
             }else {
-                text += `require('${rootPath}/${e.path}/${el}')\n`
+                text += `require('${config.targetPath}/${e.path}/${el}')\n`
             }
         })
         return {
@@ -44,13 +43,13 @@ function getPageConfig (outDir) {
     })
 }
 
-function buildJS(item) {
+function buildJS(item,config) {
     esbuild.build({
         stdin:item.stdin,
         bundle:true,
         format:'esm',
         // minify:true,
-        plugins:[esbuildPlugin(item.outfile)],
+        plugins:[esbuildPlugin(config)],
         outfile:item.outfile,
     })
     .then(()=>{
@@ -59,27 +58,34 @@ function buildJS(item) {
     })
 }
 
-function buildCSS(item) {
+function buildCSS(item,config) {
     esbuild.build({
         entryPoints:item.childrens.map((e)=>{
-            const filePath = path.join(rootPath,item.path,e)
+            const filePath = path.join(config.targetPath,item.path,e)
             return file.getWXSSPATH(filePath)
         }),
         bundle:true,
         format:'esm',
         splitting:true,
         plugins:[esbuildPlugin(item.outfile)],
-        outdir:item.outdir + '/css'
+        outdir:item.outdir
     })
 }
 
-const init = ({targetPath,outDir = './out',minify = false} = {}) => {
-    rootPath = targetPath
+function getDefaultConfig(config = {}) {
+    return {
+        outdir:'./out',
+        ...config,
+    }
+}
+
+const init = (config = {}) => {
+    const newConfig = getDefaultConfig(config)
     // 获取所有可以被遍历的页面
-    const pages = getPageConfig(outDir)
+    const pages = getPageConfig(newConfig)
     pages.forEach((e)=>{
-        buildJS(e)
-        buildCSS(e)
+        buildJS(e,newConfig)
+        buildCSS(e,newConfig)
     })
 }
 

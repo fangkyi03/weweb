@@ -13,6 +13,9 @@ var require_doc_web_view = __commonJS({
         };
       }
     });
+    fetch("./css/pages/doc-web-view/doc-web-view.css").then((res) => res.text()).then((e) => {
+      console.log("pages/doc-web-view/doc-web-view", e);
+    });
   }
 });
 
@@ -50,6 +53,9 @@ var require_user_authentication = __commonJS({
           openid: ""
         });
       }
+    });
+    fetch("./css/pages/user-authentication/user-authentication.css").then((res) => res.text()).then((e) => {
+      console.log("pages/user-authentication/user-authentication", e);
     });
   }
 });
@@ -95,6 +101,9 @@ var require_get_wx_context = __commonJS({
           wxContext: {}
         });
       }
+    });
+    fetch("./css/pages/get-wx-context/get-wx-context.css").then((res) => res.text()).then((e) => {
+      console.log("pages/get-wx-context/get-wx-context", e);
     });
   }
 });
@@ -172,6 +181,9 @@ var require_upload_file = __commonJS({
         });
       }
     });
+    fetch("./css/pages/upload-file/upload-file.css").then((res) => res.text()).then((e) => {
+      console.log("pages/upload-file/upload-file", e);
+    });
   }
 });
 
@@ -242,6 +254,9 @@ var require_download_file = __commonJS({
         });
       }
     });
+    fetch("./css/pages/download-file/download-file.css").then((res) => res.text()).then((e) => {
+      console.log("pages/download-file/download-file", e);
+    });
   }
 });
 
@@ -300,6 +315,9 @@ var require_get_temp_file_url = __commonJS({
           }
         });
       }
+    });
+    fetch("./css/pages/get-temp-file-url/get-temp-file-url.css").then((res) => res.text()).then((e) => {
+      console.log("pages/get-temp-file-url/get-temp-file-url", e);
     });
   }
 });
@@ -363,6 +381,9 @@ var require_delete_file = __commonJS({
         });
       }
     });
+    fetch("./css/pages/delete-file/delete-file.css").then((res) => res.text()).then((e) => {
+      console.log("pages/delete-file/delete-file", e);
+    });
   }
 });
 
@@ -381,6 +402,9 @@ var require_cloud_file_component = __commonJS({
         imageFileId: demoImageFileId,
         videoFileId: demoVideoFileId
       }
+    });
+    fetch("./css/pages/cloud-file-component/cloud-file-component.css").then((res) => res.text()).then((e) => {
+      console.log("pages/cloud-file-component/cloud-file-component", e);
     });
   }
 });
@@ -595,6 +619,9 @@ var require_crud = __commonJS({
         });
       }
     });
+    fetch("./css/pages/crud/crud.css").then((res) => res.text()).then((e) => {
+      console.log("pages/crud/crud", e);
+    });
   }
 });
 
@@ -733,6 +760,9 @@ var require_crud_detail = __commonJS({
           description: e.detail.value
         });
       }
+    });
+    fetch("./css/pages/crud-detail/crud-detail.css").then((res) => res.text()).then((e) => {
+      console.log("pages/crud-detail/crud-detail", e);
     });
   }
 });
@@ -1190,6 +1220,9 @@ var require_db_permission = __commonJS({
         });
       }
     });
+    fetch("./css/pages/db-permission/db-permission.css").then((res) => res.text()).then((e) => {
+      console.log("pages/db-permission/db-permission", e);
+    });
   }
 });
 
@@ -1404,6 +1437,9 @@ var require_server_date = __commonJS({
         });
       }
     });
+    fetch("./css/pages/server-date/server-date.css").then((res) => res.text()).then((e) => {
+      console.log("pages/server-date/server-date", e);
+    });
   }
 });
 
@@ -1496,6 +1532,9 @@ var require_scf_database = __commonJS({
         });
       }
     });
+    fetch("./css/pages/scf-database/scf-database.css").then((res) => res.text()).then((e) => {
+      console.log("pages/scf-database/scf-database", e);
+    });
   }
 });
 
@@ -1554,6 +1593,9 @@ var require_scf_storage = __commonJS({
           }
         });
       }
+    });
+    fetch("./css/pages/scf-storage/scf-storage.css").then((res) => res.text()).then((e) => {
+      console.log("pages/scf-storage/scf-storage", e);
     });
   }
 });
@@ -1697,6 +1739,9 @@ var require_scf_openapi = __commonJS({
           }
         });
       }
+    });
+    fetch("./css/pages/scf-openapi/scf-openapi.css").then((res) => res.text()).then((e) => {
+      console.log("pages/scf-openapi/scf-openapi", e);
     });
   }
 });

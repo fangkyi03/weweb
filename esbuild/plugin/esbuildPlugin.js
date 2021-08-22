@@ -12,10 +12,12 @@ module.exports = options => {
     name: "weweb",
     setup(build) {
       build.onLoad({ filter: /\.js$/ }, async (args) => {
-        console.log('输出当前文件',fileNumber,args.path)
+        // console.log('输出当前文件',fileNumber,args.path)
         fileNumber += 1
         let text = fs.readFileSync(args.path, 'utf8')
-        if (args.path.includes('app.js')) {
+        const isApp = args.path.includes('app.js')
+        const isPage = args.path.includes('page')
+        if (isApp) {
           const pageJSON = JSON.parse(fs.readFileSync(path.join(args.path,'../app.json'),'utf-8'))
           path.toNamespacedPath
           let pageText = ''
@@ -23,9 +25,19 @@ module.exports = options => {
             pageText += `require('./${e}')\n`
           })
           text += `\n
-            consolo.log(AppData())
             const appJSON = require('./app.json');
             ${pageText}
+          `
+        }
+        if (isPage) {
+          const pagePath = args.path.replace(options.targetPath,'').replace('.js', '').split('/').filter((e)=>e).slice(1).join('/')
+          text += `
+            fetch('./css/${pagePath}.css')
+            .then(res => res.text())
+            .then((e)=>{
+              console.log('${pagePath}',e)
+            })
+            \n
           `
         }
         return {
@@ -34,6 +46,7 @@ module.exports = options => {
         }
       })
       build.onLoad({ filter: /\.wxss$/ }, async (args) => {
+        console.log('输出当前文件',fileNumber,args.path)
         const str = readFile(args)
         return {
           contents: str,
