@@ -49,7 +49,7 @@ const init = ({targetPath,outDir = './out',minify = false} = {}) => {
             ...e,
             bundle:true,
             format:'esm',
-            minify:true,
+            // minify:true,
             plugins:[esbuildPlugin(e.outfile)],
             outfile:e.outfile,
         })

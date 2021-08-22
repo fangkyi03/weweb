@@ -24,11 +24,6 @@ window['_pageObj'] = {};
 window['_global'] = {};
 window['_pages'] = {}
 
-window['Page'] = (viewConfig) => {
-  const page = getPage(window['__wxRoute']);
-  page.view = viewConfig
-};
-
 window['getPage'] = (files) => {
   if (_pageObj[files]) {
     return _pageObj[files]
@@ -38,21 +33,23 @@ window['getPage'] = (files) => {
   }
 }
 
-window['_globalApp'] = ({appConfig}) => {
-  _global["appConfig"] = appConfig;
+window['App'] = (config) => {
+  _global["appConfig"] = config;
 };
-window['_globalComponent'] = ({config, template}) => {
-  _pageObj[window['__wxRoute']] = {
-    config,
-    template,
-  };
+window['Page'] = window['Component'] = (viewConfig) => {
+  const page = getPage(window['__wxRoute']);
+  page.view = viewConfig
 };
+
+
 window['__wxRoute'] = "";
 var getCurrentInstance = () => {
   return {
     router: _global["router"],
   };
 };
+
+
 window['wx'] = (window['jd'] = {
   webpackJsonp: [],
   getCurrentPages,

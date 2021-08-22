@@ -46,7 +46,7 @@ module.exports = options => {
         const str = readFile(args)
         return {
           contents: str,
-          loader: "text"
+          loader: "css"
         }
       })
       build.onLoad({ filter: /\.wxml$/ }, async (args) => {
