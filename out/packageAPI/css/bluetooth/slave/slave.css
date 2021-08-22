@@ -1,0 +1,6 @@
+/* miniprogram-demo/miniprogram/packageAPI/pages/bluetooth/slave/slave.wxss */
+.action-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

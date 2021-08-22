@@ -27,15 +27,6 @@ module.exports = options => {
             const appJSON = require('./app.json');
             ${pageText}
           `
-        }else {
-          const wxssFileName = args.path.split('/').slice(-1)[0].split('.')[0] + '.wxss'
-          const wxmlFileName = args.path.split('/').slice(-1)[0].split('.')[0] + '.wxml'
-          if (fs.existsSync(path.join(args.path,'../',wxssFileName))) {
-            text = `require('./${wxssFileName}')\n` + text
-          }
-          if (fs.existsSync(path.join(args.path,'../',wxmlFileName))) {
-            text = `require('./${wxmlFileName}')\n` + text
-          }
         }
         return {
           contents: text.replace(/require\('\//g, `require('./`),

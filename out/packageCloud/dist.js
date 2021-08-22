@@ -2,25 +2,9 @@ var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[Object.keys(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
 
-// miniprogram-demo/miniprogram/packageCloud/pages/doc-web-view/doc-web-view.wxml
-var require_doc_web_view = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/doc-web-view/doc-web-view.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageCloud/pages/doc-web-view/doc-web-view.wxss
-var require_ = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/doc-web-view/doc-web-view.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageCloud/pages/doc-web-view/doc-web-view.js
-var require_doc_web_view2 = __commonJS({
+var require_doc_web_view = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/doc-web-view/doc-web-view.js"() {
-    require_doc_web_view();
-    require_();
     Page({
       onShareAppMessage() {
         return {
@@ -32,25 +16,9 @@ var require_doc_web_view2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageCloud/pages/user-authentication/user-authentication.wxml
-var require_user_authentication = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/user-authentication/user-authentication.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageCloud/pages/user-authentication/user-authentication.wxss
-var require_2 = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/user-authentication/user-authentication.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageCloud/pages/user-authentication/user-authentication.js
-var require_user_authentication2 = __commonJS({
+var require_user_authentication = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/user-authentication/user-authentication.js"() {
-    require_user_authentication();
-    require_2();
     var app = getApp();
     Page({
       onShareAppMessage() {
@@ -86,25 +54,9 @@ var require_user_authentication2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageCloud/pages/get-wx-context/get-wx-context.wxml
-var require_get_wx_context = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/get-wx-context/get-wx-context.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageCloud/pages/get-wx-context/get-wx-context.wxss
-var require_3 = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/get-wx-context/get-wx-context.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageCloud/pages/get-wx-context/get-wx-context.js
-var require_get_wx_context2 = __commonJS({
+var require_get_wx_context = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/get-wx-context/get-wx-context.js"() {
-    require_get_wx_context();
-    require_3();
     Page({
       onShareAppMessage() {
         return {
@@ -147,25 +99,9 @@ var require_get_wx_context2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageCloud/pages/upload-file/upload-file.wxml
-var require_upload_file = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/upload-file/upload-file.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageCloud/pages/upload-file/upload-file.wxss
-var require_4 = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/upload-file/upload-file.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageCloud/pages/upload-file/upload-file.js
-var require_upload_file2 = __commonJS({
+var require_upload_file = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/upload-file/upload-file.js"() {
-    require_upload_file();
-    require_4();
     var app = getApp();
     Page({
       onShareAppMessage() {
@@ -239,20 +175,6 @@ var require_upload_file2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageCloud/pages/download-file/download-file.wxml
-var require_download_file = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/download-file/download-file.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageCloud/pages/download-file/download-file.wxss
-var require_5 = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/download-file/download-file.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/config.js
 var require_config = __commonJS({
   "miniprogram-demo/miniprogram/config.js"(exports, module) {
@@ -269,10 +191,8 @@ var require_config = __commonJS({
 });
 
 // miniprogram-demo/miniprogram/packageCloud/pages/download-file/download-file.js
-var require_download_file2 = __commonJS({
+var require_download_file = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/download-file/download-file.js"() {
-    require_download_file();
-    require_5();
     var demoImageFileId = require_config().demoImageFileId;
     var app = getApp();
     Page({
@@ -325,25 +245,9 @@ var require_download_file2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageCloud/pages/get-temp-file-url/get-temp-file-url.wxml
-var require_get_temp_file_url = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/get-temp-file-url/get-temp-file-url.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageCloud/pages/get-temp-file-url/get-temp-file-url.wxss
-var require_6 = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/get-temp-file-url/get-temp-file-url.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageCloud/pages/get-temp-file-url/get-temp-file-url.js
-var require_get_temp_file_url2 = __commonJS({
+var require_get_temp_file_url = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/get-temp-file-url/get-temp-file-url.js"() {
-    require_get_temp_file_url();
-    require_6();
     var demoImageFileId = require_config().demoImageFileId;
     var app = getApp();
     Page({
@@ -400,25 +304,9 @@ var require_get_temp_file_url2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageCloud/pages/delete-file/delete-file.wxml
-var require_delete_file = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/delete-file/delete-file.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageCloud/pages/delete-file/delete-file.wxss
-var require_7 = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/delete-file/delete-file.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageCloud/pages/delete-file/delete-file.js
-var require_delete_file2 = __commonJS({
+var require_delete_file = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/delete-file/delete-file.js"() {
-    require_delete_file();
-    require_7();
     var app = getApp();
     Page({
       onShareAppMessage() {
@@ -478,25 +366,9 @@ var require_delete_file2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageCloud/pages/cloud-file-component/cloud-file-component.wxml
-var require_cloud_file_component = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/cloud-file-component/cloud-file-component.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageCloud/pages/cloud-file-component/cloud-file-component.wxss
-var require_8 = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/cloud-file-component/cloud-file-component.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageCloud/pages/cloud-file-component/cloud-file-component.js
-var require_cloud_file_component2 = __commonJS({
+var require_cloud_file_component = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/cloud-file-component/cloud-file-component.js"() {
-    require_cloud_file_component();
-    require_8();
     var { demoImageFileId, demoVideoFileId } = require_config();
     Page({
       onShareAppMessage() {
@@ -513,25 +385,9 @@ var require_cloud_file_component2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageCloud/pages/crud/crud.wxml
-var require_crud = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/crud/crud.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageCloud/pages/crud/crud.wxss
-var require_9 = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/crud/crud.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageCloud/pages/crud/crud.js
-var require_crud2 = __commonJS({
+var require_crud = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/crud/crud.js"() {
-    require_crud();
-    require_9();
     var app = getApp();
     Page({
       onShareAppMessage() {
@@ -742,25 +598,9 @@ var require_crud2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageCloud/pages/crud-detail/crud-detail.wxml
-var require_crud_detail = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/crud-detail/crud-detail.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageCloud/pages/crud-detail/crud-detail.wxss
-var require_10 = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/crud-detail/crud-detail.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageCloud/pages/crud-detail/crud-detail.js
-var require_crud_detail2 = __commonJS({
+var require_crud_detail = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/crud-detail/crud-detail.js"() {
-    require_crud_detail();
-    require_10();
     var app = getApp();
     Page({
       onShareAppMessage() {
@@ -897,25 +737,9 @@ var require_crud_detail2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageCloud/pages/db-permission/db-permission.wxml
-var require_db_permission = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/db-permission/db-permission.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageCloud/pages/db-permission/db-permission.wxss
-var require_11 = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/db-permission/db-permission.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageCloud/pages/db-permission/db-permission.js
-var require_db_permission2 = __commonJS({
+var require_db_permission = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/db-permission/db-permission.js"() {
-    require_db_permission();
-    require_11();
     var app = getApp();
     var sliderWidth = 96;
     Page({
@@ -1369,20 +1193,6 @@ var require_db_permission2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageCloud/pages/server-date/server-date.wxml
-var require_server_date = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/server-date/server-date.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageCloud/pages/server-date/server-date.wxss
-var require_12 = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/server-date/server-date.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/util/util.js
 var require_util = __commonJS({
   "miniprogram-demo/miniprogram/util/util.js"(exports, module) {
@@ -1470,10 +1280,8 @@ var require_util = __commonJS({
 });
 
 // miniprogram-demo/miniprogram/packageCloud/pages/server-date/server-date.js
-var require_server_date2 = __commonJS({
+var require_server_date = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/server-date/server-date.js"() {
-    require_server_date();
-    require_12();
     var util = require_util();
     var app = getApp();
     var collection = "serverDate";
@@ -1599,25 +1407,9 @@ var require_server_date2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageCloud/pages/scf-database/scf-database.wxml
-var require_scf_database = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/scf-database/scf-database.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageCloud/pages/scf-database/scf-database.wxss
-var require_13 = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/scf-database/scf-database.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageCloud/pages/scf-database/scf-database.js
-var require_scf_database2 = __commonJS({
+var require_scf_database = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/scf-database/scf-database.js"() {
-    require_scf_database();
-    require_13();
     Page({
       onShareAppMessage() {
         return {
@@ -1707,25 +1499,9 @@ var require_scf_database2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageCloud/pages/scf-storage/scf-storage.wxml
-var require_scf_storage = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/scf-storage/scf-storage.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageCloud/pages/scf-storage/scf-storage.wxss
-var require_14 = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/scf-storage/scf-storage.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageCloud/pages/scf-storage/scf-storage.js
-var require_scf_storage2 = __commonJS({
+var require_scf_storage = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/scf-storage/scf-storage.js"() {
-    require_scf_storage();
-    require_14();
     var demoImageFileId = require_config().demoImageFileId;
     var app = getApp();
     Page({
@@ -1782,25 +1558,9 @@ var require_scf_storage2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageCloud/pages/scf-openapi/scf-openapi.wxml
-var require_scf_openapi = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/scf-openapi/scf-openapi.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageCloud/pages/scf-openapi/scf-openapi.wxss
-var require_15 = __commonJS({
-  "miniprogram-demo/miniprogram/packageCloud/pages/scf-openapi/scf-openapi.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageCloud/pages/scf-openapi/scf-openapi.js
-var require_scf_openapi2 = __commonJS({
+var require_scf_openapi = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/scf-openapi/scf-openapi.js"() {
-    require_scf_openapi();
-    require_15();
     Page({
       onShareAppMessage() {
         return {
@@ -1942,18 +1702,18 @@ var require_scf_openapi2 = __commonJS({
 });
 
 // <stdin>
-require_doc_web_view2();
-require_user_authentication2();
-require_get_wx_context2();
-require_upload_file2();
-require_download_file2();
-require_get_temp_file_url2();
-require_delete_file2();
-require_cloud_file_component2();
-require_crud2();
-require_crud_detail2();
-require_db_permission2();
-require_server_date2();
-require_scf_database2();
-require_scf_storage2();
-require_scf_openapi2();
+require_doc_web_view();
+require_user_authentication();
+require_get_wx_context();
+require_upload_file();
+require_download_file();
+require_get_temp_file_url();
+require_delete_file();
+require_cloud_file_component();
+require_crud();
+require_crud_detail();
+require_db_permission();
+require_server_date();
+require_scf_database();
+require_scf_storage();
+require_scf_openapi();

@@ -10,12 +10,14 @@ function getPageConfig (outDir) {
         {
             path:'/',
             outfile:`${outDir}/index/dist.js`,
+            outdir:'./out/index',
             children:appJSON.pages
         },
         ...(appJSON.subpackages || []).map((e)=>{
             return {
                 path:e.root,
                 children:e.pages,
+                outdir:outDir + '/' + e.root ,
                 outfile:outDir + '/' + e.root + '/dist.js'
             }
         })
@@ -31,7 +33,9 @@ function getPageConfig (outDir) {
         })
         return {
             outfile:e.outfile,
-            // children:e.children,
+            outdir:e.outdir,
+            childrens:e.children,
+            path:e.path,
             stdin:{
                 contents:text,
                 resolveDir :process.cwd(),
@@ -40,23 +44,42 @@ function getPageConfig (outDir) {
     })
 }
 
+function buildJS(item) {
+    esbuild.build({
+        stdin:item.stdin,
+        bundle:true,
+        format:'esm',
+        // minify:true,
+        plugins:[esbuildPlugin(item.outfile)],
+        outfile:item.outfile,
+    })
+    .then(()=>{
+        gulp.src(path.join(__dirname,'../publish/**/*'))
+        .pipe(gulp.dest(path.join(item.outfile,'../')))
+    })
+}
+
+function buildCSS(item) {
+    esbuild.build({
+        entryPoints:item.childrens.map((e)=>{
+            const filePath = path.join(rootPath,item.path,e)
+            return file.getWXSSPATH(filePath)
+        }),
+        bundle:true,
+        format:'esm',
+        splitting:true,
+        plugins:[esbuildPlugin(item.outfile)],
+        outdir:item.outdir + '/css'
+    })
+}
+
 const init = ({targetPath,outDir = './out',minify = false} = {}) => {
     rootPath = targetPath
     // 获取所有可以被遍历的页面
     const pages = getPageConfig(outDir)
     pages.forEach((e)=>{
-        esbuild.build({
-            ...e,
-            bundle:true,
-            format:'esm',
-            // minify:true,
-            plugins:[esbuildPlugin(e.outfile)],
-            outfile:e.outfile,
-        })
-        .then(()=>{
-            gulp.src(path.join(__dirname,'../publish/**/*'))
-            .pipe(gulp.dest(path.join(e.outfile,'../')))
-        })
+        buildJS(e)
+        buildCSS(e)
     })
 }
 

@@ -21,9 +21,22 @@ function getAppPATH(rootPATH,filePATH) {
     return path.join(rootPATH,filePATH)
 }
 
+// 获取样式目录
+function getWXSSPATH(filePATH) {
+    const lastFileNamePath = filePATH + '.wxss'
+    const indexWXML = filePATH + '/index.wxss'
+    if (fs.existsSync(lastFileNamePath)) {
+        return lastFileNamePath
+    }
+    if (fs.existsSync(indexWXML)) {
+        return indexWXML
+    }
+}
+
 module.exports = {
     readFile,
     readJSON,
     getAppJSON,
-    getAppPATH
+    getAppPATH,
+    getWXSSPATH
 }

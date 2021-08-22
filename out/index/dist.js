@@ -23,25 +23,9 @@ var __toModule = (module) => {
   return __reExport(__markAsModule(__defProp(module != null ? __create(__getProtoOf(module)) : {}, "default", module && module.__esModule && "default" in module ? { get: () => module.default, enumerable: true } : { value: module, enumerable: true })), module);
 };
 
-// miniprogram-demo/miniprogram/page/component/index.wxml
-var require_component = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/index.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/index.wxss
-var require_ = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/index.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/index.js
-var require_component2 = __commonJS({
+var require_component = __commonJS({
   "miniprogram-demo/miniprogram/page/component/index.js"() {
-    require_component();
-    require_();
     Page({
       onShow() {
         wx.reportAnalytics("enter_home_programmatically", {});
@@ -140,25 +124,9 @@ var require_component2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/view/view.wxml
-var require_view = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/view/view.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/view/view.wxss
-var require_2 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/view/view.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/view/view.js
-var require_view2 = __commonJS({
+var require_view = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/view/view.js"() {
-    require_view();
-    require_2();
     Page({
       onShareAppMessage() {
         return {
@@ -170,25 +138,9 @@ var require_view2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/scroll-view/scroll-view.wxml
-var require_scroll_view = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/scroll-view/scroll-view.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/scroll-view/scroll-view.wxss
-var require_3 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/scroll-view/scroll-view.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/scroll-view/scroll-view.js
-var require_scroll_view2 = __commonJS({
+var require_scroll_view = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/scroll-view/scroll-view.js"() {
-    require_scroll_view();
-    require_3();
     var order = ["demo1", "demo2", "demo3"];
     Page({
       onLoad() {
@@ -299,25 +251,9 @@ var require_scroll_view2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/swiper/swiper.wxml
-var require_swiper = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/swiper/swiper.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/swiper/swiper.wxss
-var require_4 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/swiper/swiper.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/swiper/swiper.js
-var require_swiper2 = __commonJS({
+var require_swiper = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/swiper/swiper.js"() {
-    require_swiper();
-    require_4();
     Page({
       onShareAppMessage() {
         return {
@@ -357,25 +293,9 @@ var require_swiper2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/text/text.wxml
-var require_text = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/text/text.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/text/text.wxss
-var require_5 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/text/text.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/text/text.js
-var require_text2 = __commonJS({
+var require_text = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/text/text.js"() {
-    require_text();
-    require_5();
     var texts = [
       "2011\u5E741\u6708\uFF0C\u5FAE\u4FE11.0\u53D1\u5E03",
       "\u540C\u5E745\u6708\uFF0C\u5FAE\u4FE12.0\u8BED\u97F3\u5BF9\u8BB2\u53D1\u5E03",
@@ -436,25 +356,9 @@ var require_text2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/icon/icon.wxml
-var require_icon = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/icon/icon.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/icon/icon.wxss
-var require_6 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/icon/icon.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/icon/icon.js
-var require_icon2 = __commonJS({
+var require_icon = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/icon/icon.js"() {
-    require_icon();
-    require_6();
     Page({
       onShareAppMessage() {
         return {
@@ -466,25 +370,9 @@ var require_icon2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/progress/progress.wxml
-var require_progress = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/progress/progress.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/progress/progress.wxss
-var require_7 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/progress/progress.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/progress/progress.js
-var require_progress2 = __commonJS({
+var require_progress = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/progress/progress.js"() {
-    require_progress();
-    require_7();
     Page({
       onShareAppMessage() {
         return {
@@ -496,25 +384,9 @@ var require_progress2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/button/button.wxml
-var require_button = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/button/button.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/button/button.wxss
-var require_8 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/button/button.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/button/button.js
-var require_button2 = __commonJS({
+var require_button = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/button/button.js"() {
-    require_button();
-    require_8();
     var types = ["default", "primary", "warn"];
     var pageObject = {
       data: {
@@ -573,25 +445,9 @@ var require_button2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/checkbox/checkbox.wxml
-var require_checkbox = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/checkbox/checkbox.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/checkbox/checkbox.wxss
-var require_9 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/checkbox/checkbox.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/checkbox/checkbox.js
-var require_checkbox2 = __commonJS({
+var require_checkbox = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/checkbox/checkbox.js"() {
-    require_checkbox();
-    require_9();
     Page({
       onShareAppMessage() {
         return {
@@ -630,25 +486,9 @@ var require_checkbox2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/form/form.wxml
-var require_form = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/form/form.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/form/form.wxss
-var require_10 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/form/form.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/form/form.js
-var require_form2 = __commonJS({
+var require_form = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/form/form.js"() {
-    require_form();
-    require_10();
     Page({
       onShareAppMessage() {
         return {
@@ -691,25 +531,9 @@ var require_form2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/input/input.wxml
-var require_input = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/input/input.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/input/input.wxss
-var require_11 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/input/input.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/input/input.js
-var require_input2 = __commonJS({
+var require_input = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/input/input.js"() {
-    require_input();
-    require_11();
     Page({
       onShareAppMessage() {
         return {
@@ -748,25 +572,9 @@ var require_input2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/label/label.wxml
-var require_label = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/label/label.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/label/label.wxss
-var require_12 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/label/label.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/label/label.js
-var require_label2 = __commonJS({
+var require_label = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/label/label.js"() {
-    require_label();
-    require_12();
     Page({
       onShareAppMessage() {
         return {
@@ -816,25 +624,9 @@ var require_label2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/picker/picker.wxml
-var require_picker = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/picker/picker.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/picker/picker.wxss
-var require_13 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/picker/picker.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/picker/picker.js
-var require_picker2 = __commonJS({
+var require_picker = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/picker/picker.js"() {
-    require_picker();
-    require_13();
     Page({
       onShareAppMessage() {
         return {
@@ -868,25 +660,9 @@ var require_picker2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/radio/radio.wxml
-var require_radio = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/radio/radio.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/radio/radio.wxss
-var require_14 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/radio/radio.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/radio/radio.js
-var require_radio2 = __commonJS({
+var require_radio = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/radio/radio.js"() {
-    require_radio();
-    require_14();
     Page({
       onShareAppMessage() {
         return {
@@ -918,25 +694,9 @@ var require_radio2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/slider/slider.wxml
-var require_slider = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/slider/slider.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/slider/slider.wxss
-var require_15 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/slider/slider.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/slider/slider.js
-var require_slider2 = __commonJS({
+var require_slider = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/slider/slider.js"() {
-    require_slider();
-    require_15();
     var pageData = {
       onShareAppMessage() {
         return {
@@ -956,25 +716,9 @@ var require_slider2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/switch/switch.wxml
-var require_switch = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/switch/switch.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/switch/switch.wxss
-var require_16 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/switch/switch.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/switch/switch.js
-var require_switch2 = __commonJS({
+var require_switch = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/switch/switch.js"() {
-    require_switch();
-    require_16();
     Page({
       onShareAppMessage() {
         return {
@@ -992,25 +736,9 @@ var require_switch2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/textarea/textarea.wxml
-var require_textarea = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/textarea/textarea.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/textarea/textarea.wxss
-var require_17 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/textarea/textarea.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/textarea/textarea.js
-var require_textarea2 = __commonJS({
+var require_textarea = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/textarea/textarea.js"() {
-    require_textarea();
-    require_17();
     Page({
       onShareAppMessage() {
         return {
@@ -1028,25 +756,9 @@ var require_textarea2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/navigator/navigator.wxml
-var require_navigator = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/navigator/navigator.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/navigator/navigator.wxss
-var require_18 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/navigator/navigator.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/navigator/navigator.js
-var require_navigator2 = __commonJS({
+var require_navigator = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/navigator/navigator.js"() {
-    require_navigator();
-    require_18();
     Page({
       onShareAppMessage() {
         return {
@@ -1058,25 +770,9 @@ var require_navigator2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/navigator/navigate.wxml
-var require_navigate = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/navigator/navigate.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/navigator/navigate.wxss
-var require_19 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/navigator/navigate.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/navigator/navigate.js
-var require_navigate2 = __commonJS({
+var require_navigate = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/navigator/navigate.js"() {
-    require_navigate();
-    require_19();
     Page({
       onShareAppMessage() {
         return {
@@ -1094,25 +790,9 @@ var require_navigate2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/navigator/redirect.wxml
-var require_redirect = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/navigator/redirect.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/navigator/redirect.wxss
-var require_20 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/navigator/redirect.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/navigator/redirect.js
-var require_redirect2 = __commonJS({
+var require_redirect = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/navigator/redirect.js"() {
-    require_redirect();
-    require_20();
     Page({
       onShareAppMessage() {
         return {
@@ -1130,25 +810,9 @@ var require_redirect2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/image/image.wxml
-var require_image = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/image/image.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/image/image.wxss
-var require_21 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/image/image.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/image/image.js
-var require_image2 = __commonJS({
+var require_image = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/image/image.js"() {
-    require_image();
-    require_21();
     Page({
       onShareAppMessage() {
         return {
@@ -1179,25 +843,9 @@ var require_image2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/video/video.wxml
-var require_video = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/video/video.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/video/video.wxss
-var require_22 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/video/video.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/video/video.js
-var require_video2 = __commonJS({
+var require_video = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/video/video.js"() {
-    require_video();
-    require_22();
     function getRandomColor() {
       const rgb = [];
       for (let i = 0; i < 3; ++i) {
@@ -1277,25 +925,9 @@ var require_video2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/map/map.wxml
-var require_map = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/map/map.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/map/map.wxss
-var require_23 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/map/map.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/map/map.js
-var require_map2 = __commonJS({
+var require_map = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/map/map.js"() {
-    require_map();
-    require_23();
     Page({
       onShareAppMessage() {
         return {
@@ -1484,20 +1116,6 @@ var require_util = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/canvas/canvas.wxml
-var require_canvas = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/canvas/canvas.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/canvas/canvas.wxss
-var require_24 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/canvas/canvas.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/canvas/canvas.js
 var canvas_exports = {};
 __markAsModule(canvas_exports);
@@ -1505,8 +1123,6 @@ var import_util;
 var init_canvas = __esm({
   "miniprogram-demo/miniprogram/page/component/pages/canvas/canvas.js"() {
     import_util = __toModule(require_util());
-    require_canvas();
-    require_24();
     Page({
       onShareAppMessage() {
         return {
@@ -1602,25 +1218,9 @@ var init_canvas = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/ad/ad.wxml
-var require_ad = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/ad/ad.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/ad/ad.wxss
-var require_25 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/ad/ad.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/ad/ad.js
-var require_ad2 = __commonJS({
+var require_ad = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/ad/ad.js"() {
-    require_ad();
-    require_25();
     var info = wx.getSystemInfoSync();
     Page({
       onShareAppMessage() {
@@ -1636,25 +1236,9 @@ var require_ad2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/movable-view/movable-view.wxml
-var require_movable_view = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/movable-view/movable-view.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/movable-view/movable-view.wxss
-var require_26 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/movable-view/movable-view.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/movable-view/movable-view.js
-var require_movable_view2 = __commonJS({
+var require_movable_view = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/movable-view/movable-view.js"() {
-    require_movable_view();
-    require_26();
     Page({
       onShareAppMessage() {
         return {
@@ -1688,25 +1272,9 @@ var require_movable_view2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/cover-view/cover-view.wxml
-var require_cover_view = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/cover-view/cover-view.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/cover-view/cover-view.wxss
-var require_27 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/cover-view/cover-view.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/cover-view/cover-view.js
-var require_cover_view2 = __commonJS({
+var require_cover_view = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/cover-view/cover-view.js"() {
-    require_cover_view();
-    require_27();
     Page({
       onShareAppMessage() {
         return {
@@ -1722,25 +1290,9 @@ var require_cover_view2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/rich-text/rich-text.wxml
-var require_rich_text = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/rich-text/rich-text.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/rich-text/rich-text.wxss
-var require_28 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/rich-text/rich-text.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/rich-text/rich-text.js
-var require_rich_text2 = __commonJS({
+var require_rich_text = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/rich-text/rich-text.js"() {
-    require_rich_text();
-    require_28();
     var htmlSnip = `<div class="div_class">
   <h1>Title</h1>
   <p class="p">
@@ -1809,25 +1361,9 @@ var require_rich_text2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/picker-view/picker-view.wxml
-var require_picker_view = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/picker-view/picker-view.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/picker-view/picker-view.wxss
-var require_29 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/picker-view/picker-view.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/picker-view/picker-view.js
-var require_picker_view2 = __commonJS({
+var require_picker_view = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/picker-view/picker-view.js"() {
-    require_picker_view();
-    require_29();
     var date = new Date();
     var years = [];
     var months = [];
@@ -1871,25 +1407,9 @@ var require_picker_view2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/camera/camera.wxml
-var require_camera = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/camera/camera.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/camera/camera.wxss
-var require_30 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/camera/camera.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/camera/camera.js
-var require_camera2 = __commonJS({
+var require_camera = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/camera/camera.js"() {
-    require_camera();
-    require_30();
     var vs2 = `
   attribute vec3 aPos;
   attribute vec2 aVertexTextureCoord;
@@ -2096,25 +1616,9 @@ var require_camera2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/camera-scan-code/camera-scan-code.wxml
-var require_camera_scan_code = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/camera-scan-code/camera-scan-code.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/camera-scan-code/camera-scan-code.wxss
-var require_31 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/camera-scan-code/camera-scan-code.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/camera-scan-code/camera-scan-code.js
-var require_camera_scan_code2 = __commonJS({
+var require_camera_scan_code = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/camera-scan-code/camera-scan-code.js"() {
-    require_camera_scan_code();
-    require_31();
     Page({
       onShareAppMessage() {
         return {
@@ -2148,25 +1652,9 @@ var require_camera_scan_code2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/map-styles/map-styles.wxml
-var require_map_styles = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/map-styles/map-styles.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/map-styles/map-styles.wxss
-var require_32 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/map-styles/map-styles.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/map-styles/map-styles.js
-var require_map_styles2 = __commonJS({
+var require_map_styles = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/map-styles/map-styles.js"() {
-    require_map_styles();
-    require_32();
     Page({
       onShareAppMessage() {
         return {
@@ -2178,25 +1666,9 @@ var require_map_styles2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/live-player/live-player.wxml
-var require_live_player = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/live-player/live-player.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/live-player/live-player.wxss
-var require_33 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/live-player/live-player.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/live-player/live-player.js
-var require_live_player2 = __commonJS({
+var require_live_player = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/live-player/live-player.js"() {
-    require_live_player();
-    require_33();
     Page({
       onShareAppMessage() {
         return {
@@ -2285,25 +1757,9 @@ var require_live_player2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/live-pusher/live-pusher.wxml
-var require_live_pusher = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/live-pusher/live-pusher.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/live-pusher/live-pusher.wxss
-var require_34 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/live-pusher/live-pusher.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/live-pusher/live-pusher.js
-var require_live_pusher2 = __commonJS({
+var require_live_pusher = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/live-pusher/live-pusher.js"() {
-    require_live_pusher();
-    require_34();
     Page({
       onShareAppMessage() {
         return {
@@ -2392,25 +1848,9 @@ var require_live_pusher2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/aria-component/aria-component.wxml
-var require_aria_component = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/aria-component/aria-component.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/aria-component/aria-component.wxss
-var require_35 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/aria-component/aria-component.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/aria-component/aria-component.js
-var require_aria_component2 = __commonJS({
+var require_aria_component = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/aria-component/aria-component.js"() {
-    require_aria_component();
-    require_35();
     Page({
       onShareAppMessage() {
         return {
@@ -2422,25 +1862,9 @@ var require_aria_component2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/API/index.wxml
-var require_API = __commonJS({
-  "miniprogram-demo/miniprogram/page/API/index.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/API/index.wxss
-var require_36 = __commonJS({
-  "miniprogram-demo/miniprogram/page/API/index.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/API/index.js
-var require_API2 = __commonJS({
+var require_API = __commonJS({
   "miniprogram-demo/miniprogram/page/API/index.js"() {
-    require_API();
-    require_36();
     Page({
       onShareAppMessage() {
         return {
@@ -2818,25 +2242,9 @@ var require_API2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/cloud/index.wxml
-var require_cloud = __commonJS({
-  "miniprogram-demo/miniprogram/page/cloud/index.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/cloud/index.wxss
-var require_37 = __commonJS({
-  "miniprogram-demo/miniprogram/page/cloud/index.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/cloud/index.js
-var require_cloud2 = __commonJS({
+var require_cloud = __commonJS({
   "miniprogram-demo/miniprogram/page/cloud/index.js"() {
-    require_cloud();
-    require_37();
     Page({
       onShareAppMessage() {
         return {
@@ -2965,25 +2373,9 @@ var require_cloud2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/doc-web-view/doc-web-view.wxml
-var require_doc_web_view = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/doc-web-view/doc-web-view.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/doc-web-view/doc-web-view.wxss
-var require_38 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/doc-web-view/doc-web-view.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/doc-web-view/doc-web-view.js
-var require_doc_web_view2 = __commonJS({
+var require_doc_web_view = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/doc-web-view/doc-web-view.js"() {
-    require_doc_web_view();
-    require_38();
     Page({
       onShareAppMessage() {
         return {
@@ -2995,25 +2387,9 @@ var require_doc_web_view2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/open-data/open-data.wxml
-var require_open_data = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/open-data/open-data.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/open-data/open-data.wxss
-var require_39 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/open-data/open-data.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/open-data/open-data.js
-var require_open_data2 = __commonJS({
+var require_open_data = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/open-data/open-data.js"() {
-    require_open_data();
-    require_39();
     Page({
       onShareAppMessage() {
         return {
@@ -3025,25 +2401,9 @@ var require_open_data2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/web-view/web-view.wxml
-var require_web_view = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/web-view/web-view.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/web-view/web-view.wxss
-var require_40 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/web-view/web-view.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/web-view/web-view.js
-var require_web_view2 = __commonJS({
+var require_web_view = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/web-view/web-view.js"() {
-    require_web_view();
-    require_40();
     Page({
       onShareAppMessage() {
         return {
@@ -3055,25 +2415,9 @@ var require_web_view2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/editor/editor.wxml
-var require_editor = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/editor/editor.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/editor/editor.wxss
-var require_41 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/editor/editor.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/editor/editor.js
-var require_editor2 = __commonJS({
+var require_editor = __commonJS({
   "miniprogram-demo/miniprogram/page/component/pages/editor/editor.js"() {
-    require_editor();
-    require_41();
     Page({
       onShareAppMessage() {
         return {
@@ -3267,28 +2611,12 @@ var init_CustomPage = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/index.wxml
-var require_example = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/index.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/index.wxss
-var require_42 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/index.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/index.js
 var example_exports = {};
 __markAsModule(example_exports);
 var init_example = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/index.js"() {
     init_CustomPage();
-    require_example();
-    require_42();
     CustomPage_default({
       onShareAppMessage() {
         return {
@@ -3413,20 +2741,6 @@ var init_example = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/cell/cell.wxml
-var require_cell = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/cell/cell.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/cell/cell.wxss
-var require_43 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/cell/cell.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/images/base64.js
 var require_base64 = __commonJS({
   "miniprogram-demo/miniprogram/page/weui/example/images/base64.js"(exports, module) {
@@ -3444,8 +2758,6 @@ var base64;
 var init_cell = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/cell/cell.js"() {
     init_CustomPage();
-    require_cell();
-    require_43();
     base64 = require_base64();
     CustomPage_default({
       onShareAppMessage() {
@@ -3479,20 +2791,6 @@ var init_cell = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/slideview/slideview.wxml
-var require_slideview = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/slideview/slideview.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/slideview/slideview.wxss
-var require_44 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/slideview/slideview.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/slideview/slideview.js
 var slideview_exports = {};
 __markAsModule(slideview_exports);
@@ -3500,8 +2798,6 @@ var base642;
 var init_slideview = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/slideview/slideview.js"() {
     init_CustomPage();
-    require_slideview();
-    require_44();
     base642 = require_base64();
     CustomPage_default({
       onShareAppMessage() {
@@ -3535,28 +2831,12 @@ var init_slideview = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/form/form.wxml
-var require_form3 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/form/form.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/form/form.wxss
-var require_45 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/form/form.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/form/form.js
 var form_exports = {};
 __markAsModule(form_exports);
 var init_form = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/form/form.js"() {
     init_CustomPage();
-    require_form3();
-    require_45();
     CustomPage_default({
       onShareAppMessage() {
         return {
@@ -3708,28 +2988,12 @@ var init_form = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/uploader/uploader.wxml
-var require_uploader = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/uploader/uploader.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/uploader/uploader.wxss
-var require_46 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/uploader/uploader.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/uploader/uploader.js
 var uploader_exports = {};
 __markAsModule(uploader_exports);
 var init_uploader = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/uploader/uploader.js"() {
     init_CustomPage();
-    require_uploader();
-    require_46();
     CustomPage_default({
       onShareAppMessage() {
         return {
@@ -3787,28 +3051,12 @@ var init_uploader = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/article/article.wxml
-var require_article = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/article/article.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/article/article.wxss
-var require_47 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/article/article.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/article/article.js
 var article_exports = {};
 __markAsModule(article_exports);
 var init_article = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/article/article.js"() {
     init_CustomPage();
-    require_article();
-    require_47();
     CustomPage_default({
       onShareAppMessage() {
         return {
@@ -3820,28 +3068,12 @@ var init_article = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/badge/badge.wxml
-var require_badge = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/badge/badge.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/badge/badge.wxss
-var require_48 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/badge/badge.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/badge/badge.js
 var badge_exports = {};
 __markAsModule(badge_exports);
 var init_badge = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/badge/badge.js"() {
     init_CustomPage();
-    require_badge();
-    require_48();
     CustomPage_default({
       onShareAppMessage() {
         console.log("\u5206\u4EAB\u6D4B\u8BD5");
@@ -3854,28 +3086,12 @@ var init_badge = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/flex/flex.wxml
-var require_flex = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/flex/flex.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/flex/flex.wxss
-var require_49 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/flex/flex.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/flex/flex.js
 var flex_exports = {};
 __markAsModule(flex_exports);
 var init_flex = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/flex/flex.js"() {
     init_CustomPage();
-    require_flex();
-    require_49();
     CustomPage_default({
       onShareAppMessage() {
         return {
@@ -3887,28 +3103,12 @@ var init_flex = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/footer/footer.wxml
-var require_footer = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/footer/footer.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/footer/footer.wxss
-var require_50 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/footer/footer.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/footer/footer.js
 var footer_exports = {};
 __markAsModule(footer_exports);
 var init_footer = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/footer/footer.js"() {
     init_CustomPage();
-    require_footer();
-    require_50();
     CustomPage_default({
       onShareAppMessage() {
         return {
@@ -3920,28 +3120,12 @@ var init_footer = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/gallery/gallery.wxml
-var require_gallery = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/gallery/gallery.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/gallery/gallery.wxss
-var require_51 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/gallery/gallery.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/gallery/gallery.js
 var gallery_exports = {};
 __markAsModule(gallery_exports);
 var init_gallery = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/gallery/gallery.js"() {
     init_CustomPage();
-    require_gallery();
-    require_51();
     CustomPage_default({
       onShareAppMessage() {
         return {
@@ -3976,20 +3160,6 @@ var init_gallery = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/grid/grid.wxml
-var require_grid = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/grid/grid.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/grid/grid.wxss
-var require_52 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/grid/grid.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/grid/grid.js
 var grid_exports = {};
 __markAsModule(grid_exports);
@@ -3997,8 +3167,6 @@ var GRID_DEMO_URL, app;
 var init_grid = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/grid/grid.js"() {
     init_CustomPage();
-    require_grid();
-    require_52();
     ({ GRID_DEMO_URL } = getApp().globalData);
     app = getApp();
     CustomPage_default({
@@ -4061,28 +3229,12 @@ var init_grid = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/loadmore/loadmore.wxml
-var require_loadmore = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/loadmore/loadmore.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/loadmore/loadmore.wxss
-var require_53 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/loadmore/loadmore.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/loadmore/loadmore.js
 var loadmore_exports = {};
 __markAsModule(loadmore_exports);
 var init_loadmore = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/loadmore/loadmore.js"() {
     init_CustomPage();
-    require_loadmore();
-    require_53();
     CustomPage_default({
       onShareAppMessage() {
         return {
@@ -4100,20 +3252,6 @@ var require_loading = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/panel/panel.wxml
-var require_panel = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/panel/panel.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/panel/panel.wxss
-var require_54 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/panel/panel.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/panel/panel.js
 var panel_exports = {};
 __markAsModule(panel_exports);
@@ -4121,8 +3259,6 @@ var base643;
 var init_panel = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/panel/panel.js"() {
     init_CustomPage();
-    require_panel();
-    require_54();
     base643 = require_base64();
     CustomPage_default({
       onShareAppMessage() {
@@ -4141,28 +3277,12 @@ var init_panel = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/preview/preview.wxml
-var require_preview = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/preview/preview.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/preview/preview.wxss
-var require_55 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/preview/preview.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/preview/preview.js
 var preview_exports = {};
 __markAsModule(preview_exports);
 var init_preview = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/preview/preview.js"() {
     init_CustomPage();
-    require_preview();
-    require_55();
     CustomPage_default({
       onShareAppMessage() {
         return {
@@ -4174,28 +3294,12 @@ var init_preview = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/dialog/dialog.wxml
-var require_dialog = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/dialog/dialog.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/dialog/dialog.wxss
-var require_56 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/dialog/dialog.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/dialog/dialog.js
 var dialog_exports = {};
 __markAsModule(dialog_exports);
 var init_dialog = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/dialog/dialog.js"() {
     init_CustomPage();
-    require_dialog();
-    require_56();
     CustomPage_default({
       onShareAppMessage() {
         return {
@@ -4229,28 +3333,12 @@ var init_dialog = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/msg/msg.wxml
-var require_msg = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/msg/msg.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/msg/msg.wxss
-var require_57 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/msg/msg.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/msg/msg.js
 var msg_exports = {};
 __markAsModule(msg_exports);
 var init_msg = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/msg/msg.js"() {
     init_CustomPage();
-    require_msg();
-    require_57();
     CustomPage_default({
       onShareAppMessage() {
         return {
@@ -4282,28 +3370,12 @@ var init_msg = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/msg/msg_text.wxml
-var require_msg_text = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/msg/msg_text.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/msg/msg_text.wxss
-var require_58 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/msg/msg_text.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/msg/msg_text.js
 var msg_text_exports = {};
 __markAsModule(msg_text_exports);
 var init_msg_text = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/msg/msg_text.js"() {
     init_CustomPage();
-    require_msg_text();
-    require_58();
     CustomPage_default({
       onShareAppMessage() {
         return {
@@ -4315,28 +3387,12 @@ var init_msg_text = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/msg/msg_text_primary.wxml
-var require_msg_text_primary = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/msg/msg_text_primary.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/msg/msg_text_primary.wxss
-var require_59 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/msg/msg_text_primary.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/msg/msg_text_primary.js
 var msg_text_primary_exports = {};
 __markAsModule(msg_text_primary_exports);
 var init_msg_text_primary = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/msg/msg_text_primary.js"() {
     init_CustomPage();
-    require_msg_text_primary();
-    require_59();
     CustomPage_default({
       onShareAppMessage() {
         return {
@@ -4348,28 +3404,12 @@ var init_msg_text_primary = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/msg/msg_success.wxml
-var require_msg_success = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/msg/msg_success.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/msg/msg_success.wxss
-var require_60 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/msg/msg_success.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/msg/msg_success.js
 var msg_success_exports = {};
 __markAsModule(msg_success_exports);
 var init_msg_success = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/msg/msg_success.js"() {
     init_CustomPage();
-    require_msg_success();
-    require_60();
     CustomPage_default({
       onShareAppMessage() {
         return {
@@ -4381,28 +3421,12 @@ var init_msg_success = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/msg/msg_fail.wxml
-var require_msg_fail = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/msg/msg_fail.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/msg/msg_fail.wxss
-var require_61 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/msg/msg_fail.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/msg/msg_fail.js
 var msg_fail_exports = {};
 __markAsModule(msg_fail_exports);
 var init_msg_fail = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/msg/msg_fail.js"() {
     init_CustomPage();
-    require_msg_fail();
-    require_61();
     CustomPage_default({
       onShareAppMessage() {
         return {
@@ -4414,25 +3438,9 @@ var init_msg_fail = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/navbar/navbar.wxml
-var require_navbar = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/navbar/navbar.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/navbar/navbar.wxss
-var require_62 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/navbar/navbar.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/navbar/navbar.js
-var require_navbar2 = __commonJS({
+var require_navbar = __commonJS({
   "miniprogram-demo/miniprogram/page/weui/example/navbar/navbar.js"() {
-    require_navbar();
-    require_62();
     var sliderWidth = 96;
     Page({
       onShareAppMessage() {
@@ -4475,20 +3483,6 @@ var require_navigation = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/tabbar/tabbar.wxml
-var require_tabbar = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/tabbar/tabbar.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/tabbar/tabbar.wxss
-var require_63 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/tabbar/tabbar.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/tabbar/tabbar.js
 var tabbar_exports = {};
 __markAsModule(tabbar_exports);
@@ -4496,8 +3490,6 @@ var app2;
 var init_tabbar = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/tabbar/tabbar.js"() {
     init_CustomPage();
-    require_tabbar();
-    require_63();
     app2 = getApp();
     CustomPage_default({
       onShareAppMessage() {
@@ -4539,20 +3531,6 @@ var init_tabbar = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/icons/icons.wxml
-var require_icons = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/icons/icons.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/icons/icons.wxss
-var require_64 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/icons/icons.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/icons/icons.js
 var icons_exports = {};
 __markAsModule(icons_exports);
@@ -4560,8 +3538,6 @@ var colorLight, colorDark;
 var init_icons = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/icons/icons.js"() {
     init_CustomPage();
-    require_icons();
-    require_64();
     colorLight = "rgba(0, 0, 0, .9)";
     colorDark = "rgba(255, 255, 255, .8)";
     CustomPage_default({
@@ -5079,25 +4055,9 @@ var init_icons = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/form-page/form-page.wxml
-var require_form_page = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/form-page/form-page.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/form-page/form-page.wxss
-var require_65 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/form-page/form-page.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/form-page/form-page.js
-var require_form_page2 = __commonJS({
+var require_form_page = __commonJS({
   "miniprogram-demo/miniprogram/page/weui/example/form-page/form-page.js"() {
-    require_form_page();
-    require_65();
     Component({
       onShareAppMessage() {
         return {
@@ -5111,28 +4071,12 @@ var require_form_page2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/half-screen-dialog/half-screen-dialog.wxml
-var require_half_screen_dialog = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/half-screen-dialog/half-screen-dialog.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/half-screen-dialog/half-screen-dialog.wxss
-var require_66 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/half-screen-dialog/half-screen-dialog.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/half-screen-dialog/half-screen-dialog.js
 var half_screen_dialog_exports = {};
 __markAsModule(half_screen_dialog_exports);
 var init_half_screen_dialog = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/half-screen-dialog/half-screen-dialog.js"() {
     init_CustomPage();
-    require_half_screen_dialog();
-    require_66();
     CustomPage_default({
       onShareAppMessage() {
         return {
@@ -5181,28 +4125,12 @@ var init_half_screen_dialog = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/actionsheet/actionsheet.wxml
-var require_actionsheet = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/actionsheet/actionsheet.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/actionsheet/actionsheet.wxss
-var require_67 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/actionsheet/actionsheet.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/actionsheet/actionsheet.js
 var actionsheet_exports = {};
 __markAsModule(actionsheet_exports);
 var init_actionsheet = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/actionsheet/actionsheet.js"() {
     init_CustomPage();
-    require_actionsheet();
-    require_67();
     CustomPage_default({
       onShareAppMessage() {
         return {
@@ -5246,25 +4174,9 @@ var init_actionsheet = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/toptips/toptips.wxml
-var require_toptips = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/toptips/toptips.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/toptips/toptips.wxss
-var require_68 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/toptips/toptips.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/toptips/toptips.js
-var require_toptips2 = __commonJS({
+var require_toptips = __commonJS({
   "miniprogram-demo/miniprogram/page/weui/example/toptips/toptips.js"() {
-    require_toptips();
-    require_68();
     Page({
       onShareAppMessage() {
         return {
@@ -5301,28 +4213,12 @@ var require_toptips2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/searchbar/searchbar.wxml
-var require_searchbar = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/searchbar/searchbar.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/searchbar/searchbar.wxss
-var require_69 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/searchbar/searchbar.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/searchbar/searchbar.js
 var searchbar_exports = {};
 __markAsModule(searchbar_exports);
 var init_searchbar = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/searchbar/searchbar.js"() {
     init_CustomPage();
-    require_searchbar();
-    require_69();
     CustomPage_default({
       onShareAppMessage() {
         return {
@@ -5363,20 +4259,6 @@ var init_searchbar = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/emoji/emoji.wxml
-var require_emoji = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/emoji/emoji.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/emoji/emoji.wxss
-var require_70 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/emoji/emoji.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/emoji/emoji.js
 var emoji_exports = {};
 __markAsModule(emoji_exports);
@@ -5385,8 +4267,6 @@ var init_emoji = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/emoji/emoji.js"() {
     init_CustomPage();
     import_util2 = __toModule(require_util());
-    require_emoji();
-    require_70();
     CustomPage_default({
       onShareAppMessage() {
         return {
@@ -5545,20 +4425,6 @@ var init_emoji = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/video-swiper/video-swiper.wxml
-var require_video_swiper = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/video-swiper/video-swiper.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/video-swiper/video-swiper.wxss
-var require_71 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/video-swiper/video-swiper.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/video-swiper/video-swiper.js
 var video_swiper_exports = {};
 __markAsModule(video_swiper_exports);
@@ -5566,8 +4432,6 @@ var urls;
 var init_video_swiper = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/video-swiper/video-swiper.js"() {
     init_CustomPage();
-    require_video_swiper();
-    require_71();
     urls = [
       "https://res.wx.qq.com/wxaliveplayer/htdocs/video14e1eea.mov",
       "https://res.wx.qq.com/wxaliveplayer/htdocs/video24e1eeb.mov",
@@ -5626,28 +4490,12 @@ var init_video_swiper = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/index-list/index-list.wxml
-var require_index_list = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/index-list/index-list.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/index-list/index-list.wxss
-var require_72 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/index-list/index-list.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/index-list/index-list.js
 var index_list_exports = {};
 __markAsModule(index_list_exports);
 var init_index_list = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/index-list/index-list.js"() {
     init_CustomPage();
-    require_index_list();
-    require_72();
     CustomPage_default({
       onShareAppMessage() {
         return {
@@ -5700,28 +4548,12 @@ var init_index_list = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/sticky/sticky.wxml
-var require_sticky = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/sticky/sticky.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/sticky/sticky.wxss
-var require_73 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/sticky/sticky.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/sticky/sticky.js
 var sticky_exports = {};
 __markAsModule(sticky_exports);
 var init_sticky = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/sticky/sticky.js"() {
     init_CustomPage();
-    require_sticky();
-    require_73();
     CustomPage_default({
       onShareAppMessage() {
         return {
@@ -5744,28 +4576,12 @@ var init_sticky = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/tabs/tabs.wxml
-var require_tabs = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/tabs/tabs.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/tabs/tabs.wxss
-var require_74 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/tabs/tabs.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/tabs/tabs.js
 var tabs_exports = {};
 __markAsModule(tabs_exports);
 var init_tabs = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/tabs/tabs.js"() {
     init_CustomPage();
-    require_tabs();
-    require_74();
     CustomPage_default({
       onShareAppMessage() {
         return {
@@ -5833,28 +4649,12 @@ var init_tabs = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/vtabs/vtabs.wxml
-var require_vtabs = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/vtabs/vtabs.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/vtabs/vtabs.wxss
-var require_75 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/vtabs/vtabs.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/vtabs/vtabs.js
 var vtabs_exports = {};
 __markAsModule(vtabs_exports);
 var init_vtabs = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/vtabs/vtabs.js"() {
     init_CustomPage();
-    require_vtabs();
-    require_75();
     CustomPage_default({
       onShareAppMessage() {
         return {
@@ -5918,28 +4718,12 @@ var init_vtabs = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/select-text/select-text.wxml
-var require_select_text = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/select-text/select-text.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/select-text/select-text.wxss
-var require_76 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/select-text/select-text.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/select-text/select-text.js
 var select_text_exports = {};
 __markAsModule(select_text_exports);
 var init_select_text = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/select-text/select-text.js"() {
     init_CustomPage();
-    require_select_text();
-    require_76();
     CustomPage_default({
       onShareAppMessage() {
         return {
@@ -5977,20 +4761,6 @@ var init_select_text = __esm({
         });
       }
     });
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/barrage/barrage.wxml
-var require_barrage = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/barrage/barrage.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/barrage/barrage.wxss
-var require_77 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/barrage/barrage.wxss"(exports, module) {
-    module.exports = {};
   }
 });
 
@@ -6035,8 +4805,6 @@ var mockData;
 var init_barrage = __esm({
   "miniprogram-demo/miniprogram/page/weui/example/barrage/barrage.js"() {
     init_CustomPage();
-    require_barrage();
-    require_77();
     ({ mockData } = require_utils());
     CustomPage_default({
       onShareAppMessage() {
@@ -6117,20 +4885,6 @@ var init_barrage = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/wxml-to-canvas/wxml-to-canvas.wxml
-var require_wxml_to_canvas = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/wxml-to-canvas/wxml-to-canvas.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/wxml-to-canvas/wxml-to-canvas.wxss
-var require_78 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/wxml-to-canvas/wxml-to-canvas.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/wxml-to-canvas/demo.js
 var require_demo = __commonJS({
   "miniprogram-demo/miniprogram/page/weui/example/wxml-to-canvas/demo.js"(exports, module) {
@@ -6176,10 +4930,8 @@ var require_demo = __commonJS({
 });
 
 // miniprogram-demo/miniprogram/page/weui/example/wxml-to-canvas/wxml-to-canvas.js
-var require_wxml_to_canvas2 = __commonJS({
+var require_wxml_to_canvas = __commonJS({
   "miniprogram-demo/miniprogram/page/weui/example/wxml-to-canvas/wxml-to-canvas.js"() {
-    require_wxml_to_canvas();
-    require_78();
     var { wxml, style } = require_demo();
     Page({
       onShareAppMessage() {
@@ -6227,25 +4979,9 @@ var require_wxml_to_canvas2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/telescopic/telescopic.wxml
-var require_telescopic = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/telescopic/telescopic.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/telescopic/telescopic.wxss
-var require_79 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/telescopic/telescopic.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/telescopic/telescopic.js
-var require_telescopic2 = __commonJS({
+var require_telescopic = __commonJS({
   "miniprogram-demo/miniprogram/page/weui/example/telescopic/telescopic.js"() {
-    require_telescopic();
-    require_79();
     Page({
       data: {},
       onLoad() {
@@ -6260,25 +4996,9 @@ var require_telescopic2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/linebreak/linebreak.wxml
-var require_linebreak = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/linebreak/linebreak.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/linebreak/linebreak.wxss
-var require_80 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/linebreak/linebreak.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/linebreak/linebreak.js
-var require_linebreak2 = __commonJS({
+var require_linebreak = __commonJS({
   "miniprogram-demo/miniprogram/page/weui/example/linebreak/linebreak.js"() {
-    require_linebreak();
-    require_80();
     Page({
       data: {},
       onLoad() {
@@ -6293,25 +5013,9 @@ var require_linebreak2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/sidenavigation/sidenavigation.wxml
-var require_sidenavigation = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/sidenavigation/sidenavigation.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/sidenavigation/sidenavigation.wxss
-var require_81 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/sidenavigation/sidenavigation.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/sidenavigation/sidenavigation.js
-var require_sidenavigation2 = __commonJS({
+var require_sidenavigation = __commonJS({
   "miniprogram-demo/miniprogram/page/weui/example/sidenavigation/sidenavigation.js"() {
-    require_sidenavigation();
-    require_81();
     Page({
       data: {
         show: false,
@@ -6343,25 +5047,9 @@ var require_sidenavigation2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/pagination/pagination.wxml
-var require_pagination = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/pagination/pagination.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/pagination/pagination.wxss
-var require_82 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/pagination/pagination.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/pagination/pagination.js
-var require_pagination2 = __commonJS({
+var require_pagination = __commonJS({
   "miniprogram-demo/miniprogram/page/weui/example/pagination/pagination.js"() {
-    require_pagination();
-    require_82();
     Page({
       data: {},
       onLoad() {
@@ -6376,25 +5064,9 @@ var require_pagination2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/freelayout/freelayout.wxml
-var require_freelayout = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/freelayout/freelayout.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/freelayout/freelayout.wxss
-var require_83 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/freelayout/freelayout.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/freelayout/freelayout.js
-var require_freelayout2 = __commonJS({
+var require_freelayout = __commonJS({
   "miniprogram-demo/miniprogram/page/weui/example/freelayout/freelayout.js"() {
-    require_freelayout();
-    require_83();
     Page({
       data: {
         theme: "light"
@@ -6419,25 +5091,9 @@ var require_freelayout2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/layeredpresentation/layeredpresentation.wxml
-var require_layeredpresentation = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/layeredpresentation/layeredpresentation.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/layeredpresentation/layeredpresentation.wxss
-var require_84 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/layeredpresentation/layeredpresentation.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/layeredpresentation/layeredpresentation.js
-var require_layeredpresentation2 = __commonJS({
+var require_layeredpresentation = __commonJS({
   "miniprogram-demo/miniprogram/page/weui/example/layeredpresentation/layeredpresentation.js"() {
-    require_layeredpresentation();
-    require_84();
     Page({
       data: {
         hide1: false,
@@ -6467,25 +5123,9 @@ var require_layeredpresentation2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/weui/example/horizontalexpansion/horizontalexpansion.wxml
-var require_horizontalexpansion = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/horizontalexpansion/horizontalexpansion.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/weui/example/horizontalexpansion/horizontalexpansion.wxss
-var require_85 = __commonJS({
-  "miniprogram-demo/miniprogram/page/weui/example/horizontalexpansion/horizontalexpansion.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/weui/example/horizontalexpansion/horizontalexpansion.js
-var require_horizontalexpansion2 = __commonJS({
+var require_horizontalexpansion = __commonJS({
   "miniprogram-demo/miniprogram/page/weui/example/horizontalexpansion/horizontalexpansion.js"() {
-    require_horizontalexpansion();
-    require_85();
     Page({
       data: {
         theme: "light"
@@ -6510,20 +5150,6 @@ var require_horizontalexpansion2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/canvas-2d/canvas-2d.wxml
-var require_canvas_2d = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/canvas-2d/canvas-2d.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/canvas-2d/canvas-2d.wxss
-var require_86 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/canvas-2d/canvas-2d.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/canvas-2d/canvas-2d.js
 var canvas_2d_exports = {};
 __markAsModule(canvas_2d_exports);
@@ -6531,8 +5157,6 @@ var import_util3;
 var init_canvas_2d = __esm({
   "miniprogram-demo/miniprogram/page/component/pages/canvas-2d/canvas-2d.js"() {
     import_util3 = __toModule(require_util());
-    require_canvas_2d();
-    require_86();
     Page({
       onShareAppMessage() {
         return {
@@ -6644,20 +5268,6 @@ var init_canvas_2d = __esm({
   }
 });
 
-// miniprogram-demo/miniprogram/page/component/pages/webgl/webgl.wxml
-var require_webgl = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/webgl/webgl.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/page/component/pages/webgl/webgl.wxss
-var require_87 = __commonJS({
-  "miniprogram-demo/miniprogram/page/component/pages/webgl/webgl.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/page/component/pages/webgl/webgl.js
 var webgl_exports = {};
 __markAsModule(webgl_exports);
@@ -6665,8 +5275,6 @@ var import_util4, vs, fs, triangleVertices;
 var init_webgl = __esm({
   "miniprogram-demo/miniprogram/page/component/pages/webgl/webgl.js"() {
     import_util4 = __toModule(require_util());
-    require_webgl();
-    require_87();
     vs = `
   precision mediump float;
 
@@ -6774,47 +5382,47 @@ var init_webgl = __esm({
 });
 
 // <stdin>
-require_component2();
-require_view2();
-require_scroll_view2();
-require_swiper2();
-require_text2();
-require_icon2();
-require_progress2();
-require_button2();
-require_checkbox2();
-require_form2();
-require_input2();
-require_label2();
-require_picker2();
-require_radio2();
-require_slider2();
-require_switch2();
-require_textarea2();
-require_navigator2();
-require_navigate2();
-require_redirect2();
-require_image2();
-require_video2();
-require_map2();
+require_component();
+require_view();
+require_scroll_view();
+require_swiper();
+require_text();
+require_icon();
+require_progress();
+require_button();
+require_checkbox();
+require_form();
+require_input();
+require_label();
+require_picker();
+require_radio();
+require_slider();
+require_switch();
+require_textarea();
+require_navigator();
+require_navigate();
+require_redirect();
+require_image();
+require_video();
+require_map();
 init_canvas();
-require_ad2();
-require_movable_view2();
-require_cover_view2();
-require_rich_text2();
-require_picker_view2();
-require_camera2();
-require_camera_scan_code2();
-require_map_styles2();
-require_live_player2();
-require_live_pusher2();
-require_aria_component2();
-require_API2();
-require_cloud2();
-require_doc_web_view2();
-require_open_data2();
-require_web_view2();
-require_editor2();
+require_ad();
+require_movable_view();
+require_cover_view();
+require_rich_text();
+require_picker_view();
+require_camera();
+require_camera_scan_code();
+require_map_styles();
+require_live_player();
+require_live_pusher();
+require_aria_component();
+require_API();
+require_cloud();
+require_doc_web_view();
+require_open_data();
+require_web_view();
+require_editor();
 init_example();
 init_cell();
 init_slideview();
@@ -6836,14 +5444,14 @@ init_msg_text();
 init_msg_text_primary();
 init_msg_success();
 init_msg_fail();
-require_navbar2();
+require_navbar();
 require_navigation();
 init_tabbar();
 init_icons();
-require_form_page2();
+require_form_page();
 init_half_screen_dialog();
 init_actionsheet();
-require_toptips2();
+require_toptips();
 init_searchbar();
 init_emoji();
 init_video_swiper();
@@ -6853,13 +5461,13 @@ init_tabs();
 init_vtabs();
 init_select_text();
 init_barrage();
-require_wxml_to_canvas2();
-require_telescopic2();
-require_linebreak2();
-require_sidenavigation2();
-require_pagination2();
-require_freelayout2();
-require_layeredpresentation2();
-require_horizontalexpansion2();
+require_wxml_to_canvas();
+require_telescopic();
+require_linebreak();
+require_sidenavigation();
+require_pagination();
+require_freelayout();
+require_layeredpresentation();
+require_horizontalexpansion();
 init_canvas_2d();
 init_webgl();

@@ -2,25 +2,9 @@ var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[Object.keys(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
 
-// miniprogram-demo/miniprogram/packageAPI/pages/login/login.wxml
-var require_login = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/login/login.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/login/login.wxss
-var require_ = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/login/login.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/login/login.js
-var require_login2 = __commonJS({
+var require_login = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/login/login.js"() {
-    require_login();
-    require_();
     var app = getApp();
     Page({
       onShareAppMessage() {
@@ -50,25 +34,9 @@ var require_login2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/get-user-info/get-user-info.wxml
-var require_get_user_info = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/get-user-info/get-user-info.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/get-user-info/get-user-info.wxss
-var require_2 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/get-user-info/get-user-info.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/get-user-info/get-user-info.js
-var require_get_user_info2 = __commonJS({
+var require_get_user_info = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-user-info/get-user-info.js"() {
-    require_get_user_info();
-    require_2();
     Page({
       onShareAppMessage() {
         return {
@@ -96,25 +64,9 @@ var require_get_user_info2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/request-payment/request-payment.wxml
-var require_request_payment = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/request-payment/request-payment.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/request-payment/request-payment.wxss
-var require_3 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/request-payment/request-payment.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/request-payment/request-payment.js
-var require_request_payment2 = __commonJS({
+var require_request_payment = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/request-payment/request-payment.js"() {
-    require_request_payment();
-    require_3();
     var app = getApp();
     Page({
       onShareAppMessage() {
@@ -175,25 +127,9 @@ var require_request_payment2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/share/share.wxml
-var require_share = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/share/share.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/share/share.wxss
-var require_4 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/share/share.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/share/share.js
-var require_share2 = __commonJS({
+var require_share = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/share/share.js"() {
-    require_share();
-    require_4();
     Page({
       data: {
         shareData: {
@@ -209,25 +145,9 @@ var require_share2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/share-button/share-button.wxml
-var require_share_button = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/share-button/share-button.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/share-button/share-button.wxss
-var require_5 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/share-button/share-button.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/share-button/share-button.js
-var require_share_button2 = __commonJS({
+var require_share_button = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/share-button/share-button.js"() {
-    require_share_button();
-    require_5();
     Page({
       onShareAppMessage() {
         return {
@@ -248,25 +168,9 @@ var require_share_button2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/custom-message/custom-message.wxml
-var require_custom_message = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/custom-message/custom-message.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/custom-message/custom-message.wxss
-var require_6 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/custom-message/custom-message.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/custom-message/custom-message.js
-var require_custom_message2 = __commonJS({
+var require_custom_message = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/custom-message/custom-message.js"() {
-    require_custom_message();
-    require_6();
     Page({
       onShareAppMessage() {
         return {
@@ -275,20 +179,6 @@ var require_custom_message2 = __commonJS({
         };
       }
     });
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/template-message/template-message.wxml
-var require_template_message = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/template-message/template-message.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/template-message/template-message.wxss
-var require_7 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/template-message/template-message.wxss"(exports, module) {
-    module.exports = {};
   }
 });
 
@@ -308,10 +198,8 @@ var require_config = __commonJS({
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/template-message/template-message.js
-var require_template_message2 = __commonJS({
+var require_template_message = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/template-message/template-message.js"() {
-    require_template_message();
-    require_7();
     var templateMessageUrl = require_config().templateMessageUrl;
     var app = getApp();
     var formData = {
@@ -373,25 +261,9 @@ var require_template_message2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/set-navigation-bar-title/set-navigation-bar-title.wxml
-var require_set_navigation_bar_title = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/set-navigation-bar-title/set-navigation-bar-title.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/set-navigation-bar-title/set-navigation-bar-title.wxss
-var require_8 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/set-navigation-bar-title/set-navigation-bar-title.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/set-navigation-bar-title/set-navigation-bar-title.js
-var require_set_navigation_bar_title2 = __commonJS({
+var require_set_navigation_bar_title = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/set-navigation-bar-title/set-navigation-bar-title.js"() {
-    require_set_navigation_bar_title();
-    require_8();
     Page({
       onShareAppMessage() {
         return {
@@ -417,25 +289,9 @@ var require_set_navigation_bar_title2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/navigation-bar-loading/navigation-bar-loading.wxml
-var require_navigation_bar_loading = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/navigation-bar-loading/navigation-bar-loading.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/navigation-bar-loading/navigation-bar-loading.wxss
-var require_9 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/navigation-bar-loading/navigation-bar-loading.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/navigation-bar-loading/navigation-bar-loading.js
-var require_navigation_bar_loading2 = __commonJS({
+var require_navigation_bar_loading = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/navigation-bar-loading/navigation-bar-loading.js"() {
-    require_navigation_bar_loading();
-    require_9();
     Page({
       onShareAppMessage() {
         return {
@@ -453,25 +309,9 @@ var require_navigation_bar_loading2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/navigator/navigator.wxml
-var require_navigator = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/navigator/navigator.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/navigator/navigator.wxss
-var require_10 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/navigator/navigator.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/navigator/navigator.js
-var require_navigator2 = __commonJS({
+var require_navigator = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/navigator/navigator.js"() {
-    require_navigator();
-    require_10();
     Page({
       onShareAppMessage() {
         return {
@@ -498,25 +338,9 @@ var require_navigator2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/pull-down-refresh/pull-down-refresh.wxml
-var require_pull_down_refresh = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/pull-down-refresh/pull-down-refresh.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/pull-down-refresh/pull-down-refresh.wxss
-var require_11 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/pull-down-refresh/pull-down-refresh.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/pull-down-refresh/pull-down-refresh.js
-var require_pull_down_refresh2 = __commonJS({
+var require_pull_down_refresh = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/pull-down-refresh/pull-down-refresh.js"() {
-    require_pull_down_refresh();
-    require_11();
     Page({
       onShareAppMessage() {
         return {
@@ -543,25 +367,9 @@ var require_pull_down_refresh2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/animation/animation.wxml
-var require_animation = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/animation/animation.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/animation/animation.wxss
-var require_12 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/animation/animation.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/animation/animation.js
-var require_animation2 = __commonJS({
+var require_animation = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/animation/animation.js"() {
-    require_animation();
-    require_12();
     Page({
       onShareAppMessage() {
         return {
@@ -608,25 +416,9 @@ var require_animation2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/action-sheet/action-sheet.wxml
-var require_action_sheet = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/action-sheet/action-sheet.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/action-sheet/action-sheet.wxss
-var require_13 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/action-sheet/action-sheet.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/action-sheet/action-sheet.js
-var require_action_sheet2 = __commonJS({
+var require_action_sheet = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/action-sheet/action-sheet.js"() {
-    require_action_sheet();
-    require_13();
     Page({
       onShareAppMessage() {
         return {
@@ -646,25 +438,9 @@ var require_action_sheet2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/modal/modal.wxml
-var require_modal = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/modal/modal.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/modal/modal.wxss
-var require_14 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/modal/modal.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/modal/modal.js
-var require_modal2 = __commonJS({
+var require_modal = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/modal/modal.js"() {
-    require_modal();
-    require_14();
     Page({
       onShareAppMessage() {
         return {
@@ -695,25 +471,9 @@ var require_modal2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/toast/toast.wxml
-var require_toast = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/toast/toast.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/toast/toast.wxss
-var require_15 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/toast/toast.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/toast/toast.js
-var require_toast2 = __commonJS({
+var require_toast = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/toast/toast.js"() {
-    require_toast();
-    require_15();
     Page({
       onShareAppMessage() {
         return {
@@ -746,25 +506,9 @@ var require_toast2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/get-network-type/get-network-type.wxml
-var require_get_network_type = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/get-network-type/get-network-type.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/get-network-type/get-network-type.wxss
-var require_16 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/get-network-type/get-network-type.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/get-network-type/get-network-type.js
-var require_get_network_type2 = __commonJS({
+var require_get_network_type = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-network-type/get-network-type.js"() {
-    require_get_network_type();
-    require_16();
     Page({
       onShareAppMessage() {
         return {
@@ -797,25 +541,9 @@ var require_get_network_type2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/on-network-status-change/on-network-status-change.wxml
-var require_on_network_status_change = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/on-network-status-change/on-network-status-change.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/on-network-status-change/on-network-status-change.wxss
-var require_17 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/on-network-status-change/on-network-status-change.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/on-network-status-change/on-network-status-change.js
-var require_on_network_status_change2 = __commonJS({
+var require_on_network_status_change = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/on-network-status-change/on-network-status-change.js"() {
-    require_on_network_status_change();
-    require_17();
     Page({
       onShareAppMessage() {
         return {
@@ -850,25 +578,9 @@ var require_on_network_status_change2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/get-system-info/get-system-info.wxml
-var require_get_system_info = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/get-system-info/get-system-info.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/get-system-info/get-system-info.wxss
-var require_18 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/get-system-info/get-system-info.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/get-system-info/get-system-info.js
-var require_get_system_info2 = __commonJS({
+var require_get_system_info = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-system-info/get-system-info.js"() {
-    require_get_system_info();
-    require_18();
     Page({
       onShareAppMessage() {
         return {
@@ -893,25 +605,9 @@ var require_get_system_info2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/on-compass-change/on-compass-change.wxml
-var require_on_compass_change = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/on-compass-change/on-compass-change.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/on-compass-change/on-compass-change.wxss
-var require_19 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/on-compass-change/on-compass-change.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/on-compass-change/on-compass-change.js
-var require_on_compass_change2 = __commonJS({
+var require_on_compass_change = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/on-compass-change/on-compass-change.js"() {
-    require_on_compass_change();
-    require_19();
     Page({
       onShareAppMessage() {
         return {
@@ -961,25 +657,9 @@ var require_on_compass_change2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/make-phone-call/make-phone-call.wxml
-var require_make_phone_call = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/make-phone-call/make-phone-call.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/make-phone-call/make-phone-call.wxss
-var require_20 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/make-phone-call/make-phone-call.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/make-phone-call/make-phone-call.js
-var require_make_phone_call2 = __commonJS({
+var require_make_phone_call = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/make-phone-call/make-phone-call.js"() {
-    require_make_phone_call();
-    require_20();
     Page({
       onShareAppMessage() {
         return {
@@ -1014,25 +694,9 @@ var require_make_phone_call2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/scan-code/scan-code.wxml
-var require_scan_code = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/scan-code/scan-code.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/scan-code/scan-code.wxss
-var require_21 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/scan-code/scan-code.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/scan-code/scan-code.js
-var require_scan_code2 = __commonJS({
+var require_scan_code = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/scan-code/scan-code.js"() {
-    require_scan_code();
-    require_21();
     Page({
       onShareAppMessage() {
         return {
@@ -1059,25 +723,9 @@ var require_scan_code2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/request/request.wxml
-var require_request = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/request/request.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/request/request.wxss
-var require_22 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/request/request.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/request/request.js
-var require_request2 = __commonJS({
+var require_request = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/request/request.js"() {
-    require_request();
-    require_22();
     var requestUrl = require_config().requestUrl;
     var duration = 2e3;
     Page({
@@ -1121,25 +769,9 @@ var require_request2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/web-socket/web-socket.wxml
-var require_web_socket = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/web-socket/web-socket.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/web-socket/web-socket.wxss
-var require_23 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/web-socket/web-socket.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/web-socket/web-socket.js
-var require_web_socket2 = __commonJS({
+var require_web_socket = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/web-socket/web-socket.js"() {
-    require_web_socket();
-    require_23();
     function showModal(title, content) {
       wx.showModal({
         title,
@@ -1234,25 +866,9 @@ var require_web_socket2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/upload-file/upload-file.wxml
-var require_upload_file = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/upload-file/upload-file.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/upload-file/upload-file.wxss
-var require_24 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/upload-file/upload-file.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/upload-file/upload-file.js
-var require_upload_file2 = __commonJS({
+var require_upload_file = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/upload-file/upload-file.js"() {
-    require_upload_file();
-    require_24();
     Page({
       onShareAppMessage() {
         return {
@@ -1313,25 +929,9 @@ var require_upload_file2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/download-file/download-file.wxml
-var require_download_file = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/download-file/download-file.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/download-file/download-file.wxss
-var require_25 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/download-file/download-file.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/download-file/download-file.js
-var require_download_file2 = __commonJS({
+var require_download_file = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/download-file/download-file.js"() {
-    require_download_file();
-    require_25();
     var demoImageFileId = require_config().demoImageFileId;
     Page({
       onShareAppMessage() {
@@ -1357,25 +957,9 @@ var require_download_file2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/image/image.wxml
-var require_image = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/image/image.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/image/image.wxss
-var require_26 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/image/image.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/image/image.js
-var require_image2 = __commonJS({
+var require_image = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/image/image.js"() {
-    require_image();
-    require_26();
     var sourceType = [["camera"], ["album"], ["camera", "album"]];
     var sizeType = [["compressed"], ["original"], ["compressed", "original"]];
     Page({
@@ -1431,20 +1015,6 @@ var require_image2 = __commonJS({
         });
       }
     });
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/voice/voice.wxml
-var require_voice = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/voice/voice.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/voice/voice.wxss
-var require_27 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/voice/voice.wxss"(exports, module) {
-    module.exports = {};
   }
 });
 
@@ -1535,10 +1105,8 @@ var require_util = __commonJS({
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/voice/voice.js
-var require_voice2 = __commonJS({
+var require_voice = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/voice/voice.js"() {
-    require_voice();
-    require_27();
     var util = require_util();
     var playTimeInterval;
     var recordTimeInterval;
@@ -1679,25 +1247,9 @@ var require_voice2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/file/file.wxml
-var require_file = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/file/file.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/file/file.wxss
-var require_28 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/file/file.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/file/file.js
-var require_file2 = __commonJS({
+var require_file = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/file/file.js"() {
-    require_file();
-    require_28();
     Page({
       onShareAppMessage() {
         return {
@@ -1774,25 +1326,9 @@ var require_file2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/on-accelerometer-change/on-accelerometer-change.wxml
-var require_on_accelerometer_change = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/on-accelerometer-change/on-accelerometer-change.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/on-accelerometer-change/on-accelerometer-change.wxss
-var require_29 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/on-accelerometer-change/on-accelerometer-change.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/on-accelerometer-change/on-accelerometer-change.js
-var require_on_accelerometer_change2 = __commonJS({
+var require_on_accelerometer_change = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/on-accelerometer-change/on-accelerometer-change.js"() {
-    require_on_accelerometer_change();
-    require_29();
     Page({
       onShareAppMessage() {
         return {
@@ -1905,20 +1441,6 @@ var require_on_accelerometer_change2 = __commonJS({
         clearInterval(this.interval);
       }
     });
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/canvas/canvas.wxml
-var require_canvas = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/canvas/canvas.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/canvas/canvas.wxss
-var require_30 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/canvas/canvas.wxss"(exports, module) {
-    module.exports = {};
   }
 });
 
@@ -2166,10 +1688,8 @@ var require_example = __commonJS({
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/canvas/canvas.js
-var require_canvas2 = __commonJS({
+var require_canvas = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/canvas/canvas.js"() {
-    require_canvas();
-    require_30();
     var example = require_example();
     Page({
       onShareAppMessage() {
@@ -2211,25 +1731,9 @@ var require_canvas2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/background-audio/background-audio.wxml
-var require_background_audio = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/background-audio/background-audio.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/background-audio/background-audio.wxss
-var require_31 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/background-audio/background-audio.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/background-audio/background-audio.js
-var require_background_audio2 = __commonJS({
+var require_background_audio = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/background-audio/background-audio.js"() {
-    require_background_audio();
-    require_31();
     var app = getApp();
     var util = require_util();
     var backgroundAudioManager = wx.getBackgroundAudioManager();
@@ -2335,25 +1839,9 @@ var require_background_audio2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/video/video.wxml
-var require_video = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/video/video.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/video/video.wxss
-var require_32 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/video/video.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/video/video.js
-var require_video2 = __commonJS({
+var require_video = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/video/video.js"() {
-    require_video();
-    require_32();
     var sourceType = [["camera"], ["album"], ["camera", "album"]];
     var camera = [["front"], ["back"], ["front", "back"]];
     var duration = Array.apply(null, { length: 60 }).map(function(n, i) {
@@ -2409,25 +1897,9 @@ var require_video2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/get-location/get-location.wxml
-var require_get_location = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/get-location/get-location.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/get-location/get-location.wxss
-var require_33 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/get-location/get-location.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/get-location/get-location.js
-var require_get_location2 = __commonJS({
+var require_get_location = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-location/get-location.js"() {
-    require_get_location();
-    require_33();
     var util = require_util();
     var formatLocation = util.formatLocation;
     Page({
@@ -2461,25 +1933,9 @@ var require_get_location2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/open-location/open-location.wxml
-var require_open_location = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/open-location/open-location.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/open-location/open-location.wxss
-var require_34 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/open-location/open-location.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/open-location/open-location.js
-var require_open_location2 = __commonJS({
+var require_open_location = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/open-location/open-location.js"() {
-    require_open_location();
-    require_34();
     Page({
       onShareAppMessage() {
         return {
@@ -2502,25 +1958,9 @@ var require_open_location2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/choose-location/choose-location.wxml
-var require_choose_location = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/choose-location/choose-location.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/choose-location/choose-location.wxss
-var require_35 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/choose-location/choose-location.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/choose-location/choose-location.js
-var require_choose_location2 = __commonJS({
+var require_choose_location = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/choose-location/choose-location.js"() {
-    require_choose_location();
-    require_35();
     var util = require_util();
     var formatLocation = util.formatLocation;
     Page({
@@ -2555,25 +1995,9 @@ var require_choose_location2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/storage/storage.wxml
-var require_storage = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/storage/storage.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/storage/storage.wxss
-var require_36 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/storage/storage.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/storage/storage.js
-var require_storage2 = __commonJS({
+var require_storage = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/storage/storage.js"() {
-    require_storage();
-    require_36();
     Page({
       onShareAppMessage() {
         return {
@@ -2668,25 +2092,9 @@ var require_storage2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/get-wxml-node-info/get-wxml-node-info.wxml
-var require_get_wxml_node_info = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/get-wxml-node-info/get-wxml-node-info.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/get-wxml-node-info/get-wxml-node-info.wxss
-var require_37 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/get-wxml-node-info/get-wxml-node-info.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/get-wxml-node-info/get-wxml-node-info.js
-var require_get_wxml_node_info2 = __commonJS({
+var require_get_wxml_node_info = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-wxml-node-info/get-wxml-node-info.js"() {
-    require_get_wxml_node_info();
-    require_37();
     Page({
       onShareAppMessage() {
         return {
@@ -2722,25 +2130,9 @@ var require_get_wxml_node_info2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/load-font-face/load-font-face.wxml
-var require_load_font_face = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/load-font-face/load-font-face.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/load-font-face/load-font-face.wxss
-var require_38 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/load-font-face/load-font-face.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/load-font-face/load-font-face.js
-var require_load_font_face2 = __commonJS({
+var require_load_font_face = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/load-font-face/load-font-face.js"() {
-    require_load_font_face();
-    require_38();
     Page({
       onShareAppMessage() {
         return {
@@ -2781,25 +2173,9 @@ var require_load_font_face2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/clipboard-data/clipboard-data.wxml
-var require_clipboard_data = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/clipboard-data/clipboard-data.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/clipboard-data/clipboard-data.wxss
-var require_39 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/clipboard-data/clipboard-data.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/clipboard-data/clipboard-data.js
-var require_clipboard_data2 = __commonJS({
+var require_clipboard_data = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/clipboard-data/clipboard-data.js"() {
-    require_clipboard_data();
-    require_39();
     Page({
       onShareAppMessage() {
         return {
@@ -2847,25 +2223,9 @@ var require_clipboard_data2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/bluetooth/bluetooth.wxml
-var require_bluetooth = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/bluetooth/bluetooth.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/bluetooth/bluetooth.wxss
-var require_40 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/bluetooth/bluetooth.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/bluetooth/bluetooth.js
-var require_bluetooth2 = __commonJS({
+var require_bluetooth = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/bluetooth/bluetooth.js"() {
-    require_bluetooth();
-    require_40();
     function inArray(arr, key, val) {
       for (let i = 0; i < arr.length; i++) {
         if (arr[i][key] === val) {
@@ -3103,25 +2463,9 @@ var require_bluetooth2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/screen-brightness/screen-brightness.wxml
-var require_screen_brightness = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/screen-brightness/screen-brightness.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/screen-brightness/screen-brightness.wxss
-var require_41 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/screen-brightness/screen-brightness.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/screen-brightness/screen-brightness.js
-var require_screen_brightness2 = __commonJS({
+var require_screen_brightness = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/screen-brightness/screen-brightness.js"() {
-    require_screen_brightness();
-    require_41();
     Page({
       onShareAppMessage() {
         return {
@@ -3161,25 +2505,9 @@ var require_screen_brightness2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/vibrate/vibrate.wxml
-var require_vibrate = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/vibrate/vibrate.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/vibrate/vibrate.wxss
-var require_42 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/vibrate/vibrate.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/vibrate/vibrate.js
-var require_vibrate2 = __commonJS({
+var require_vibrate = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/vibrate/vibrate.js"() {
-    require_vibrate();
-    require_42();
     Page({
       onShareAppMessage() {
         return {
@@ -3217,25 +2545,9 @@ var require_vibrate2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/add-contact/add-contact.wxml
-var require_add_contact = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/add-contact/add-contact.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/add-contact/add-contact.wxss
-var require_43 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/add-contact/add-contact.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/add-contact/add-contact.js
-var require_add_contact2 = __commonJS({
+var require_add_contact = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/add-contact/add-contact.js"() {
-    require_add_contact();
-    require_43();
     Page({
       onShareAppMessage() {
         return {
@@ -3263,25 +2575,9 @@ var require_add_contact2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/wifi/wifi.wxml
-var require_wifi = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/wifi/wifi.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/wifi/wifi.wxss
-var require_44 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/wifi/wifi.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/wifi/wifi.js
-var require_wifi2 = __commonJS({
+var require_wifi = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wifi/wifi.js"() {
-    require_wifi();
-    require_44();
     Page({
       onShareAppMessage() {
         return {
@@ -3354,25 +2650,9 @@ var require_wifi2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/page-scroll/page-scroll.wxml
-var require_page_scroll = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/page-scroll/page-scroll.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/page-scroll/page-scroll.wxss
-var require_45 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/page-scroll/page-scroll.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/page-scroll/page-scroll.js
-var require_page_scroll2 = __commonJS({
+var require_page_scroll = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/page-scroll/page-scroll.js"() {
-    require_page_scroll();
-    require_45();
     Page({
       onShareAppMessage() {
         return {
@@ -3396,25 +2676,9 @@ var require_page_scroll2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/intersection-observer/intersection-observer.wxml
-var require_intersection_observer = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/intersection-observer/intersection-observer.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/intersection-observer/intersection-observer.wxss
-var require_46 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/intersection-observer/intersection-observer.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/intersection-observer/intersection-observer.js
-var require_intersection_observer2 = __commonJS({
+var require_intersection_observer = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/intersection-observer/intersection-observer.js"() {
-    require_intersection_observer();
-    require_46();
     Page({
       onShareAppMessage() {
         return {
@@ -3442,25 +2706,9 @@ var require_intersection_observer2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/capture-screen/capture-screen.wxml
-var require_capture_screen = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/capture-screen/capture-screen.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/capture-screen/capture-screen.wxss
-var require_47 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/capture-screen/capture-screen.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/capture-screen/capture-screen.js
-var require_capture_screen2 = __commonJS({
+var require_capture_screen = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/capture-screen/capture-screen.js"() {
-    require_capture_screen();
-    require_47();
     Page({
       onShareAppMessage() {
         return {
@@ -3482,25 +2730,9 @@ var require_capture_screen2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/worker/worker.wxml
-var require_worker = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/worker/worker.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/worker/worker.wxss
-var require_48 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/worker/worker.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/worker/worker.js
-var require_worker2 = __commonJS({
+var require_worker = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/worker/worker.js"() {
-    require_worker();
-    require_48();
     var { fib } = require_util();
     Page({
       onShareAppMessage() {
@@ -3622,25 +2854,9 @@ var require_worker2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/ibeacon/ibeacon.wxml
-var require_ibeacon = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/ibeacon/ibeacon.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/ibeacon/ibeacon.wxss
-var require_49 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/ibeacon/ibeacon.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/ibeacon/ibeacon.js
-var require_ibeacon2 = __commonJS({
+var require_ibeacon = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/ibeacon/ibeacon.js"() {
-    require_ibeacon();
-    require_49();
     Page({
       onShareAppMessage() {
         return {
@@ -3687,25 +2903,9 @@ var require_ibeacon2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/choose-address/choose-address.wxml
-var require_choose_address = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/choose-address/choose-address.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/choose-address/choose-address.wxss
-var require_50 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/choose-address/choose-address.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/choose-address/choose-address.js
-var require_choose_address2 = __commonJS({
+var require_choose_address = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/choose-address/choose-address.js"() {
-    require_choose_address();
-    require_50();
     Page({
       onShareAppMessage() {
         return {
@@ -3732,25 +2932,9 @@ var require_choose_address2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/setting/setting.wxml
-var require_setting = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/setting/setting.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/setting/setting.wxss
-var require_51 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/setting/setting.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/setting/setting.js
-var require_setting2 = __commonJS({
+var require_setting = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/setting/setting.js"() {
-    require_setting();
-    require_51();
     Page({
       onShareAppMessage() {
         return {
@@ -3773,25 +2957,9 @@ var require_setting2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/choose-invoice-title/choose-invoice-title.wxml
-var require_choose_invoice_title = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/choose-invoice-title/choose-invoice-title.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/choose-invoice-title/choose-invoice-title.wxss
-var require_52 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/choose-invoice-title/choose-invoice-title.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/choose-invoice-title/choose-invoice-title.js
-var require_choose_invoice_title2 = __commonJS({
+var require_choose_invoice_title = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/choose-invoice-title/choose-invoice-title.js"() {
-    require_choose_invoice_title();
-    require_52();
     Page({
       onShareAppMessage() {
         return {
@@ -3830,25 +2998,9 @@ var require_choose_invoice_title2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/soter-authentication/soter-authentication.wxml
-var require_soter_authentication = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/soter-authentication/soter-authentication.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/soter-authentication/soter-authentication.wxss
-var require_53 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/soter-authentication/soter-authentication.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/soter-authentication/soter-authentication.js
-var require_soter_authentication2 = __commonJS({
+var require_soter_authentication = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/soter-authentication/soter-authentication.js"() {
-    require_soter_authentication();
-    require_53();
     Page({
       onShareAppMessage() {
         return {
@@ -3926,25 +3078,9 @@ var require_soter_authentication2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/subscribe-message/subscribe-message.wxml
-var require_subscribe_message = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/subscribe-message/subscribe-message.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/subscribe-message/subscribe-message.wxss
-var require_54 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/subscribe-message/subscribe-message.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/subscribe-message/subscribe-message.js
-var require_subscribe_message2 = __commonJS({
+var require_subscribe_message = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/subscribe-message/subscribe-message.js"() {
-    require_subscribe_message();
-    require_54();
     Page({
       data: {},
       requestSubscribeMessage() {
@@ -4009,25 +3145,9 @@ var require_subscribe_message2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/doc-web-view/doc-web-view.wxml
-var require_doc_web_view = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/doc-web-view/doc-web-view.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/doc-web-view/doc-web-view.wxss
-var require_55 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/doc-web-view/doc-web-view.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/doc-web-view/doc-web-view.js
-var require_doc_web_view2 = __commonJS({
+var require_doc_web_view = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/doc-web-view/doc-web-view.js"() {
-    require_doc_web_view();
-    require_55();
     Page({
       onShareAppMessage() {
         return {
@@ -4039,25 +3159,9 @@ var require_doc_web_view2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/audio/audio.wxml
-var require_audio = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/audio/audio.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/audio/audio.wxss
-var require_56 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/audio/audio.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/audio/audio.js
-var require_audio2 = __commonJS({
+var require_audio = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/audio/audio.js"() {
-    require_audio();
-    require_56();
     Page({
       onShareAppMessage() {
         return {
@@ -4089,25 +3193,9 @@ var require_audio2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/get-battery-info/get-battery-info.wxml
-var require_get_battery_info = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/get-battery-info/get-battery-info.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/get-battery-info/get-battery-info.wxss
-var require_57 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/get-battery-info/get-battery-info.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/get-battery-info/get-battery-info.js
-var require_get_battery_info2 = __commonJS({
+var require_get_battery_info = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-battery-info/get-battery-info.js"() {
-    require_get_battery_info();
-    require_57();
     Page({
       onShareAppMessage() {
         return {
@@ -4128,20 +3216,6 @@ var require_get_battery_info2 = __commonJS({
         });
       }
     });
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/get-performance/get-performance.wxml
-var require_get_performance = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/get-performance/get-performance.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/get-performance/get-performance.wxss
-var require_58 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/get-performance/get-performance.wxss"(exports, module) {
-    module.exports = {};
   }
 });
 
@@ -4211,10 +3285,8 @@ var require_util2 = __commonJS({
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/get-performance/get-performance.js
-var require_get_performance2 = __commonJS({
+var require_get_performance = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-performance/get-performance.js"() {
-    require_get_performance();
-    require_58();
     var util = require_util2();
     var performance = wx.getPerformance ? wx.getPerformance() : {};
     var performanceObserver = performance.createObserver ? performance.createObserver() : null;
@@ -4264,25 +3336,9 @@ var require_get_performance2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/mdns/mdns.wxml
-var require_mdns = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/mdns/mdns.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/mdns/mdns.wxss
-var require_59 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/mdns/mdns.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/mdns/mdns.js
-var require_mdns2 = __commonJS({
+var require_mdns = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/mdns/mdns.js"() {
-    require_mdns();
-    require_59();
     var serviceList = [];
     var resolveFailList = [];
     Page({
@@ -4394,25 +3450,9 @@ var require_mdns2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/udp-socket/udp-socket.wxml
-var require_udp_socket = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/udp-socket/udp-socket.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/udp-socket/udp-socket.wxss
-var require_60 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/udp-socket/udp-socket.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/udp-socket/udp-socket.js
-var require_udp_socket2 = __commonJS({
+var require_udp_socket = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/udp-socket/udp-socket.js"() {
-    require_udp_socket();
-    require_60();
     var AB2String = (arrayBuffer) => {
       let unit8Arr = new Uint8Array(arrayBuffer);
       let encodedString = String.fromCharCode.apply(null, unit8Arr), decodedString = decodeURIComponent(escape(encodedString));
@@ -4500,25 +3540,9 @@ var require_udp_socket2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/two-way-bindings/two-way-bindings.wxml
-var require_two_way_bindings = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/two-way-bindings/two-way-bindings.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/two-way-bindings/two-way-bindings.wxss
-var require_61 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/two-way-bindings/two-way-bindings.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/two-way-bindings/two-way-bindings.js
-var require_two_way_bindings2 = __commonJS({
+var require_two_way_bindings = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/two-way-bindings/two-way-bindings.js"() {
-    require_two_way_bindings();
-    require_61();
     Page({
       data: {
         value: ""
@@ -4547,25 +3571,9 @@ var require_two_way_bindings2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/media-container/media-container.wxml
-var require_media_container = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/media-container/media-container.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/media-container/media-container.wxss
-var require_62 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/media-container/media-container.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/media-container/media-container.js
-var require_media_container2 = __commonJS({
+var require_media_container = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/media-container/media-container.js"() {
-    require_media_container();
-    require_62();
     Page({
       onShareAppMessage() {
         return {
@@ -4646,25 +3654,9 @@ var require_media_container2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/get-background-fetch-data/get-background-fetch-data.wxml
-var require_get_background_fetch_data = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/get-background-fetch-data/get-background-fetch-data.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/get-background-fetch-data/get-background-fetch-data.wxss
-var require_63 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/get-background-fetch-data/get-background-fetch-data.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/get-background-fetch-data/get-background-fetch-data.js
-var require_get_background_fetch_data2 = __commonJS({
+var require_get_background_fetch_data = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-background-fetch-data/get-background-fetch-data.js"() {
-    require_get_background_fetch_data();
-    require_63();
     Page({
       onShareAppMessage() {
         return {
@@ -4720,25 +3712,9 @@ var require_get_background_fetch_data2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/get-background-prefetch-data/get-background-prefetch-data.wxml
-var require_get_background_prefetch_data = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/get-background-prefetch-data/get-background-prefetch-data.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/get-background-prefetch-data/get-background-prefetch-data.wxss
-var require_64 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/get-background-prefetch-data/get-background-prefetch-data.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/get-background-prefetch-data/get-background-prefetch-data.js
-var require_get_background_prefetch_data2 = __commonJS({
+var require_get_background_prefetch_data = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-background-prefetch-data/get-background-prefetch-data.js"() {
-    require_get_background_prefetch_data();
-    require_64();
     var app = getApp();
     Date.prototype.Format = function(fmt) {
       var o = {
@@ -4802,25 +3778,9 @@ var require_get_background_prefetch_data2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/wxs/wxs.wxml
-var require_wxs = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/wxs/wxs.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/wxs/wxs.wxss
-var require_65 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/wxs/wxs.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/wxs/wxs.js
-var require_wxs2 = __commonJS({
+var require_wxs = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wxs/wxs.js"() {
-    require_wxs();
-    require_65();
     Page({
       onShareAppMessage() {
         return {
@@ -4838,25 +3798,9 @@ var require_wxs2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/bluetooth/slave/slave.wxml
-var require_slave = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/bluetooth/slave/slave.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/bluetooth/slave/slave.wxss
-var require_66 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/bluetooth/slave/slave.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/bluetooth/slave/slave.js
-var require_slave2 = __commonJS({
+var require_slave = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/bluetooth/slave/slave.js"() {
-    require_slave();
-    require_66();
     var uuid3 = "0C76801A-62EB-45E5-96A8-37C8882ABB2B";
     var serviceId = "D0611E78-BBB4-4591-A5F8-487910AE4366";
     var characteristicId = "8667556C-9A37-4C91-84ED-54EE27D90049";
@@ -5096,25 +4040,9 @@ var require_slave2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/resizable/resizable.wxml
-var require_resizable = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/resizable/resizable.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/resizable/resizable.wxss
-var require_67 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/resizable/resizable.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/resizable/resizable.js
-var require_resizable2 = __commonJS({
+var require_resizable = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/resizable/resizable.js"() {
-    require_resizable();
-    require_67();
     Page({
       onShareAppMessage() {
         return {
@@ -5134,25 +4062,9 @@ var require_resizable2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/wxs/movable.wxml
-var require_movable = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/wxs/movable.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/wxs/movable.wxss
-var require_68 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/wxs/movable.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/wxs/movable.js
-var require_movable2 = __commonJS({
+var require_movable = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wxs/movable.js"() {
-    require_movable();
-    require_68();
     Page({
       onShareAppMessage() {
         return {
@@ -5185,25 +4097,9 @@ var require_movable2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/wxs/sidebar.wxml
-var require_sidebar = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/wxs/sidebar.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/wxs/sidebar.wxss
-var require_69 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/wxs/sidebar.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/wxs/sidebar.js
-var require_sidebar2 = __commonJS({
+var require_sidebar = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wxs/sidebar.js"() {
-    require_sidebar();
-    require_69();
     Page({
       data: {
         tabs: [],
@@ -5231,25 +4127,9 @@ var require_sidebar2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/wxs/stick-top.wxml
-var require_stick_top = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/wxs/stick-top.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/wxs/stick-top.wxss
-var require_70 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/wxs/stick-top.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/wxs/stick-top.js
-var require_stick_top2 = __commonJS({
+var require_stick_top = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wxs/stick-top.js"() {
-    require_stick_top();
-    require_70();
     var height = wx.getSystemInfoSync().windowHeight;
     var app = getApp();
     Page({
@@ -5305,25 +4185,9 @@ var require_stick_top2 = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/packageAPI/pages/wxs/nearby.wxml
-var require_nearby = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/wxs/nearby.wxml"() {
-    console.log(123);
-  }
-});
-
-// miniprogram-demo/miniprogram/packageAPI/pages/wxs/nearby.wxss
-var require_71 = __commonJS({
-  "miniprogram-demo/miniprogram/packageAPI/pages/wxs/nearby.wxss"(exports, module) {
-    module.exports = {};
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/wxs/nearby.js
-var require_nearby2 = __commonJS({
+var require_nearby = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wxs/nearby.js"() {
-    require_nearby();
-    require_71();
     var windowWidth = wx.getSystemInfoSync().windowWidth;
     Page({
       onShareAppMessage() {
@@ -5388,74 +4252,74 @@ var require_nearby2 = __commonJS({
 });
 
 // <stdin>
-require_login2();
-require_get_user_info2();
-require_request_payment2();
-require_share2();
-require_share_button2();
-require_custom_message2();
-require_template_message2();
-require_set_navigation_bar_title2();
-require_navigation_bar_loading2();
-require_navigator2();
-require_pull_down_refresh2();
-require_animation2();
-require_action_sheet2();
-require_modal2();
-require_toast2();
-require_get_network_type2();
-require_on_network_status_change2();
-require_get_system_info2();
-require_on_compass_change2();
-require_make_phone_call2();
-require_scan_code2();
-require_request2();
-require_web_socket2();
-require_upload_file2();
-require_download_file2();
-require_image2();
-require_voice2();
-require_file2();
-require_on_accelerometer_change2();
-require_canvas2();
-require_background_audio2();
-require_video2();
-require_get_location2();
-require_open_location2();
-require_choose_location2();
-require_storage2();
-require_get_wxml_node_info2();
-require_load_font_face2();
-require_clipboard_data2();
-require_bluetooth2();
-require_screen_brightness2();
-require_vibrate2();
-require_add_contact2();
-require_wifi2();
-require_page_scroll2();
-require_intersection_observer2();
-require_capture_screen2();
-require_worker2();
-require_ibeacon2();
-require_choose_address2();
-require_setting2();
-require_choose_invoice_title2();
-require_soter_authentication2();
-require_subscribe_message2();
-require_doc_web_view2();
-require_audio2();
-require_get_battery_info2();
-require_get_performance2();
-require_mdns2();
-require_udp_socket2();
-require_two_way_bindings2();
-require_media_container2();
-require_get_background_fetch_data2();
-require_get_background_prefetch_data2();
-require_wxs2();
-require_slave2();
-require_resizable2();
-require_movable2();
-require_sidebar2();
-require_stick_top2();
-require_nearby2();
+require_login();
+require_get_user_info();
+require_request_payment();
+require_share();
+require_share_button();
+require_custom_message();
+require_template_message();
+require_set_navigation_bar_title();
+require_navigation_bar_loading();
+require_navigator();
+require_pull_down_refresh();
+require_animation();
+require_action_sheet();
+require_modal();
+require_toast();
+require_get_network_type();
+require_on_network_status_change();
+require_get_system_info();
+require_on_compass_change();
+require_make_phone_call();
+require_scan_code();
+require_request();
+require_web_socket();
+require_upload_file();
+require_download_file();
+require_image();
+require_voice();
+require_file();
+require_on_accelerometer_change();
+require_canvas();
+require_background_audio();
+require_video();
+require_get_location();
+require_open_location();
+require_choose_location();
+require_storage();
+require_get_wxml_node_info();
+require_load_font_face();
+require_clipboard_data();
+require_bluetooth();
+require_screen_brightness();
+require_vibrate();
+require_add_contact();
+require_wifi();
+require_page_scroll();
+require_intersection_observer();
+require_capture_screen();
+require_worker();
+require_ibeacon();
+require_choose_address();
+require_setting();
+require_choose_invoice_title();
+require_soter_authentication();
+require_subscribe_message();
+require_doc_web_view();
+require_audio();
+require_get_battery_info();
+require_get_performance();
+require_mdns();
+require_udp_socket();
+require_two_way_bindings();
+require_media_container();
+require_get_background_fetch_data();
+require_get_background_prefetch_data();
+require_wxs();
+require_slave();
+require_resizable();
+require_movable();
+require_sidebar();
+require_stick_top();
+require_nearby();
