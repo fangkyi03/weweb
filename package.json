@@ -5,15 +5,6 @@
   "main": "dist.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "remax": "cd remax && npm run build && gulp remax",
-    "taro": "cd taro && npm run build:weapp && gulp taro",
-    "wepy": "cd wepy && npm run build && gulp wepy",
-    "kbone": "cd kbone && npm run build:mp && gulp kbone",
-    "gulp:remax": "gulp remax",
-    "gulp:taro": "gulp taro",
-    "gulp:wepy": "gulp wepy",
-    "gulp:kbone": "gulp kbone",
-    "gulp:mini": "gulp mini",
     "esbuild":"node esbuild"
   },
   "browserslist": [

@@ -45,7 +45,7 @@ module.exports = options => {
       build.onLoad({ filter: /\.wxss$/ }, async (args) => {
         const str = readFile(args)
         return {
-          contents: '',
+          contents: str,
           loader: "text"
         }
       })

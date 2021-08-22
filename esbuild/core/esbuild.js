@@ -8,34 +8,33 @@ function getPageConfig (outDir) {
     const appJSON = file.getAppJSON(rootPath) || {}
     const pages = [
         {
-            path:'app.js',
-            outfile:`${outDir}/index/app.js`
+            path:'/',
+            outfile:`${outDir}/index/dist.js`,
+            children:appJSON.pages
         },
         ...(appJSON.subpackages || []).map((e)=>{
             return {
                 path:e.root,
                 children:e.pages,
-                outfile:outDir + '/' + e.root + '/app.js'
+                outfile:outDir + '/' + e.root + '/dist.js'
             }
         })
     ]
     return pages.map((e)=>{
-        if (e.children) {
-            let text = ''
-            e.children.forEach((el)=>{
-                text = `require('${rootPath}/${e.path}/${el}')\n`
-            })
-            return {
-                outfile:e.outfile,
-                stdin:{
-                    contents:text,
-                    resolveDir :process.cwd(),
-                }
+        let text = ''
+        e.children.forEach((el)=>{
+            if (e.path == '/' ) {
+                text += `require('${rootPath}/${el}')\n`
+            }else {
+                text += `require('${rootPath}/${e.path}/${el}')\n`
             }
-        }else {
-            return {
-                outfile:e.outfile,
-                entryPoints:[file.getAppPATH(rootPath,e.path)]
+        })
+        return {
+            outfile:e.outfile,
+            // children:e.children,
+            stdin:{
+                contents:text,
+                resolveDir :process.cwd(),
             }
         }
     })
@@ -50,8 +49,9 @@ const init = ({targetPath,outDir = './out',minify = false} = {}) => {
             ...e,
             bundle:true,
             format:'esm',
-            plugins:[esbuildPlugin()],
-            outfile:e.outfile
+            minify:true,
+            plugins:[esbuildPlugin(e.outfile)],
+            outfile:e.outfile,
         })
         .then(()=>{
             gulp.src(path.join(__dirname,'../publish/**/*'))
