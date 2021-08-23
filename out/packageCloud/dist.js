@@ -5,6 +5,11 @@ var __commonJS = (cb, mod) => function __require() {
 // miniprogram-demo/miniprogram/packageCloud/pages/doc-web-view/doc-web-view.js
 var require_doc_web_view = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/doc-web-view/doc-web-view.js"() {
+    var page = getPage("packageCloud/pages/doc-web-view/doc-web-view");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "\u5C0F\u7A0B\u5E8F\u4E91\u5F00\u53D1\u6587\u6863"
+}`;
     Page({
       onShareAppMessage() {
         return {
@@ -13,15 +18,17 @@ var require_doc_web_view = __commonJS({
         };
       }
     });
-    fetch("./css/pages/doc-web-view/doc-web-view.css").then((res) => res.text()).then((e) => {
-      console.log("pages/doc-web-view/doc-web-view", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageCloud/pages/user-authentication/user-authentication.js
 var require_user_authentication = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/user-authentication/user-authentication.js"() {
+    var page = getPage("packageCloud/pages/user-authentication/user-authentication");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "\u7528\u6237\u9274\u6743"
+}`;
     var app = getApp();
     Page({
       onShareAppMessage() {
@@ -54,15 +61,17 @@ var require_user_authentication = __commonJS({
         });
       }
     });
-    fetch("./css/pages/user-authentication/user-authentication.css").then((res) => res.text()).then((e) => {
-      console.log("pages/user-authentication/user-authentication", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageCloud/pages/get-wx-context/get-wx-context.js
 var require_get_wx_context = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/get-wx-context/get-wx-context.js"() {
+    var page = getPage("packageCloud/pages/get-wx-context/get-wx-context");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "WXContext"
+}`;
     Page({
       onShareAppMessage() {
         return {
@@ -102,15 +111,17 @@ var require_get_wx_context = __commonJS({
         });
       }
     });
-    fetch("./css/pages/get-wx-context/get-wx-context.css").then((res) => res.text()).then((e) => {
-      console.log("pages/get-wx-context/get-wx-context", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageCloud/pages/upload-file/upload-file.js
 var require_upload_file = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/upload-file/upload-file.js"() {
+    var page = getPage("packageCloud/pages/upload-file/upload-file");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "\u4E0A\u4F20\u6587\u4EF6"
+}`;
     var app = getApp();
     Page({
       onShareAppMessage() {
@@ -181,9 +192,6 @@ var require_upload_file = __commonJS({
         });
       }
     });
-    fetch("./css/pages/upload-file/upload-file.css").then((res) => res.text()).then((e) => {
-      console.log("pages/upload-file/upload-file", e);
-    });
   }
 });
 
@@ -205,6 +213,11 @@ var require_config = __commonJS({
 // miniprogram-demo/miniprogram/packageCloud/pages/download-file/download-file.js
 var require_download_file = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/download-file/download-file.js"() {
+    var page = getPage("packageCloud/pages/download-file/download-file");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "\u4E0B\u8F7D\u6587\u4EF6"
+}`;
     var demoImageFileId = require_config().demoImageFileId;
     var app = getApp();
     Page({
@@ -254,15 +267,17 @@ var require_download_file = __commonJS({
         });
       }
     });
-    fetch("./css/pages/download-file/download-file.css").then((res) => res.text()).then((e) => {
-      console.log("pages/download-file/download-file", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageCloud/pages/get-temp-file-url/get-temp-file-url.js
 var require_get_temp_file_url = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/get-temp-file-url/get-temp-file-url.js"() {
+    var page = getPage("packageCloud/pages/get-temp-file-url/get-temp-file-url");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "\u6362\u53D6\u4E34\u65F6\u94FE\u63A5"
+}`;
     var demoImageFileId = require_config().demoImageFileId;
     var app = getApp();
     Page({
@@ -316,15 +331,17 @@ var require_get_temp_file_url = __commonJS({
         });
       }
     });
-    fetch("./css/pages/get-temp-file-url/get-temp-file-url.css").then((res) => res.text()).then((e) => {
-      console.log("pages/get-temp-file-url/get-temp-file-url", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageCloud/pages/delete-file/delete-file.js
 var require_delete_file = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/delete-file/delete-file.js"() {
+    var page = getPage("packageCloud/pages/delete-file/delete-file");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "\u5220\u9664\u6587\u4EF6"
+}`;
     var app = getApp();
     Page({
       onShareAppMessage() {
@@ -381,15 +398,17 @@ var require_delete_file = __commonJS({
         });
       }
     });
-    fetch("./css/pages/delete-file/delete-file.css").then((res) => res.text()).then((e) => {
-      console.log("pages/delete-file/delete-file", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageCloud/pages/cloud-file-component/cloud-file-component.js
 var require_cloud_file_component = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/cloud-file-component/cloud-file-component.js"() {
+    var page = getPage("packageCloud/pages/cloud-file-component/cloud-file-component");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "\u7EC4\u4EF6\u652F\u6301"
+}`;
     var { demoImageFileId, demoVideoFileId } = require_config();
     Page({
       onShareAppMessage() {
@@ -403,15 +422,17 @@ var require_cloud_file_component = __commonJS({
         videoFileId: demoVideoFileId
       }
     });
-    fetch("./css/pages/cloud-file-component/cloud-file-component.css").then((res) => res.text()).then((e) => {
-      console.log("pages/cloud-file-component/cloud-file-component", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageCloud/pages/crud/crud.js
 var require_crud = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/crud/crud.js"() {
+    var page = getPage("packageCloud/pages/crud/crud");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "\u57FA\u672C\u64CD\u4F5C"
+}`;
     var app = getApp();
     Page({
       onShareAppMessage() {
@@ -619,15 +640,17 @@ var require_crud = __commonJS({
         });
       }
     });
-    fetch("./css/pages/crud/crud.css").then((res) => res.text()).then((e) => {
-      console.log("pages/crud/crud", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageCloud/pages/crud-detail/crud-detail.js
 var require_crud_detail = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/crud-detail/crud-detail.js"() {
+    var page = getPage("packageCloud/pages/crud-detail/crud-detail");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "\u57FA\u672C\u64CD\u4F5C"
+}`;
     var app = getApp();
     Page({
       onShareAppMessage() {
@@ -761,15 +784,17 @@ var require_crud_detail = __commonJS({
         });
       }
     });
-    fetch("./css/pages/crud-detail/crud-detail.css").then((res) => res.text()).then((e) => {
-      console.log("pages/crud-detail/crud-detail", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageCloud/pages/db-permission/db-permission.js
 var require_db_permission = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/db-permission/db-permission.js"() {
+    var page = getPage("packageCloud/pages/db-permission/db-permission");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "\u6743\u9650\u7BA1\u7406"
+}`;
     var app = getApp();
     var sliderWidth = 96;
     Page({
@@ -1220,9 +1245,6 @@ var require_db_permission = __commonJS({
         });
       }
     });
-    fetch("./css/pages/db-permission/db-permission.css").then((res) => res.text()).then((e) => {
-      console.log("pages/db-permission/db-permission", e);
-    });
   }
 });
 
@@ -1315,6 +1337,11 @@ var require_util = __commonJS({
 // miniprogram-demo/miniprogram/packageCloud/pages/server-date/server-date.js
 var require_server_date = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/server-date/server-date.js"() {
+    var page = getPage("packageCloud/pages/server-date/server-date");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "\u670D\u52A1\u7AEF\u65F6\u95F4"
+}`;
     var util = require_util();
     var app = getApp();
     var collection = "serverDate";
@@ -1437,15 +1464,17 @@ var require_server_date = __commonJS({
         });
       }
     });
-    fetch("./css/pages/server-date/server-date.css").then((res) => res.text()).then((e) => {
-      console.log("pages/server-date/server-date", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageCloud/pages/scf-database/scf-database.js
 var require_scf_database = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/scf-database/scf-database.js"() {
+    var page = getPage("packageCloud/pages/scf-database/scf-database");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "\u4E91\u51FD\u6570\u64CD\u4F5C\u6570\u636E\u5E93"
+}`;
     Page({
       onShareAppMessage() {
         return {
@@ -1532,15 +1561,18 @@ var require_scf_database = __commonJS({
         });
       }
     });
-    fetch("./css/pages/scf-database/scf-database.css").then((res) => res.text()).then((e) => {
-      console.log("pages/scf-database/scf-database", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageCloud/pages/scf-storage/scf-storage.js
 var require_scf_storage = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/scf-storage/scf-storage.js"() {
+    var page = getPage("packageCloud/pages/scf-storage/scf-storage");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "\u4E91\u51FD\u6570\u64CD\u4F5C\u5B58\u50A8"
+}
+`;
     var demoImageFileId = require_config().demoImageFileId;
     var app = getApp();
     Page({
@@ -1594,15 +1626,17 @@ var require_scf_storage = __commonJS({
         });
       }
     });
-    fetch("./css/pages/scf-storage/scf-storage.css").then((res) => res.text()).then((e) => {
-      console.log("pages/scf-storage/scf-storage", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageCloud/pages/scf-openapi/scf-openapi.js
 var require_scf_openapi = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/scf-openapi/scf-openapi.js"() {
+    var page = getPage("packageCloud/pages/scf-openapi/scf-openapi");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "\u4E91\u8C03\u7528"
+}`;
     Page({
       onShareAppMessage() {
         return {
@@ -1739,9 +1773,6 @@ var require_scf_openapi = __commonJS({
           }
         });
       }
-    });
-    fetch("./css/pages/scf-openapi/scf-openapi.css").then((res) => res.text()).then((e) => {
-      console.log("pages/scf-openapi/scf-openapi", e);
     });
   }
 });

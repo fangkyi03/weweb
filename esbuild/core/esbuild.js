@@ -70,6 +70,7 @@ function buildCSS(item,config) {
         plugins:[esbuildPlugin(item.outfile)],
         outdir:item.outdir
     })
+    
 }
 
 function getDefaultConfig(config = {}) {
@@ -80,6 +81,7 @@ function getDefaultConfig(config = {}) {
 }
 
 const init = (config = {}) => {
+    let time = Date.now()
     const newConfig = getDefaultConfig(config)
     // 获取所有可以被遍历的页面
     const pages = getPageConfig(newConfig)
@@ -87,6 +89,7 @@ const init = (config = {}) => {
         buildJS(e,newConfig)
         buildCSS(e,newConfig)
     })
+    console.log('输出执行时间',Date.now() - time)
 }
 
 module.exports = {

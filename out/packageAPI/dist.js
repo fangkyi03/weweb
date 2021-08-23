@@ -5,6 +5,12 @@ var __commonJS = (cb, mod) => function __require() {
 // miniprogram-demo/miniprogram/packageAPI/pages/login/login.js
 var require_login = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/login/login.js"() {
+    var page = getPage("packageAPI/pages/login/login");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u5FAE\u4FE1\u767B\u5F55"
+}
+`;
     var app = getApp();
     Page({
       onShareAppMessage() {
@@ -31,15 +37,18 @@ var require_login = __commonJS({
         });
       }
     });
-    fetch("./css/pages/login/login.css").then((res) => res.text()).then((e) => {
-      console.log("pages/login/login", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/get-user-info/get-user-info.js
 var require_get_user_info = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-user-info/get-user-info.js"() {
+    var page = getPage("packageAPI/pages/get-user-info/get-user-info");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u83B7\u53D6\u7528\u6237\u4FE1\u606F"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -64,15 +73,18 @@ var require_get_user_info = __commonJS({
         });
       }
     });
-    fetch("./css/pages/get-user-info/get-user-info.css").then((res) => res.text()).then((e) => {
-      console.log("pages/get-user-info/get-user-info", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/request-payment/request-payment.js
 var require_request_payment = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/request-payment/request-payment.js"() {
+    var page = getPage("packageAPI/pages/request-payment/request-payment");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u53D1\u8D77\u652F\u4ED8"
+}
+`;
     var app = getApp();
     Page({
       onShareAppMessage() {
@@ -130,15 +142,18 @@ var require_request_payment = __commonJS({
         });
       }
     });
-    fetch("./css/pages/request-payment/request-payment.css").then((res) => res.text()).then((e) => {
-      console.log("pages/request-payment/request-payment", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/share/share.js
 var require_share = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/share/share.js"() {
+    var page = getPage("packageAPI/pages/share/share");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u8F6C\u53D1"
+}
+`;
     Page({
       data: {
         shareData: {
@@ -151,15 +166,18 @@ var require_share = __commonJS({
         return this.data.shareData;
       }
     });
-    fetch("./css/pages/share/share.css").then((res) => res.text()).then((e) => {
-      console.log("pages/share/share", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/share-button/share-button.js
 var require_share_button = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/share-button/share-button.js"() {
+    var page = getPage("packageAPI/pages/share-button/share-button");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u8F6C\u53D1\u6309\u94AE"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -177,15 +195,18 @@ var require_share_button = __commonJS({
         }
       }
     });
-    fetch("./css/pages/share-button/share-button.css").then((res) => res.text()).then((e) => {
-      console.log("pages/share-button/share-button", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/custom-message/custom-message.js
 var require_custom_message = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/custom-message/custom-message.js"() {
+    var page = getPage("packageAPI/pages/custom-message/custom-message");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u5BA2\u670D\u6D88\u606F"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -193,9 +214,6 @@ var require_custom_message = __commonJS({
           path: "packageAPI/pages/custom-message/custom-message"
         };
       }
-    });
-    fetch("./css/pages/custom-message/custom-message.css").then((res) => res.text()).then((e) => {
-      console.log("pages/custom-message/custom-message", e);
     });
   }
 });
@@ -218,6 +236,12 @@ var require_config = __commonJS({
 // miniprogram-demo/miniprogram/packageAPI/pages/template-message/template-message.js
 var require_template_message = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/template-message/template-message.js"() {
+    var page = getPage("packageAPI/pages/template-message/template-message");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u6A21\u677F\u6D88\u606F"
+}
+`;
     var templateMessageUrl = require_config().templateMessageUrl;
     var app = getApp();
     var formData = {
@@ -276,15 +300,18 @@ var require_template_message = __commonJS({
         });
       }
     });
-    fetch("./css/pages/template-message/template-message.css").then((res) => res.text()).then((e) => {
-      console.log("pages/template-message/template-message", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/set-navigation-bar-title/set-navigation-bar-title.js
 var require_set_navigation_bar_title = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/set-navigation-bar-title/set-navigation-bar-title.js"() {
+    var page = getPage("packageAPI/pages/set-navigation-bar-title/set-navigation-bar-title");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u8BBE\u7F6E\u9875\u9762\u6807\u9898"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -307,15 +334,18 @@ var require_set_navigation_bar_title = __commonJS({
         return false;
       }
     });
-    fetch("./css/pages/set-navigation-bar-title/set-navigation-bar-title.css").then((res) => res.text()).then((e) => {
-      console.log("pages/set-navigation-bar-title/set-navigation-bar-title", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/navigation-bar-loading/navigation-bar-loading.js
 var require_navigation_bar_loading = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/navigation-bar-loading/navigation-bar-loading.js"() {
+    var page = getPage("packageAPI/pages/navigation-bar-loading/navigation-bar-loading");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u6807\u9898\u680F\u52A0\u8F7D\u52A8\u753B"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -330,15 +360,18 @@ var require_navigation_bar_loading = __commonJS({
         wx.hideNavigationBarLoading();
       }
     });
-    fetch("./css/pages/navigation-bar-loading/navigation-bar-loading.css").then((res) => res.text()).then((e) => {
-      console.log("pages/navigation-bar-loading/navigation-bar-loading", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/navigator/navigator.js
 var require_navigator = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/navigator/navigator.js"() {
+    var page = getPage("packageAPI/pages/navigator/navigator");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u9875\u9762\u8DF3\u8F6C"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -362,15 +395,20 @@ var require_navigator = __commonJS({
         wx.reLaunch({ url: "/page/component/index" });
       }
     });
-    fetch("./css/pages/navigator/navigator.css").then((res) => res.text()).then((e) => {
-      console.log("pages/navigator/navigator", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/pull-down-refresh/pull-down-refresh.js
 var require_pull_down_refresh = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/pull-down-refresh/pull-down-refresh.js"() {
+    var page = getPage("packageAPI/pages/pull-down-refresh/pull-down-refresh");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u4E0B\u62C9\u5237\u65B0",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "@backgroundTextStyle"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -394,15 +432,18 @@ var require_pull_down_refresh = __commonJS({
         });
       }
     });
-    fetch("./css/pages/pull-down-refresh/pull-down-refresh.css").then((res) => res.text()).then((e) => {
-      console.log("pages/pull-down-refresh/pull-down-refresh", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/animation/animation.js
 var require_animation = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/animation/animation.js"() {
+    var page = getPage("packageAPI/pages/animation/animation");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u52A8\u753B"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -446,15 +487,18 @@ var require_animation = __commonJS({
         }.bind(this));
       }
     });
-    fetch("./css/pages/animation/animation.css").then((res) => res.text()).then((e) => {
-      console.log("pages/animation/animation", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/action-sheet/action-sheet.js
 var require_action_sheet = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/action-sheet/action-sheet.js"() {
+    var page = getPage("packageAPI/pages/action-sheet/action-sheet");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u64CD\u4F5C\u83DC\u5355"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -471,15 +515,18 @@ var require_action_sheet = __commonJS({
         });
       }
     });
-    fetch("./css/pages/action-sheet/action-sheet.css").then((res) => res.text()).then((e) => {
-      console.log("pages/action-sheet/action-sheet", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/modal/modal.js
 var require_modal = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/modal/modal.js"() {
+    var page = getPage("packageAPI/pages/modal/modal");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u6A21\u6001\u5F39\u7A97"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -507,15 +554,18 @@ var require_modal = __commonJS({
         });
       }
     });
-    fetch("./css/pages/modal/modal.css").then((res) => res.text()).then((e) => {
-      console.log("pages/modal/modal", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/toast/toast.js
 var require_toast = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/toast/toast.js"() {
+    var page = getPage("packageAPI/pages/toast/toast");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u6D88\u606F\u63D0\u793A\u6846"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -545,15 +595,18 @@ var require_toast = __commonJS({
         wx.hideToast();
       }
     });
-    fetch("./css/pages/toast/toast.css").then((res) => res.text()).then((e) => {
-      console.log("pages/toast/toast", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/get-network-type/get-network-type.js
 var require_get_network_type = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-network-type/get-network-type.js"() {
+    var page = getPage("packageAPI/pages/get-network-type/get-network-type");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u83B7\u53D6\u624B\u673A\u7F51\u7EDC\u72B6\u6001"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -583,15 +636,18 @@ var require_get_network_type = __commonJS({
         });
       }
     });
-    fetch("./css/pages/get-network-type/get-network-type.css").then((res) => res.text()).then((e) => {
-      console.log("pages/get-network-type/get-network-type", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/on-network-status-change/on-network-status-change.js
 var require_on_network_status_change = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/on-network-status-change/on-network-status-change.js"() {
+    var page = getPage("packageAPI/pages/on-network-status-change/on-network-status-change");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u76D1\u542C\u624B\u673A\u7F51\u7EDC\u53D8\u5316"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -623,15 +679,18 @@ var require_on_network_status_change = __commonJS({
         });
       }
     });
-    fetch("./css/pages/on-network-status-change/on-network-status-change.css").then((res) => res.text()).then((e) => {
-      console.log("pages/on-network-status-change/on-network-status-change", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/get-system-info/get-system-info.js
 var require_get_system_info = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-system-info/get-system-info.js"() {
+    var page = getPage("packageAPI/pages/get-system-info/get-system-info");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u83B7\u53D6\u624B\u673A\u7CFB\u7EDF\u4FE1\u606F"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -653,15 +712,18 @@ var require_get_system_info = __commonJS({
         });
       }
     });
-    fetch("./css/pages/get-system-info/get-system-info.css").then((res) => res.text()).then((e) => {
-      console.log("pages/get-system-info/get-system-info", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/on-compass-change/on-compass-change.js
 var require_on_compass_change = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/on-compass-change/on-compass-change.js"() {
+    var page = getPage("packageAPI/pages/on-compass-change/on-compass-change");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u76D1\u542C\u7F57\u76D8\u6570\u636E"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -708,15 +770,18 @@ var require_on_compass_change = __commonJS({
         });
       }
     });
-    fetch("./css/pages/on-compass-change/on-compass-change.css").then((res) => res.text()).then((e) => {
-      console.log("pages/on-compass-change/on-compass-change", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/make-phone-call/make-phone-call.js
 var require_make_phone_call = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/make-phone-call/make-phone-call.js"() {
+    var page = getPage("packageAPI/pages/make-phone-call/make-phone-call");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u6253\u7535\u8BDD"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -748,15 +813,18 @@ var require_make_phone_call = __commonJS({
         });
       }
     });
-    fetch("./css/pages/make-phone-call/make-phone-call.css").then((res) => res.text()).then((e) => {
-      console.log("pages/make-phone-call/make-phone-call", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/scan-code/scan-code.js
 var require_scan_code = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/scan-code/scan-code.js"() {
+    var page = getPage("packageAPI/pages/scan-code/scan-code");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u626B\u7801"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -780,15 +848,18 @@ var require_scan_code = __commonJS({
         });
       }
     });
-    fetch("./css/pages/scan-code/scan-code.css").then((res) => res.text()).then((e) => {
-      console.log("pages/scan-code/scan-code", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/request/request.js
 var require_request = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/request/request.js"() {
+    var page = getPage("packageAPI/pages/request/request");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u7F51\u7EDC\u8BF7\u6C42"
+}
+`;
     var requestUrl = require_config().requestUrl;
     var duration = 2e3;
     Page({
@@ -829,15 +900,18 @@ var require_request = __commonJS({
         });
       }
     });
-    fetch("./css/pages/request/request.css").then((res) => res.text()).then((e) => {
-      console.log("pages/request/request", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/web-socket/web-socket.js
 var require_web_socket = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/web-socket/web-socket.js"() {
+    var page = getPage("packageAPI/pages/web-socket/web-socket");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "Web Socket"
+}
+`;
     function showModal(title, content) {
       wx.showModal({
         title,
@@ -929,15 +1003,18 @@ var require_web_socket = __commonJS({
         }
       }
     });
-    fetch("./css/pages/web-socket/web-socket.css").then((res) => res.text()).then((e) => {
-      console.log("pages/web-socket/web-socket", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/upload-file/upload-file.js
 var require_upload_file = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/upload-file/upload-file.js"() {
+    var page = getPage("packageAPI/pages/upload-file/upload-file");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u4E0A\u4F20\u6587\u4EF6"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -995,15 +1072,18 @@ var require_upload_file = __commonJS({
         }
       }
     });
-    fetch("./css/pages/upload-file/upload-file.css").then((res) => res.text()).then((e) => {
-      console.log("pages/upload-file/upload-file", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/download-file/download-file.js
 var require_download_file = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/download-file/download-file.js"() {
+    var page = getPage("packageAPI/pages/download-file/download-file");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u4E0B\u8F7D\u6587\u4EF6"
+}
+`;
     var demoImageFileId = require_config().demoImageFileId;
     Page({
       onShareAppMessage() {
@@ -1026,15 +1106,18 @@ var require_download_file = __commonJS({
         });
       }
     });
-    fetch("./css/pages/download-file/download-file.css").then((res) => res.text()).then((e) => {
-      console.log("pages/download-file/download-file", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/image/image.js
 var require_image = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/image/image.js"() {
+    var page = getPage("packageAPI/pages/image/image");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u56FE\u7247"
+}
+`;
     var sourceType = [["camera"], ["album"], ["camera", "album"]];
     var sizeType = [["compressed"], ["original"], ["compressed", "original"]];
     Page({
@@ -1089,9 +1172,6 @@ var require_image = __commonJS({
           urls: this.data.imageList
         });
       }
-    });
-    fetch("./css/pages/image/image.css").then((res) => res.text()).then((e) => {
-      console.log("pages/image/image", e);
     });
   }
 });
@@ -1185,6 +1265,12 @@ var require_util = __commonJS({
 // miniprogram-demo/miniprogram/packageAPI/pages/voice/voice.js
 var require_voice = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/voice/voice.js"() {
+    var page = getPage("packageAPI/pages/voice/voice");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u5F55\u97F3"
+}
+`;
     var util = require_util();
     var playTimeInterval;
     var recordTimeInterval;
@@ -1322,15 +1408,18 @@ var require_voice = __commonJS({
         });
       }
     });
-    fetch("./css/pages/voice/voice.css").then((res) => res.text()).then((e) => {
-      console.log("pages/voice/voice", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/file/file.js
 var require_file = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/file/file.js"() {
+    var page = getPage("packageAPI/pages/file/file");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u6587\u4EF6"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -1404,15 +1493,18 @@ var require_file = __commonJS({
         });
       }
     });
-    fetch("./css/pages/file/file.css").then((res) => res.text()).then((e) => {
-      console.log("pages/file/file", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/on-accelerometer-change/on-accelerometer-change.js
 var require_on_accelerometer_change = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/on-accelerometer-change/on-accelerometer-change.js"() {
+    var page = getPage("packageAPI/pages/on-accelerometer-change/on-accelerometer-change");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u76D1\u542C\u91CD\u529B\u611F\u5E94\u6570\u636E"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -1525,15 +1617,15 @@ var require_on_accelerometer_change = __commonJS({
         clearInterval(this.interval);
       }
     });
-    fetch("./css/pages/on-accelerometer-change/on-accelerometer-change.css").then((res) => res.text()).then((e) => {
-      console.log("pages/on-accelerometer-change/on-accelerometer-change", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/canvas/example.js
 var require_example = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/canvas/example.js"(exports, module) {
+    var page = getPage("packageAPI/pages/canvas/example");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = ``;
     var example = {};
     example.rotate = function(context) {
       context.beginPath();
@@ -1771,15 +1863,18 @@ var require_example = __commonJS({
       });
     };
     module.exports = example;
-    fetch("./css/pages/canvas/example.css").then((res) => res.text()).then((e) => {
-      console.log("pages/canvas/example", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/canvas/canvas.js
 var require_canvas = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/canvas/canvas.js"() {
+    var page = getPage("packageAPI/pages/canvas/canvas");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u521B\u5EFA\u753B\u5E03"
+}
+`;
     var example = require_example();
     Page({
       onShareAppMessage() {
@@ -1818,15 +1913,18 @@ var require_canvas = __commonJS({
         });
       }
     });
-    fetch("./css/pages/canvas/canvas.css").then((res) => res.text()).then((e) => {
-      console.log("pages/canvas/canvas", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/background-audio/background-audio.js
 var require_background_audio = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/background-audio/background-audio.js"() {
+    var page = getPage("packageAPI/pages/background-audio/background-audio");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+   "navigationBarTitleText": "\u80CC\u666F\u97F3\u9891"
+}
+`;
     var app = getApp();
     var util = require_util();
     var backgroundAudioManager = wx.getBackgroundAudioManager();
@@ -1929,15 +2027,18 @@ var require_background_audio = __commonJS({
         clearInterval(updateInterval);
       }
     });
-    fetch("./css/pages/background-audio/background-audio.css").then((res) => res.text()).then((e) => {
-      console.log("pages/background-audio/background-audio", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/video/video.js
 var require_video = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/video/video.js"() {
+    var page = getPage("packageAPI/pages/video/video");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u62CD\u6444/\u9009\u62E9\u89C6\u9891"
+}
+`;
     var sourceType = [["camera"], ["album"], ["camera", "album"]];
     var camera = [["front"], ["back"], ["front", "back"]];
     var duration = Array.apply(null, { length: 60 }).map(function(n, i) {
@@ -1990,15 +2091,18 @@ var require_video = __commonJS({
         });
       }
     });
-    fetch("./css/pages/video/video.css").then((res) => res.text()).then((e) => {
-      console.log("pages/video/video", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/get-location/get-location.js
 var require_get_location = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-location/get-location.js"() {
+    var page = getPage("packageAPI/pages/get-location/get-location");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u83B7\u53D6\u4F4D\u7F6E"
+}
+`;
     var util = require_util();
     var formatLocation = util.formatLocation;
     Page({
@@ -2029,15 +2133,18 @@ var require_get_location = __commonJS({
         });
       }
     });
-    fetch("./css/pages/get-location/get-location.css").then((res) => res.text()).then((e) => {
-      console.log("pages/get-location/get-location", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/open-location/open-location.js
 var require_open_location = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/open-location/open-location.js"() {
+    var page = getPage("packageAPI/pages/open-location/open-location");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u67E5\u770B\u4F4D\u7F6E"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -2057,15 +2164,17 @@ var require_open_location = __commonJS({
         });
       }
     });
-    fetch("./css/pages/open-location/open-location.css").then((res) => res.text()).then((e) => {
-      console.log("pages/open-location/open-location", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/choose-location/choose-location.js
 var require_choose_location = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/choose-location/choose-location.js"() {
+    var page = getPage("packageAPI/pages/choose-location/choose-location");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "\u4F7F\u7528\u539F\u751F\u5730\u56FE\u9009\u62E9\u4F4D\u7F6E"
+}`;
     var util = require_util();
     var formatLocation = util.formatLocation;
     Page({
@@ -2097,15 +2206,18 @@ var require_choose_location = __commonJS({
         });
       }
     });
-    fetch("./css/pages/choose-location/choose-location.css").then((res) => res.text()).then((e) => {
-      console.log("pages/choose-location/choose-location", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/storage/storage.js
 var require_storage = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/storage/storage.js"() {
+    var page = getPage("packageAPI/pages/storage/storage");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u6570\u636E\u5B58\u50A8"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -2197,15 +2309,17 @@ var require_storage = __commonJS({
         });
       }
     });
-    fetch("./css/pages/storage/storage.css").then((res) => res.text()).then((e) => {
-      console.log("pages/storage/storage", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/get-wxml-node-info/get-wxml-node-info.js
 var require_get_wxml_node_info = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-wxml-node-info/get-wxml-node-info.js"() {
+    var page = getPage("packageAPI/pages/get-wxml-node-info/get-wxml-node-info");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "\u83B7\u53D6WXML\u8282\u70B9\u4FE1\u606F"
+}`;
     Page({
       onShareAppMessage() {
         return {
@@ -2238,15 +2352,18 @@ var require_get_wxml_node_info = __commonJS({
         });
       }
     });
-    fetch("./css/pages/get-wxml-node-info/get-wxml-node-info.css").then((res) => res.text()).then((e) => {
-      console.log("pages/get-wxml-node-info/get-wxml-node-info", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/load-font-face/load-font-face.js
 var require_load_font_face = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/load-font-face/load-font-face.js"() {
+    var page = getPage("packageAPI/pages/load-font-face/load-font-face");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u52A8\u6001\u52A0\u8F7D\u5B57\u4F53"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -2284,15 +2401,18 @@ var require_load_font_face = __commonJS({
         this.setData({ loaded: false });
       }
     });
-    fetch("./css/pages/load-font-face/load-font-face.css").then((res) => res.text()).then((e) => {
-      console.log("pages/load-font-face/load-font-face", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/clipboard-data/clipboard-data.js
 var require_clipboard_data = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/clipboard-data/clipboard-data.js"() {
+    var page = getPage("packageAPI/pages/clipboard-data/clipboard-data");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u526A\u5207\u677F"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -2337,15 +2457,18 @@ var require_clipboard_data = __commonJS({
         });
       }
     });
-    fetch("./css/pages/clipboard-data/clipboard-data.css").then((res) => res.text()).then((e) => {
-      console.log("pages/clipboard-data/clipboard-data", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/bluetooth/bluetooth.js
 var require_bluetooth = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/bluetooth/bluetooth.js"() {
+    var page = getPage("packageAPI/pages/bluetooth/bluetooth");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+   "navigationBarTitleText": "\u84DD\u7259"
+}
+`;
     function inArray(arr, key, val) {
       for (let i = 0; i < arr.length; i++) {
         if (arr[i][key] === val) {
@@ -2580,15 +2703,17 @@ var require_bluetooth = __commonJS({
         this._discoveryStarted = false;
       }
     });
-    fetch("./css/pages/bluetooth/bluetooth.css").then((res) => res.text()).then((e) => {
-      console.log("pages/bluetooth/bluetooth", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/screen-brightness/screen-brightness.js
 var require_screen_brightness = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/screen-brightness/screen-brightness.js"() {
+    var page = getPage("packageAPI/pages/screen-brightness/screen-brightness");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "\u5C4F\u5E55\u4EAE\u5EA6"
+}`;
     Page({
       onShareAppMessage() {
         return {
@@ -2625,15 +2750,18 @@ var require_screen_brightness = __commonJS({
         });
       }
     });
-    fetch("./css/pages/screen-brightness/screen-brightness.css").then((res) => res.text()).then((e) => {
-      console.log("pages/screen-brightness/screen-brightness", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/vibrate/vibrate.js
 var require_vibrate = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/vibrate/vibrate.js"() {
+    var page = getPage("packageAPI/pages/vibrate/vibrate");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u632F\u52A8"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -2668,15 +2796,18 @@ var require_vibrate = __commonJS({
         });
       }
     });
-    fetch("./css/pages/vibrate/vibrate.css").then((res) => res.text()).then((e) => {
-      console.log("pages/vibrate/vibrate", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/add-contact/add-contact.js
 var require_add_contact = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/add-contact/add-contact.js"() {
+    var page = getPage("packageAPI/pages/add-contact/add-contact");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+    "navigationBarTitleText": "\u65B0\u589E\u8054\u7CFB\u4EBA"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -2701,15 +2832,18 @@ var require_add_contact = __commonJS({
         });
       }
     });
-    fetch("./css/pages/add-contact/add-contact.css").then((res) => res.text()).then((e) => {
-      console.log("pages/add-contact/add-contact", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/wifi/wifi.js
 var require_wifi = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wifi/wifi.js"() {
+    var page = getPage("packageAPI/pages/wifi/wifi");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+   "navigationBarTitleText": "Wi-Fi"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -2779,15 +2913,17 @@ var require_wifi = __commonJS({
         });
       }
     });
-    fetch("./css/pages/wifi/wifi.css").then((res) => res.text()).then((e) => {
-      console.log("pages/wifi/wifi", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/page-scroll/page-scroll.js
 var require_page_scroll = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/page-scroll/page-scroll.js"() {
+    var page = getPage("packageAPI/pages/page-scroll/page-scroll");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "\u9875\u9762\u6EDA\u52A8"
+}`;
     Page({
       onShareAppMessage() {
         return {
@@ -2808,15 +2944,17 @@ var require_page_scroll = __commonJS({
         });
       }
     });
-    fetch("./css/pages/page-scroll/page-scroll.css").then((res) => res.text()).then((e) => {
-      console.log("pages/page-scroll/page-scroll", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/intersection-observer/intersection-observer.js
 var require_intersection_observer = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/intersection-observer/intersection-observer.js"() {
+    var page = getPage("packageAPI/pages/intersection-observer/intersection-observer");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "WXML\u8282\u70B9\u5E03\u5C40\u76F8\u4EA4\u72B6\u6001"
+}`;
     Page({
       onShareAppMessage() {
         return {
@@ -2841,15 +2979,17 @@ var require_intersection_observer = __commonJS({
           this._observer.disconnect();
       }
     });
-    fetch("./css/pages/intersection-observer/intersection-observer.css").then((res) => res.text()).then((e) => {
-      console.log("pages/intersection-observer/intersection-observer", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/capture-screen/capture-screen.js
 var require_capture_screen = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/capture-screen/capture-screen.js"() {
+    var page = getPage("packageAPI/pages/capture-screen/capture-screen");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "\u7528\u6237\u622A\u5C4F\u4E8B\u4EF6"
+}`;
     Page({
       onShareAppMessage() {
         return {
@@ -2868,15 +3008,18 @@ var require_capture_screen = __commonJS({
         });
       }
     });
-    fetch("./css/pages/capture-screen/capture-screen.css").then((res) => res.text()).then((e) => {
-      console.log("pages/capture-screen/capture-screen", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/worker/worker.js
 var require_worker = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/worker/worker.js"() {
+    var page = getPage("packageAPI/pages/worker/worker");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+   "navigationBarTitleText": "\u591A\u7EBF\u7A0BWorker"
+}
+`;
     var { fib } = require_util();
     Page({
       onShareAppMessage() {
@@ -2995,15 +3138,18 @@ var require_worker = __commonJS({
         });
       }
     });
-    fetch("./css/pages/worker/worker.css").then((res) => res.text()).then((e) => {
-      console.log("pages/worker/worker", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/ibeacon/ibeacon.js
 var require_ibeacon = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/ibeacon/ibeacon.js"() {
+    var page = getPage("packageAPI/pages/ibeacon/ibeacon");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "iBeacon"
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -3047,15 +3193,17 @@ var require_ibeacon = __commonJS({
         wx.stopBeaconDiscovery();
       }
     });
-    fetch("./css/pages/ibeacon/ibeacon.css").then((res) => res.text()).then((e) => {
-      console.log("pages/ibeacon/ibeacon", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/choose-address/choose-address.js
 var require_choose_address = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/choose-address/choose-address.js"() {
+    var page = getPage("packageAPI/pages/choose-address/choose-address");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "\u6536\u8D27\u5730\u5740"
+}`;
     Page({
       onShareAppMessage() {
         return {
@@ -3079,15 +3227,17 @@ var require_choose_address = __commonJS({
         });
       }
     });
-    fetch("./css/pages/choose-address/choose-address.css").then((res) => res.text()).then((e) => {
-      console.log("pages/choose-address/choose-address", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/setting/setting.js
 var require_setting = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/setting/setting.js"() {
+    var page = getPage("packageAPI/pages/setting/setting");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "\u8BBE\u7F6E"
+}`;
     Page({
       onShareAppMessage() {
         return {
@@ -3107,15 +3257,17 @@ var require_setting = __commonJS({
         });
       }
     });
-    fetch("./css/pages/setting/setting.css").then((res) => res.text()).then((e) => {
-      console.log("pages/setting/setting", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/choose-invoice-title/choose-invoice-title.js
 var require_choose_invoice_title = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/choose-invoice-title/choose-invoice-title.js"() {
+    var page = getPage("packageAPI/pages/choose-invoice-title/choose-invoice-title");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "\u83B7\u53D6\u53D1\u7968\u62AC\u5934"
+}`;
     Page({
       onShareAppMessage() {
         return {
@@ -3151,15 +3303,17 @@ var require_choose_invoice_title = __commonJS({
         });
       }
     });
-    fetch("./css/pages/choose-invoice-title/choose-invoice-title.css").then((res) => res.text()).then((e) => {
-      console.log("pages/choose-invoice-title/choose-invoice-title", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/soter-authentication/soter-authentication.js
 var require_soter_authentication = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/soter-authentication/soter-authentication.js"() {
+    var page = getPage("packageAPI/pages/soter-authentication/soter-authentication");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "\u751F\u7269\u8BA4\u8BC1"
+}`;
     Page({
       onShareAppMessage() {
         return {
@@ -3234,15 +3388,17 @@ var require_soter_authentication = __commonJS({
         });
       }
     });
-    fetch("./css/pages/soter-authentication/soter-authentication.css").then((res) => res.text()).then((e) => {
-      console.log("pages/soter-authentication/soter-authentication", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/subscribe-message/subscribe-message.js
 var require_subscribe_message = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/subscribe-message/subscribe-message.js"() {
+    var page = getPage("packageAPI/pages/subscribe-message/subscribe-message");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "usingComponents": {}
+}`;
     Page({
       data: {},
       requestSubscribeMessage() {
@@ -3304,15 +3460,17 @@ var require_subscribe_message = __commonJS({
         };
       }
     });
-    fetch("./css/pages/subscribe-message/subscribe-message.css").then((res) => res.text()).then((e) => {
-      console.log("pages/subscribe-message/subscribe-message", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/doc-web-view/doc-web-view.js
 var require_doc_web_view = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/doc-web-view/doc-web-view.js"() {
+    var page = getPage("packageAPI/pages/doc-web-view/doc-web-view");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "navigationBarTitleText": "\u5C0F\u7A0B\u5E8F\u63A5\u53E3\u6587\u6863"
+}`;
     Page({
       onShareAppMessage() {
         return {
@@ -3321,15 +3479,20 @@ var require_doc_web_view = __commonJS({
         };
       }
     });
-    fetch("./css/pages/doc-web-view/doc-web-view.css").then((res) => res.text()).then((e) => {
-      console.log("pages/doc-web-view/doc-web-view", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/audio/audio.js
 var require_audio = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/audio/audio.js"() {
+    var page = getPage("packageAPI/pages/audio/audio");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "usingComponents": {},
+  "navigationBarTitleText": "\u97F3\u9891"
+
+}
+`;
     Page({
       onShareAppMessage() {
         return {
@@ -3358,15 +3521,19 @@ var require_audio = __commonJS({
         this.audioCtx.seek(0);
       }
     });
-    fetch("./css/pages/audio/audio.css").then((res) => res.text()).then((e) => {
-      console.log("pages/audio/audio", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/get-battery-info/get-battery-info.js
 var require_get_battery_info = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-battery-info/get-battery-info.js"() {
+    var page = getPage("packageAPI/pages/get-battery-info/get-battery-info");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "usingComponents": {},
+  "navigationBarTitleText": "\u83B7\u53D6\u624B\u673A\u8BBE\u5907\u7535\u91CF"
+
+}`;
     Page({
       onShareAppMessage() {
         return {
@@ -3387,15 +3554,15 @@ var require_get_battery_info = __commonJS({
         });
       }
     });
-    fetch("./css/pages/get-battery-info/get-battery-info.css").then((res) => res.text()).then((e) => {
-      console.log("pages/get-battery-info/get-battery-info", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/get-performance/util.js
 var require_util2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-performance/util.js"(exports, module) {
+    var page = getPage("packageAPI/pages/get-performance/util");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = ``;
     var util = {};
     Date.prototype.Format = function(fmt) {
       var o = {
@@ -3455,15 +3622,19 @@ var require_util2 = __commonJS({
       return date.Format("yyyy-MM-dd hh:mm:ss");
     };
     module.exports = util;
-    fetch("./css/pages/get-performance/util.css").then((res) => res.text()).then((e) => {
-      console.log("pages/get-performance/util", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/get-performance/get-performance.js
 var require_get_performance = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-performance/get-performance.js"() {
+    var page = getPage("packageAPI/pages/get-performance/get-performance");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "usingComponents": {},
+  "navigationBarTitleText": "\u6027\u80FD\u6570\u636E"
+
+}`;
     var util = require_util2();
     var performance = wx.getPerformance ? wx.getPerformance() : {};
     var performanceObserver = performance.createObserver ? performance.createObserver() : null;
@@ -3510,15 +3681,19 @@ var require_get_performance = __commonJS({
         performanceObserver.disconnect();
       }
     });
-    fetch("./css/pages/get-performance/get-performance.css").then((res) => res.text()).then((e) => {
-      console.log("pages/get-performance/get-performance", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/mdns/mdns.js
 var require_mdns = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/mdns/mdns.js"() {
+    var page = getPage("packageAPI/pages/mdns/mdns");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "usingComponents": {},
+  "navigationBarTitleText": "mDNS"
+
+}`;
     var serviceList = [];
     var resolveFailList = [];
     Page({
@@ -3627,15 +3802,19 @@ var require_mdns = __commonJS({
         });
       }
     });
-    fetch("./css/pages/mdns/mdns.css").then((res) => res.text()).then((e) => {
-      console.log("pages/mdns/mdns", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/udp-socket/udp-socket.js
 var require_udp_socket = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/udp-socket/udp-socket.js"() {
+    var page = getPage("packageAPI/pages/udp-socket/udp-socket");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "usingComponents": {},
+  "navigationBarTitleText": "UDPSocket"
+
+}`;
     var AB2String = (arrayBuffer) => {
       let unit8Arr = new Uint8Array(arrayBuffer);
       let encodedString = String.fromCharCode.apply(null, unit8Arr), decodedString = decodeURIComponent(escape(encodedString));
@@ -3720,15 +3899,18 @@ var require_udp_socket = __commonJS({
         });
       }
     });
-    fetch("./css/pages/udp-socket/udp-socket.css").then((res) => res.text()).then((e) => {
-      console.log("pages/udp-socket/udp-socket", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/two-way-bindings/two-way-bindings.js
 var require_two_way_bindings = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/two-way-bindings/two-way-bindings.js"() {
+    var page = getPage("packageAPI/pages/two-way-bindings/two-way-bindings");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "usingComponents": {},
+  "navigationBarTitleText": "two-way-bindings"
+}`;
     Page({
       data: {
         value: ""
@@ -3754,15 +3936,18 @@ var require_two_way_bindings = __commonJS({
         };
       }
     });
-    fetch("./css/pages/two-way-bindings/two-way-bindings.css").then((res) => res.text()).then((e) => {
-      console.log("pages/two-way-bindings/two-way-bindings", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/media-container/media-container.js
 var require_media_container = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/media-container/media-container.js"() {
+    var page = getPage("packageAPI/pages/media-container/media-container");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "usingComponents": {},
+  "navigationBarTitleText": "\u97F3\u89C6\u9891\u5408\u6210"
+}`;
     Page({
       onShareAppMessage() {
         return {
@@ -3840,15 +4025,18 @@ var require_media_container = __commonJS({
         }
       }
     });
-    fetch("./css/pages/media-container/media-container.css").then((res) => res.text()).then((e) => {
-      console.log("pages/media-container/media-container", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/get-background-fetch-data/get-background-fetch-data.js
 var require_get_background_fetch_data = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-background-fetch-data/get-background-fetch-data.js"() {
+    var page = getPage("packageAPI/pages/get-background-fetch-data/get-background-fetch-data");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "usingComponents": {},
+  "navigationBarTitleText": "\u5468\u671F\u6027\u66F4\u65B0\u6570\u636E"
+}`;
     Page({
       onShareAppMessage() {
         return {
@@ -3901,15 +4089,19 @@ var require_get_background_fetch_data = __commonJS({
         }
       }
     });
-    fetch("./css/pages/get-background-fetch-data/get-background-fetch-data.css").then((res) => res.text()).then((e) => {
-      console.log("pages/get-background-fetch-data/get-background-fetch-data", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/get-background-prefetch-data/get-background-prefetch-data.js
 var require_get_background_prefetch_data = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-background-prefetch-data/get-background-prefetch-data.js"() {
+    var page = getPage("packageAPI/pages/get-background-prefetch-data/get-background-prefetch-data");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "usingComponents": {},
+  "navigationBarTitleText": "\u6570\u636E\u9884\u62C9\u53D6"
+
+}`;
     var app = getApp();
     Date.prototype.Format = function(fmt) {
       var o = {
@@ -3970,15 +4162,18 @@ var require_get_background_prefetch_data = __commonJS({
         }
       }
     });
-    fetch("./css/pages/get-background-prefetch-data/get-background-prefetch-data.css").then((res) => res.text()).then((e) => {
-      console.log("pages/get-background-prefetch-data/get-background-prefetch-data", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/wxs/wxs.js
 var require_wxs = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wxs/wxs.js"() {
+    var page = getPage("packageAPI/pages/wxs/wxs");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "usingComponents": {},
+  "navigationBarTitleText": "WXS"
+}`;
     Page({
       onShareAppMessage() {
         return {
@@ -3993,15 +4188,17 @@ var require_wxs = __commonJS({
         });
       }
     });
-    fetch("./css/pages/wxs/wxs.css").then((res) => res.text()).then((e) => {
-      console.log("pages/wxs/wxs", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/bluetooth/slave/slave.js
 var require_slave = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/bluetooth/slave/slave.js"() {
+    var page = getPage("packageAPI/pages/bluetooth/slave/slave");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "usingComponents": {}
+}`;
     var uuid3 = "0C76801A-62EB-45E5-96A8-37C8882ABB2B";
     var serviceId = "D0611E78-BBB4-4591-A5F8-487910AE4366";
     var characteristicId = "8667556C-9A37-4C91-84ED-54EE27D90049";
@@ -4238,15 +4435,19 @@ var require_slave = __commonJS({
         });
       }
     });
-    fetch("./css/pages/bluetooth/slave/slave.css").then((res) => res.text()).then((e) => {
-      console.log("pages/bluetooth/slave/slave", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/resizable/resizable.js
 var require_resizable = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/resizable/resizable.js"() {
+    var page = getPage("packageAPI/pages/resizable/resizable");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "usingComponents": {},
+  "navigationBarTitleText": "\u5C4F\u5E55\u65CB\u8F6C",
+  "pageOrientation": "auto"
+}`;
     Page({
       onShareAppMessage() {
         return {
@@ -4263,15 +4464,18 @@ var require_resizable = __commonJS({
         });
       }
     });
-    fetch("./css/pages/resizable/resizable.css").then((res) => res.text()).then((e) => {
-      console.log("pages/resizable/resizable", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/wxs/movable.js
 var require_movable = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wxs/movable.js"() {
+    var page = getPage("packageAPI/pages/wxs/movable");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "usingComponents": {},
+  "navigationBarTitleText": "movable"
+}`;
     Page({
       onShareAppMessage() {
         return {
@@ -4301,15 +4505,18 @@ var require_movable = __commonJS({
         });
       }
     });
-    fetch("./css/pages/wxs/movable.css").then((res) => res.text()).then((e) => {
-      console.log("pages/wxs/movable", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/wxs/sidebar.js
 var require_sidebar = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wxs/sidebar.js"() {
+    var page = getPage("packageAPI/pages/wxs/sidebar");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "usingComponents": {},
+  "navigationBarTitleText": "sidebar"
+}`;
     Page({
       data: {
         tabs: [],
@@ -4334,15 +4541,18 @@ var require_sidebar = __commonJS({
         this.setData({ tabs });
       }
     });
-    fetch("./css/pages/wxs/sidebar.css").then((res) => res.text()).then((e) => {
-      console.log("pages/wxs/sidebar", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/wxs/stick-top.js
 var require_stick_top = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wxs/stick-top.js"() {
+    var page = getPage("packageAPI/pages/wxs/stick-top");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "usingComponents": {},
+  "navigationBarTitleText": "stick-top"
+}`;
     var height = wx.getSystemInfoSync().windowHeight;
     var app = getApp();
     Page({
@@ -4395,15 +4605,18 @@ var require_stick_top = __commonJS({
         this.setData({ tabs });
       }
     });
-    fetch("./css/pages/wxs/stick-top.css").then((res) => res.text()).then((e) => {
-      console.log("pages/wxs/stick-top", e);
-    });
   }
 });
 
 // miniprogram-demo/miniprogram/packageAPI/pages/wxs/nearby.js
 var require_nearby = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wxs/nearby.js"() {
+    var page = getPage("packageAPI/pages/wxs/nearby");
+    page.template = "<test>\u6D4B\u8BD5</test>";
+    page.json = `{
+  "usingComponents": {},
+  "navigationBarTitleText": "nearby"
+}`;
     var windowWidth = wx.getSystemInfoSync().windowWidth;
     Page({
       onShareAppMessage() {
@@ -4463,9 +4676,6 @@ var require_nearby = __commonJS({
           duration: e.detail.value
         });
       }
-    });
-    fetch("./css/pages/wxs/nearby.css").then((res) => res.text()).then((e) => {
-      console.log("pages/wxs/nearby", e);
     });
   }
 });
