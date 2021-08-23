@@ -27,12 +27,14 @@ function getPage(options,filePath) {
     const jsonContent = fs.existsSync(jsonPath) ? fs.readFileSync(jsonPath, 'utf8') : ''
     const wxmlContent = fs.existsSync(wxmlPath) ? fs.readFileSync(wxmlPath, 'utf8') : ''
     return `
+        $wxmlrequire$
         const page = getPage('${pagePath}')
         page.template = $wxmlContent$
         page.json = $jsonContent$
     `
-    .replace('$wxmlContent$',`'<test>测试</test>'`)
+    .replace('$wxmlContent$',`'<div>测试</div>'`)
     .replace('$jsonContent$','`' + jsonContent + '`')
+    .replace('$wxmlrequire$',fs.existsSync(wxmlPath) ? `require('./${fileName}.wxml')` : '')
 }
 
 module.exports = {
