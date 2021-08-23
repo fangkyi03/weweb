@@ -48,7 +48,7 @@ function buildJS(item,config) {
         stdin:item.stdin,
         bundle:true,
         format:'esm',
-        minify:true,
+        // minify:true,
         plugins:[esbuildPlugin(config)],
         outfile:item.outfile,
     })
