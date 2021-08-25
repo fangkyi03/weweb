@@ -174,6 +174,12 @@ var require_head = __commonJS({
   "miniprogram-demo/miniprogram/common/head.wxml"() {
     Vue.component("head", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -193,6 +199,12 @@ var require_foot = __commonJS({
   "miniprogram-demo/miniprogram/common/foot.wxml"() {
     Vue.component("foot", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -1600,7 +1612,7 @@ var require_db_permission = __commonJS({
             
               
                 
-        <div v-for="item in tabs[currentPermissionIndex]" v-key="*this" >
+        <div v-for="item in tabs[currentPermissionIndex]" >
             
                   
                     {{item}}
@@ -1652,7 +1664,7 @@ var require_db_permission = __commonJS({
             
               
                 
-        <div v-for="item in tabs[currentPermissionIndex]" v-key="*this" >
+        <div v-for="item in tabs[currentPermissionIndex]" >
             
                   
                     {{item}}

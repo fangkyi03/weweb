@@ -27,6 +27,7 @@ function getRouter() {
       path: "/" + e,
       component: {
         name: e.split("/").join("-"),
+        // template:'<div>测试</div>',
         template: _pageObj[e].template,
         data() {
           return _pageObj[e].view.data;
@@ -34,16 +35,24 @@ function getRouter() {
         mounted() {
           _pageObj[e].view.setData = (data) => {
             Object.keys(data).forEach((e) => {
-              if (e == 'root.cn.[0]') {
-                this.$data['root'].cn[0] = data[e];
-              }else if (e == 'root.uid') {
-                this.$data['root'].uid = data[e];
+              const keys = e.split(".");
+              if (keys.length > 1) {
+                keys.reduce((a,b,i)=> {
+                  if (!a) {
+                    return this.$data[b]
+                  }else {
+                    const newB = b.replace('[','').replace(']','')
+                    if (i === keys.length - 1) {
+                      a[newB] = data[e]
+                    }
+                    return a[newB]
+                  }
+                },'')
+              }else {
+                this.$data[e] = data[e]
               }
-              console.log('asda')
-              this.$forceUpdate();
-              // this.$set(this.$data, e, data[e]);
-              // this.$data[e] = data[e];
             });
+            this.$forceUpdate();
           };
           const view = _pageObj[e].view;
           onCreate(view);

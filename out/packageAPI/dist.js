@@ -145,6 +145,12 @@ var require_head = __commonJS({
   "miniprogram-demo/miniprogram/common/head.wxml"() {
     Vue.component("head", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -164,6 +170,12 @@ var require_foot = __commonJS({
   "miniprogram-demo/miniprogram/common/foot.wxml"() {
     Vue.component("foot", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -676,6 +688,12 @@ var require_template_message = __commonJS({
     require_foot();
     Vue.component("address", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -683,6 +701,12 @@ var require_template_message = __commonJS({
     });
     Vue.component("time", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -690,6 +714,12 @@ var require_template_message = __commonJS({
     });
     Vue.component("name", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -697,6 +727,12 @@ var require_template_message = __commonJS({
     });
     Vue.component("serial", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -783,6 +819,12 @@ var require_set_navigation_bar_title = __commonJS({
     require_foot();
     Vue.component("title", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -1772,6 +1814,12 @@ var require_make_phone_call = __commonJS({
     require_foot();
     Vue.component("input", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -3935,6 +3983,12 @@ var require_open_location = __commonJS({
     require_foot();
     Vue.component("longitude", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -3942,6 +3996,12 @@ var require_open_location = __commonJS({
     });
     Vue.component("latitude", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -3949,6 +4009,12 @@ var require_open_location = __commonJS({
     });
     Vue.component("name", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -3956,6 +4022,12 @@ var require_open_location = __commonJS({
     });
     Vue.component("address", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -4102,6 +4174,12 @@ var require_storage = __commonJS({
     require_foot();
     Vue.component("key", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -4109,6 +4187,12 @@ var require_storage = __commonJS({
     });
     Vue.component("data", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -4406,6 +4490,12 @@ var require_clipboard_data = __commonJS({
     require_foot();
     Vue.component("key", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -4968,6 +5058,12 @@ var require_add_contact = __commonJS({
     require_foot();
     Vue.component("lastName", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -4975,6 +5071,12 @@ var require_add_contact = __commonJS({
     });
     Vue.component("firstName", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -4982,6 +5084,12 @@ var require_add_contact = __commonJS({
     });
     Vue.component("mobilePhoneNumber", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -8146,7 +8254,7 @@ var require_sidebar2 = __commonJS({
   
      >>> \u53F3\u6ED1\u51FA\u73B0\u4FA7\u8FB9\u83DC\u5355
       
-        <div v-for="item in tabs" v-key="title" >
+        <div v-for="item in tabs" >
             
         
           
@@ -8276,7 +8384,7 @@ var require_stick_top2 = __commonJS({
     \u6211\u7684
   
   
-        <div v-for="item in tabs" v-key="title" >
+        <div v-for="item in tabs" >
             
     
       
