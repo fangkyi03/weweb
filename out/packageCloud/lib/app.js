@@ -21,7 +21,7 @@ window['getApp'] = function () {
 };
 window['requirePlugin'] = function () {};
 window['_pageObj'] = {};
-window['_global'] = {};
+window['global'] = {};
 window['_pages'] = {}
 
 window['getPage'] = (files) => {
@@ -34,7 +34,7 @@ window['getPage'] = (files) => {
 }
 
 window['App'] = (config) => {
-  _global["appConfig"] = config;
+  console.log('app初始化',config)
 };
 window['Page'] = window['Component'] = (viewConfig) => {
   const page = getPage(window['__wxRoute']);

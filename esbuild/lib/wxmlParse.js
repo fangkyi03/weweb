@@ -17,6 +17,7 @@ function removeParenTheses(data) {
 }
 // 判断当前对象是否有for循环 
 function getAttribsObj(attribs) {
+    delete attribs.is
     if (attribs['v-for-items']) {
         const items = removeParenTheses(attribs['v-for-items'])
         const item = removeParenTheses(attribs['v-for-item'] || 'item') 
@@ -53,7 +54,11 @@ function getAttribs(attribs) {
     for (let key in obj) {
         // 初始化事件的对象
         let keyText = getEvent(key)
-        attribsStr += `${keyText}="${attribsObj[key]}" `
+        if (keyText == 'data' ) {
+            attribsStr += `:${keyText}="${attribsObj[key]}" `
+        }else {
+            attribsStr += `${keyText}="${attribsObj[key]}" `
+        }
     }
     return attribsStr
 }
@@ -119,9 +124,21 @@ function findAllTemplate(children,importText,templates) {
     }
 }
 
-function getVueComponent(name,text) {
+function getVueComponent(name,text,isPage) {
+    if (isPage) {
+        return `
+            const page = getPage('${name}')
+            page.template = \`${text}\`
+        `
+    }
     return `
-     Vue.component('${name}',{template:$template$})
+     Vue.component('${name}',{
+        props:['data'],
+        data() {
+            return this['$props'].data 
+        },
+        template:$template$
+     })
     `.replace('$template$','`<div>' + text + '</div>`')
 }
 function getTemplate(filePath) {
@@ -134,12 +151,12 @@ function getTemplate(filePath) {
         const templateText = getTemplateText(dom.children)
         return `
             ${importText.join('\n')}
-            ${getVueComponent(f.getPageName(filePath),templateText)}
+            ${getVueComponent(f.getPageName(filePath),templateText,true)}
         `
     }else {
        let templateText = ''
        templates.forEach((e)=> {
-           templateText += getVueComponent(e.attribs.name,getTemplateText(e.children))
+           templateText += getVueComponent(e.attribs.name,getTemplateText(e.children),false)
        })
        return `
           ${importText.join('\n')}

@@ -19,7 +19,10 @@ function onShow(config) {
 
 // 获取路由
 function getRouter() {
-  return _global["appConfig"].pages.map((e) => {
+  return window["__pages__"].map((e) => {
+    if (!_pageObj[e]) {
+      return {fail:true}
+    }
     return {
       path: "/" + e,
       component: {
@@ -45,7 +48,7 @@ function getRouter() {
 }
 
 // 返回路由数据
-const routerData = getRouter();
+const routerData = getRouter().filter((e)=>e.fail != true);
 
 // 初始化vue
 var app = new Vue({

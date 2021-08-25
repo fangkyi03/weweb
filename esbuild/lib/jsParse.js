@@ -3,18 +3,18 @@ const fs = require('fs')
 
 // 收集所有的数据 转换成新文本
 function getText (arr) {
-    if (arr.length > 0) {
-        return arr.join('\n')
+    const list = arr.filter((e)=>e)
+    if (list.length > 0) {
+        return list.join('\n')
     } else {
         return ''
     }
 }
 
 // 获取app模板
-function getApp(options) {
-    const {pages = []} = options || {}
+function getApp(childrens) {
     return `
-      var __pages__ = ${JSON.stringify(pages)}
+      window['__pages__'] = ${JSON.stringify(childrens)}
     `
 }
 
@@ -28,9 +28,10 @@ function getPage(options,filePath) {
     const wxmlContent = fs.existsSync(wxmlPath) ? fs.readFileSync(wxmlPath, 'utf8') : ''
     return `
         $wxmlrequire$
+        window['__wxRoute'] = '${pagePath}'
         const page = getPage('${pagePath}')
-        page.template = $wxmlContent$
-        page.json = $jsonContent$
+        // page.template = '<${pagePath} />'
+        page.json = $jsonContent$;\n
     `
     .replace('$wxmlContent$',`'<div>测试</div>'`)
     .replace('$jsonContent$','`' + jsonContent + '`')

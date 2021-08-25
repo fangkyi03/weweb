@@ -2,6 +2,144 @@ var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[Object.keys(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
 
+// miniprogram-demo/miniprogram/config.js
+var require_config = __commonJS({
+  "miniprogram-demo/miniprogram/config.js"(exports2, module2) {
+    var host = "14592619.qcloud.la";
+    var config = {
+      requestUrl: "https://mp.weixin.qq.com",
+      host,
+      envId: "release-b86096",
+      demoImageFileId: "cloud://release-b86096.7265-release-b86096-1258211818/demo.jpg",
+      demoVideoFileId: "cloud://release-b86096.7265-release-b86096/demo.mp4"
+    };
+    module2.exports = config;
+  }
+});
+
+// miniprogram-demo/miniprogram/app.js
+var require_app = __commonJS({
+  "miniprogram-demo/miniprogram/app.js"() {
+    window["__pages__"] = ["pages/login/login", "pages/get-user-info/get-user-info", "pages/request-payment/request-payment", "pages/share/share", "pages/share-button/share-button", "pages/custom-message/custom-message", "pages/template-message/template-message", "pages/set-navigation-bar-title/set-navigation-bar-title", "pages/navigation-bar-loading/navigation-bar-loading", "pages/navigator/navigator", "pages/pull-down-refresh/pull-down-refresh", "pages/animation/animation", "pages/action-sheet/action-sheet", "pages/modal/modal", "pages/toast/toast", "pages/get-network-type/get-network-type", "pages/on-network-status-change/on-network-status-change", "pages/get-system-info/get-system-info", "pages/on-compass-change/on-compass-change", "pages/make-phone-call/make-phone-call", "pages/scan-code/scan-code", "pages/request/request", "pages/web-socket/web-socket", "pages/upload-file/upload-file", "pages/download-file/download-file", "pages/image/image", "pages/voice/voice", "pages/file/file", "pages/on-accelerometer-change/on-accelerometer-change", "pages/canvas/canvas", "pages/background-audio/background-audio", "pages/video/video", "pages/get-location/get-location", "pages/open-location/open-location", "pages/choose-location/choose-location", "pages/storage/storage", "pages/get-wxml-node-info/get-wxml-node-info", "pages/load-font-face/load-font-face", "pages/clipboard-data/clipboard-data", "pages/bluetooth/bluetooth", "pages/screen-brightness/screen-brightness", "pages/vibrate/vibrate", "pages/add-contact/add-contact", "pages/wifi/wifi", "pages/page-scroll/page-scroll", "pages/intersection-observer/intersection-observer", "pages/capture-screen/capture-screen", "pages/worker/worker", "pages/ibeacon/ibeacon", "pages/choose-address/choose-address", "pages/setting/setting", "pages/choose-invoice-title/choose-invoice-title", "pages/soter-authentication/soter-authentication", "pages/subscribe-message/subscribe-message", "pages/doc-web-view/doc-web-view", "pages/audio/audio", "pages/get-battery-info/get-battery-info", "pages/get-performance/get-performance", "pages/mdns/mdns", "pages/udp-socket/udp-socket", "pages/two-way-bindings/two-way-bindings", "pages/media-container/media-container", "pages/get-background-fetch-data/get-background-fetch-data", "pages/get-background-prefetch-data/get-background-prefetch-data", "pages/wxs/wxs", "pages/bluetooth/slave/slave", "pages/resizable/resizable", "pages/wxs/movable", "pages/wxs/sidebar", "pages/wxs/stick-top", "pages/wxs/nearby"];
+    var config = require_config();
+    var themeListeners = [];
+    global.isDemo = true;
+    App({
+      onLaunch(opts, data) {
+        const that = this;
+        const canIUseSetBackgroundFetchToken = wx.canIUse("setBackgroundFetchToken");
+        if (canIUseSetBackgroundFetchToken) {
+          wx.setBackgroundFetchToken({
+            token: "getBackgroundFetchToken"
+          });
+        }
+        if (wx.getBackgroundFetchData) {
+          wx.getBackgroundFetchData({
+            fetchType: "pre",
+            success(res2) {
+              that.globalData.backgroundFetchData = res2;
+              console.log("\u8BFB\u53D6\u9884\u62C9\u53D6\u6570\u636E\u6210\u529F");
+            },
+            fail() {
+              console.log("\u8BFB\u53D6\u9884\u62C9\u53D6\u6570\u636E\u5931\u8D25");
+              wx.showToast({
+                title: "\u65E0\u7F13\u5B58\u6570\u636E",
+                icon: "none"
+              });
+            },
+            complete() {
+              console.log("\u7ED3\u675F\u8BFB\u53D6");
+            }
+          });
+        }
+        console.log("App Launch", opts);
+        if (data && data.path) {
+          wx.navigateTo({
+            url: data.path
+          });
+        }
+        if (!wx.cloud) {
+          console.error("\u8BF7\u4F7F\u7528 2.2.3 \u6216\u4EE5\u4E0A\u7684\u57FA\u7840\u5E93\u4EE5\u4F7F\u7528\u4E91\u80FD\u529B");
+        } else {
+          wx.cloud.init({
+            env: config.envId,
+            traceUser: true
+          });
+        }
+      },
+      onShow(opts) {
+        console.log("App Show", opts);
+      },
+      onHide() {
+        console.log("App Hide");
+      },
+      onThemeChange({ theme }) {
+        this.globalData.theme = theme;
+        console.log("\u8F93\u51FA");
+        themeListeners.forEach((listener) => {
+          listener(theme);
+        });
+      },
+      watchThemeChange(listener) {
+        if (themeListeners.indexOf(listener) < 0) {
+          themeListeners.push(listener);
+        }
+      },
+      unWatchThemeChange(listener) {
+        const index = themeListeners.indexOf(listener);
+        if (index > -1) {
+          themeListeners.splice(index, 1);
+        }
+      },
+      globalData: {
+        theme: wx.getSystemInfoSync().theme,
+        hasLogin: false,
+        openid: null,
+        iconTabbar: "/page/weui/example/images/icon_tabbar.png"
+      },
+      getUserOpenId(callback) {
+        const self = this;
+        if (self.globalData.openid) {
+          callback(null, self.globalData.openid);
+        } else {
+          wx.login({
+            success(data) {
+              wx.cloud.callFunction({
+                name: "login",
+                data: {
+                  action: "openid"
+                },
+                success: (res2) => {
+                  console.log("\u62C9\u53D6openid\u6210\u529F", res2);
+                  self.globalData.openid = res2.result.openid;
+                  callback(null, self.globalData.openid);
+                },
+                fail: (err) => {
+                  console.log("\u62C9\u53D6\u7528\u6237openid\u5931\u8D25\uFF0C\u5C06\u65E0\u6CD5\u6B63\u5E38\u4F7F\u7528\u5F00\u653E\u63A5\u53E3\u7B49\u670D\u52A1", res);
+                  callback(res);
+                }
+              });
+            },
+            fail(err) {
+              console.log("wx.login \u63A5\u53E3\u8C03\u7528\u5931\u8D25\uFF0C\u5C06\u65E0\u6CD5\u6B63\u5E38\u4F7F\u7528\u5F00\u653E\u63A5\u53E3\u7B49\u670D\u52A1", err);
+              callback(err);
+            }
+          });
+        }
+      },
+      getUserOpenIdViaCloud() {
+        return wx.cloud.callFunction({
+          name: "wxContext",
+          data: {}
+        }).then((res2) => {
+          this.globalData.openid = res2.result.openid;
+          return res2.result.openid;
+        });
+      }
+    });
+  }
+});
+
 // miniprogram-demo/miniprogram/common/head.wxml
 var require_head = __commonJS({
   "miniprogram-demo/miniprogram/common/head.wxml"() {
@@ -68,8 +206,9 @@ var require_login = __commonJS({
 var require_login2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/login/login.js"() {
     require_login();
+    window["__wxRoute"] = "packageAPI/pages/login/login";
     var page = getPage("packageAPI/pages/login/login");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/login/login />";
     page.json = `{
     "navigationBarTitleText": "\u5FAE\u4FE1\u767B\u5F55"
 }
@@ -152,8 +291,9 @@ var require_get_user_info = __commonJS({
 var require_get_user_info2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-user-info/get-user-info.js"() {
     require_get_user_info();
+    window["__wxRoute"] = "packageAPI/pages/get-user-info/get-user-info";
     var page = getPage("packageAPI/pages/get-user-info/get-user-info");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/get-user-info/get-user-info />";
     page.json = `{
     "navigationBarTitleText": "\u83B7\u53D6\u7528\u6237\u4FE1\u606F"
 }
@@ -225,8 +365,9 @@ var require_request_payment = __commonJS({
 var require_request_payment2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/request-payment/request-payment.js"() {
     require_request_payment();
+    window["__wxRoute"] = "packageAPI/pages/request-payment/request-payment";
     var page = getPage("packageAPI/pages/request-payment/request-payment");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/request-payment/request-payment />";
     page.json = `{
     "navigationBarTitleText": "\u53D1\u8D77\u652F\u4ED8"
 }
@@ -257,9 +398,9 @@ var require_request_payment2 = __commonJS({
                 },
                 price: 0.01
               },
-              success: (res) => {
-                console.warn("[\u4E91\u51FD\u6570] [openapi] templateMessage.send \u8C03\u7528\u6210\u529F\uFF1A", res);
-                const data = res.result.data;
+              success: (res2) => {
+                console.warn("[\u4E91\u51FD\u6570] [openapi] templateMessage.send \u8C03\u7528\u6210\u529F\uFF1A", res2);
+                const data = res2.result.data;
                 wx.requestPayment({
                   timeStamp: data.time_stamp,
                   nonceStr: data.nonce_str,
@@ -351,8 +492,9 @@ var require_share = __commonJS({
 var require_share2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/share/share.js"() {
     require_share();
+    window["__wxRoute"] = "packageAPI/pages/share/share";
     var page = getPage("packageAPI/pages/share/share");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/share/share />";
     page.json = `{
     "navigationBarTitleText": "\u8F6C\u53D1"
 }
@@ -414,8 +556,9 @@ var require_share_button = __commonJS({
 var require_share_button2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/share-button/share-button.js"() {
     require_share_button();
+    window["__wxRoute"] = "packageAPI/pages/share-button/share-button";
     var page = getPage("packageAPI/pages/share-button/share-button");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/share-button/share-button />";
     page.json = `{
     "navigationBarTitleText": "\u8F6C\u53D1\u6309\u94AE"
 }
@@ -480,8 +623,9 @@ var require_custom_message = __commonJS({
 var require_custom_message2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/custom-message/custom-message.js"() {
     require_custom_message();
+    window["__wxRoute"] = "packageAPI/pages/custom-message/custom-message";
     var page = getPage("packageAPI/pages/custom-message/custom-message");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/custom-message/custom-message />";
     page.json = `{
     "navigationBarTitleText": "\u5BA2\u670D\u6D88\u606F"
 }
@@ -509,27 +653,13 @@ var require_template_message = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/config.js
-var require_config = __commonJS({
-  "miniprogram-demo/miniprogram/config.js"(exports2, module2) {
-    var host = "14592619.qcloud.la";
-    var config = {
-      requestUrl: "https://mp.weixin.qq.com",
-      host,
-      envId: "release-b86096",
-      demoImageFileId: "cloud://release-b86096.7265-release-b86096-1258211818/demo.jpg",
-      demoVideoFileId: "cloud://release-b86096.7265-release-b86096/demo.mp4"
-    };
-    module2.exports = config;
-  }
-});
-
 // miniprogram-demo/miniprogram/packageAPI/pages/template-message/template-message.js
 var require_template_message2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/template-message/template-message.js"() {
     require_template_message();
+    window["__wxRoute"] = "packageAPI/pages/template-message/template-message";
     var page = getPage("packageAPI/pages/template-message/template-message");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/template-message/template-message />";
     page.json = `{
     "navigationBarTitleText": "\u6A21\u677F\u6D88\u606F"
 }
@@ -572,8 +702,8 @@ var require_template_message2 = __commonJS({
                 openid,
                 formData: formData2
               },
-              success(res) {
-                console.log("submit form success", res);
+              success(res2) {
+                console.log("submit form success", res2);
                 wx.showToast({
                   title: "\u53D1\u9001\u6210\u529F",
                   icon: "success"
@@ -608,8 +738,9 @@ var require_set_navigation_bar_title = __commonJS({
 var require_set_navigation_bar_title2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/set-navigation-bar-title/set-navigation-bar-title.js"() {
     require_set_navigation_bar_title();
+    window["__wxRoute"] = "packageAPI/pages/set-navigation-bar-title/set-navigation-bar-title";
     var page = getPage("packageAPI/pages/set-navigation-bar-title/set-navigation-bar-title");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/set-navigation-bar-title/set-navigation-bar-title />";
     page.json = `{
     "navigationBarTitleText": "\u8BBE\u7F6E\u9875\u9762\u6807\u9898"
 }
@@ -675,8 +806,9 @@ var require_navigation_bar_loading = __commonJS({
 var require_navigation_bar_loading2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/navigation-bar-loading/navigation-bar-loading.js"() {
     require_navigation_bar_loading();
+    window["__wxRoute"] = "packageAPI/pages/navigation-bar-loading/navigation-bar-loading";
     var page = getPage("packageAPI/pages/navigation-bar-loading/navigation-bar-loading");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/navigation-bar-loading/navigation-bar-loading />";
     page.json = `{
     "navigationBarTitleText": "\u6807\u9898\u680F\u52A0\u8F7D\u52A8\u753B"
 }
@@ -737,8 +869,9 @@ var require_navigator = __commonJS({
 var require_navigator2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/navigator/navigator.js"() {
     require_navigator();
+    window["__wxRoute"] = "packageAPI/pages/navigator/navigator";
     var page = getPage("packageAPI/pages/navigator/navigator");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/navigator/navigator />";
     page.json = `{
     "navigationBarTitleText": "\u9875\u9762\u8DF3\u8F6C"
 }
@@ -809,8 +942,9 @@ var require_pull_down_refresh = __commonJS({
 var require_pull_down_refresh2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/pull-down-refresh/pull-down-refresh.js"() {
     require_pull_down_refresh();
+    window["__wxRoute"] = "packageAPI/pages/pull-down-refresh/pull-down-refresh";
     var page = getPage("packageAPI/pages/pull-down-refresh/pull-down-refresh");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/pull-down-refresh/pull-down-refresh />";
     page.json = `{
     "navigationBarTitleText": "\u4E0B\u62C9\u5237\u65B0",
     "enablePullDownRefresh": true,
@@ -833,9 +967,9 @@ var require_pull_down_refresh2 = __commonJS({
       },
       stopPullDownRefresh() {
         wx.stopPullDownRefresh({
-          complete(res) {
+          complete(res2) {
             wx.hideToast();
-            console.log(res, new Date());
+            console.log(res2, new Date());
           }
         });
       }
@@ -887,8 +1021,9 @@ var require_animation = __commonJS({
 var require_animation2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/animation/animation.js"() {
     require_animation();
+    window["__wxRoute"] = "packageAPI/pages/animation/animation";
     var page = getPage("packageAPI/pages/animation/animation");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/animation/animation />";
     page.json = `{
     "navigationBarTitleText": "\u52A8\u753B"
 }
@@ -974,8 +1109,9 @@ var require_action_sheet = __commonJS({
 var require_action_sheet2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/action-sheet/action-sheet.js"() {
     require_action_sheet();
+    window["__wxRoute"] = "packageAPI/pages/action-sheet/action-sheet";
     var page = getPage("packageAPI/pages/action-sheet/action-sheet");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/action-sheet/action-sheet />";
     page.json = `{
     "navigationBarTitleText": "\u64CD\u4F5C\u83DC\u5355"
 }
@@ -1035,8 +1171,9 @@ var require_modal = __commonJS({
 var require_modal2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/modal/modal.js"() {
     require_modal();
+    window["__wxRoute"] = "packageAPI/pages/modal/modal";
     var page = getPage("packageAPI/pages/modal/modal");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/modal/modal />";
     page.json = `{
     "navigationBarTitleText": "\u6A21\u6001\u5F39\u7A97"
 }
@@ -1117,8 +1254,9 @@ var require_toast = __commonJS({
 var require_toast2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/toast/toast.js"() {
     require_toast();
+    window["__wxRoute"] = "packageAPI/pages/toast/toast";
     var page = getPage("packageAPI/pages/toast/toast");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/toast/toast />";
     page.json = `{
     "navigationBarTitleText": "\u6D88\u606F\u63D0\u793A\u6846"
 }
@@ -1203,8 +1341,9 @@ var require_get_network_type = __commonJS({
 var require_get_network_type2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-network-type/get-network-type.js"() {
     require_get_network_type();
+    window["__wxRoute"] = "packageAPI/pages/get-network-type/get-network-type";
     var page = getPage("packageAPI/pages/get-network-type/get-network-type");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/get-network-type/get-network-type />";
     page.json = `{
     "navigationBarTitleText": "\u83B7\u53D6\u624B\u673A\u7F51\u7EDC\u72B6\u6001"
 }
@@ -1222,11 +1361,11 @@ var require_get_network_type2 = __commonJS({
       getNetworkType() {
         const that = this;
         wx.getNetworkType({
-          success(res) {
-            console.log(res);
+          success(res2) {
+            console.log(res2);
             that.setData({
               hasNetworkType: true,
-              networkType: res.subtype || res.networkType
+              networkType: res2.subtype || res2.networkType
             });
           }
         });
@@ -1284,8 +1423,9 @@ var require_on_network_status_change = __commonJS({
 var require_on_network_status_change2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/on-network-status-change/on-network-status-change.js"() {
     require_on_network_status_change();
+    window["__wxRoute"] = "packageAPI/pages/on-network-status-change/on-network-status-change";
     var page = getPage("packageAPI/pages/on-network-status-change/on-network-status-change");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/on-network-status-change/on-network-status-change />";
     page.json = `{
     "navigationBarTitleText": "\u76D1\u542C\u624B\u673A\u7F51\u7EDC\u53D8\u5316"
 }
@@ -1302,20 +1442,20 @@ var require_on_network_status_change2 = __commonJS({
       },
       onLoad() {
         const that = this;
-        wx.onNetworkStatusChange(function(res) {
+        wx.onNetworkStatusChange(function(res2) {
           that.setData({
-            isConnected: res.isConnected,
-            networkType: res.networkType
+            isConnected: res2.isConnected,
+            networkType: res2.networkType
           });
         });
       },
       onShow() {
         const that = this;
         wx.getNetworkType({
-          success(res) {
+          success(res2) {
             that.setData({
-              isConnected: res.networkType !== "none",
-              networkType: res.networkType
+              isConnected: res2.networkType !== "none",
+              networkType: res2.networkType
             });
           }
         });
@@ -1419,8 +1559,9 @@ var require_get_system_info = __commonJS({
 var require_get_system_info2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-system-info/get-system-info.js"() {
     require_get_system_info();
+    window["__wxRoute"] = "packageAPI/pages/get-system-info/get-system-info";
     var page = getPage("packageAPI/pages/get-system-info/get-system-info");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/get-system-info/get-system-info />";
     page.json = `{
     "navigationBarTitleText": "\u83B7\u53D6\u624B\u673A\u7CFB\u7EDF\u4FE1\u606F"
 }
@@ -1438,9 +1579,9 @@ var require_get_system_info2 = __commonJS({
       getSystemInfo() {
         const that = this;
         wx.getSystemInfo({
-          success(res) {
+          success(res2) {
             that.setData({
-              systemInfo: res
+              systemInfo: res2
             });
           }
         });
@@ -1496,8 +1637,9 @@ var require_on_compass_change = __commonJS({
 var require_on_compass_change2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/on-compass-change/on-compass-change.js"() {
     require_on_compass_change();
+    window["__wxRoute"] = "packageAPI/pages/on-compass-change/on-compass-change";
     var page = getPage("packageAPI/pages/on-compass-change/on-compass-change");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/on-compass-change/on-compass-change />";
     page.json = `{
     "navigationBarTitleText": "\u76D1\u542C\u7F57\u76D8\u6570\u636E"
 }
@@ -1515,9 +1657,9 @@ var require_on_compass_change2 = __commonJS({
       },
       onReady() {
         const that = this;
-        wx.onCompassChange(function(res) {
+        wx.onCompassChange(function(res2) {
           that.setData({
-            direction: parseInt(res.direction, 10)
+            direction: parseInt(res2.direction, 10)
           });
         });
       },
@@ -1564,8 +1706,9 @@ var require_make_phone_call = __commonJS({
 var require_make_phone_call2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/make-phone-call/make-phone-call.js"() {
     require_make_phone_call();
+    window["__wxRoute"] = "packageAPI/pages/make-phone-call/make-phone-call";
     var page = getPage("packageAPI/pages/make-phone-call/make-phone-call");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/make-phone-call/make-phone-call />";
     page.json = `{
     "navigationBarTitleText": "\u6253\u7535\u8BDD"
 }
@@ -1645,8 +1788,9 @@ var require_scan_code = __commonJS({
 var require_scan_code2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/scan-code/scan-code.js"() {
     require_scan_code();
+    window["__wxRoute"] = "packageAPI/pages/scan-code/scan-code";
     var page = getPage("packageAPI/pages/scan-code/scan-code");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/scan-code/scan-code />";
     page.json = `{
     "navigationBarTitleText": "\u626B\u7801"
 }
@@ -1664,9 +1808,9 @@ var require_scan_code2 = __commonJS({
       scanCode() {
         const that = this;
         wx.scanCode({
-          success(res) {
+          success(res2) {
             that.setData({
-              result: res.result
+              result: res2.result
             });
           },
           fail() {
@@ -1717,8 +1861,9 @@ var require_request = __commonJS({
 var require_request2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/request/request.js"() {
     require_request();
+    window["__wxRoute"] = "packageAPI/pages/request/request";
     var page = getPage("packageAPI/pages/request/request");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/request/request />";
     page.json = `{
     "navigationBarTitleText": "\u7F51\u7EDC\u8BF7\u6C42"
 }
@@ -1817,8 +1962,9 @@ var require_web_socket = __commonJS({
 var require_web_socket2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/web-socket/web-socket.js"() {
     require_web_socket();
+    window["__wxRoute"] = "packageAPI/pages/web-socket/web-socket";
     var page = getPage("packageAPI/pages/web-socket/web-socket");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/web-socket/web-socket />";
     page.json = `{
     "navigationBarTitleText": "Web Socket"
 }
@@ -1966,8 +2112,9 @@ var require_upload_file = __commonJS({
 var require_upload_file2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/upload-file/upload-file.js"() {
     require_upload_file();
+    window["__wxRoute"] = "packageAPI/pages/upload-file/upload-file";
     var page = getPage("packageAPI/pages/upload-file/upload-file");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/upload-file/upload-file />";
     page.json = `{
     "navigationBarTitleText": "\u4E0A\u4F20\u6587\u4EF6"
 }
@@ -1985,18 +2132,18 @@ var require_upload_file2 = __commonJS({
           count: 1,
           sizeType: ["compressed"],
           sourceType: ["album"],
-          success(res) {
-            console.log("chooseImage success, temp path is", res.tempFilePaths[0]);
-            const imageSrc = res.tempFilePaths[0];
+          success(res2) {
+            console.log("chooseImage success, temp path is", res2.tempFilePaths[0]);
+            const imageSrc = res2.tempFilePaths[0];
             wx.cloud.uploadFile({
               cloudPath: "example.png",
               filePath: imageSrc,
               config: {
                 env: "release-b86096"
               },
-              success: (res2) => {
-                console.log(res2.fileID);
-                console.log("uploadImage success, res is:", res2);
+              success: (res3) => {
+                console.log(res3.fileID);
+                console.log("uploadImage success, res is:", res3);
                 wx.showToast({
                   title: "\u4E0A\u4F20\u6210\u529F",
                   icon: "success",
@@ -2004,7 +2151,7 @@ var require_upload_file2 = __commonJS({
                 });
                 self.setData({
                   imageSrc,
-                  fileID: res2.fileID
+                  fileID: res3.fileID
                 });
               },
               fail({ errMsg }) {
@@ -2012,12 +2159,12 @@ var require_upload_file2 = __commonJS({
               }
             });
           },
-          fail: (res) => {
+          fail: (res2) => {
             wx.showToast({
               icon: "none",
               title: "\u4E0A\u4F20\u5931\u8D25"
             });
-            console.log("uploadImage fail, errMsg is", res.errMsg);
+            console.log("uploadImage fail, errMsg is", res2.errMsg);
           }
         });
       },
@@ -2075,8 +2222,9 @@ var require_download_file = __commonJS({
 var require_download_file2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/download-file/download-file.js"() {
     require_download_file();
+    window["__wxRoute"] = "packageAPI/pages/download-file/download-file";
     var page = getPage("packageAPI/pages/download-file/download-file");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/download-file/download-file />";
     page.json = `{
     "navigationBarTitleText": "\u4E0B\u8F7D\u6587\u4EF6"
 }
@@ -2093,10 +2241,10 @@ var require_download_file2 = __commonJS({
         const self = this;
         wx.cloud.downloadFile({
           fileID: demoImageFileId,
-          success: (res) => {
-            console.log("downloadFile success, res is", res);
+          success: (res2) => {
+            console.log("downloadFile success, res is", res2);
             self.setData({
-              imageSrc: res.tempFilePath
+              imageSrc: res2.tempFilePath
             });
           },
           fail: console.error
@@ -2202,8 +2350,9 @@ var require_image = __commonJS({
 var require_image2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/image/image.js"() {
     require_image();
+    window["__wxRoute"] = "packageAPI/pages/image/image";
     var page = getPage("packageAPI/pages/image/image");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/image/image />";
     page.json = `{
     "navigationBarTitleText": "\u56FE\u7247"
 }
@@ -2247,10 +2396,10 @@ var require_image2 = __commonJS({
           sourceType: sourceType[this.data.sourceTypeIndex],
           sizeType: sizeType[this.data.sizeTypeIndex],
           count: this.data.count[this.data.countIndex],
-          success(res) {
-            console.log(res);
+          success(res2) {
+            console.log(res2);
             that.setData({
-              imageList: res.tempFilePaths
+              imageList: res2.tempFilePaths
             });
           }
         });
@@ -2445,8 +2594,9 @@ var require_util = __commonJS({
 var require_voice2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/voice/voice.js"() {
     require_voice();
+    window["__wxRoute"] = "packageAPI/pages/voice/voice";
     var page = getPage("packageAPI/pages/voice/voice");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/voice/voice />";
     page.json = `{
     "navigationBarTitleText": "\u5F55\u97F3"
 }
@@ -2491,12 +2641,12 @@ var require_voice2 = __commonJS({
             });
           }, 1e3);
         });
-        recorderManager.onStop((res) => {
+        recorderManager.onStop((res2) => {
           console.log("recorderManage: onStop");
           that.setData({
             hasRecord: true,
             recording: false,
-            tempFilePath: res.tempFilePath,
+            tempFilePath: res2.tempFilePath,
             formatedPlayTime: util.formatTime(that.data.playTime)
           });
           clearInterval(recordTimeInterval);
@@ -2646,8 +2796,9 @@ var require_file = __commonJS({
 var require_file2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/file/file.js"() {
     require_file();
+    window["__wxRoute"] = "packageAPI/pages/file/file";
     var page = getPage("packageAPI/pages/file/file");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/file/file />";
     page.json = `{
     "navigationBarTitleText": "\u6587\u4EF6"
 }
@@ -2675,9 +2826,9 @@ var require_file2 = __commonJS({
         const that = this;
         wx.chooseImage({
           count: 1,
-          success(res) {
+          success(res2) {
             that.setData({
-              tempFilePath: res.tempFilePaths[0]
+              tempFilePath: res2.tempFilePaths[0]
             });
           }
         });
@@ -2687,11 +2838,11 @@ var require_file2 = __commonJS({
           const that = this;
           wx.saveFile({
             tempFilePath: this.data.tempFilePath,
-            success(res) {
+            success(res2) {
               that.setData({
-                savedFilePath: res.savedFilePath
+                savedFilePath: res2.savedFilePath
               });
-              wx.setStorageSync("savedFilePath", res.savedFilePath);
+              wx.setStorageSync("savedFilePath", res2.savedFilePath);
               that.setData({
                 dialog: {
                   title: "\u4FDD\u5B58\u6210\u529F",
@@ -2776,8 +2927,9 @@ var require_on_accelerometer_change = __commonJS({
 var require_on_accelerometer_change2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/on-accelerometer-change/on-accelerometer-change.js"() {
     require_on_accelerometer_change();
+    window["__wxRoute"] = "packageAPI/pages/on-accelerometer-change/on-accelerometer-change";
     var page = getPage("packageAPI/pages/on-accelerometer-change/on-accelerometer-change");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/on-accelerometer-change/on-accelerometer-change />";
     page.json = `{
     "navigationBarTitleText": "\u76D1\u542C\u91CD\u529B\u611F\u5E94\u6570\u636E"
 }
@@ -2806,14 +2958,14 @@ var require_on_accelerometer_change2 = __commonJS({
           ax: 0,
           ay: 0
         };
-        wx.onAccelerometerChange(function(res) {
+        wx.onAccelerometerChange(function(res2) {
           that.setData({
-            x: res.x.toFixed(2),
-            y: res.y.toFixed(2),
-            z: res.z.toFixed(2)
+            x: res2.x.toFixed(2),
+            y: res2.y.toFixed(2),
+            z: res2.z.toFixed(2)
           });
-          that.position.ax = Math.sin(res.x * Math.PI / 2);
-          that.position.ay = -Math.sin(res.y * Math.PI / 2);
+          that.position.ax = Math.sin(res2.x * Math.PI / 2);
+          that.position.ay = -Math.sin(res2.y * Math.PI / 2);
         });
         this.interval = setInterval(function() {
           that.drawSmallBall();
@@ -2937,8 +3089,9 @@ var require_canvas = __commonJS({
 // miniprogram-demo/miniprogram/packageAPI/pages/canvas/example.js
 var require_example = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/canvas/example.js"(exports2, module2) {
+    window["__wxRoute"] = "packageAPI/pages/canvas/example";
     var page = getPage("packageAPI/pages/canvas/example");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/canvas/example />";
     page.json = ``;
     var example = {};
     example.rotate = function(context) {
@@ -3184,8 +3337,9 @@ var require_example = __commonJS({
 var require_canvas2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/canvas/canvas.js"() {
     require_canvas();
+    window["__wxRoute"] = "packageAPI/pages/canvas/canvas";
     var page = getPage("packageAPI/pages/canvas/canvas");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/canvas/canvas />";
     page.json = `{
     "navigationBarTitleText": "\u521B\u5EFA\u753B\u5E03"
 }
@@ -3219,11 +3373,11 @@ var require_canvas2 = __commonJS({
       toTempFilePath() {
         wx.canvasToTempFilePath({
           canvasId: "canvas",
-          success(res) {
-            console.log(res);
+          success(res2) {
+            console.log(res2);
           },
-          fail(res) {
-            console.log(res);
+          fail(res2) {
+            console.log(res2);
           }
         });
       }
@@ -3289,8 +3443,9 @@ var require_background_audio = __commonJS({
 var require_background_audio2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/background-audio/background-audio.js"() {
     require_background_audio();
+    window["__wxRoute"] = "packageAPI/pages/background-audio/background-audio";
     var page = getPage("packageAPI/pages/background-audio/background-audio");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/background-audio/background-audio />";
     page.json = `{
    "navigationBarTitleText": "\u80CC\u666F\u97F3\u9891"
 }
@@ -3473,8 +3628,9 @@ var require_video = __commonJS({
 var require_video2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/video/video.js"() {
     require_video();
+    window["__wxRoute"] = "packageAPI/pages/video/video";
     var page = getPage("packageAPI/pages/video/video");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/video/video />";
     page.json = `{
     "navigationBarTitleText": "\u62CD\u6444/\u9009\u62E9\u89C6\u9891"
 }
@@ -3523,9 +3679,9 @@ var require_video2 = __commonJS({
           sourceType: sourceType[this.data.sourceTypeIndex],
           camera: camera[this.data.cameraIndex],
           maxDuration: duration[this.data.durationIndex],
-          success(res) {
+          success(res2) {
             that.setData({
-              src: res.tempFilePath
+              src: res2.tempFilePath
             });
           }
         });
@@ -3584,8 +3740,9 @@ var require_get_location = __commonJS({
 var require_get_location2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-location/get-location.js"() {
     require_get_location();
+    window["__wxRoute"] = "packageAPI/pages/get-location/get-location";
     var page = getPage("packageAPI/pages/get-location/get-location");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/get-location/get-location />";
     page.json = `{
     "navigationBarTitleText": "\u83B7\u53D6\u4F4D\u7F6E"
 }
@@ -3605,11 +3762,11 @@ var require_get_location2 = __commonJS({
       getLocation() {
         const that = this;
         wx.getLocation({
-          success(res) {
-            console.log(res);
+          success(res2) {
+            console.log(res2);
             that.setData({
               hasLocation: true,
-              location: formatLocation(res.longitude, res.latitude)
+              location: formatLocation(res2.longitude, res2.latitude)
             });
           }
         });
@@ -3639,8 +3796,9 @@ var require_open_location = __commonJS({
 var require_open_location2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/open-location/open-location.js"() {
     require_open_location();
+    window["__wxRoute"] = "packageAPI/pages/open-location/open-location";
     var page = getPage("packageAPI/pages/open-location/open-location");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/open-location/open-location />";
     page.json = `{
     "navigationBarTitleText": "\u67E5\u770B\u4F4D\u7F6E"
 }
@@ -3718,8 +3876,9 @@ var require_choose_location = __commonJS({
 var require_choose_location2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/choose-location/choose-location.js"() {
     require_choose_location();
+    window["__wxRoute"] = "packageAPI/pages/choose-location/choose-location";
     var page = getPage("packageAPI/pages/choose-location/choose-location");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/choose-location/choose-location />";
     page.json = `{
   "navigationBarTitleText": "\u4F7F\u7528\u539F\u751F\u5730\u56FE\u9009\u62E9\u4F4D\u7F6E"
 }`;
@@ -3738,12 +3897,12 @@ var require_choose_location2 = __commonJS({
       chooseLocation() {
         const that = this;
         wx.chooseLocation({
-          success(res) {
-            console.log(res);
+          success(res2) {
+            console.log(res2);
             that.setData({
               hasLocation: true,
-              location: formatLocation(res.longitude, res.latitude),
-              locationAddress: res.address
+              location: formatLocation(res2.longitude, res2.latitude),
+              locationAddress: res2.address
             });
           }
         });
@@ -3771,8 +3930,9 @@ var require_storage = __commonJS({
 var require_storage2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/storage/storage.js"() {
     require_storage();
+    window["__wxRoute"] = "packageAPI/pages/storage/storage";
     var page = getPage("packageAPI/pages/storage/storage");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/storage/storage />";
     page.json = `{
     "navigationBarTitleText": "\u6570\u636E\u5B58\u50A8"
 }
@@ -3919,8 +4079,9 @@ var require_get_wxml_node_info = __commonJS({
 var require_get_wxml_node_info2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-wxml-node-info/get-wxml-node-info.js"() {
     require_get_wxml_node_info();
+    window["__wxRoute"] = "packageAPI/pages/get-wxml-node-info/get-wxml-node-info";
     var page = getPage("packageAPI/pages/get-wxml-node-info/get-wxml-node-info");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/get-wxml-node-info/get-wxml-node-info />";
     page.json = `{
   "navigationBarTitleText": "\u83B7\u53D6WXML\u8282\u70B9\u4FE1\u606F"
 }`;
@@ -3941,8 +4102,8 @@ var require_get_wxml_node_info2 = __commonJS({
         const $ = wx.createSelectorQuery();
         const target = $.select(".target");
         target.boundingClientRect();
-        $.exec((res) => {
-          const rect = res[0];
+        $.exec((res2) => {
+          const rect = res2[0];
           if (rect) {
             const metrics = [];
             for (const key in rect) {
@@ -4001,8 +4162,9 @@ var require_load_font_face = __commonJS({
 var require_load_font_face2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/load-font-face/load-font-face.js"() {
     require_load_font_face();
+    window["__wxRoute"] = "packageAPI/pages/load-font-face/load-font-face";
     var page = getPage("packageAPI/pages/load-font-face/load-font-face");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/load-font-face/load-font-face />";
     page.json = `{
     "navigationBarTitleText": "\u52A8\u6001\u52A0\u8F7D\u5B57\u4F53"
 }
@@ -4028,15 +4190,15 @@ var require_load_font_face2 = __commonJS({
         wx.loadFontFace({
           family: this.data.fontFamily,
           source: 'url("https://sungd.github.io/Pacifico.ttf")',
-          success(res) {
-            console.log(res.status);
+          success(res2) {
+            console.log(res2.status);
             self.setData({ loaded: true });
           },
-          fail(res) {
-            console.log(res.status);
+          fail(res2) {
+            console.log(res2.status);
           },
-          complete(res) {
-            console.log(res.status);
+          complete(res2) {
+            console.log(res2.status);
           }
         });
       },
@@ -4060,8 +4222,9 @@ var require_clipboard_data = __commonJS({
 var require_clipboard_data2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/clipboard-data/clipboard-data.js"() {
     require_clipboard_data();
+    window["__wxRoute"] = "packageAPI/pages/clipboard-data/clipboard-data";
     var page = getPage("packageAPI/pages/clipboard-data/clipboard-data");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/clipboard-data/clipboard-data />";
     page.json = `{
     "navigationBarTitleText": "\u526A\u5207\u677F"
 }
@@ -4097,9 +4260,9 @@ var require_clipboard_data2 = __commonJS({
       paste() {
         const self = this;
         wx.getClipboardData({
-          success(res) {
+          success(res2) {
             self.setData({
-              pasted: res.data
+              pasted: res2.data
             });
             wx.showToast({
               title: "\u7C98\u8D34\u6210\u529F",
@@ -4190,8 +4353,9 @@ module.exports.len = function(arr) {
 var require_bluetooth2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/bluetooth/bluetooth.js"() {
     require_bluetooth();
+    window["__wxRoute"] = "packageAPI/pages/bluetooth/bluetooth";
     var page = getPage("packageAPI/pages/bluetooth/bluetooth");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/bluetooth/bluetooth />";
     page.json = `{
    "navigationBarTitleText": "\u84DD\u7259"
 }
@@ -4227,19 +4391,19 @@ var require_bluetooth2 = __commonJS({
       },
       openBluetoothAdapter() {
         wx.openBluetoothAdapter({
-          success: (res) => {
-            console.log("openBluetoothAdapter success", res);
+          success: (res2) => {
+            console.log("openBluetoothAdapter success", res2);
             this.startBluetoothDevicesDiscovery();
           },
-          fail: (res) => {
-            if (res.errCode === 10001) {
+          fail: (res2) => {
+            if (res2.errCode === 10001) {
               wx.showModal({
                 title: "\u9519\u8BEF",
                 content: "\u672A\u627E\u5230\u84DD\u7259\u8BBE\u5907, \u8BF7\u6253\u5F00\u84DD\u7259\u540E\u91CD\u8BD5\u3002",
                 showCancel: false
               });
-              wx.onBluetoothAdapterStateChange(function(res2) {
-                if (res2 && res2.available) {
+              wx.onBluetoothAdapterStateChange(function(res3) {
+                if (res3 && res3.available) {
                   this.startBluetoothDevicesDiscovery();
                 }
               });
@@ -4249,11 +4413,11 @@ var require_bluetooth2 = __commonJS({
       },
       getBluetoothAdapterState() {
         wx.getBluetoothAdapterState({
-          success: (res) => {
-            console.log("getBluetoothAdapterState", res);
-            if (res.discovering) {
+          success: (res2) => {
+            console.log("getBluetoothAdapterState", res2);
+            if (res2.discovering) {
               this.onBluetoothDeviceFound();
-            } else if (res.available) {
+            } else if (res2.available) {
               this.startBluetoothDevicesDiscovery();
             }
           }
@@ -4266,8 +4430,8 @@ var require_bluetooth2 = __commonJS({
         this._discoveryStarted = true;
         wx.startBluetoothDevicesDiscovery({
           allowDuplicatesKey: true,
-          success: (res) => {
-            console.log("startBluetoothDevicesDiscovery success", res);
+          success: (res2) => {
+            console.log("startBluetoothDevicesDiscovery success", res2);
             this.onBluetoothDeviceFound();
           }
         });
@@ -4280,8 +4444,8 @@ var require_bluetooth2 = __commonJS({
         });
       },
       onBluetoothDeviceFound() {
-        wx.onBluetoothDeviceFound((res) => {
-          res.devices.forEach((device) => {
+        wx.onBluetoothDeviceFound((res2) => {
+          res2.devices.forEach((device) => {
             if (!device.name && !device.localName) {
               return;
             }
@@ -4336,10 +4500,10 @@ var require_bluetooth2 = __commonJS({
       getBLEDeviceServices(deviceId) {
         wx.getBLEDeviceServices({
           deviceId,
-          success: (res) => {
-            for (let i = 0; i < res.services.length; i++) {
-              if (res.services[i].isPrimary) {
-                this.getBLEDeviceCharacteristics(deviceId, res.services[i].uuid);
+          success: (res2) => {
+            for (let i = 0; i < res2.services.length; i++) {
+              if (res2.services[i].isPrimary) {
+                this.getBLEDeviceCharacteristics(deviceId, res2.services[i].uuid);
                 return;
               }
             }
@@ -4350,10 +4514,10 @@ var require_bluetooth2 = __commonJS({
         wx.getBLEDeviceCharacteristics({
           deviceId,
           serviceId,
-          success: (res) => {
-            console.log("getBLEDeviceCharacteristics success", res.characteristics);
-            for (let i = 0; i < res.characteristics.length; i++) {
-              const item = res.characteristics[i];
+          success: (res2) => {
+            console.log("getBLEDeviceCharacteristics success", res2.characteristics);
+            for (let i = 0; i < res2.characteristics.length; i++) {
+              const item = res2.characteristics[i];
               if (item.properties.read) {
                 wx.readBLECharacteristicValue({
                   deviceId,
@@ -4381,8 +4545,8 @@ var require_bluetooth2 = __commonJS({
               }
             }
           },
-          fail(res) {
-            console.error("getBLEDeviceCharacteristics", res);
+          fail(res2) {
+            console.error("getBLEDeviceCharacteristics", res2);
           }
         });
         wx.onBLECharacteristicValueChange((characteristic) => {
@@ -4475,8 +4639,9 @@ var require_screen_brightness = __commonJS({
 var require_screen_brightness2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/screen-brightness/screen-brightness.js"() {
     require_screen_brightness();
+    window["__wxRoute"] = "packageAPI/pages/screen-brightness/screen-brightness";
     var page = getPage("packageAPI/pages/screen-brightness/screen-brightness");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/screen-brightness/screen-brightness />";
     page.json = `{
   "navigationBarTitleText": "\u5C4F\u5E55\u4EAE\u5EA6"
 }`;
@@ -4504,10 +4669,10 @@ var require_screen_brightness2 = __commonJS({
       },
       _updateScreenBrightness() {
         wx.getScreenBrightness({
-          success: (res) => {
-            console.log(res);
+          success: (res2) => {
+            console.log(res2);
             this.setData({
-              screenBrightness: Number.parseFloat(res.value.toFixed(1))
+              screenBrightness: Number.parseFloat(res2.value.toFixed(1))
             });
           },
           fail(err) {
@@ -4557,8 +4722,9 @@ var require_vibrate = __commonJS({
 var require_vibrate2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/vibrate/vibrate.js"() {
     require_vibrate();
+    window["__wxRoute"] = "packageAPI/pages/vibrate/vibrate";
     var page = getPage("packageAPI/pages/vibrate/vibrate");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/vibrate/vibrate />";
     page.json = `{
     "navigationBarTitleText": "\u632F\u52A8"
 }
@@ -4572,8 +4738,8 @@ var require_vibrate2 = __commonJS({
       },
       vibrateShort() {
         wx.vibrateShort({
-          success(res) {
-            console.log(res);
+          success(res2) {
+            console.log(res2);
           },
           fail(err) {
             console.error(err);
@@ -4585,8 +4751,8 @@ var require_vibrate2 = __commonJS({
       },
       vibrateLong() {
         wx.vibrateLong({
-          success(res) {
-            console.log(res);
+          success(res2) {
+            console.log(res2);
           },
           fail(err) {
             console.error(err);
@@ -4615,8 +4781,9 @@ var require_add_contact = __commonJS({
 var require_add_contact2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/add-contact/add-contact.js"() {
     require_add_contact();
+    window["__wxRoute"] = "packageAPI/pages/add-contact/add-contact";
     var page = getPage("packageAPI/pages/add-contact/add-contact");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/add-contact/add-contact />";
     page.json = `{
     "navigationBarTitleText": "\u65B0\u589E\u8054\u7CFB\u4EBA"
 }
@@ -4700,8 +4867,9 @@ var require_wifi = __commonJS({
 var require_wifi2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wifi/wifi.js"() {
     require_wifi();
+    window["__wxRoute"] = "packageAPI/pages/wifi/wifi";
     var page = getPage("packageAPI/pages/wifi/wifi");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/wifi/wifi />";
     page.json = `{
    "navigationBarTitleText": "Wi-Fi"
 }
@@ -4723,8 +4891,8 @@ var require_wifi2 = __commonJS({
         const getWifiList = () => {
           wx.getWifiList({
             success: () => {
-              wx.onGetWifiList((res) => {
-                const wifiList = res.wifiList.sort((a, b) => b.signalStrength - a.signalStrength).map((wifi) => {
+              wx.onGetWifiList((res2) => {
+                const wifiList = res2.wifiList.sort((a, b) => b.signalStrength - a.signalStrength).map((wifi) => {
                   const strength = Math.ceil(wifi.signalStrength * 4);
                   return Object.assign(wifi, { strength });
                 });
@@ -4747,8 +4915,8 @@ var require_wifi2 = __commonJS({
           });
         };
         wx.getSystemInfo({
-          success(res) {
-            const isIOS = res.platform === "ios";
+          success(res2) {
+            const isIOS = res2.platform === "ios";
             if (isIOS) {
               wx.showModal({
                 title: "\u63D0\u793A",
@@ -4766,8 +4934,8 @@ var require_wifi2 = __commonJS({
       },
       stopSearch() {
         wx.stopWifi({
-          success(res) {
-            console.log(res);
+          success(res2) {
+            console.log(res2);
           },
           fail(err) {
             console.error(err);
@@ -4819,8 +4987,9 @@ var require_page_scroll = __commonJS({
 var require_page_scroll2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/page-scroll/page-scroll.js"() {
     require_page_scroll();
+    window["__wxRoute"] = "packageAPI/pages/page-scroll/page-scroll";
     var page = getPage("packageAPI/pages/page-scroll/page-scroll");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/page-scroll/page-scroll />";
     page.json = `{
   "navigationBarTitleText": "\u9875\u9762\u6EDA\u52A8"
 }`;
@@ -4896,8 +5065,9 @@ var require_intersection_observer = __commonJS({
 var require_intersection_observer2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/intersection-observer/intersection-observer.js"() {
     require_intersection_observer();
+    window["__wxRoute"] = "packageAPI/pages/intersection-observer/intersection-observer";
     var page = getPage("packageAPI/pages/intersection-observer/intersection-observer");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/intersection-observer/intersection-observer />";
     page.json = `{
   "navigationBarTitleText": "WXML\u8282\u70B9\u5E03\u5C40\u76F8\u4EA4\u72B6\u6001"
 }`;
@@ -4913,10 +5083,10 @@ var require_intersection_observer2 = __commonJS({
       },
       onLoad() {
         this._observer = wx.createIntersectionObserver(this);
-        this._observer.relativeTo(".scroll-view").observe(".ball", (res) => {
-          console.log(res);
+        this._observer.relativeTo(".scroll-view").observe(".ball", (res2) => {
+          console.log(res2);
           this.setData({
-            appear: res.intersectionRatio > 0
+            appear: res2.intersectionRatio > 0
           });
         });
       },
@@ -4964,8 +5134,9 @@ var require_capture_screen = __commonJS({
 var require_capture_screen2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/capture-screen/capture-screen.js"() {
     require_capture_screen();
+    window["__wxRoute"] = "packageAPI/pages/capture-screen/capture-screen";
     var page = getPage("packageAPI/pages/capture-screen/capture-screen");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/capture-screen/capture-screen />";
     page.json = `{
   "navigationBarTitleText": "\u7528\u6237\u622A\u5C4F\u4E8B\u4EF6"
 }`;
@@ -5045,8 +5216,9 @@ var require_worker = __commonJS({
 var require_worker2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/worker/worker.js"() {
     require_worker();
+    window["__wxRoute"] = "packageAPI/pages/worker/worker";
     var page = getPage("packageAPI/pages/worker/worker");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/worker/worker />";
     page.json = `{
    "navigationBarTitleText": "\u591A\u7EBF\u7A0BWorker"
 }
@@ -5091,11 +5263,11 @@ var require_worker2 = __commonJS({
           title: "\u8BA1\u7B97\u4E2D..."
         });
         const t0 = +Date.now();
-        const res = fib(this.data.input);
+        const res2 = fib(this.data.input);
         const t1 = +Date.now();
         wx.hideLoading();
         this.setData({
-          res,
+          res: res2,
           time: t1 - t0
         });
       },
@@ -5109,12 +5281,12 @@ var require_worker2 = __commonJS({
           type: "execFunc_fib",
           params: [this.data.input]
         });
-        this._worker.onMessage((res) => {
-          if (res.type === "execFunc_fib") {
+        this._worker.onMessage((res2) => {
+          if (res2.type === "execFunc_fib") {
             wx.hideLoading();
             const t1 = +Date.now();
             this.setData({
-              res: res.result,
+              res: res2.result,
               time: t1 - t0
             });
           }
@@ -5227,8 +5399,9 @@ var require_ibeacon = __commonJS({
 var require_ibeacon2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/ibeacon/ibeacon.js"() {
     require_ibeacon();
+    window["__wxRoute"] = "packageAPI/pages/ibeacon/ibeacon";
     var page = getPage("packageAPI/pages/ibeacon/ibeacon");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/ibeacon/ibeacon />";
     page.json = `{
   "navigationBarTitleText": "iBeacon"
 }
@@ -5258,8 +5431,8 @@ var require_ibeacon2 = __commonJS({
         this._searching = true;
         wx.startBeaconDiscovery({
           uuids: [this.data.uuid],
-          success: (res) => {
-            console.log(res);
+          success: (res2) => {
+            console.log(res2);
             wx.onBeaconUpdate(({ beacons }) => {
               this.setData({
                 beacons
@@ -5378,8 +5551,9 @@ var require_choose_address = __commonJS({
 var require_choose_address2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/choose-address/choose-address.js"() {
     require_choose_address();
+    window["__wxRoute"] = "packageAPI/pages/choose-address/choose-address";
     var page = getPage("packageAPI/pages/choose-address/choose-address");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/choose-address/choose-address />";
     page.json = `{
   "navigationBarTitleText": "\u6536\u8D27\u5730\u5740"
 }`;
@@ -5395,9 +5569,9 @@ var require_choose_address2 = __commonJS({
       },
       chooseAddress() {
         wx.chooseAddress({
-          success: (res) => {
+          success: (res2) => {
             this.setData({
-              addressInfo: res
+              addressInfo: res2
             });
           },
           fail(err) {
@@ -5525,8 +5699,9 @@ var require_setting = __commonJS({
 var require_setting2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/setting/setting.js"() {
     require_setting();
+    window["__wxRoute"] = "packageAPI/pages/setting/setting";
     var page = getPage("packageAPI/pages/setting/setting");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/setting/setting />";
     page.json = `{
   "navigationBarTitleText": "\u8BBE\u7F6E"
 }`;
@@ -5542,9 +5717,9 @@ var require_setting2 = __commonJS({
       },
       getSetting() {
         wx.getSetting({
-          success: (res) => {
-            console.log(res);
-            this.setData({ setting: res.authSetting });
+          success: (res2) => {
+            console.log(res2);
+            this.setData({ setting: res2.authSetting });
           }
         });
       }
@@ -5657,8 +5832,9 @@ var require_choose_invoice_title = __commonJS({
 var require_choose_invoice_title2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/choose-invoice-title/choose-invoice-title.js"() {
     require_choose_invoice_title();
+    window["__wxRoute"] = "packageAPI/pages/choose-invoice-title/choose-invoice-title";
     var page = getPage("packageAPI/pages/choose-invoice-title/choose-invoice-title");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/choose-invoice-title/choose-invoice-title />";
     page.json = `{
   "navigationBarTitleText": "\u83B7\u53D6\u53D1\u7968\u62AC\u5934"
 }`;
@@ -5680,15 +5856,15 @@ var require_choose_invoice_title2 = __commonJS({
       },
       chooseInvoiceTitle() {
         wx.chooseInvoiceTitle({
-          success: (res) => {
+          success: (res2) => {
             this.setData({
-              type: res.type,
-              title: res.title,
-              taxNumber: res.taxNumber,
-              companyAddress: res.companyAddress,
-              telephone: res.telephone,
-              bankName: res.bankName,
-              bankAccount: res.bankAccount
+              type: res2.type,
+              title: res2.title,
+              taxNumber: res2.taxNumber,
+              companyAddress: res2.companyAddress,
+              telephone: res2.telephone,
+              bankName: res2.bankName,
+              bankAccount: res2.bankAccount
             });
           },
           fail: (err) => {
@@ -5738,8 +5914,9 @@ var require_soter_authentication = __commonJS({
 var require_soter_authentication2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/soter-authentication/soter-authentication.js"() {
     require_soter_authentication();
+    window["__wxRoute"] = "packageAPI/pages/soter-authentication/soter-authentication";
     var page = getPage("packageAPI/pages/soter-authentication/soter-authentication");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/soter-authentication/soter-authentication />";
     page.json = `{
   "navigationBarTitleText": "\u751F\u7269\u8BA4\u8BC1"
 }`;
@@ -5777,9 +5954,9 @@ var require_soter_authentication2 = __commonJS({
         const checkIsEnrolled = () => {
           wx.checkIsSoterEnrolledInDevice({
             checkAuthMode: AUTH_MODE,
-            success: (res) => {
-              console.log(res);
-              if (parseInt(res.isEnrolled, 10) <= 0) {
+            success: (res2) => {
+              console.log(res2);
+              if (parseInt(res2.isEnrolled, 10) <= 0) {
                 wx.showModal({
                   title: "\u9519\u8BEF",
                   content: `\u60A8\u6682\u672A\u5F55\u5165${AUTH_MODE === "facial" ? "\u4EBA\u8138" : "\u6307\u7EB9"}\u4FE1\u606F\uFF0C\u8BF7\u5F55\u5165\u540E\u91CD\u8BD5`,
@@ -5802,9 +5979,9 @@ var require_soter_authentication2 = __commonJS({
           });
         };
         wx.checkIsSupportSoterAuthentication({
-          success: (res) => {
-            console.log(res);
-            if (!res || res.supportMode.length === 0 || res.supportMode.indexOf(AUTH_MODE) < 0) {
+          success: (res2) => {
+            console.log(res2);
+            if (!res2 || res2.supportMode.length === 0 || res2.supportMode.indexOf(AUTH_MODE) < 0) {
               notSupported();
               return;
             }
@@ -5858,8 +6035,9 @@ var require_subscribe_message = __commonJS({
 var require_subscribe_message2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/subscribe-message/subscribe-message.js"() {
     require_subscribe_message();
+    window["__wxRoute"] = "packageAPI/pages/subscribe-message/subscribe-message";
     var page = getPage("packageAPI/pages/subscribe-message/subscribe-message");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/subscribe-message/subscribe-message />";
     page.json = `{
   "usingComponents": {}
 }`;
@@ -5869,14 +6047,14 @@ var require_subscribe_message2 = __commonJS({
         const self = this;
         wx.requestSubscribeMessage({
           tmplIds: ["y1bXHAg_oDuvrQ3pHgcODcMPl-2hZHenWugsqdB2CXY"],
-          success(res) {
-            console.log(res);
-            if (res.errMsg === "requestSubscribeMessage:ok") {
+          success(res2) {
+            console.log(res2);
+            if (res2.errMsg === "requestSubscribeMessage:ok") {
               self.subscribeMessageSend();
             }
           },
-          complete(res) {
-            console.log(res);
+          complete(res2) {
+            console.log(res2);
           }
         });
       },
@@ -5886,8 +6064,8 @@ var require_subscribe_message2 = __commonJS({
           data: {
             action: "sendSubscribeMessage"
           },
-          success: (res) => {
-            console.warn("[\u4E91\u51FD\u6570] [openapi] templateMessage.send \u8C03\u7528\u6210\u529F\uFF1A", res);
+          success: (res2) => {
+            console.warn("[\u4E91\u51FD\u6570] [openapi] templateMessage.send \u8C03\u7528\u6210\u529F\uFF1A", res2);
             wx.showModal({
               title: "\u8BA2\u9605\u6210\u529F",
               content: "\u8BF7\u8FD4\u56DE\u5FAE\u4FE1\u4E3B\u754C\u9762\u67E5\u770B",
@@ -5939,8 +6117,9 @@ var require_doc_web_view = __commonJS({
 var require_doc_web_view2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/doc-web-view/doc-web-view.js"() {
     require_doc_web_view();
+    window["__wxRoute"] = "packageAPI/pages/doc-web-view/doc-web-view";
     var page = getPage("packageAPI/pages/doc-web-view/doc-web-view");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/doc-web-view/doc-web-view />";
     page.json = `{
   "navigationBarTitleText": "\u5C0F\u7A0B\u5E8F\u63A5\u53E3\u6587\u6863"
 }`;
@@ -5974,8 +6153,9 @@ var require_audio = __commonJS({
 var require_audio2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/audio/audio.js"() {
     require_audio();
+    window["__wxRoute"] = "packageAPI/pages/audio/audio";
     var page = getPage("packageAPI/pages/audio/audio");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/audio/audio />";
     page.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "\u97F3\u9891"
@@ -6066,8 +6246,9 @@ var require_get_battery_info = __commonJS({
 var require_get_battery_info2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-battery-info/get-battery-info.js"() {
     require_get_battery_info();
+    window["__wxRoute"] = "packageAPI/pages/get-battery-info/get-battery-info";
     var page = getPage("packageAPI/pages/get-battery-info/get-battery-info");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/get-battery-info/get-battery-info />";
     page.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "\u83B7\u53D6\u624B\u673A\u8BBE\u5907\u7535\u91CF"
@@ -6083,10 +6264,10 @@ var require_get_battery_info2 = __commonJS({
       data: {},
       getBatteryInfo() {
         wx.getBatteryInfo({
-          complete: (res) => {
-            const msg = res.isCharging ? "\u5145\u7535\u4E2D" : "\u4F7F\u7528\u7535\u6C60\u4E2D";
+          complete: (res2) => {
+            const msg = res2.isCharging ? "\u5145\u7535\u4E2D" : "\u4F7F\u7528\u7535\u6C60\u4E2D";
             this.setData({
-              level: res.level,
+              level: res2.level,
               isCharging: msg
             });
           }
@@ -6141,8 +6322,9 @@ var require_get_performance = __commonJS({
 // miniprogram-demo/miniprogram/packageAPI/pages/get-performance/util.js
 var require_util2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-performance/util.js"(exports2, module2) {
+    window["__wxRoute"] = "packageAPI/pages/get-performance/util";
     var page = getPage("packageAPI/pages/get-performance/util");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/get-performance/util />";
     page.json = ``;
     var util = {};
     Date.prototype.Format = function(fmt) {
@@ -6210,8 +6392,9 @@ var require_util2 = __commonJS({
 var require_get_performance2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-performance/get-performance.js"() {
     require_get_performance();
+    window["__wxRoute"] = "packageAPI/pages/get-performance/get-performance";
     var page = getPage("packageAPI/pages/get-performance/get-performance");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/get-performance/get-performance />";
     page.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "\u6027\u80FD\u6570\u636E"
@@ -6305,8 +6488,9 @@ var require_mdns = __commonJS({
 var require_mdns2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/mdns/mdns.js"() {
     require_mdns();
+    window["__wxRoute"] = "packageAPI/pages/mdns/mdns";
     var page = getPage("packageAPI/pages/mdns/mdns");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/mdns/mdns />";
     page.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "mDNS"
@@ -6331,8 +6515,8 @@ var require_mdns2 = __commonJS({
       startDiscovery() {
         wx.startLocalServiceDiscovery({
           serviceType: "_http._tcp.",
-          success: function(res) {
-            console.log(res);
+          success: function(res2) {
+            console.log(res2);
             wx.showToast({
               title: "\u5F00\u542F\u6210\u529F",
               icon: "none",
@@ -6355,7 +6539,7 @@ var require_mdns2 = __commonJS({
       stopDiscovery() {
         const that = this;
         wx.stopLocalServiceDiscovery({
-          success: (res) => {
+          success: (res2) => {
             wx.showToast({
               title: "\u5173\u95ED\u6210\u529F",
               icon: "none",
@@ -6488,8 +6672,9 @@ var require_udp_socket = __commonJS({
 var require_udp_socket2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/udp-socket/udp-socket.js"() {
     require_udp_socket();
+    window["__wxRoute"] = "packageAPI/pages/udp-socket/udp-socket";
     var page = getPage("packageAPI/pages/udp-socket/udp-socket");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/udp-socket/udp-socket />";
     page.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "UDPSocket"
@@ -6536,12 +6721,12 @@ var require_udp_socket2 = __commonJS({
           remote_port: this.remote_port,
           startUDP: true
         });
-        this.remoteUDPSocket.onMessage((res) => {
-          const { remoteInfo } = res;
-          console.log(res);
+        this.remoteUDPSocket.onMessage((res2) => {
+          const { remoteInfo } = res2;
+          console.log(res2);
           wx.showModal({
             title: `IP:${remoteInfo.address}\u53D1\u6765\u7684\u4FE1\u606F`,
-            content: AB2String(res.message)
+            content: AB2String(res2.message)
           });
         });
       },
@@ -6619,8 +6804,9 @@ var require_two_way_bindings = __commonJS({
 var require_two_way_bindings2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/two-way-bindings/two-way-bindings.js"() {
     require_two_way_bindings();
+    window["__wxRoute"] = "packageAPI/pages/two-way-bindings/two-way-bindings";
     var page = getPage("packageAPI/pages/two-way-bindings/two-way-bindings");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/two-way-bindings/two-way-bindings />";
     page.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "two-way-bindings"
@@ -6714,8 +6900,9 @@ var require_media_container = __commonJS({
 var require_media_container2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/media-container/media-container.js"() {
     require_media_container();
+    window["__wxRoute"] = "packageAPI/pages/media-container/media-container";
     var page = getPage("packageAPI/pages/media-container/media-container");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/media-container/media-container />";
     page.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "\u97F3\u89C6\u9891\u5408\u6210"
@@ -6750,10 +6937,10 @@ var require_media_container2 = __commonJS({
         const that = this;
         wx.chooseVideo({
           sourceType: ["album", "camera"],
-          success(res) {
-            console.log(res.tempFilePath);
+          success(res2) {
+            console.log(res2.tempFilePath);
             that.setData({
-              [e.currentTarget.dataset.video]: res.tempFilePath
+              [e.currentTarget.dataset.video]: res2.tempFilePath
             });
             if (e.currentTarget.dataset.video === "one") {
               that.mediaContainer.extractDataSource({
@@ -6788,9 +6975,9 @@ var require_media_container2 = __commonJS({
           this.mediaContainer.addTrack(trackAudio);
           const that = this;
           this.mediaContainer.export({
-            success: (res) => {
+            success: (res2) => {
               that.setData({
-                targetSrc: res.tempFilePath
+                targetSrc: res2.tempFilePath
               });
             }
           });
@@ -6852,8 +7039,9 @@ var require_get_background_fetch_data = __commonJS({
 var require_get_background_fetch_data2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-background-fetch-data/get-background-fetch-data.js"() {
     require_get_background_fetch_data();
+    window["__wxRoute"] = "packageAPI/pages/get-background-fetch-data/get-background-fetch-data";
     var page = getPage("packageAPI/pages/get-background-fetch-data/get-background-fetch-data");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/get-background-fetch-data/get-background-fetch-data />";
     page.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "\u5468\u671F\u6027\u66F4\u65B0\u6570\u636E"
@@ -6879,9 +7067,9 @@ var require_get_background_fetch_data2 = __commonJS({
         if (wx.getBackgroundFetchData) {
           wx.getBackgroundFetchData({
             fetchType: "periodic",
-            success(res) {
-              console.log(res);
-              const { fetchedData } = res;
+            success(res2) {
+              console.log(res2);
+              const { fetchedData } = res2;
               const result = JSON.parse(fetchedData);
               that.setData({
                 appid: result.appid,
@@ -6968,8 +7156,9 @@ var require_get_background_prefetch_data = __commonJS({
 var require_get_background_prefetch_data2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-background-prefetch-data/get-background-prefetch-data.js"() {
     require_get_background_prefetch_data();
+    window["__wxRoute"] = "packageAPI/pages/get-background-prefetch-data/get-background-prefetch-data";
     var page = getPage("packageAPI/pages/get-background-prefetch-data/get-background-prefetch-data");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/get-background-prefetch-data/get-background-prefetch-data />";
     page.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "\u6570\u636E\u9884\u62C9\u53D6"
@@ -7014,11 +7203,11 @@ var require_get_background_prefetch_data2 = __commonJS({
       getBackgroundFetchData() {
         if (wx.getBackgroundFetchData) {
           console.log("\u8BFB\u53D6\u9884\u62C9\u53D6\u6570\u636E");
-          const res = app.globalData.backgroundFetchData;
-          const { fetchedData } = res;
+          const res2 = app.globalData.backgroundFetchData;
+          const { fetchedData } = res2;
           const result = JSON.parse(fetchedData);
           const systemInfo = wx.getSystemInfoSync();
-          const timeStamp = systemInfo.brand === "iPhone" ? res.timeStamp * 1e3 : res.timeStamp;
+          const timeStamp = systemInfo.brand === "iPhone" ? res2.timeStamp * 1e3 : res2.timeStamp;
           const time = new Date(timeStamp).Format("yyyy-MM-dd hh:mm:ss");
           this.setData({
             appid: result.appid,
@@ -7082,8 +7271,9 @@ var require_wxs = __commonJS({
 var require_wxs2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wxs/wxs.js"() {
     require_wxs();
+    window["__wxRoute"] = "packageAPI/pages/wxs/wxs";
     var page = getPage("packageAPI/pages/wxs/wxs");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/wxs/wxs />";
     page.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "WXS"
@@ -7164,8 +7354,9 @@ var require_slave = __commonJS({
 var require_slave2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/bluetooth/slave/slave.js"() {
     require_slave();
+    window["__wxRoute"] = "packageAPI/pages/bluetooth/slave/slave";
     var page = getPage("packageAPI/pages/bluetooth/slave/slave");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/bluetooth/slave/slave />";
     page.json = `{
   "usingComponents": {}
 }`;
@@ -7192,14 +7383,14 @@ var require_slave2 = __commonJS({
         servers: []
       },
       onLoad: function(options) {
-        wx.onBLEPeripheralConnectionStateChanged((res) => {
+        wx.onBLEPeripheralConnectionStateChanged((res2) => {
           console.log("connect");
           const connects = this.data.connects;
-          const idx = inArray(connects, "deviceId", res.deviceId);
+          const idx = inArray(connects, "deviceId", res2.deviceId);
           if (idx >= 0) {
-            connects[idx] = res;
+            connects[idx] = res2;
           } else {
-            connects.push(res);
+            connects.push(res2);
           }
           this.setData({ connects });
         });
@@ -7207,20 +7398,20 @@ var require_slave2 = __commonJS({
       openBluetoothAdapter() {
         wx.openBluetoothAdapter({
           mode: "peripheral",
-          success: (res) => {
-            console.log("openBluetoothAdapter success", res);
+          success: (res2) => {
+            console.log("openBluetoothAdapter success", res2);
             this.createBLEPeripheralServer();
           },
-          fail: (res) => {
-            console.log(res);
+          fail: (res2) => {
+            console.log(res2);
             wx.showToast({
-              title: `\u521B\u5EFA\u5931\u8D25 \u9519\u8BEF\u7801: ${res.errCode}`,
+              title: `\u521B\u5EFA\u5931\u8D25 \u9519\u8BEF\u7801: ${res2.errCode}`,
               icon: "none"
             });
-            if (res.errCode === 10001) {
-              wx.onBluetoothAdapterStateChange(function(res2) {
-                console.log("onBluetoothAdapterStateChange", res2);
-                if (res2.available) {
+            if (res2.errCode === 10001) {
+              wx.onBluetoothAdapterStateChange(function(res3) {
+                console.log("onBluetoothAdapterStateChange", res3);
+                if (res3.available) {
                   this.createBLEPeripheralServer();
                 }
               });
@@ -7229,23 +7420,23 @@ var require_slave2 = __commonJS({
         });
       },
       createBLEPeripheralServer() {
-        wx.createBLEPeripheralServer().then((res) => {
-          console.log("createBLEPeripheralServer", res);
-          this.data.servers.push(res.server);
-          this.server = res.server;
+        wx.createBLEPeripheralServer().then((res2) => {
+          console.log("createBLEPeripheralServer", res2);
+          this.data.servers.push(res2.server);
+          this.server = res2.server;
           this.setData({
             serverId: this.server.serverId
           });
           wx.showToast({
             title: "\u521B\u5EFA server "
           });
-          this.server.onCharacteristicReadRequest((res2) => {
-            const { serviceId: serviceId2, characteristicId: characteristicId2, callbackId } = res2;
+          this.server.onCharacteristicReadRequest((res3) => {
+            const { serviceId: serviceId2, characteristicId: characteristicId2, callbackId } = res3;
             const buffer = new ArrayBuffer(1);
             const dataView = new DataView(buffer);
             const newValue = Math.ceil(Math.random() * 10);
             dataView.setUint8(0, newValue);
-            console.log("onCharacteristicReadRequest", res2, newValue);
+            console.log("onCharacteristicReadRequest", res3, newValue);
             this.server.writeCharacteristicValue({
               serviceId: serviceId2,
               characteristicId: characteristicId2,
@@ -7254,9 +7445,9 @@ var require_slave2 = __commonJS({
               callbackId
             });
           });
-          this.server.onCharacteristicWriteRequest((res2) => {
-            console.log("onCharacteristicWriteRequest", res2);
-            const { serviceId: serviceId2, characteristicId: characteristicId2, value, callbackId } = res2;
+          this.server.onCharacteristicWriteRequest((res3) => {
+            console.log("onCharacteristicWriteRequest", res3);
+            const { serviceId: serviceId2, characteristicId: characteristicId2, value, callbackId } = res3;
             wx.showToast({
               title: "\u6536\u5230\u4E3B\u673A\u6570\u636E"
             });
@@ -7337,8 +7528,8 @@ var require_slave2 = __commonJS({
         };
         this.server.addService({
           service
-        }).then((res) => {
-          console.log("add Service", res);
+        }).then((res2) => {
+          console.log("add Service", res2);
           wx.showToast({
             title: "\u521B\u5EFA\u670D\u52A1"
           });
@@ -7359,11 +7550,11 @@ var require_slave2 = __commonJS({
       removeService() {
         this.server.removeService({
           serviceId
-        }).then((res) => {
+        }).then((res2) => {
           wx.showToast({
             title: "\u5173\u95ED\u670D\u52A1"
           });
-          console.log("removeService", res);
+          console.log("removeService", res2);
         });
       },
       startAdvertising() {
@@ -7381,8 +7572,8 @@ var require_slave2 = __commonJS({
             }]
           },
           powerLevel: "medium"
-        }).then((res) => {
-          console.log("startAdvertising", res);
+        }).then((res2) => {
+          console.log("startAdvertising", res2);
           wx.showToast({
             title: "\u5F00\u542F\u5E7F\u64AD"
           });
@@ -7468,8 +7659,9 @@ var require_resizable2 = __commonJS({
 var require_resizable3 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/resizable/resizable.js"() {
     require_resizable2();
+    window["__wxRoute"] = "packageAPI/pages/resizable/resizable";
     var page = getPage("packageAPI/pages/resizable/resizable");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/resizable/resizable />";
     page.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "\u5C4F\u5E55\u65CB\u8F6C",
@@ -7505,8 +7697,8 @@ var require_movable = __commonJS({
       startX = touch.pageX;
       startY = touch.pageY;
       ins.callMethod("testCallmethod", {
-        complete: function(res) {
-          console.log("args", res);
+        complete: function(res2) {
+          console.log("args", res2);
         }
       });
     }
@@ -7549,8 +7741,9 @@ var require_movable2 = __commonJS({
 var require_movable3 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wxs/movable.js"() {
     require_movable2();
+    window["__wxRoute"] = "packageAPI/pages/wxs/movable";
     var page = getPage("packageAPI/pages/wxs/movable");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/wxs/movable />";
     page.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "movable"
@@ -7692,8 +7885,9 @@ var require_sidebar2 = __commonJS({
 var require_sidebar3 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wxs/sidebar.js"() {
     require_sidebar2();
+    window["__wxRoute"] = "packageAPI/pages/wxs/sidebar";
     var page = getPage("packageAPI/pages/wxs/sidebar");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/wxs/sidebar />";
     page.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "sidebar"
@@ -7820,8 +8014,9 @@ var require_stick_top2 = __commonJS({
 var require_stick_top3 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wxs/stick-top.js"() {
     require_stick_top2();
+    window["__wxRoute"] = "packageAPI/pages/wxs/stick-top";
     var page = getPage("packageAPI/pages/wxs/stick-top");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/wxs/stick-top />";
     page.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "stick-top"
@@ -7968,8 +8163,9 @@ var require_nearby2 = __commonJS({
 var require_nearby3 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wxs/nearby.js"() {
     require_nearby2();
+    window["__wxRoute"] = "packageAPI/pages/wxs/nearby";
     var page = getPage("packageAPI/pages/wxs/nearby");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageAPI/pages/wxs/nearby />";
     page.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "nearby"
@@ -8038,74 +8234,145 @@ var require_nearby3 = __commonJS({
 });
 
 // <stdin>
+require_app();
 require_login2();
+require_app();
 require_get_user_info2();
+require_app();
 require_request_payment2();
+require_app();
 require_share2();
+require_app();
 require_share_button2();
+require_app();
 require_custom_message2();
+require_app();
 require_template_message2();
+require_app();
 require_set_navigation_bar_title2();
+require_app();
 require_navigation_bar_loading2();
+require_app();
 require_navigator2();
+require_app();
 require_pull_down_refresh2();
+require_app();
 require_animation2();
+require_app();
 require_action_sheet2();
+require_app();
 require_modal2();
+require_app();
 require_toast2();
+require_app();
 require_get_network_type2();
+require_app();
 require_on_network_status_change2();
+require_app();
 require_get_system_info2();
+require_app();
 require_on_compass_change2();
+require_app();
 require_make_phone_call2();
+require_app();
 require_scan_code2();
+require_app();
 require_request2();
+require_app();
 require_web_socket2();
+require_app();
 require_upload_file2();
+require_app();
 require_download_file2();
+require_app();
 require_image2();
+require_app();
 require_voice2();
+require_app();
 require_file2();
+require_app();
 require_on_accelerometer_change2();
+require_app();
 require_canvas2();
+require_app();
 require_background_audio2();
+require_app();
 require_video2();
+require_app();
 require_get_location2();
+require_app();
 require_open_location2();
+require_app();
 require_choose_location2();
+require_app();
 require_storage2();
+require_app();
 require_get_wxml_node_info2();
+require_app();
 require_load_font_face2();
+require_app();
 require_clipboard_data2();
+require_app();
 require_bluetooth2();
+require_app();
 require_screen_brightness2();
+require_app();
 require_vibrate2();
+require_app();
 require_add_contact2();
+require_app();
 require_wifi2();
+require_app();
 require_page_scroll2();
+require_app();
 require_intersection_observer2();
+require_app();
 require_capture_screen2();
+require_app();
 require_worker2();
+require_app();
 require_ibeacon2();
+require_app();
 require_choose_address2();
+require_app();
 require_setting2();
+require_app();
 require_choose_invoice_title2();
+require_app();
 require_soter_authentication2();
+require_app();
 require_subscribe_message2();
+require_app();
 require_doc_web_view2();
+require_app();
 require_audio2();
+require_app();
 require_get_battery_info2();
+require_app();
 require_get_performance2();
+require_app();
 require_mdns2();
+require_app();
 require_udp_socket2();
+require_app();
 require_two_way_bindings2();
+require_app();
 require_media_container2();
+require_app();
 require_get_background_fetch_data2();
+require_app();
 require_get_background_prefetch_data2();
+require_app();
 require_wxs2();
+require_app();
 require_slave2();
+require_app();
 require_resizable3();
+require_app();
 require_movable3();
+require_app();
 require_sidebar3();
+require_app();
 require_stick_top3();
+require_app();
 require_nearby3();

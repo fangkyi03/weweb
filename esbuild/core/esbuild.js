@@ -25,8 +25,10 @@ function getPageConfig (config) {
         let text = ''
         e.children.forEach((el)=>{
             if (e.path == '/' ) {
+                text += `require('${config.targetPath}/app.js')\n`
                 text += `require('${config.targetPath}/${el}')\n`
             }else {
+                text += `require('${config.targetPath}/app.js')\n`
                 text += `require('${config.targetPath}/${e.path}/${el}')\n`
             }
         })
@@ -49,7 +51,7 @@ function buildJS(item,config) {
         bundle:true,
         format:'esm',
         // minify:true,
-        plugins:[esbuildPlugin(config)],
+        plugins:[esbuildPlugin(config,item)],
         outfile:item.outfile,
     })
     .then(()=>{

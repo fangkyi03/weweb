@@ -2,6 +2,144 @@ var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[Object.keys(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
 
+// miniprogram-demo/miniprogram/config.js
+var require_config = __commonJS({
+  "miniprogram-demo/miniprogram/config.js"(exports, module) {
+    var host = "14592619.qcloud.la";
+    var config = {
+      requestUrl: "https://mp.weixin.qq.com",
+      host,
+      envId: "release-b86096",
+      demoImageFileId: "cloud://release-b86096.7265-release-b86096-1258211818/demo.jpg",
+      demoVideoFileId: "cloud://release-b86096.7265-release-b86096/demo.mp4"
+    };
+    module.exports = config;
+  }
+});
+
+// miniprogram-demo/miniprogram/app.js
+var require_app = __commonJS({
+  "miniprogram-demo/miniprogram/app.js"() {
+    window["__pages__"] = ["pages/doc-web-view/doc-web-view", "pages/user-authentication/user-authentication", "pages/get-wx-context/get-wx-context", "pages/upload-file/upload-file", "pages/download-file/download-file", "pages/get-temp-file-url/get-temp-file-url", "pages/delete-file/delete-file", "pages/cloud-file-component/cloud-file-component", "pages/crud/crud", "pages/crud-detail/crud-detail", "pages/db-permission/db-permission", "pages/server-date/server-date", "pages/scf-database/scf-database", "pages/scf-storage/scf-storage", "pages/scf-openapi/scf-openapi"];
+    var config = require_config();
+    var themeListeners = [];
+    global.isDemo = true;
+    App({
+      onLaunch(opts, data) {
+        const that = this;
+        const canIUseSetBackgroundFetchToken = wx.canIUse("setBackgroundFetchToken");
+        if (canIUseSetBackgroundFetchToken) {
+          wx.setBackgroundFetchToken({
+            token: "getBackgroundFetchToken"
+          });
+        }
+        if (wx.getBackgroundFetchData) {
+          wx.getBackgroundFetchData({
+            fetchType: "pre",
+            success(res2) {
+              that.globalData.backgroundFetchData = res2;
+              console.log("\u8BFB\u53D6\u9884\u62C9\u53D6\u6570\u636E\u6210\u529F");
+            },
+            fail() {
+              console.log("\u8BFB\u53D6\u9884\u62C9\u53D6\u6570\u636E\u5931\u8D25");
+              wx.showToast({
+                title: "\u65E0\u7F13\u5B58\u6570\u636E",
+                icon: "none"
+              });
+            },
+            complete() {
+              console.log("\u7ED3\u675F\u8BFB\u53D6");
+            }
+          });
+        }
+        console.log("App Launch", opts);
+        if (data && data.path) {
+          wx.navigateTo({
+            url: data.path
+          });
+        }
+        if (!wx.cloud) {
+          console.error("\u8BF7\u4F7F\u7528 2.2.3 \u6216\u4EE5\u4E0A\u7684\u57FA\u7840\u5E93\u4EE5\u4F7F\u7528\u4E91\u80FD\u529B");
+        } else {
+          wx.cloud.init({
+            env: config.envId,
+            traceUser: true
+          });
+        }
+      },
+      onShow(opts) {
+        console.log("App Show", opts);
+      },
+      onHide() {
+        console.log("App Hide");
+      },
+      onThemeChange({ theme }) {
+        this.globalData.theme = theme;
+        console.log("\u8F93\u51FA");
+        themeListeners.forEach((listener) => {
+          listener(theme);
+        });
+      },
+      watchThemeChange(listener) {
+        if (themeListeners.indexOf(listener) < 0) {
+          themeListeners.push(listener);
+        }
+      },
+      unWatchThemeChange(listener) {
+        const index = themeListeners.indexOf(listener);
+        if (index > -1) {
+          themeListeners.splice(index, 1);
+        }
+      },
+      globalData: {
+        theme: wx.getSystemInfoSync().theme,
+        hasLogin: false,
+        openid: null,
+        iconTabbar: "/page/weui/example/images/icon_tabbar.png"
+      },
+      getUserOpenId(callback) {
+        const self = this;
+        if (self.globalData.openid) {
+          callback(null, self.globalData.openid);
+        } else {
+          wx.login({
+            success(data) {
+              wx.cloud.callFunction({
+                name: "login",
+                data: {
+                  action: "openid"
+                },
+                success: (res2) => {
+                  console.log("\u62C9\u53D6openid\u6210\u529F", res2);
+                  self.globalData.openid = res2.result.openid;
+                  callback(null, self.globalData.openid);
+                },
+                fail: (err) => {
+                  console.log("\u62C9\u53D6\u7528\u6237openid\u5931\u8D25\uFF0C\u5C06\u65E0\u6CD5\u6B63\u5E38\u4F7F\u7528\u5F00\u653E\u63A5\u53E3\u7B49\u670D\u52A1", res);
+                  callback(res);
+                }
+              });
+            },
+            fail(err) {
+              console.log("wx.login \u63A5\u53E3\u8C03\u7528\u5931\u8D25\uFF0C\u5C06\u65E0\u6CD5\u6B63\u5E38\u4F7F\u7528\u5F00\u653E\u63A5\u53E3\u7B49\u670D\u52A1", err);
+              callback(err);
+            }
+          });
+        }
+      },
+      getUserOpenIdViaCloud() {
+        return wx.cloud.callFunction({
+          name: "wxContext",
+          data: {}
+        }).then((res2) => {
+          this.globalData.openid = res2.result.openid;
+          return res2.result.openid;
+        });
+      }
+    });
+  }
+});
+
 // miniprogram-demo/miniprogram/packageCloud/pages/doc-web-view/doc-web-view.wxml
 var require_doc_web_view = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/doc-web-view/doc-web-view.wxml"() {
@@ -14,8 +152,9 @@ var require_doc_web_view = __commonJS({
 var require_doc_web_view2 = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/doc-web-view/doc-web-view.js"() {
     require_doc_web_view();
+    window["__wxRoute"] = "packageCloud/pages/doc-web-view/doc-web-view";
     var page = getPage("packageCloud/pages/doc-web-view/doc-web-view");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageCloud/pages/doc-web-view/doc-web-view />";
     page.json = `{
   "navigationBarTitleText": "\u5C0F\u7A0B\u5E8F\u4E91\u5F00\u53D1\u6587\u6863"
 }`;
@@ -102,8 +241,9 @@ var require_user_authentication = __commonJS({
 var require_user_authentication2 = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/user-authentication/user-authentication.js"() {
     require_user_authentication();
+    window["__wxRoute"] = "packageCloud/pages/user-authentication/user-authentication";
     var page = getPage("packageCloud/pages/user-authentication/user-authentication");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageCloud/pages/user-authentication/user-authentication />";
     page.json = `{
   "navigationBarTitleText": "\u7528\u6237\u9274\u6743"
 }`;
@@ -202,8 +342,9 @@ var require_get_wx_context = __commonJS({
 var require_get_wx_context2 = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/get-wx-context/get-wx-context.js"() {
     require_get_wx_context();
+    window["__wxRoute"] = "packageCloud/pages/get-wx-context/get-wx-context";
     var page = getPage("packageCloud/pages/get-wx-context/get-wx-context");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageCloud/pages/get-wx-context/get-wx-context />";
     page.json = `{
   "navigationBarTitleText": "WXContext"
 }`;
@@ -226,11 +367,11 @@ var require_get_wx_context2 = __commonJS({
         wx.cloud.callFunction({
           name: "wxContext",
           data: {},
-          success: (res) => {
-            console.log("[\u4E91\u51FD\u6570] [wxContext] wxContext: ", res.result);
+          success: (res2) => {
+            console.log("[\u4E91\u51FD\u6570] [wxContext] wxContext: ", res2.result);
             this.setData({
               hasWXContext: true,
-              wxContext: res.result,
+              wxContext: res2.result,
               loading: false
             });
           },
@@ -314,8 +455,9 @@ var require_upload_file = __commonJS({
 var require_upload_file2 = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/upload-file/upload-file.js"() {
     require_upload_file();
+    window["__wxRoute"] = "packageCloud/pages/upload-file/upload-file";
     var page = getPage("packageCloud/pages/upload-file/upload-file");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageCloud/pages/upload-file/upload-file />";
     page.json = `{
   "navigationBarTitleText": "\u4E0A\u4F20\u6587\u4EF6"
 }`;
@@ -346,9 +488,9 @@ var require_upload_file2 = __commonJS({
           count: 1,
           sizeType: ["compressed"],
           sourceType: ["album"],
-          success(res) {
-            console.log("chooseImage success, temp path is", res.tempFilePaths[0]);
-            const filePath = res.tempFilePaths[0];
+          success(res2) {
+            console.log("chooseImage success, temp path is", res2.tempFilePaths[0]);
+            const filePath = res2.tempFilePaths[0];
             wx.showLoading({
               title: "\u4E0A\u4F20\u4E2D"
             });
@@ -358,12 +500,12 @@ var require_upload_file2 = __commonJS({
               wx.cloud.uploadFile({
                 cloudPath,
                 filePath,
-                success: (res2) => {
-                  console.log("[\u4E0A\u4F20\u6587\u4EF6] \u6210\u529F\uFF1A", res2);
-                  app.globalData.fileId = res2.fileID;
+                success: (res3) => {
+                  console.log("[\u4E0A\u4F20\u6587\u4EF6] \u6210\u529F\uFF1A", res3);
+                  app.globalData.fileId = res3.fileID;
                   self.setData({
                     fileUploaded: true,
-                    fileId: res2.fileID,
+                    fileId: res3.fileID,
                     filePath
                   });
                   wx.hideLoading();
@@ -458,27 +600,13 @@ var require_download_file = __commonJS({
   }
 });
 
-// miniprogram-demo/miniprogram/config.js
-var require_config = __commonJS({
-  "miniprogram-demo/miniprogram/config.js"(exports, module) {
-    var host = "14592619.qcloud.la";
-    var config = {
-      requestUrl: "https://mp.weixin.qq.com",
-      host,
-      envId: "release-b86096",
-      demoImageFileId: "cloud://release-b86096.7265-release-b86096-1258211818/demo.jpg",
-      demoVideoFileId: "cloud://release-b86096.7265-release-b86096/demo.mp4"
-    };
-    module.exports = config;
-  }
-});
-
 // miniprogram-demo/miniprogram/packageCloud/pages/download-file/download-file.js
 var require_download_file2 = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/download-file/download-file.js"() {
     require_download_file();
+    window["__wxRoute"] = "packageCloud/pages/download-file/download-file";
     var page = getPage("packageCloud/pages/download-file/download-file");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageCloud/pages/download-file/download-file />";
     page.json = `{
   "navigationBarTitleText": "\u4E0B\u8F7D\u6587\u4EF6"
 }`;
@@ -513,11 +641,11 @@ var require_download_file2 = __commonJS({
         });
         wx.cloud.downloadFile({
           fileID: fileId,
-          success: (res) => {
-            console.log("[\u4E0B\u8F7D\u6587\u4EF6] \u6210\u529F\uFF1A", res);
+          success: (res2) => {
+            console.log("[\u4E0B\u8F7D\u6587\u4EF6] \u6210\u529F\uFF1A", res2);
             self.setData({
               fileDownloaded: true,
-              filePath: res.tempFilePath
+              filePath: res2.tempFilePath
             });
           },
           fail: (err) => {
@@ -613,8 +741,9 @@ var require_get_temp_file_url = __commonJS({
 var require_get_temp_file_url2 = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/get-temp-file-url/get-temp-file-url.js"() {
     require_get_temp_file_url();
+    window["__wxRoute"] = "packageCloud/pages/get-temp-file-url/get-temp-file-url";
     var page = getPage("packageCloud/pages/get-temp-file-url/get-temp-file-url");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageCloud/pages/get-temp-file-url/get-temp-file-url />";
     page.json = `{
   "navigationBarTitleText": "\u6362\u53D6\u4E34\u65F6\u94FE\u63A5"
 }`;
@@ -650,13 +779,13 @@ var require_get_temp_file_url2 = __commonJS({
         });
         wx.cloud.getTempFileURL({
           fileList: [fileId],
-          success: (res) => {
-            console.log("[\u6362\u53D6\u4E34\u65F6\u94FE\u63A5] \u6210\u529F\uFF1A", res);
-            if (res.fileList && res.fileList.length) {
+          success: (res2) => {
+            console.log("[\u6362\u53D6\u4E34\u65F6\u94FE\u63A5] \u6210\u529F\uFF1A", res2);
+            if (res2.fileList && res2.fileList.length) {
               self.setData({
                 fileTempURLDone: true,
-                tempFileURL: res.fileList[0].tempFileURL,
-                maxAge: res.fileList[0].maxAge
+                tempFileURL: res2.fileList[0].tempFileURL,
+                maxAge: res2.fileList[0].maxAge
               });
             }
           },
@@ -736,8 +865,9 @@ var require_delete_file = __commonJS({
 var require_delete_file2 = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/delete-file/delete-file.js"() {
     require_delete_file();
+    window["__wxRoute"] = "packageCloud/pages/delete-file/delete-file";
     var page = getPage("packageCloud/pages/delete-file/delete-file");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageCloud/pages/delete-file/delete-file />";
     page.json = `{
   "navigationBarTitleText": "\u5220\u9664\u6587\u4EF6"
 }`;
@@ -774,9 +904,9 @@ var require_delete_file2 = __commonJS({
         });
         wx.cloud.deleteFile({
           fileList: [fileId],
-          success: (res) => {
-            console.log("[\u5220\u9664\u6587\u4EF6] \u6210\u529F\uFF1A", res);
-            if (res.fileList && res.fileList.length) {
+          success: (res2) => {
+            console.log("[\u5220\u9664\u6587\u4EF6] \u6210\u529F\uFF1A", res2);
+            if (res2.fileList && res2.fileList.length) {
               self.setData({
                 fileId: ""
               });
@@ -869,8 +999,9 @@ var require_cloud_file_component = __commonJS({
 var require_cloud_file_component2 = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/cloud-file-component/cloud-file-component.js"() {
     require_cloud_file_component();
+    window["__wxRoute"] = "packageCloud/pages/cloud-file-component/cloud-file-component";
     var page = getPage("packageCloud/pages/cloud-file-component/cloud-file-component");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageCloud/pages/cloud-file-component/cloud-file-component />";
     page.json = `{
   "navigationBarTitleText": "\u7EC4\u4EF6\u652F\u6301"
 }`;
@@ -955,8 +1086,9 @@ var require_crud = __commonJS({
 var require_crud2 = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/crud/crud.js"() {
     require_crud();
+    window["__wxRoute"] = "packageCloud/pages/crud/crud";
     var page = getPage("packageCloud/pages/crud/crud");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageCloud/pages/crud/crud />";
     page.json = `{
   "navigationBarTitleText": "\u57FA\u672C\u64CD\u4F5C"
 }`;
@@ -1024,12 +1156,12 @@ var require_crud2 = __commonJS({
             description: newContent,
             done: false
           },
-          success: (res) => {
+          success: (res2) => {
             this.setData({
               todoList: [
                 ...this.data.todoList,
                 {
-                  _id: res._id,
+                  _id: res2._id,
                   _openid: this.data.openid,
                   description: newContent,
                   done: false
@@ -1040,7 +1172,7 @@ var require_crud2 = __commonJS({
             wx.showToast({
               title: "\u65B0\u589E\u8BB0\u5F55\u6210\u529F"
             });
-            console.log("[\u6570\u636E\u5E93] [\u65B0\u589E\u8BB0\u5F55] \u6210\u529F\uFF0C\u8BB0\u5F55 _id: ", res._id);
+            console.log("[\u6570\u636E\u5E93] [\u65B0\u589E\u8BB0\u5F55] \u6210\u529F\uFF0C\u8BB0\u5F55 _id: ", res2._id);
           },
           fail: (err) => {
             wx.showToast({
@@ -1062,13 +1194,13 @@ var require_crud2 = __commonJS({
         db.collection("todos").where({
           _openid: this.data.openid
         }).get({
-          success: (res) => {
+          success: (res2) => {
             this.setData({
               todoListFetched: true,
-              todoList: res.data,
+              todoList: res2.data,
               filtered: false
             });
-            console.log("[\u6570\u636E\u5E93] [\u67E5\u8BE2\u8BB0\u5F55] \u6210\u529F: ", res);
+            console.log("[\u6570\u636E\u5E93] [\u67E5\u8BE2\u8BB0\u5F55] \u6210\u529F: ", res2);
           },
           fail: (err) => {
             wx.showToast({
@@ -1104,12 +1236,12 @@ var require_crud2 = __commonJS({
           _openid: this.data.openid,
           description: descriptionCondition
         }).get({
-          success: (res) => {
+          success: (res2) => {
             this.setData({
-              todoList: res.data,
+              todoList: res2.data,
               filtered: true
             });
-            console.log("[\u6570\u636E\u5E93] [\u67E5\u8BE2\u8BB0\u5F55] \u6210\u529F: ", res);
+            console.log("[\u6570\u636E\u5E93] [\u67E5\u8BE2\u8BB0\u5F55] \u6210\u529F: ", res2);
           },
           fail: (err) => {
             wx.showToast({
@@ -1216,8 +1348,9 @@ var require_crud_detail = __commonJS({
 var require_crud_detail2 = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/crud-detail/crud-detail.js"() {
     require_crud_detail();
+    window["__wxRoute"] = "packageCloud/pages/crud-detail/crud-detail";
     var page = getPage("packageCloud/pages/crud-detail/crud-detail");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageCloud/pages/crud-detail/crud-detail />";
     page.json = `{
   "navigationBarTitleText": "\u57FA\u672C\u64CD\u4F5C"
 }`;
@@ -1270,12 +1403,12 @@ var require_crud_detail2 = __commonJS({
         });
         const db = wx.cloud.database();
         db.collection("todos").doc(this.data.todoId).get({
-          success: (res) => {
+          success: (res2) => {
             this.setData({
-              description: res.data.description,
-              done: res.data.done
+              description: res2.data.description,
+              done: res2.data.done
             });
-            console.log("[\u6570\u636E\u5E93] [\u67E5\u8BE2\u8BB0\u5F55] \u6210\u529F: ", res);
+            console.log("[\u6570\u636E\u5E93] [\u67E5\u8BE2\u8BB0\u5F55] \u6210\u529F: ", res2);
           },
           fail: (err) => {
             wx.showToast({
@@ -1530,8 +1663,9 @@ var require_db_permission = __commonJS({
 var require_db_permission2 = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/db-permission/db-permission.js"() {
     require_db_permission();
+    window["__wxRoute"] = "packageCloud/pages/db-permission/db-permission";
     var page = getPage("packageCloud/pages/db-permission/db-permission");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageCloud/pages/db-permission/db-permission />";
     page.json = `{
   "navigationBarTitleText": "\u6743\u9650\u7BA1\u7406"
 }`;
@@ -1612,10 +1746,10 @@ var require_db_permission2 = __commonJS({
         const tabLength = this.data.tabs[currentPermissionIndex].length;
         const that = this;
         wx.getSystemInfo({
-          success(res) {
+          success(res2) {
             that.setData({
-              sliderLeft: (res.windowWidth / tabLength - sliderWidth) / 2,
-              sliderOffset: res.windowWidth / tabLength * that.data.activeTabIndex
+              sliderLeft: (res2.windowWidth / tabLength - sliderWidth) / 2,
+              sliderOffset: res2.windowWidth / tabLength * that.data.activeTabIndex
             });
           }
         });
@@ -1675,9 +1809,9 @@ var require_db_permission2 = __commonJS({
         db.collection(collection).where({
           _openid
         }).get({
-          success: (res) => {
-            console.log("[\u6570\u636E\u5E93] [\u67E5\u8BE2\u8BB0\u5F55] \u6210\u529F: ", res);
-            const resFirstData = res.data[0] || {};
+          success: (res2) => {
+            console.log("[\u6570\u636E\u5E93] [\u67E5\u8BE2\u8BB0\u5F55] \u6210\u529F: ", res2);
+            const resFirstData = res2.data[0] || {};
             if (resFirstData._openid && resFirstData._openid !== _openid) {
               const err = new Error("database permission denied");
               if (showError)
@@ -1685,7 +1819,7 @@ var require_db_permission2 = __commonJS({
               if (failCallback)
                 failCallback.call(this, err);
             } else if (successCallback) {
-              successCallback.call(this, res.data[0]);
+              successCallback.call(this, res2.data[0]);
             }
           },
           fail: (err) => {
@@ -1727,10 +1861,10 @@ var require_db_permission2 = __commonJS({
             if (dbData) {
               db.collection(collection).doc(dbData._id).update({
                 data,
-                success: (res) => {
-                  console.log("[\u6570\u636E\u5E93] [\u66F4\u65B0\u8BB0\u5F55] \u6210\u529F: ", res);
+                success: (res2) => {
+                  console.log("[\u6570\u636E\u5E93] [\u66F4\u65B0\u8BB0\u5F55] \u6210\u529F: ", res2);
                   if (successCallback)
-                    successCallback.call(this, res.stats);
+                    successCallback.call(this, res2.stats);
                 },
                 fail: (err) => {
                   if (showError)
@@ -1750,10 +1884,10 @@ var require_db_permission2 = __commonJS({
             } else if (!openid || openid === this.data.openid) {
               db.collection(collection).add({
                 data,
-                success: (res) => {
-                  console.log("[\u6570\u636E\u5E93] [\u65B0\u589E\u8BB0\u5F55] \u6210\u529F\uFF1A", res);
+                success: (res2) => {
+                  console.log("[\u6570\u636E\u5E93] [\u65B0\u589E\u8BB0\u5F55] \u6210\u529F\uFF1A", res2);
                   if (successCallback)
-                    successCallback.call(this, { _id: res._id });
+                    successCallback.call(this, { _id: res2._id });
                 },
                 fail: (err) => {
                   if (showError)
@@ -1850,8 +1984,8 @@ var require_db_permission2 = __commonJS({
         this.updateOneByOpenId("perm1", "kiki", data, {
           showLoading: true,
           showError: true,
-          success: (res) => {
-            if (res.updated === 0) {
+          success: (res2) => {
+            if (res2.updated === 0) {
               wx.showModal({
                 content: "\u8BBE\u7F6E\u5931\u8D25\uFF1A\u65E0\u6743\u9650\u64CD\u4F5C",
                 showCancel: false
@@ -2133,8 +2267,9 @@ var require_util = __commonJS({
 var require_server_date2 = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/server-date/server-date.js"() {
     require_server_date();
+    window["__wxRoute"] = "packageCloud/pages/server-date/server-date";
     var page = getPage("packageCloud/pages/server-date/server-date");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageCloud/pages/server-date/server-date />";
     page.json = `{
   "navigationBarTitleText": "\u670D\u52A1\u7AEF\u65F6\u95F4"
 }`;
@@ -2196,18 +2331,18 @@ var require_server_date2 = __commonJS({
       insertOrUpdateData(existedData, data) {
         const db = wx.cloud.database();
         if (existedData._id) {
-          db.collection(collection).doc(existedData._id).update({ data }).then((res) => {
+          db.collection(collection).doc(existedData._id).update({ data }).then((res2) => {
             this.setCompletedData(existedData._id);
-            return res;
+            return res2;
           }).catch((err) => {
             this.showError();
             console.error("[\u6570\u636E\u5E93] [\u66F4\u65B0\u8BB0\u5F55] \u5931\u8D25\uFF1A", err);
             this.completeTask();
           });
         } else {
-          db.collection(collection).add({ data }).then((res) => {
-            this.setCompletedData(res._id);
-            return res;
+          db.collection(collection).add({ data }).then((res2) => {
+            this.setCompletedData(res2._id);
+            return res2;
           }).catch((err) => {
             this.showError();
             console.error("[\u6570\u636E\u5E93] [\u65B0\u589E\u8BB0\u5F55] \u5931\u8D25\uFF1A", err);
@@ -2217,18 +2352,18 @@ var require_server_date2 = __commonJS({
       },
       setCompletedData(id) {
         const db = wx.cloud.database();
-        db.collection(collection).doc(id).get().then((res) => {
+        db.collection(collection).doc(id).get().then((res2) => {
           this.setData({
-            delta: Math.abs(res.data.time - this.data.clientDate),
-            serverDate: res.data.time,
+            delta: Math.abs(res2.data.time - this.data.clientDate),
+            serverDate: res2.data.time,
             clientDateFormatted: util.formatDateTime(this.data.clientDate, true),
-            serverDateFormatted: util.formatDateTime(res.data.time, true)
+            serverDateFormatted: util.formatDateTime(res2.data.time, true)
           });
           wx.showToast({
             title: "\u63D2\u5165\u6210\u529F"
           });
           this.completeTask();
-          return res;
+          return res2;
         }).catch((err) => {
           this.showError();
           console.error("[\u6570\u636E\u5E93] [\u67E5\u8BE2\u8BB0\u5F55] \u5931\u8D25\uFF1A", err);
@@ -2245,14 +2380,14 @@ var require_server_date2 = __commonJS({
         });
         db.collection(collection).where({
           _openid: this.data.openid
-        }).get().then((res) => {
+        }).get().then((res2) => {
           this.setData({
             clientDate: new Date()
           });
-          console.log("[\u6570\u636E\u5E93] [\u67E5\u8BE2\u8BB0\u5F55] \u6210\u529F: ", res);
-          const resFirstData = res.data[0] || {};
+          console.log("[\u6570\u636E\u5E93] [\u67E5\u8BE2\u8BB0\u5F55] \u6210\u529F: ", res2);
+          const resFirstData = res2.data[0] || {};
           this.insertOrUpdateData(resFirstData, data);
-          return res;
+          return res2;
         }).catch((err) => {
           this.showError();
           console.error("[\u6570\u636E\u5E93] [\u67E5\u8BE2\u8BB0\u5F55] \u5931\u8D25\uFF1A", err);
@@ -2357,8 +2492,9 @@ var require_scf_database = __commonJS({
 var require_scf_database2 = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/scf-database/scf-database.js"() {
     require_scf_database();
+    window["__wxRoute"] = "packageCloud/pages/scf-database/scf-database";
     var page = getPage("packageCloud/pages/scf-database/scf-database");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageCloud/pages/scf-database/scf-database />";
     page.json = `{
   "navigationBarTitleText": "\u4E91\u51FD\u6570\u64CD\u4F5C\u6570\u636E\u5E93"
 }`;
@@ -2398,12 +2534,12 @@ var require_scf_database2 = __commonJS({
         db.collection("perm4").where({
           _openid: "server"
         }).get({
-          success: (res) => {
-            const resFirstData = res.data && res.data[0] || {};
+          success: (res2) => {
+            const resFirstData = res2.data && res2.data[0] || {};
             this.setData({
               serverDataClient: resFirstData.data
             });
-            console.log("[\u6570\u636E\u5E93] [\u67E5\u8BE2\u8BB0\u5F55] \u6210\u529F: ", res);
+            console.log("[\u6570\u636E\u5E93] [\u67E5\u8BE2\u8BB0\u5F55] \u6210\u529F: ", res2);
           },
           fail: (err) => {
             this.setData({
@@ -2427,9 +2563,9 @@ var require_scf_database2 = __commonJS({
         wx.cloud.callFunction({
           name: "getServerDataDemo",
           data: {},
-          success: (res) => {
-            console.log("[\u4E91\u51FD\u6570] [getServerDataDemo] res: ", res.result);
-            const resFirstData = res.result.data && res.result.data[0] || {};
+          success: (res2) => {
+            console.log("[\u4E91\u51FD\u6570] [getServerDataDemo] res: ", res2.result);
+            const resFirstData = res2.result.data && res2.result.data[0] || {};
             this.setData({
               serverDataCloud: resFirstData.data
             });
@@ -2530,8 +2666,9 @@ var require_scf_storage = __commonJS({
 var require_scf_storage2 = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/scf-storage/scf-storage.js"() {
     require_scf_storage();
+    window["__wxRoute"] = "packageCloud/pages/scf-storage/scf-storage";
     var page = getPage("packageCloud/pages/scf-storage/scf-storage");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageCloud/pages/scf-storage/scf-storage />";
     page.json = `{
   "navigationBarTitleText": "\u4E91\u51FD\u6570\u64CD\u4F5C\u5B58\u50A8"
 }
@@ -2569,12 +2706,12 @@ var require_scf_storage2 = __commonJS({
           data: {
             fileIdList: [fileId]
           },
-          success: (res) => {
-            console.log("[\u4E91\u51FD\u6570] [getTempFileURL] res: ", res.result);
-            if (res.result.length) {
+          success: (res2) => {
+            console.log("[\u4E91\u51FD\u6570] [getTempFileURL] res: ", res2.result);
+            if (res2.result.length) {
               this.setData({
                 fileTempURLDone: true,
-                tempFileURL: res.result[0].tempFileURL
+                tempFileURL: res2.result[0].tempFileURL
               });
             }
           },
@@ -2696,8 +2833,9 @@ var require_scf_openapi = __commonJS({
 var require_scf_openapi2 = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/scf-openapi/scf-openapi.js"() {
     require_scf_openapi();
+    window["__wxRoute"] = "packageCloud/pages/scf-openapi/scf-openapi";
     var page = getPage("packageCloud/pages/scf-openapi/scf-openapi");
-    page.template = "<div>\u6D4B\u8BD5</div>";
+    page.template = "<packageCloud/pages/scf-openapi/scf-openapi />";
     page.json = `{
   "navigationBarTitleText": "\u4E91\u8C03\u7528"
 }`;
@@ -2739,12 +2877,12 @@ var require_scf_openapi2 = __commonJS({
             action: "sendTemplateMessage",
             formId: e.detail.formId
           }
-        }).then((res) => {
+        }).then((res2) => {
           this.setData({
-            sendTemplateMessageResult: res,
+            sendTemplateMessageResult: res2,
             sendTemplateMessageLoading: false
           });
-          console.log("[\u4E91\u8C03\u7528] [\u53D1\u9001\u6A21\u677F\u6D88\u606F] \u6210\u529F: ", res);
+          console.log("[\u4E91\u8C03\u7528] [\u53D1\u9001\u6A21\u677F\u6D88\u606F] \u6210\u529F: ", res2);
         }).catch((err) => {
           this.setData({
             sendTemplateMessageError: true,
@@ -2764,12 +2902,12 @@ var require_scf_openapi2 = __commonJS({
           data: {
             action: "getWXACode"
           }
-        }).then((res) => {
+        }).then((res2) => {
           this.setData({
-            getWXACodeResult: res,
+            getWXACodeResult: res2,
             getWXACodeLoading: false
           });
-          console.log("[\u4E91\u8C03\u7528] [\u83B7\u53D6\u5C0F\u7A0B\u5E8F\u7801]] \u6210\u529F: ", res);
+          console.log("[\u4E91\u8C03\u7528] [\u83B7\u53D6\u5C0F\u7A0B\u5E8F\u7801]] \u6210\u529F: ", res2);
         }).catch((err) => {
           this.setData({
             getWXACodeError: true,
@@ -2788,12 +2926,12 @@ var require_scf_openapi2 = __commonJS({
         db.collection("perm4").where({
           _openid: "server"
         }).get({
-          success: (res) => {
-            const resFirstData = res.data && res.data[0] || {};
+          success: (res2) => {
+            const resFirstData = res2.data && res2.data[0] || {};
             this.setData({
               serverDataClient: resFirstData.data
             });
-            console.log("[\u6570\u636E\u5E93] [\u67E5\u8BE2\u8BB0\u5F55] \u6210\u529F: ", res);
+            console.log("[\u6570\u636E\u5E93] [\u67E5\u8BE2\u8BB0\u5F55] \u6210\u529F: ", res2);
           },
           fail: (err) => {
             this.setData({
@@ -2817,9 +2955,9 @@ var require_scf_openapi2 = __commonJS({
         wx.cloud.callFunction({
           name: "getServerDataDemo",
           data: {},
-          success: (res) => {
-            console.log("[\u4E91\u51FD\u6570] [getServerDataDemo] res: ", res.result);
-            const resFirstData = res.result.data && res.result.data[0] || {};
+          success: (res2) => {
+            console.log("[\u4E91\u51FD\u6570] [getServerDataDemo] res: ", res2.result);
+            const resFirstData = res2.result.data && res2.result.data[0] || {};
             this.setData({
               serverDataCloud: resFirstData.data
             });
@@ -2842,18 +2980,33 @@ var require_scf_openapi2 = __commonJS({
 });
 
 // <stdin>
+require_app();
 require_doc_web_view2();
+require_app();
 require_user_authentication2();
+require_app();
 require_get_wx_context2();
+require_app();
 require_upload_file2();
+require_app();
 require_download_file2();
+require_app();
 require_get_temp_file_url2();
+require_app();
 require_delete_file2();
+require_app();
 require_cloud_file_component2();
+require_app();
 require_crud2();
+require_app();
 require_crud_detail2();
+require_app();
 require_db_permission2();
+require_app();
 require_server_date2();
+require_app();
 require_scf_database2();
+require_app();
 require_scf_storage2();
+require_app();
 require_scf_openapi2();

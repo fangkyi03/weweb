@@ -6,7 +6,7 @@ const f = require('../core/file')
 const jsParse = require('../lib/jsParse')
 const wxmlParse = require('../lib/wxmlParse')
 const wxssParse = require('../lib/wxssParse')
-module.exports = options => {
+module.exports = (options,item) => {
   return {
     name: "weweb",
     setup(build) {
@@ -17,7 +17,7 @@ module.exports = options => {
         const isPage = /page/.test(args.path)
         const isApp = /app.js/.test(args.path)
         const text = jsParse.getText([
-          isApp && jsParse.getApp(options),
+          isApp && jsParse.getApp(item.childrens),
           isPage && jsParse.getPage(options,args.path),
           fileContent
         ])
