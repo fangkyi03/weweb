@@ -73,37 +73,79 @@ function getTagTemplate(item) {
     `
 }
 
-function getTemplateText(children,importText) {
+// 获取wxs文件模板
+function getWXS(wxs) {
+  if (wxs.attribs.src) {
+    return `
+        var ${wxs.attribs.module} = require('${wxs.attribs.src}')
+    `
+  }
+  const data = "`var module = {exports:{}};" + wxs.attribs.src + "`";
+  return `
+    var ${wxs.attribs.module} = eval(${data})
+  `;
+}
+
+function getTemplateText(children) {
     let template = ''
     if (children.length == 0) return ''
-    children.forEach((e)=>{
-        if (e.name == 'import') {
-            importText += `import('${e.attribs.src}')\n`
-        }else if (e.type == 'text') {
-            // template += e.data
-        }else if (e.type == 'tag') {
-            template += getTagTemplate(e)
-        }else if (e.type == 'comment') {
-            console.log('data',e.data)
-            template += '<div>' + e.data + '</div>'
-        }else {
-            console.log(e)
+    for (let item of children) {
+        if (item.type == 'text') {
+            template += item.data
+        }else if (item.type == 'tag' && item.name == 'template') {
+            template += getTagTemplate(item)
+            continue
+        }else if (item.type == 'comment') {
+            template += '<div>' + item.data + '</div>'
         }
-        template += getTemplateText(e.children || [],importText)
-    })
+        template += getTemplateText(item.children || [])
+    }
     return template
 }
 
+function findAllTemplate(children,importText,templates) {
+    for (let item of children ) {
+        if (item.name == 'import' && item.attribs.src) {
+            importText.push(`require('${item.attribs.src}')`)
+        }
+        if (item.type == 'tag') {
+            if (item.name == 'wxs' ) {
+                importText.push(getWXS(item))
+            }else if (item.attribs.name) {
+                templates.push(item)
+            }
+        }
+        findAllTemplate(item.children || [],importText,templates)
+    }
+}
+
+function getVueComponent(name,text) {
+    return `
+     Vue.component('${name}',{template:$template$})
+    `.replace('$template$','`<div>' + text + '</div>`')
+}
 function getTemplate(filePath) {
+    let importText = []
+    let templates = []
     const content = f.readFile(filePath)
-    let importText = ''
     const dom = htmlparser2.parseDocument(content)
-    let template = getTemplateText(dom.children,importText)
-    template = `
-        ${importText}
-        Vue.component({template:$template$})\n
-    `.replace('$template$','`' + template + '`')
-    return template
+    findAllTemplate(dom.children,importText,templates)
+    if (templates.length == 0 ) {
+        const templateText = getTemplateText(dom.children)
+        return `
+            ${importText.join('\n')}
+            ${getVueComponent(f.getPageName(filePath),templateText)}
+        `
+    }else {
+       let templateText = ''
+       templates.forEach((e)=> {
+           templateText += getVueComponent(e.attribs.name,getTemplateText(e.children))
+       })
+       return `
+          ${importText.join('\n')}
+          ${templateText}
+        `
+    }
 }
 
 module.exports = {

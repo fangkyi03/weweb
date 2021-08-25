@@ -33,10 +33,16 @@ function getWXSSPATH(filePATH) {
     }
 }
 
+function getPageName(filePath) {
+    const json = JSON.parse(process.env.config)
+    return filePath.replace(json.targetPath,'').split('.')[0].slice(1)
+}
+
 module.exports = {
     readFile,
     readJSON,
     getAppJSON,
     getAppPATH,
-    getWXSSPATH
+    getWXSSPATH,
+    getPageName
 }
