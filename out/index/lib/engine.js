@@ -34,7 +34,15 @@ function getRouter() {
         mounted() {
           _pageObj[e].view.setData = (data) => {
             Object.keys(data).forEach((e) => {
-              this.$data[e] = data[e];
+              if (e == 'root.cn.[0]') {
+                this.$data['root'].cn[0] = data[e];
+              }else if (e == 'root.uid') {
+                this.$data['root'].uid = data[e];
+              }
+              console.log('asda')
+              this.$forceUpdate();
+              // this.$set(this.$data, e, data[e]);
+              // this.$data[e] = data[e];
             });
           };
           const view = _pageObj[e].view;

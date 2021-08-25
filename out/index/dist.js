@@ -1324,7 +1324,7 @@ var require_vendors = __commonJS({
       });
     }, function(t, n, e) {
       "use strict";
-      t.exports = e(56);
+      t.exports = e(55);
     }, function(t, n, e) {
       "use strict";
       e.d(n, "a", function() {
@@ -1460,8 +1460,8 @@ var require_vendors = __commonJS({
         return c;
       };
     }, , , function(t, n, e) {
-      t.exports = e(53);
-    }, , , , , function(t, n, e) {
+      t.exports = e(52);
+    }, , , function(t, n, e) {
       "use strict";
       e.d(n, "a", function() {
         return a;
@@ -1589,7 +1589,7 @@ var require_vendors = __commonJS({
       function a(t2) {
         return Object(r["a"])(t2) || Object(i["a"])(t2) || Object(o["a"])(t2) || Object(u["a"])();
       }
-    }, , , , , , function(t, n, e) {
+    }, , , , , , , function(t, n, e) {
       "use strict";
       e.d(n, "a", function() {
         return c;
@@ -1626,13 +1626,13 @@ var require_vendors = __commonJS({
         }, c(t2);
       }
     }, , , , function(t, n, e) {
-      var r = e(48), i = e(49), o = e(50), u = e(51);
+      var r = e(47), i = e(48), o = e(49), u = e(50);
       function a(t2) {
         return r(t2) || i(t2) || o(t2) || u();
       }
       t.exports = a, t.exports["default"] = t.exports, t.exports.__esModule = true;
     }, function(t, n, e) {
-      var r = e(32);
+      var r = e(30);
       function i(t2) {
         if (Array.isArray(t2))
           return r(t2);
@@ -1645,7 +1645,7 @@ var require_vendors = __commonJS({
       }
       t.exports = e, t.exports["default"] = t.exports, t.exports.__esModule = true;
     }, function(t, n, e) {
-      var r = e(32);
+      var r = e(30);
       function i(t2, n2) {
         if (t2) {
           if (typeof t2 === "string")
@@ -1756,7 +1756,7 @@ var require_vendors = __commonJS({
       var r = function() {
         return this;
       }() || Function("return this")(), i = r.regeneratorRuntime && Object.getOwnPropertyNames(r).indexOf("regeneratorRuntime") >= 0, o = i && r.regeneratorRuntime;
-      if (r.regeneratorRuntime = void 0, t.exports = e(54), i)
+      if (r.regeneratorRuntime = void 0, t.exports = e(53), i)
         r.regeneratorRuntime = o;
       else
         try {
@@ -2030,7 +2030,7 @@ var require_vendors = __commonJS({
         }(function() {
           return this;
         }() || Function("return this")());
-      }).call(this, e(34)(t));
+      }).call(this, e(32)(t));
     }, , function(t, n, e) {
       "use strict";
       var r = e(10), i = e(23), o = 60103, u = 60106;
@@ -2253,7 +2253,7 @@ var require_taro = __commonJS({
   "taro/dist/taro.js"() {
     (wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([[1], { 0: function(e, t, n) {
       "use strict";
-      var r = n(47), i = n(10);
+      var r = n(46), i = n(10);
       function o(e2) {
         return typeof e2 === "string";
       }
@@ -2573,7 +2573,7 @@ var require_taro = __commonJS({
         }), n.d(t, "window", function() {
           return mi;
         });
-        var u = n(31), s = n(26), l = n.n(s), d = n(35), f = n(36), h = n(11), p = n(9), v = n(5), b = n(43), m = n(37), g = n(12), y = n(7), O = n(8), j = n(13), w = n(3), k = n(4), T = n(6), E = n(1), _ = n(0);
+        var u = n(29), s = n(26), l = n.n(s), d = n(33), f = n(34), h = n(11), p = n(9), v = n(5), b = n(42), m = n(35), g = n(12), y = n(7), O = n(8), j = n(13), w = n(3), k = n(4), T = n(6), E = n(1), _ = n(0);
         function C(e3, t2, n2, r2) {
           var i2, o2 = arguments.length, a2 = o2 < 3 ? t2 : r2 === null ? r2 = Object.getOwnPropertyDescriptor(t2, n2) : r2;
           if ((typeof Reflect === "undefined" ? "undefined" : Object(T["a"])(Reflect)) === "object" && typeof Reflect.decorate === "function")
@@ -5190,21 +5190,13 @@ var require_taro = __commonJS({
           } else
             a2();
         };
-      }.call(this, n(52), n(33), n(2)["document"], n(2)["window"], n(2)["requestAnimationFrame"], n(2)["cancelAnimationFrame"]);
-    }, 29: function(e, t, n) {
-      "use strict";
-      n.d(t, "a", function() {
-        return i;
-      }), n.d(t, "b", function() {
-        return r;
-      });
-      var r = "view", i = "text";
-    }, 38: function(e, t, n) {
-      var r = n(2), i = r.container, o = r.SERVICE_IDENTIFIER, a = n(55).default, c = i.get(o.Hooks);
+      }.call(this, n(51), n(31), n(2)["document"], n(2)["window"], n(2)["requestAnimationFrame"], n(2)["cancelAnimationFrame"]);
+    }, 36: function(e, t, n) {
+      var r = n(2), i = r.container, o = r.SERVICE_IDENTIFIER, a = n(54).default, c = i.get(o.Hooks);
       typeof c.initNativeApi === "function" && c.initNativeApi(a), e.exports = a, e.exports.default = e.exports;
-    }, 40: function(e, t, n) {
+    }, 38: function(e, t, n) {
       "use strict";
-      var r = n(3), i = n(4), o = n(41), a = n.n(o), c = n(25), u = n(2), s = n(0);
+      var r = n(3), i = n(4), o = n(39), a = n.n(o), c = n(25), u = n(2), s = n(0);
       function l(e2) {
         return e2[0] === "o" && e2[1] === "n";
       }
@@ -5341,7 +5333,7 @@ var require_taro = __commonJS({
       }
       var S = { render: w, unstable_batchedUpdates: k, unmountComponentAtNode: T, findDOMNode: E, createPortal: C };
       t["a"] = S;
-    }, 46: function(e, t, n) {
+    }, 45: function(e, t, n) {
       "use strict";
       var r = n(0), i = new Set(["authPrivateMessage", "disableAlertBeforeUnload", "enableAlertBeforeUnload", "getBackgroundFetchData", "getGroupEnterInfo", "getShareInfo", "getWeRunData", "join1v1Chat", "openVideoEditor", "saveFileToDisk", "scanItem", "setEnable1v1Chat", "setWindowSize", "sendBizRedPacket", "startFacialRecognitionVerify"]);
       function o(e2) {
@@ -5351,10 +5343,10 @@ var require_taro = __commonJS({
       }
       var a = { Progress: { "border-radius": "0", "font-size": "16", duration: "30", bindActiveEnd: "" }, RichText: { space: "" }, Text: { "user-select": "false" }, Map: { polygons: "[]", subkey: "", rotate: "0", skew: "0", "enable-3D": "false", "show-compass": "false", "show-scale": "false", "enable-overlooking": "false", "enable-zoom": "true", "enable-scroll": "true", "enable-rotate": "false", "enable-satellite": "false", "enable-traffic": "false", setting: "[]", bindLabelTap: "", bindRegionChange: "", bindPoiTap: "" }, Button: { lang: "en", "session-from": "", "send-message-title": "", "send-message-path": "", "send-message-img": "", "app-parameter": "", "show-message-card": "false", "business-id": "", bindGetUserInfo: "", bindContact: "", bindGetPhoneNumber: "", bindError: "", bindOpenSetting: "", bindLaunchApp: "" }, Form: { "report-submit-timeout": "0" }, Input: { "always-embed": "false", "adjust-position": "true", "hold-keyboard": "false", bindKeyboardHeightChange: "" }, Picker: { "header-text": "" }, PickerView: { bindPickStart: "", bindPickEnd: "" }, Slider: { color: Object(r["singleQuote"])("#e9e9e9"), "selected-color": Object(r["singleQuote"])("#1aad19") }, Textarea: { "show-confirm-bar": "true", "adjust-position": "true", "hold-keyboard": "false", "disable-default-padding": "false", "confirm-type": Object(r["singleQuote"])("return"), "confirm-hold": "false", bindKeyboardHeightChange: "" }, ScrollView: { "enable-flex": "false", "scroll-anchoring": "false", "refresher-enabled": "false", "refresher-threshold": "45", "refresher-default-style": Object(r["singleQuote"])("black"), "refresher-background": Object(r["singleQuote"])("#FFF"), "refresher-triggered": "false", enhanced: "false", bounces: "true", "show-scrollbar": "true", "paging-enabled": "false", "fast-deceleration": "false", bindDragStart: "", bindDragging: "", bindDragEnd: "", bindRefresherPulling: "", bindRefresherRefresh: "", bindRefresherRestore: "", bindRefresherAbort: "" }, Swiper: { "snap-to-edge": "false", "easing-function": Object(r["singleQuote"])("default") }, SwiperItem: { "skip-hidden-item-layout": "false" }, Navigator: { target: Object(r["singleQuote"])("self"), "app-id": "", path: "", "extra-data": "", version: Object(r["singleQuote"])("version") }, Camera: { mode: Object(r["singleQuote"])("normal"), resolution: Object(r["singleQuote"])("medium"), "frame-size": Object(r["singleQuote"])("medium"), bindInitDone: "", bindScanCode: "" }, Image: { webp: "false", "show-menu-by-longpress": "false" }, LivePlayer: { mode: Object(r["singleQuote"])("live"), "sound-mode": Object(r["singleQuote"])("speaker"), "auto-pause-if-navigate": "true", "auto-pause-if-open-native": "true", "picture-in-picture-mode": "[]", bindstatechange: "", bindfullscreenchange: "", bindnetstatus: "", bindAudioVolumeNotify: "", bindEnterPictureInPicture: "", bindLeavePictureInPicture: "" }, Video: { title: "", "play-btn-position": Object(r["singleQuote"])("bottom"), "enable-play-gesture": "false", "auto-pause-if-navigate": "true", "auto-pause-if-open-native": "true", "vslide-gesture": "false", "vslide-gesture-in-fullscreen": "true", "ad-unit-id": "", "poster-for-crawler": "", "show-casting-button": "false", "picture-in-picture-mode": "[]", "enable-auto-rotation": "false", "show-screen-lock-button": "false", "show-snapshot-button": "false", "show-background-playback-button": "false", "background-poster": "", bindProgress: "", bindLoadedMetadata: "", bindControlsToggle: "", bindEnterPictureInPicture: "", bindLeavePictureInPicture: "", bindSeekComplete: "", bindAdLoad: "", bindAdError: "", bindAdClose: "", bindAdPlay: "" }, Canvas: { type: "" }, Ad: { "ad-type": Object(r["singleQuote"])("banner"), "ad-theme": Object(r["singleQuote"])("white") }, CoverView: { "marker-id": "", slot: "" }, Editor: { "read-only": "false", placeholder: "", "show-img-size": "false", "show-img-toolbar": "false", "show-img-resize": "false", focus: "false", bindReady: "", bindFocus: "", bindBlur: "", bindInput: "", bindStatusChange: "", name: "" }, MatchMedia: { "min-width": "", "max-width": "", width: "", "min-height": "", "max-height": "", height: "", orientation: "" }, FunctionalPageNavigator: { version: Object(r["singleQuote"])("release"), name: "", args: "", bindSuccess: "", bindFail: "", bindCancel: "" }, LivePusher: { url: "", mode: Object(r["singleQuote"])("RTC"), autopush: "false", muted: "false", "enable-camera": "true", "auto-focus": "true", orientation: Object(r["singleQuote"])("vertical"), beauty: "0", whiteness: "0", aspect: Object(r["singleQuote"])("9:16"), "min-bitrate": "200", "max-bitrate": "1000", "audio-quality": Object(r["singleQuote"])("high"), "waiting-image": "", "waiting-image-hash": "", zoom: "false", "device-position": Object(r["singleQuote"])("front"), "background-mute": "false", mirror: "false", "remote-mirror": "false", "local-mirror": "false", "audio-reverb-type": "0", "enable-mic": "true", "enable-agc": "false", "enable-ans": "false", "audio-volume-type": Object(r["singleQuote"])("voicecall"), "video-width": "360", "video-height": "640", "beauty-style": Object(r["singleQuote"])("smooth"), filter: Object(r["singleQuote"])("standard"), animation: "", bindStateChange: "", bindNetStatus: "", bindBgmStart: "", bindBgmProgress: "", bindBgmComplete: "", bindAudioVolumeNotify: "" }, OfficialAccount: { bindLoad: "", bindError: "" }, OpenData: { type: "", "open-gid": "", lang: Object(r["singleQuote"])("en"), "default-text": "", "default-avatar": "", bindError: "" }, NavigationBar: { title: "", loading: "false", "front-color": "", "background-color": "", "color-animation-duration": "0", "color-animation-timing-func": Object(r["singleQuote"])("linear") }, PageMeta: { "background-text-style": "", "background-color": "", "background-color-top": "", "background-color-bottom": "", "scroll-top": Object(r["singleQuote"])(""), "scroll-duration": "300", "page-style": Object(r["singleQuote"])(""), "root-font-size": Object(r["singleQuote"])(""), bindResize: "", bindScroll: "", bindScrollDone: "" }, VoipRoom: { openid: "", mode: Object(r["singleQuote"])("camera"), "device-position": Object(r["singleQuote"])("front"), bindError: "" }, AdCustom: { "unit-id": "", "ad-intervals": "", bindLoad: "", bindError: "" }, PageContainer: { show: "false", duration: "300", "z-index": "100", overlay: "true", position: Object(r["singleQuote"])("bottom"), round: "false", "close-on-slideDown": "false", "overlay-style": "", "custom-style": "", bindBeforeEnter: "", bindEnter: "", bindAfterEnter: "", bindBeforeLeave: "", bindLeave: "", bindAfterLeave: "", bindClickOverlay: "" }, KeyboardAccessory: {} }, c = { initNativeApi: o };
       Object(r["mergeReconciler"])(c), Object(r["mergeInternalComponents"])(a);
-    }, 55: function(e, t, n) {
+    }, 54: function(e, t, n) {
       "use strict";
       n.r(t), function(e2, r) {
-        var i = n(10), o = n.n(i), a = n(39), c = n.n(a), u = n(27), s = n.n(u), l = n(28), d = n.n(l), f = n(24), h = n.n(f), p = n(2);
+        var i = n(10), o = n.n(i), a = n(37), c = n.n(a), u = n(27), s = n.n(u), l = n(28), d = n.n(l), f = n(24), h = n.n(f), p = n(2);
         typeof Object.assign !== "function" && (Object.assign = function(e3) {
           if (e3 == null)
             throw new TypeError("Cannot convert undefined or null to object");
@@ -5483,7 +5475,9 @@ var require_taro = __commonJS({
         }
         var C = { Behavior: k, getEnv: m, ENV_TYPE: v, Link: y, interceptors: w, Current: p["Current"], getCurrentInstance: p["getCurrentInstance"], options: p["options"], nextTick: p["nextTick"], eventCenter: p["eventCenter"], Events: p["Events"], useDidShow: p["useDidShow"], useDidHide: p["useDidHide"], usePullDownRefresh: p["usePullDownRefresh"], useReachBottom: p["useReachBottom"], usePageScroll: p["usePageScroll"], useResize: p["useResize"], useShareAppMessage: p["useShareAppMessage"], useTabItemTap: p["useTabItemTap"], useTitleClick: p["useTitleClick"], useOptionMenuClick: p["useOptionMenuClick"], usePullIntercept: p["usePullIntercept"], useShareTimeline: p["useShareTimeline"], useAddToFavorites: p["useAddToFavorites"], useReady: p["useReady"], useRouter: p["useRouter"], getInitPxTransform: E };
         C.initPxTransform = E(C), C.preload = T(p["Current"]), C.pxTransform = _(C), t["default"] = C;
-      }.call(this, n(33), n(2)["window"]);
+      }.call(this, n(31), n(2)["window"]);
+    }, 60: function(e, t, n) {
+      "use strict";
     }, 64: function(e, t, n) {
       "use strict";
       n.r(t);
@@ -5509,7 +5503,7 @@ var require_app = __commonJS({
       e.exports = t, e.exports["default"] = e.exports, e.exports.__esModule = true;
     }, 25: function(e, n, t) {
       "use strict";
-      e.exports = t(59);
+      e.exports = t(58);
     }, 27: function(e, n) {
       function t(e2, n2) {
         if (!(e2 instanceof n2))
@@ -5527,7 +5521,7 @@ var require_app = __commonJS({
         return n2 && t(e2.prototype, n2), r2 && t(e2, r2), e2;
       }
       e.exports = r, e.exports["default"] = e.exports, e.exports.__esModule = true;
-    }, 39: function(e, n, t) {
+    }, 37: function(e, n, t) {
       var r = t(24);
       function l(e2, n2) {
         var t2 = Object.keys(e2);
@@ -5551,11 +5545,11 @@ var require_app = __commonJS({
         return e2;
       }
       e.exports = a, e.exports["default"] = e.exports, e.exports.__esModule = true;
-    }, 41: function(e, n, t) {
+    }, 39: function(e, n, t) {
       "use strict";
-      e.exports = t(58);
+      e.exports = t(57);
+    }, 56: function(e, n, t) {
     }, 57: function(e, n, t) {
-    }, 58: function(e, n, t) {
       (function(e2) {
         var n2 = t(10);
         e2.exports = function(r) {
@@ -9077,8 +9071,8 @@ var require_app = __commonJS({
             return n3.context === null ? n3.context = t2 : n3.pendingContext = t2, n3 = Et(a2, u2), n3.payload = { element: e3 }, r2 = r2 === void 0 ? null : r2, r2 !== null && (n3.callback = r2), xt(l2, n3), Va(l2, u2, a2), u2;
           }, l;
         };
-      }).call(this, t(34)(e));
-    }, 59: function(e, n, t) {
+      }).call(this, t(32)(e));
+    }, 58: function(e, n, t) {
       "use strict";
       (function(e2) {
         var r, l, a, u, i = t(10);
@@ -9315,8 +9309,8 @@ var require_app = __commonJS({
     }, 63: function(e, n, t) {
       "use strict";
       t.r(n);
-      t(46);
-      var r = t(2), l = t(38), a = t(3), u = t(4), i = t(7), o = t(8), s = t(14), c = (t(57), function(e2) {
+      t(45);
+      var r = t(2), l = t(36), a = t(3), u = t(4), i = t(7), o = t(8), s = t(14), c = (t(56), function(e2) {
         Object(i["a"])(t2, e2);
         var n2 = Object(o["a"])(t2);
         function t2() {
@@ -9329,7 +9323,7 @@ var require_app = __commonJS({
         } }, { key: "render", value: function() {
           return this.props.children;
         } }]), t2;
-      }(s["Component"])), f = c, d = t(40), p = { pages: ["pages/index/index"], window: { backgroundTextStyle: "light", navigationBarBackgroundColor: "#fff", navigationBarTitleText: "WeChat", navigationBarTextStyle: "black" } };
+      }(s["Component"])), f = c, d = t(38), p = { pages: ["pages/index/index"], window: { backgroundTextStyle: "light", navigationBarBackgroundColor: "#fff", navigationBarTitleText: "WeChat", navigationBarTextStyle: "black" } };
       r["window"].__taroAppConfig = p;
       App(Object(r["createReactApp"])(f, s, d["a"], p));
       Object(l["initPxTransform"])({ designWidth: 750, deviceRatio: { 640: 1.17, 750: 1, 828: 0.905 } });
@@ -9390,187 +9384,1282 @@ var require_base = __commonJS({
     var xs = require_utils();
     Vue.component("taro_tmpl", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
+        <div v-for="item in root.cn" >
+            
     
         <tmpl_0_container :data="{i:item,l:''}" >
             
   
         </tmpl_0_container>
     
+        </div>
+    
 </div>`
     });
     Vue.component("tmpl_0_catch-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_0_static-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_0_pure-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_0_view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_0_icon", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+</div>`
+    });
+    Vue.component("tmpl_0_progress", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+</div>`
+    });
+    Vue.component("tmpl_0_rich-text", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
   
 </div>`
     });
     Vue.component("tmpl_0_static-text", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_0_text", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
 </div>`
     });
-    Vue.component("tmpl_0_scroll-view", {
+    Vue.component("tmpl_0_button", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
 </div>`
     });
-    Vue.component("tmpl_0_static-image", {
+    Vue.component("{{i.name}}", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
-  
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
-  
-</div>`
+        </div>
+    
+  </div>`
     });
-    Vue.component("tmpl_0_image", {
+    Vue.component("tmpl_0_checkbox", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
 </div>`
     });
-    Vue.component("tmpl_0_#text", {
+    Vue.component("{{i.name}}", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
-  {{i.v}}
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  </div>`
+    });
+    Vue.component("tmpl_0_checkbox-group", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
 </div>`
     });
-    Vue.component("tmpl_0_container", {
+    Vue.component("{{i.name}}", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  </div>`
+    });
+    Vue.component("tmpl_0_form", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("{{i.name}}", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  </div>`
+    });
+    Vue.component("tmpl_0_input", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+        <{{xs.c(i, 'tmpl_0_')}} :data="{i:i}" >
+            
+
+        </{{xs.c(i, 'tmpl_0_')}}>
+    
+
+
+        <template name="tmpl_0_input_focus" >
+            
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_input_blur" >
+            
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_picker" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_picker-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_picker-view-column" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_radio" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_radio-group" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_slider" >
+            
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_switch" >
+            
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_cover-image" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_textarea" >
+            
+  
+        <{{xs.c(i, 'tmpl_0_')}} :data="{i:i,cid:cid}" >
+            
+
+        </{{xs.c(i, 'tmpl_0_')}}>
+    
+
+
+        <template name="tmpl_0_textarea_focus" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_textarea_blur" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_movable-area" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_movable-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_scroll-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_swiper" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_swiper-item" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_navigator" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_audio" >
+            
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_camera" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_static-image" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_image" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_live-player" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_video" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_canvas" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_ad" >
+            
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_web-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_0_map" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_editor" >
+            
+  
+        <{{xs.c(i, 'tmpl_0_')}} :data="{i:i,cid:cid}" >
+            
+
+        </{{xs.c(i, 'tmpl_0_')}}>
+    
+
+
+        <template name="tmpl_0_editor_focus" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_editor_blur" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_match-media" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_functional-page-navigator" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_live-pusher" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_official-account" >
+            
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_open-data" >
+            
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_navigation-bar" >
+            
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_page-meta" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_voip-room" >
+            
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_ad-custom" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_page-container" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_#text" :data="{i:i}" >
+            
+  
+        <div >
+            {{i.v}}
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_0_container" >
+            
   
         <{{xs.a(0, i.nn, l)}} :data="{i:i,cid:0,l:xs.f(l,i.nn)}" >
             
@@ -9583,11 +10672,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -9599,11 +10692,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -9615,11 +10712,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -9631,11 +10732,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -9647,11 +10752,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -9663,11 +10772,75 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_form" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -9679,11 +10852,119 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_swiper" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_swiper-item" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_1_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -9705,11 +10986,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -9721,11 +11006,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -9737,11 +11026,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -9753,11 +11046,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -9769,11 +11066,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -9785,11 +11086,75 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_form" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -9801,11 +11166,119 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_swiper" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_swiper-item" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_2_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -9827,11 +11300,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -9843,11 +11320,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -9859,11 +11340,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -9875,11 +11360,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -9891,11 +11380,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -9907,11 +11400,75 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_form" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -9923,11 +11480,119 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_swiper" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_swiper-item" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_3_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -9949,11 +11614,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -9965,11 +11634,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -9981,11 +11654,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -9997,11 +11674,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10013,11 +11694,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10029,11 +11714,119 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_4_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10055,11 +11848,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10071,11 +11868,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10087,11 +11888,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10103,11 +11908,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10119,11 +11928,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10135,11 +11948,119 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_5_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10161,11 +12082,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10177,11 +12102,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10193,11 +12122,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10209,11 +12142,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10225,11 +12162,99 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_6_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10251,11 +12276,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10267,11 +12296,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10283,11 +12316,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10299,11 +12336,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10315,11 +12356,99 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_7_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10341,11 +12470,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10357,11 +12490,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10373,11 +12510,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10389,11 +12530,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10405,13 +12550,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_8_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_8_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -10431,11 +12624,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10447,11 +12644,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10463,11 +12664,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10479,11 +12684,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10495,13 +12704,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_9_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -10521,11 +12778,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10537,11 +12798,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10553,11 +12818,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10569,11 +12838,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10585,13 +12858,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_10_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -10611,11 +12932,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10627,11 +12952,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10643,11 +12972,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10659,11 +12992,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10675,13 +13012,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_11_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -10701,11 +13086,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10717,11 +13106,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10733,11 +13126,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10749,11 +13146,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10765,13 +13166,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_12_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -10791,11 +13240,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10807,11 +13260,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10823,11 +13280,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10839,11 +13300,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10855,13 +13320,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_13_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -10881,11 +13394,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10897,11 +13414,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10913,11 +13434,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10929,11 +13454,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -10945,13 +13474,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_14_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -10970,15 +13547,11198 @@ var require_base = __commonJS({
         <template name="tmpl_15_container" >
             
   
+        <div v-if="{i.nn === '#text'}" >
+            
     
         <tmpl_0_#text :data="{i:i}" >
             
   
         </tmpl_0_#text>
     
-  
+        </div>
     
   
+        <div v-else="" >
+            
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    </div>`
+    });
+    Vue.component("tmpl_0_input_focus", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+</div>`
+    });
+    Vue.component("{{i.name}}", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div></div>`
+    });
+    Vue.component("tmpl_0_input_blur", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+</div>`
+    });
+    Vue.component("{{i.name}}", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div></div>`
+    });
+    Vue.component("tmpl_0_label", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("{{i.name}}", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  </div>`
+    });
+    Vue.component("tmpl_0_picker", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("{{i.name}}", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  </div>`
+    });
+    Vue.component("tmpl_0_picker-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("{{i.name}}", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  </div>`
+    });
+    Vue.component("tmpl_0_picker-view-column", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("{{i.name}}", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  </div>`
+    });
+    Vue.component("tmpl_0_radio", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("{{i.name}}", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  </div>`
+    });
+    Vue.component("tmpl_0_radio-group", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("{{i.name}}", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  </div>`
+    });
+    Vue.component("tmpl_0_slider", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+</div>`
+    });
+    Vue.component("{{i.name}}", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div></div>`
+    });
+    Vue.component("tmpl_0_switch", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+</div>`
+    });
+    Vue.component("{{i.name}}", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div></div>`
+    });
+    Vue.component("tmpl_0_cover-image", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_0_textarea", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+        <{{xs.c(i, 'tmpl_0_')}} :data="{i:i,cid:cid}" >
+            
+
+        </{{xs.c(i, 'tmpl_0_')}}>
+    
+
+
+        <template name="tmpl_0_textarea_focus" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_textarea_blur" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_movable-area" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_movable-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_scroll-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_swiper" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_swiper-item" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_navigator" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_audio" >
+            
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_camera" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_static-image" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_image" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_live-player" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_video" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_canvas" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_ad" >
+            
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_web-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_0_map" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_editor" >
+            
+  
+        <{{xs.c(i, 'tmpl_0_')}} :data="{i:i,cid:cid}" >
+            
+
+        </{{xs.c(i, 'tmpl_0_')}}>
+    
+
+
+        <template name="tmpl_0_editor_focus" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_editor_blur" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_match-media" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_functional-page-navigator" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_live-pusher" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_official-account" >
+            
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_open-data" >
+            
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_navigation-bar" >
+            
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_page-meta" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_voip-room" >
+            
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_ad-custom" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_page-container" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_#text" :data="{i:i}" >
+            
+  
+        <div >
+            {{i.v}}
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_0_container" >
+            
+  
+        <{{xs.a(0, i.nn, l)}} :data="{i:i,cid:0,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(0, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_1_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_static-text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_form" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_scroll-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_swiper" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_swiper-item" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_1_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_container" >
+            
+  
+        <{{xs.a(1, i.nn, l)}} :data="{i:i,cid:1,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(1, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_2_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_static-text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_form" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_scroll-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_swiper" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_swiper-item" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_2_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_container" >
+            
+  
+        <{{xs.a(2, i.nn, l)}} :data="{i:i,cid:2,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(2, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_3_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_static-text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_form" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_scroll-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_swiper" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_swiper-item" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_3_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_container" >
+            
+  
+        <{{xs.a(3, i.nn, l)}} :data="{i:i,cid:3,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(3, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_4_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_static-text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_4_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_container" >
+            
+  
+        <{{xs.a(4, i.nn, l)}} :data="{i:i,cid:4,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(4, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_5_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_static-text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_5_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_container" >
+            
+  
+        <{{xs.a(5, i.nn, l)}} :data="{i:i,cid:5,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(5, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_6_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_6_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_container" >
+            
+  
+        <{{xs.a(6, i.nn, l)}} :data="{i:i,cid:6,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(6, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_7_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_7_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_container" >
+            
+  
+        <{{xs.a(7, i.nn, l)}} :data="{i:i,cid:7,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(7, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_8_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_8_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_8_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_8_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_8_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_8_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_8_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_8_container" >
+            
+  
+        <{{xs.a(8, i.nn, l)}} :data="{i:i,cid:8,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(8, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_9_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_9_container" >
+            
+  
+        <{{xs.a(9, i.nn, l)}} :data="{i:i,cid:9,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(9, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_10_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_10_container" >
+            
+  
+        <{{xs.a(10, i.nn, l)}} :data="{i:i,cid:10,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(10, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_11_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_11_container" >
+            
+  
+        <{{xs.a(11, i.nn, l)}} :data="{i:i,cid:11,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(11, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_12_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_12_container" >
+            
+  
+        <{{xs.a(12, i.nn, l)}} :data="{i:i,cid:12,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(12, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_13_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_13_container" >
+            
+  
+        <{{xs.a(13, i.nn, l)}} :data="{i:i,cid:13,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(13, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_14_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_14_container" >
+            
+  
+        <{{xs.a(14, i.nn, l)}} :data="{i:i,cid:14,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(14, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_15_container" >
+            
+  
+        <div v-if="{i.nn === '#text'}" >
+            
+    
+        <tmpl_0_#text :data="{i:i}" >
+            
+  
+        </tmpl_0_#text>
+    
+        </div>
+    
+  
+        <div v-else="" >
+            
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    </div>`
+    });
+    Vue.component("tmpl_0_textarea_focus", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("{{i.name}}", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  </div>`
+    });
+    Vue.component("tmpl_0_textarea_blur", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("{{i.name}}", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  </div>`
+    });
+    Vue.component("tmpl_0_cover-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_0_movable-area", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_0_movable-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_0_scroll-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_0_swiper", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_0_swiper-item", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_0_navigator", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_0_audio", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+</div>`
+    });
+    Vue.component("{{i.name}}", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div></div>`
+    });
+    Vue.component("tmpl_0_camera", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_0_static-image", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_0_image", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_0_live-player", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_0_video", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_0_canvas", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_0_ad", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+</div>`
+    });
+    Vue.component("tmpl_0_web-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_0_block", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+</div>`
+    });
+    Vue.component("tmpl_0_map", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_0_slot", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_0_slot-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_0_editor", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+        <{{xs.c(i, 'tmpl_0_')}} :data="{i:i,cid:cid}" >
+            
+
+        </{{xs.c(i, 'tmpl_0_')}}>
+    
+
+
+        <template name="tmpl_0_editor_focus" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_editor_blur" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_match-media" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_functional-page-navigator" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_live-pusher" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_official-account" >
+            
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_open-data" >
+            
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_navigation-bar" >
+            
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_page-meta" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_voip-room" >
+            
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_ad-custom" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_page-container" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_0_#text" :data="{i:i}" >
+            
+  
+        <div >
+            {{i.v}}
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_0_container" >
+            
+  
+        <{{xs.a(0, i.nn, l)}} :data="{i:i,cid:0,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(0, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_1_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_static-text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_form" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_scroll-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_swiper" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_swiper-item" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_1_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_container" >
+            
+  
+        <{{xs.a(1, i.nn, l)}} :data="{i:i,cid:1,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(1, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_2_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_static-text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_form" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_scroll-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_swiper" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_swiper-item" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_2_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_container" >
+            
+  
+        <{{xs.a(2, i.nn, l)}} :data="{i:i,cid:2,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(2, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_3_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_static-text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_form" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_scroll-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_swiper" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_swiper-item" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_3_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_container" >
+            
+  
+        <{{xs.a(3, i.nn, l)}} :data="{i:i,cid:3,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(3, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_4_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_static-text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_4_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_container" >
+            
+  
+        <{{xs.a(4, i.nn, l)}} :data="{i:i,cid:4,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(4, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_5_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_static-text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_5_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_container" >
+            
+  
+        <{{xs.a(5, i.nn, l)}} :data="{i:i,cid:5,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(5, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_6_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_6_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_container" >
+            
+  
+        <{{xs.a(6, i.nn, l)}} :data="{i:i,cid:6,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(6, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_7_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_7_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_container" >
+            
+  
+        <{{xs.a(7, i.nn, l)}} :data="{i:i,cid:7,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(7, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_8_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_8_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_8_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_8_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_8_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_8_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_8_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_8_container" >
+            
+  
+        <{{xs.a(8, i.nn, l)}} :data="{i:i,cid:8,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(8, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_9_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_9_container" >
+            
+  
+        <{{xs.a(9, i.nn, l)}} :data="{i:i,cid:9,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(9, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_10_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_10_container" >
+            
+  
+        <{{xs.a(10, i.nn, l)}} :data="{i:i,cid:10,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(10, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_11_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_11_container" >
+            
+  
+        <{{xs.a(11, i.nn, l)}} :data="{i:i,cid:11,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(11, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_12_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_12_container" >
+            
+  
+        <{{xs.a(12, i.nn, l)}} :data="{i:i,cid:12,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(12, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_13_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_13_container" >
+            
+  
+        <{{xs.a(13, i.nn, l)}} :data="{i:i,cid:13,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(13, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_14_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_14_container" >
+            
+  
+        <{{xs.a(14, i.nn, l)}} :data="{i:i,cid:14,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(14, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_15_container" >
+            
+  
+        <div v-if="{i.nn === '#text'}" >
+            
+    
+        <tmpl_0_#text :data="{i:i}" >
+            
+  
+        </tmpl_0_#text>
+    
+        </div>
+    
+  
+        <div v-else="" >
+            
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    
+        </template>
+    </div>`
+    });
+    Vue.component("tmpl_0_editor_focus", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("{{i.name}}", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  </div>`
+    });
+    Vue.component("tmpl_0_editor_blur", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("{{i.name}}", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  </div>`
+    });
+    Vue.component("tmpl_0_match-media", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_0_functional-page-navigator", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("{{i.name}}", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  </div>`
+    });
+    Vue.component("tmpl_0_live-pusher", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_0_official-account", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+</div>`
+    });
+    Vue.component("tmpl_0_open-data", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+</div>`
+    });
+    Vue.component("tmpl_0_navigation-bar", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+</div>`
+    });
+    Vue.component("tmpl_0_page-meta", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_0_voip-room", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+</div>`
+    });
+    Vue.component("tmpl_0_ad-custom", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_0_page-container", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_0_#text", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+        <div >
+            {{i.v}}
+        </div>
+    
+</div>`
+    });
+    Vue.component("tmpl_0_container", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+        <{{xs.a(0, i.nn, l)}} :data="{i:i,cid:0,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(0, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_1_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_static-text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_form" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_scroll-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_swiper" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_swiper-item" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_1_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_1_container" >
+            
+  
+        <{{xs.a(1, i.nn, l)}} :data="{i:i,cid:1,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(1, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_2_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_static-text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_form" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_scroll-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_swiper" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_swiper-item" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_2_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_container" >
+            
+  
+        <{{xs.a(2, i.nn, l)}} :data="{i:i,cid:2,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(2, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_3_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_static-text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_form" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_scroll-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_swiper" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_swiper-item" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_3_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_container" >
+            
+  
+        <{{xs.a(3, i.nn, l)}} :data="{i:i,cid:3,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(3, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_4_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_static-text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_4_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_container" >
+            
+  
+        <{{xs.a(4, i.nn, l)}} :data="{i:i,cid:4,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(4, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_5_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_static-text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_5_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_container" >
+            
+  
+        <{{xs.a(5, i.nn, l)}} :data="{i:i,cid:5,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(5, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_6_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_6_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_container" >
+            
+  
+        <{{xs.a(6, i.nn, l)}} :data="{i:i,cid:6,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(6, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_7_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_7_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_container" >
+            
+  
+        <{{xs.a(7, i.nn, l)}} :data="{i:i,cid:7,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(7, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_8_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_8_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_8_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_8_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_8_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_8_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_8_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_8_container" >
+            
+  
+        <{{xs.a(8, i.nn, l)}} :data="{i:i,cid:8,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(8, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_9_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_9_container" >
+            
+  
+        <{{xs.a(9, i.nn, l)}} :data="{i:i,cid:9,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(9, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_10_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_10_container" >
+            
+  
+        <{{xs.a(10, i.nn, l)}} :data="{i:i,cid:10,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(10, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_11_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_11_container" >
+            
+  
+        <{{xs.a(11, i.nn, l)}} :data="{i:i,cid:11,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(11, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_12_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_12_container" >
+            
+  
+        <{{xs.a(12, i.nn, l)}} :data="{i:i,cid:12,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(12, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_13_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_13_container" >
+            
+  
+        <{{xs.a(13, i.nn, l)}} :data="{i:i,cid:13,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(13, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_14_catch-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_static-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_pure-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_text" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_14_container" >
+            
+  
+        <{{xs.a(14, i.nn, l)}} :data="{i:i,cid:14,l:xs.f(l,i.nn)}" >
+            
+
+        </{{xs.a(14, i.nn, l)}}>
+    
+
+
+        <template name="tmpl_15_container" >
+            
+  
+        <div v-if="{i.nn === '#text'}" >
+            
+    
+        <tmpl_0_#text :data="{i:i}" >
+            
+  
+        </tmpl_0_#text>
+    
+        </div>
+    
+  
+        <div v-else="" >
+            
+    
+  
+        </div>
+    
 
         </template>
     
@@ -11014,125 +24774,471 @@ var require_base = __commonJS({
     });
     Vue.component("tmpl_1_catch-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_1_static-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_1_pure-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_1_view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_1_static-text", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_1_text", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_1_form", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("{{i.name}}", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  </div>`
+    });
+    Vue.component("tmpl_1_label", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("{{i.name}}", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  </div>`
+    });
+    Vue.component("tmpl_1_cover-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_1_scroll-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_1_swiper", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_1_swiper-item", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_1_block", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+</div>`
+    });
+    Vue.component("tmpl_1_slot", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_1_slot-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
   
 </div>`
     });
     Vue.component("tmpl_1_container", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -11149,11 +25255,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11165,11 +25275,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11181,11 +25295,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11197,11 +25315,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11213,11 +25335,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11229,11 +25355,75 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_form" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11245,11 +25435,119 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_swiper" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_swiper-item" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_2_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_2_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11271,11 +25569,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11287,11 +25589,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11303,11 +25609,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11319,11 +25629,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11335,11 +25649,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11351,11 +25669,75 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_form" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11367,11 +25749,119 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_swiper" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_swiper-item" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_3_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11393,11 +25883,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11409,11 +25903,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11425,11 +25923,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11441,11 +25943,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11457,11 +25963,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11473,11 +25983,119 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_4_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11499,11 +26117,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11515,11 +26137,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11531,11 +26157,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11547,11 +26177,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11563,11 +26197,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11579,11 +26217,119 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_5_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11605,11 +26351,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11621,11 +26371,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11637,11 +26391,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11653,11 +26411,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11669,11 +26431,99 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_6_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11695,11 +26545,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11711,11 +26565,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11727,11 +26585,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11743,11 +26605,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11759,11 +26625,99 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_7_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11785,11 +26739,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11801,11 +26759,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11817,11 +26779,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11833,11 +26799,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11849,13 +26819,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_8_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_8_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -11875,11 +26893,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11891,11 +26913,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11907,11 +26933,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11923,11 +26953,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11939,13 +26973,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_9_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -11965,11 +27047,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11981,11 +27067,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -11997,11 +27087,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12013,11 +27107,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12029,13 +27127,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_10_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -12055,11 +27201,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12071,11 +27221,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12087,11 +27241,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12103,11 +27261,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12119,13 +27281,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_11_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -12145,11 +27355,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12161,11 +27375,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12177,11 +27395,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12193,11 +27415,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12209,13 +27435,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_12_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -12235,11 +27509,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12251,11 +27529,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12267,11 +27549,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12283,11 +27569,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12299,13 +27589,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_13_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -12325,11 +27663,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12341,11 +27683,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12357,11 +27703,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12373,11 +27723,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12389,13 +27743,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_14_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -12414,15 +27816,23 @@ var require_base = __commonJS({
         <template name="tmpl_15_container" >
             
   
+        <div v-if="{i.nn === '#text'}" >
+            
     
         <tmpl_0_#text :data="{i:i}" >
             
   
         </tmpl_0_#text>
     
-  
+        </div>
     
   
+        <div v-else="" >
+            
+    
+  
+        </div>
+    
 
         </template>
     
@@ -12456,125 +27866,471 @@ var require_base = __commonJS({
     });
     Vue.component("tmpl_2_catch-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_2_static-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_2_pure-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_2_view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_2_static-text", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_2_text", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_2_form", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("{{i.name}}", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  </div>`
+    });
+    Vue.component("tmpl_2_label", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("{{i.name}}", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  </div>`
+    });
+    Vue.component("tmpl_2_cover-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_2_scroll-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_2_swiper", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_2_swiper-item", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_2_block", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+</div>`
+    });
+    Vue.component("tmpl_2_slot", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_2_slot-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
   
 </div>`
     });
     Vue.component("tmpl_2_container", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -12591,11 +28347,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12607,11 +28367,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12623,11 +28387,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12639,11 +28407,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12655,11 +28427,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12671,11 +28447,75 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_form" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12687,11 +28527,119 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_swiper" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_swiper-item" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_3_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_3_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12713,11 +28661,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12729,11 +28681,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12745,11 +28701,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12761,11 +28721,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12777,11 +28741,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12793,11 +28761,119 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_4_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12819,11 +28895,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12835,11 +28915,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12851,11 +28935,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12867,11 +28955,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12883,11 +28975,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12899,11 +28995,119 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_5_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12925,11 +29129,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12941,11 +29149,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12957,11 +29169,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12973,11 +29189,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -12989,11 +29209,99 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_6_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13015,11 +29323,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13031,11 +29343,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13047,11 +29363,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13063,11 +29383,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13079,11 +29403,99 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_7_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13105,11 +29517,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13121,11 +29537,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13137,11 +29557,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13153,11 +29577,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13169,13 +29597,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_8_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_8_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -13195,11 +29671,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13211,11 +29691,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13227,11 +29711,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13243,11 +29731,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13259,13 +29751,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_9_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -13285,11 +29825,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13301,11 +29845,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13317,11 +29865,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13333,11 +29885,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13349,13 +29905,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_10_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -13375,11 +29979,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13391,11 +29999,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13407,11 +30019,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13423,11 +30039,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13439,13 +30059,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_11_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -13465,11 +30133,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13481,11 +30153,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13497,11 +30173,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13513,11 +30193,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13529,13 +30213,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_12_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -13555,11 +30287,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13571,11 +30307,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13587,11 +30327,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13603,11 +30347,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13619,13 +30367,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_13_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -13645,11 +30441,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13661,11 +30461,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13677,11 +30481,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13693,11 +30501,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13709,13 +30521,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_14_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -13734,15 +30594,23 @@ var require_base = __commonJS({
         <template name="tmpl_15_container" >
             
   
+        <div v-if="{i.nn === '#text'}" >
+            
     
         <tmpl_0_#text :data="{i:i}" >
             
   
         </tmpl_0_#text>
     
-  
+        </div>
     
   
+        <div v-else="" >
+            
+    
+  
+        </div>
+    
 
         </template>
     
@@ -13774,125 +30642,471 @@ var require_base = __commonJS({
     });
     Vue.component("tmpl_3_catch-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_3_static-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_3_pure-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_3_view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_3_static-text", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_3_text", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_3_form", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("{{i.name}}", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  </div>`
+    });
+    Vue.component("tmpl_3_label", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("{{i.name}}", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  </div>`
+    });
+    Vue.component("tmpl_3_cover-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_3_scroll-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_3_swiper", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_3_swiper-item", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_3_block", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+</div>`
+    });
+    Vue.component("tmpl_3_slot", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_3_slot-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
   
 </div>`
     });
     Vue.component("tmpl_3_container", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -13909,11 +31123,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13925,11 +31143,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13941,11 +31163,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13957,11 +31183,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13973,11 +31203,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -13989,11 +31223,119 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_4_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_4_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14015,11 +31357,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14031,11 +31377,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14047,11 +31397,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14063,11 +31417,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14079,11 +31437,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14095,11 +31457,119 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_5_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14121,11 +31591,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14137,11 +31611,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14153,11 +31631,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14169,11 +31651,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14185,11 +31671,99 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_6_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14211,11 +31785,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14227,11 +31805,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14243,11 +31825,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14259,11 +31845,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14275,11 +31865,99 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_7_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14301,11 +31979,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14317,11 +31999,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14333,11 +32019,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14349,11 +32039,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14365,13 +32059,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_8_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_8_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -14391,11 +32133,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14407,11 +32153,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14423,11 +32173,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14439,11 +32193,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14455,13 +32213,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_9_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -14481,11 +32287,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14497,11 +32307,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14513,11 +32327,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14529,11 +32347,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14545,13 +32367,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_10_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -14571,11 +32441,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14587,11 +32461,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14603,11 +32481,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14619,11 +32501,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14635,13 +32521,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_11_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -14661,11 +32595,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14677,11 +32615,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14693,11 +32635,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14709,11 +32655,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14725,13 +32675,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_12_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -14751,11 +32749,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14767,11 +32769,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14783,11 +32789,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14799,11 +32809,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14815,13 +32829,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_13_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -14841,11 +32903,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14857,11 +32923,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14873,11 +32943,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14889,11 +32963,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -14905,13 +32983,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_14_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -14930,15 +33056,23 @@ var require_base = __commonJS({
         <template name="tmpl_15_container" >
             
   
+        <div v-if="{i.nn === '#text'}" >
+            
     
         <tmpl_0_#text :data="{i:i}" >
             
   
         </tmpl_0_#text>
     
-  
+        </div>
     
   
+        <div v-else="" >
+            
+    
+  
+        </div>
+    
 
         </template>
     
@@ -14968,108 +33102,338 @@ var require_base = __commonJS({
     });
     Vue.component("tmpl_4_catch-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_4_static-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_4_pure-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_4_view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_4_static-text", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_4_text", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_4_label", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("{{i.name}}", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  </div>`
+    });
+    Vue.component("tmpl_4_cover-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_4_block", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+</div>`
+    });
+    Vue.component("tmpl_4_slot", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_4_slot-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
   
 </div>`
     });
     Vue.component("tmpl_4_container", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -15086,11 +33450,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15102,11 +33470,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15118,11 +33490,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15134,11 +33510,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15150,11 +33530,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15166,11 +33550,119 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_label" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_5_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_5_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15192,11 +33684,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15208,11 +33704,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15224,11 +33724,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15240,11 +33744,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15256,11 +33764,99 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_6_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15282,11 +33878,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15298,11 +33898,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15314,11 +33918,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15330,11 +33938,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15346,11 +33958,99 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_7_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15372,11 +34072,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15388,11 +34092,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15404,11 +34112,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15420,11 +34132,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15436,13 +34152,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_8_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_8_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -15462,11 +34226,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15478,11 +34246,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15494,11 +34266,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15510,11 +34286,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15526,13 +34306,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_9_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -15552,11 +34380,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15568,11 +34400,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15584,11 +34420,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15600,11 +34440,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15616,13 +34460,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_10_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -15642,11 +34534,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15658,11 +34554,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15674,11 +34574,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15690,11 +34594,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15706,13 +34614,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_11_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -15732,11 +34688,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15748,11 +34708,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15764,11 +34728,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15780,11 +34748,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15796,13 +34768,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_12_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -15822,11 +34842,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15838,11 +34862,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15854,11 +34882,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15870,11 +34902,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15886,13 +34922,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_13_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -15912,11 +34996,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15928,11 +35016,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15944,11 +35036,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15960,11 +35056,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -15976,13 +35076,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_14_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -16001,15 +35149,23 @@ var require_base = __commonJS({
         <template name="tmpl_15_container" >
             
   
+        <div v-if="{i.nn === '#text'}" >
+            
     
         <tmpl_0_#text :data="{i:i}" >
             
   
         </tmpl_0_#text>
     
-  
+        </div>
     
   
+        <div v-else="" >
+            
+    
+  
+        </div>
+    
 
         </template>
     
@@ -16037,108 +35193,338 @@ var require_base = __commonJS({
     });
     Vue.component("tmpl_5_catch-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_5_static-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_5_pure-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_5_view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_5_static-text", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_5_text", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_5_label", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("{{i.name}}", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  </div>`
+    });
+    Vue.component("tmpl_5_cover-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_5_block", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+</div>`
+    });
+    Vue.component("tmpl_5_slot", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_5_slot-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
   
 </div>`
     });
     Vue.component("tmpl_5_container", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -16155,11 +35541,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16171,11 +35561,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16187,11 +35581,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16203,11 +35601,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16219,11 +35621,99 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_6_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_6_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16245,11 +35735,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16261,11 +35755,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16277,11 +35775,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16293,11 +35795,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16309,11 +35815,99 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_7_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16335,11 +35929,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16351,11 +35949,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16367,11 +35969,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16383,11 +35989,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16399,13 +36009,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_8_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_8_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -16425,11 +36083,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16441,11 +36103,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16457,11 +36123,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16473,11 +36143,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16489,13 +36163,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_9_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -16515,11 +36237,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16531,11 +36257,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16547,11 +36277,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16563,11 +36297,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16579,13 +36317,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_10_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -16605,11 +36391,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16621,11 +36411,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16637,11 +36431,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16653,11 +36451,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16669,13 +36471,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_11_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -16695,11 +36545,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16711,11 +36565,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16727,11 +36585,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16743,11 +36605,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16759,13 +36625,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_12_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -16785,11 +36699,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16801,11 +36719,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16817,11 +36739,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16833,11 +36759,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16849,13 +36779,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_13_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -16875,11 +36853,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16891,11 +36873,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16907,11 +36893,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16923,11 +36913,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -16939,13 +36933,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_14_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -16964,15 +37006,23 @@ var require_base = __commonJS({
         <template name="tmpl_15_container" >
             
   
+        <div v-if="{i.nn === '#text'}" >
+            
     
         <tmpl_0_#text :data="{i:i}" >
             
   
         </tmpl_0_#text>
     
-  
+        </div>
     
   
+        <div v-else="" >
+            
+    
+  
+        </div>
+    
 
         </template>
     
@@ -16998,91 +37048,259 @@ var require_base = __commonJS({
     });
     Vue.component("tmpl_6_catch-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_6_static-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_6_pure-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_6_view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_6_text", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_6_cover-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_6_block", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+</div>`
+    });
+    Vue.component("tmpl_6_slot", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_6_slot-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
   
 </div>`
     });
     Vue.component("tmpl_6_container", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -17099,11 +37317,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17115,11 +37337,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17131,11 +37357,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17147,11 +37377,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17163,11 +37397,99 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+
+        </template>
+    
+
+
+        <template name="tmpl_7_slot" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_7_slot-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17189,11 +37511,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17205,11 +37531,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17221,11 +37551,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17237,11 +37571,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17253,13 +37591,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_8_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_8_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -17279,11 +37665,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17295,11 +37685,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17311,11 +37705,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17327,11 +37725,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17343,13 +37745,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_9_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -17369,11 +37819,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17385,11 +37839,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17401,11 +37859,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17417,11 +37879,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17433,13 +37899,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_10_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -17459,11 +37973,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17475,11 +37993,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17491,11 +38013,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17507,11 +38033,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17523,13 +38053,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_11_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -17549,11 +38127,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17565,11 +38147,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17581,11 +38167,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17597,11 +38187,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17613,13 +38207,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_12_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -17639,11 +38281,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17655,11 +38301,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17671,11 +38321,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17687,11 +38341,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17703,13 +38361,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_13_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -17729,11 +38435,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17745,11 +38455,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17761,11 +38475,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17777,11 +38495,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17793,13 +38515,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_14_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -17818,15 +38588,23 @@ var require_base = __commonJS({
         <template name="tmpl_15_container" >
             
   
+        <div v-if="{i.nn === '#text'}" >
+            
     
         <tmpl_0_#text :data="{i:i}" >
             
   
         </tmpl_0_#text>
     
-  
+        </div>
     
   
+        <div v-else="" >
+            
+    
+  
+        </div>
+    
 
         </template>
     
@@ -17850,91 +38628,259 @@ var require_base = __commonJS({
     });
     Vue.component("tmpl_7_catch-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_7_static-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_7_pure-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_7_view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_7_text", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_7_cover-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_7_block", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
+</div>`
+    });
+    Vue.component("tmpl_7_slot", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_7_slot-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
   
 </div>`
     });
     Vue.component("tmpl_7_container", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -17951,11 +38897,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17967,11 +38917,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17983,11 +38937,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -17999,11 +38957,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18015,13 +38977,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_8_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_8_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -18041,11 +39051,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18057,11 +39071,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18073,11 +39091,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18089,11 +39111,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18105,13 +39131,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_9_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -18131,11 +39205,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18147,11 +39225,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18163,11 +39245,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18179,11 +39265,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18195,13 +39285,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_10_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -18221,11 +39359,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18237,11 +39379,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18253,11 +39399,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18269,11 +39419,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18285,13 +39439,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_11_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -18311,11 +39513,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18327,11 +39533,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18343,11 +39553,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18359,11 +39573,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18375,13 +39593,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_12_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -18401,11 +39667,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18417,11 +39687,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18433,11 +39707,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18449,11 +39727,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18465,13 +39747,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_13_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -18491,11 +39821,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18507,11 +39841,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18523,11 +39861,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18539,11 +39881,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18555,13 +39901,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_14_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -18580,15 +39974,23 @@ var require_base = __commonJS({
         <template name="tmpl_15_container" >
             
   
+        <div v-if="{i.nn === '#text'}" >
+            
     
         <tmpl_0_#text :data="{i:i}" >
             
   
         </tmpl_0_#text>
     
-  
+        </div>
     
   
+        <div v-else="" >
+            
+    
+  
+        </div>
+    
 
         </template>
     
@@ -18610,91 +40012,205 @@ var require_base = __commonJS({
     });
     Vue.component("tmpl_8_catch-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_8_static-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_8_pure-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_8_view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_8_text", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+</div>`
+    });
+    Vue.component("tmpl_8_cover-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_8_block", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 </div>`
     });
     Vue.component("tmpl_8_container", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -18711,11 +40227,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18727,11 +40247,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18743,11 +40267,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18759,11 +40287,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18775,13 +40307,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_9_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_9_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -18801,11 +40381,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18817,11 +40401,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18833,11 +40421,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18849,11 +40441,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18865,13 +40461,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_10_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -18891,11 +40535,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18907,11 +40555,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18923,11 +40575,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18939,11 +40595,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18955,13 +40615,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_11_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -18981,11 +40689,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -18997,11 +40709,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19013,11 +40729,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19029,11 +40749,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19045,13 +40769,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_12_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -19071,11 +40843,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19087,11 +40863,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19103,11 +40883,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19119,11 +40903,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19135,13 +40923,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_13_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -19161,11 +40997,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19177,11 +41017,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19193,11 +41037,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19209,11 +41057,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19225,13 +41077,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_14_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -19250,15 +41150,23 @@ var require_base = __commonJS({
         <template name="tmpl_15_container" >
             
   
+        <div v-if="{i.nn === '#text'}" >
+            
     
         <tmpl_0_#text :data="{i:i}" >
             
   
         </tmpl_0_#text>
     
-  
+        </div>
     
   
+        <div v-else="" >
+            
+    
+  
+        </div>
+    
 
         </template>
     
@@ -19278,91 +41186,205 @@ var require_base = __commonJS({
     });
     Vue.component("tmpl_9_catch-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_9_static-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_9_pure-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_9_view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_9_text", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+</div>`
+    });
+    Vue.component("tmpl_9_cover-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_9_block", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 </div>`
     });
     Vue.component("tmpl_9_container", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -19379,11 +41401,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19395,11 +41421,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19411,11 +41441,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19427,11 +41461,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19443,13 +41481,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_10_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_10_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -19469,11 +41555,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19485,11 +41575,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19501,11 +41595,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19517,11 +41615,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19533,13 +41635,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_11_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -19559,11 +41709,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19575,11 +41729,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19591,11 +41749,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19607,11 +41769,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19623,13 +41789,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_12_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -19649,11 +41863,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19665,11 +41883,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19681,11 +41903,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19697,11 +41923,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19713,13 +41943,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_13_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -19739,11 +42017,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19755,11 +42037,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19771,11 +42057,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19787,11 +42077,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19803,13 +42097,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_14_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -19828,15 +42170,23 @@ var require_base = __commonJS({
         <template name="tmpl_15_container" >
             
   
+        <div v-if="{i.nn === '#text'}" >
+            
     
         <tmpl_0_#text :data="{i:i}" >
             
   
         </tmpl_0_#text>
     
-  
+        </div>
     
   
+        <div v-else="" >
+            
+    
+  
+        </div>
+    
 
         </template>
     
@@ -19854,91 +42204,205 @@ var require_base = __commonJS({
     });
     Vue.component("tmpl_10_catch-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_10_static-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_10_pure-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_10_view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_10_text", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+</div>`
+    });
+    Vue.component("tmpl_10_cover-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_10_block", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 </div>`
     });
     Vue.component("tmpl_10_container", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -19955,11 +42419,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19971,11 +42439,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -19987,11 +42459,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20003,11 +42479,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20019,13 +42499,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_11_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_11_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -20045,11 +42573,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20061,11 +42593,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20077,11 +42613,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20093,11 +42633,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20109,13 +42653,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_12_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -20135,11 +42727,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20151,11 +42747,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20167,11 +42767,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20183,11 +42787,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20199,13 +42807,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_13_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -20225,11 +42881,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20241,11 +42901,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20257,11 +42921,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20273,11 +42941,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20289,13 +42961,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_14_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -20314,15 +43034,23 @@ var require_base = __commonJS({
         <template name="tmpl_15_container" >
             
   
+        <div v-if="{i.nn === '#text'}" >
+            
     
         <tmpl_0_#text :data="{i:i}" >
             
   
         </tmpl_0_#text>
     
-  
+        </div>
     
   
+        <div v-else="" >
+            
+    
+  
+        </div>
+    
 
         </template>
     
@@ -20338,91 +43066,205 @@ var require_base = __commonJS({
     });
     Vue.component("tmpl_11_catch-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_11_static-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_11_pure-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_11_view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_11_text", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+</div>`
+    });
+    Vue.component("tmpl_11_cover-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_11_block", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 </div>`
     });
     Vue.component("tmpl_11_container", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -20439,11 +43281,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20455,11 +43301,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20471,11 +43321,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20487,11 +43341,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20503,13 +43361,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_12_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_12_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -20529,11 +43435,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20545,11 +43455,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20561,11 +43475,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20577,11 +43495,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20593,13 +43515,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_13_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -20619,11 +43589,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20635,11 +43609,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20651,11 +43629,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20667,11 +43649,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20683,13 +43669,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_14_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -20708,15 +43742,23 @@ var require_base = __commonJS({
         <template name="tmpl_15_container" >
             
   
+        <div v-if="{i.nn === '#text'}" >
+            
     
         <tmpl_0_#text :data="{i:i}" >
             
   
         </tmpl_0_#text>
     
-  
+        </div>
     
   
+        <div v-else="" >
+            
+    
+  
+        </div>
+    
 
         </template>
     
@@ -20730,91 +43772,205 @@ var require_base = __commonJS({
     });
     Vue.component("tmpl_12_catch-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_12_static-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_12_pure-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_12_view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_12_text", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+</div>`
+    });
+    Vue.component("tmpl_12_cover-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_12_block", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 </div>`
     });
     Vue.component("tmpl_12_container", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -20831,11 +43987,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20847,11 +44007,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20863,11 +44027,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20879,11 +44047,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20895,13 +44067,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_13_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_13_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -20921,11 +44141,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20937,11 +44161,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20953,11 +44181,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20969,11 +44201,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -20985,13 +44221,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_14_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -21010,15 +44294,23 @@ var require_base = __commonJS({
         <template name="tmpl_15_container" >
             
   
+        <div v-if="{i.nn === '#text'}" >
+            
     
         <tmpl_0_#text :data="{i:i}" >
             
   
         </tmpl_0_#text>
     
-  
+        </div>
     
   
+        <div v-else="" >
+            
+    
+  
+        </div>
+    
 
         </template>
     
@@ -21030,91 +44322,205 @@ var require_base = __commonJS({
     });
     Vue.component("tmpl_13_catch-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_13_static-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_13_pure-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_13_view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_13_text", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+</div>`
+    });
+    Vue.component("tmpl_13_cover-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_13_block", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 </div>`
     });
     Vue.component("tmpl_13_container", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -21131,11 +44537,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -21147,11 +44557,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -21163,11 +44577,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -21179,11 +44597,15 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 
@@ -21195,13 +44617,61 @@ var require_base = __commonJS({
             
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+
+        </template>
+    
+
+
+        <template name="tmpl_14_cover-view" >
+            
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+
+        </template>
+    
+
+
+        <template name="tmpl_14_block" >
+            
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 
         </template>
     
@@ -21220,15 +44690,23 @@ var require_base = __commonJS({
         <template name="tmpl_15_container" >
             
   
+        <div v-if="{i.nn === '#text'}" >
+            
     
         <tmpl_0_#text :data="{i:i}" >
             
   
         </tmpl_0_#text>
     
-  
+        </div>
     
   
+        <div v-else="" >
+            
+    
+  
+        </div>
+    
 
         </template>
     
@@ -21238,91 +44716,205 @@ var require_base = __commonJS({
     });
     Vue.component("tmpl_14_catch-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_14_static-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_14_pure-view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_14_view", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
+    
+        </div>
     
   
 </div>`
     });
     Vue.component("tmpl_14_text", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
     
+        <div v-for="item in i.cn" >
+            
       
         <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
             
     
         </{{xs.e(cid+1)}}>
     
+        </div>
+    
   
+</div>`
+    });
+    Vue.component("tmpl_14_cover-view", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+</div>`
+    });
+    Vue.component("tmpl_14_block", {
+      props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
+  
+        <div id="{i.uid}" >
+            
+    
+        <div v-for="item in i.cn" >
+            
+      
+        <{{xs.e(cid+1)}} :data="{i:item,l:l}" >
+            
+    
+        </{{xs.e(cid+1)}}>
+    
+        </div>
+    
+  
+        </div>
+    
 </div>`
     });
     Vue.component("tmpl_14_container", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
@@ -21338,15 +44930,23 @@ var require_base = __commonJS({
         <template name="tmpl_15_container" >
             
   
+        <div v-if="{i.nn === '#text'}" >
+            
     
         <tmpl_0_#text :data="{i:i}" >
             
   
         </tmpl_0_#text>
     
-  
+        </div>
     
   
+        <div v-else="" >
+            
+    
+  
+        </div>
+    
 
         </template>
     
@@ -21354,20 +44954,34 @@ var require_base = __commonJS({
     });
     Vue.component("tmpl_15_container", {
       props: ["data"],
+      watch: {
+        ["data"]: function(newVal) {
+          this.$data = newVal;
+          this.$forceUpdate();
+        }
+      },
       data() {
         return this["$props"].data;
       },
       template: `<div>
   
+        <div v-if="{i.nn === '#text'}" >
+            
     
         <tmpl_0_#text :data="{i:i}" >
             
   
         </tmpl_0_#text>
     
-  
+        </div>
     
   
+        <div v-else="" >
+            
+    
+  
+        </div>
+    
 </div>`
     });
   }
@@ -21394,22 +45008,19 @@ var require_index2 = __commonJS({
     window["__wxRoute"] = "pages/index/index";
     var page = getPage("pages/index/index");
     page.json = `{"navigationBarTitleText":"\u9996\u9875","usingComponents":{"custom-wrapper":"../../custom-wrapper","comp":"../../comp"}}`;
-    (wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([[7], { 30: function(n, e, o) {
-      "use strict";
-      n.exports = o(62);
-    }, 42: function(n, e, o) {
+    (wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([[7], { 40: function(n, e, o) {
       "use strict";
       (function(n2) {
         o.d(e, "a", function() {
-          return s;
+          return a;
         });
-        var t = o(3), c = o(4), r = o(7), i = o(8), l = o(14), u = o(29), a = (o(61), o(30)), s = function(e2) {
-          Object(r["a"])(l2, e2);
-          var o2 = Object(i["a"])(l2);
-          function l2() {
-            return Object(t["a"])(this, l2), o2.apply(this, arguments);
+        var t = o(3), c = o(4), r = o(7), i = o(8), u = o(14), l = (o(60), o(61), o(41)), a = function(e2) {
+          Object(r["a"])(u2, e2);
+          var o2 = Object(i["a"])(u2);
+          function u2() {
+            return Object(t["a"])(this, u2), o2.apply(this, arguments);
           }
-          return Object(c["a"])(l2, [{ key: "componentWillMount", value: function() {
+          return Object(c["a"])(u2, [{ key: "componentWillMount", value: function() {
             console.log("componentWillMount", n2);
           } }, { key: "componentDidMount", value: function() {
             console.log("componentDidMount");
@@ -21422,14 +45033,17 @@ var require_index2 = __commonJS({
           } }, { key: "componentDidUpdate", value: function(n3, e3) {
             console.log("componentDidUpdate");
           } }, { key: "render", value: function() {
-            return console.log("render"), Object(a["jsx"])(u["b"], { className: "index", children: Object(a["jsx"])(u["a"], { children: "Hello world!" }) });
-          } }]), l2;
-        }(l["Component"]);
+            return console.log("render"), Object(l["jsx"])("view", { children: "\u6D4B\u8BD5" });
+          } }]), u2;
+        }(u["Component"]);
       }).call(this, o(2)["window"]);
-    }, 60: function(n, e, o) {
+    }, 41: function(n, e, o) {
+      "use strict";
+      n.exports = o(62);
+    }, 59: function(n, e, o) {
       "use strict";
       o.r(e);
-      var t = o(2), c = o(42), r = { navigationBarTitleText: "\u9996\u9875" };
+      var t = o(2), c = o(40), r = { navigationBarTitleText: "\u9996\u9875" };
       Page(Object(t["createPageConfig"])(c["a"], "pages/index/index", { root: { cn: [] } }, r || {}));
     }, 61: function(n, e, o) {
     }, 62: function(n, e, o) {
@@ -21440,18 +45054,18 @@ var require_index2 = __commonJS({
         var r = Symbol.for;
         c = r("react.element"), e.Fragment = r("react.fragment");
       }
-      var i = t.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, l = Object.prototype.hasOwnProperty, u = { key: true, ref: true, __self: true, __source: true };
+      var i = t.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, u = Object.prototype.hasOwnProperty, l = { key: true, ref: true, __self: true, __source: true };
       function a(n2, e2, o2) {
-        var t2, r2 = {}, a2 = null, s = null;
-        for (t2 in o2 !== void 0 && (a2 = "" + o2), e2.key !== void 0 && (a2 = "" + e2.key), e2.ref !== void 0 && (s = e2.ref), e2)
-          l.call(e2, t2) && !u.hasOwnProperty(t2) && (r2[t2] = e2[t2]);
+        var t2, r2 = {}, a2 = null, f = null;
+        for (t2 in o2 !== void 0 && (a2 = "" + o2), e2.key !== void 0 && (a2 = "" + e2.key), e2.ref !== void 0 && (f = e2.ref), e2)
+          u.call(e2, t2) && !l.hasOwnProperty(t2) && (r2[t2] = e2[t2]);
         if (n2 && n2.defaultProps)
           for (t2 in e2 = n2.defaultProps, e2)
             r2[t2] === void 0 && (r2[t2] = e2[t2]);
-        return { $$typeof: c, type: n2, key: a2, ref: s, props: r2, _owner: i.current };
+        return { $$typeof: c, type: n2, key: a2, ref: f, props: r2, _owner: i.current };
       }
       e.jsx = a, e.jsxs = a;
-    } }, [[60, 0, 1, 2]]]);
+    } }, [[59, 0, 1, 2]]]);
   }
 });
 

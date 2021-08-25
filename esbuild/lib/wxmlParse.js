@@ -30,7 +30,16 @@ function getAttribsObj(attribs) {
             ':key': key,
             ...attribs,
         }
-    }else {
+    } else if (attribs['v-for']) {
+        const items = removeParenTheses(attribs['v-for'])
+        const key = removeParenTheses(attribs['v-key'] || 'key') 
+        delete attribs['v-key']
+        return {
+            ...attribs,
+            'v-for':`item in ${items}`,
+            ':key':key
+        }
+    } else {
         return attribs
     }
 }
@@ -65,6 +74,8 @@ function getAttribs(attribs) {
 function getTagName(item) {
     if (item.name == 'template' && item.attribs.is) {
         return item.attribs.is
+    }else if (item.name == 'block') {
+        return 'div'
     }else {
         return item.name
     }
@@ -97,7 +108,7 @@ function getTemplateText(children) {
     for (let item of children) {
         if (item.type == 'text') {
             template += item.data
-        }else if (item.type == 'tag' && item.name == 'template') {
+        }else if (item.type == 'tag' && (item.name == 'template' || item.name == 'block')) {
             template += getTagTemplate(item)
             continue
         }else if (item.type == 'comment') {
@@ -134,6 +145,12 @@ function getVueComponent(name,text,isPage) {
     return `
      Vue.component('${name}',{
         props:['data'],
+        watch:{
+            ['data']:function(newVal){
+                this.$data = newVal
+                this.$forceUpdate()
+            }
+        },
         data() {
             return this['$props'].data 
         },

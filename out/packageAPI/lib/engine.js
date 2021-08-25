@@ -48,7 +48,7 @@ function getRouter() {
 }
 
 // 返回路由数据
-const routerData = getRouter().filter((e)=>e.fail!==true);
+const routerData = getRouter().filter((e)=>e.fail != true);
 
 // 初始化vue
 var app = new Vue({

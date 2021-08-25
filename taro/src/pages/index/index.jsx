@@ -31,9 +31,7 @@ export default class Index extends Component {
   render () {
     console.log('render')
     return (
-      <View className='index'>
-        <Text>Hello world!</Text>
-      </View>
+      <view>测试</view>
     )
   }
 }

@@ -143,8 +143,9 @@ var require_app = __commonJS({
 // miniprogram-demo/miniprogram/packageCloud/pages/doc-web-view/doc-web-view.wxml
 var require_doc_web_view = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/doc-web-view/doc-web-view.wxml"() {
-    Vue.component("packageCloud/pages/doc-web-view/doc-web-view", { template: `<div>
-</div>` });
+    var page = getPage("packageCloud/pages/doc-web-view/doc-web-view");
+    page.template = `
+`;
   }
 });
 
@@ -154,7 +155,6 @@ var require_doc_web_view2 = __commonJS({
     require_doc_web_view();
     window["__wxRoute"] = "packageCloud/pages/doc-web-view/doc-web-view";
     var page = getPage("packageCloud/pages/doc-web-view/doc-web-view");
-    page.template = "<packageCloud/pages/doc-web-view/doc-web-view />";
     page.json = `{
   "navigationBarTitleText": "\u5C0F\u7A0B\u5E8F\u4E91\u5F00\u53D1\u6587\u6863"
 }`;
@@ -172,24 +172,36 @@ var require_doc_web_view2 = __commonJS({
 // miniprogram-demo/miniprogram/common/head.wxml
 var require_head = __commonJS({
   "miniprogram-demo/miniprogram/common/head.wxml"() {
-    Vue.component("head", { template: `<div>
+    Vue.component("head", {
+      props: ["data"],
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
   
     {{title}}
     
     {{desc}}
   
-</div>` });
+</div>`
+    });
   }
 });
 
 // miniprogram-demo/miniprogram/common/foot.wxml
 var require_foot = __commonJS({
   "miniprogram-demo/miniprogram/common/foot.wxml"() {
-    Vue.component("foot", { template: `<div>
+    Vue.component("foot", {
+      props: ["data"],
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
   
     
   
-</div>` });
+</div>`
+    });
   }
 });
 
@@ -198,12 +210,13 @@ var require_user_authentication = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/user-authentication/user-authentication.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageCloud/pages/user-authentication/user-authentication", { template: `<div>
+    var page = getPage("packageCloud/pages/user-authentication/user-authentication");
+    page.template = `
 
 
 
   
-        <head is="head" data="{title: 'User Authentication'}" >
+        <head :data="{title: 'User Authentication'}" >
             
 
   
@@ -211,12 +224,20 @@ var require_user_authentication = __commonJS({
       
         OpenID
         
+        <div v-if="{!openid}" >
+            
           \u70B9\u51FB\u7EFF\u8272\u6309\u94AE\u53EF\u901A\u8FC7\u4E91\u5F00\u53D1\u83B7\u53D6\u7528\u6237 OpenID
           \u4F7F\u7528\u4E91\u5F00\u53D1\uFF0C\u65E0\u9700\u81EA\u5DF1\u90E8\u7F72\u670D\u52A1\u7AEF\u5E76\u7EF4\u62A4\u590D\u6742\u7684\u9274\u6743\u673A\u5236\uFF0C\u5728\u5C0F\u7A0B\u5E8F\u7AEF\u7B80\u5355\u8C03\u7528\u5373\u53EF\u901A\u8FC7\u4E91\u7AEF\u83B7\u53D6\u5929\u7136\u53EF\u4FE1\u4EFB\u7684\u7528\u6237\u767B\u5F55\u6001
         
+        </div>
+    
         
+        <div v-else="" >
+            
           {{openid}}
         
+        </div>
+    
       
       
         \u83B7\u53D6 OpenID
@@ -226,14 +247,14 @@ var require_user_authentication = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -243,7 +264,6 @@ var require_user_authentication2 = __commonJS({
     require_user_authentication();
     window["__wxRoute"] = "packageCloud/pages/user-authentication/user-authentication";
     var page = getPage("packageCloud/pages/user-authentication/user-authentication");
-    page.template = "<packageCloud/pages/user-authentication/user-authentication />";
     page.json = `{
   "navigationBarTitleText": "\u7528\u6237\u9274\u6743"
 }`;
@@ -287,12 +307,13 @@ var require_get_wx_context = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/get-wx-context/get-wx-context.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageCloud/pages/get-wx-context/get-wx-context", { template: `<div>
+    var page = getPage("packageCloud/pages/get-wx-context/get-wx-context");
+    page.template = `
 
 
 
   
-        <head is="head" data="{title: 'getWXContext'}" >
+        <head :data="{title: 'getWXContext'}" >
             
 
   
@@ -300,24 +321,44 @@ var require_get_wx_context = __commonJS({
       
         WXContext
         
+        <div v-if="{!hasWXContext}" >
+            
           \u4E91\u51FD\u6570\u662F\u5728\u4E91\u7AEF\uFF08\u670D\u52A1\u5668\u7AEF\uFF09\u8FD0\u884C\u7684\u51FD\u6570
           \u70B9\u51FB\u7EFF\u8272\u6309\u94AE\u53EF\u8C03\u7528\u4E91\u51FD\u6570\u83B7\u53D6\u5FAE\u4FE1\u8C03\u7528\u4E0A\u4E0B\u6587
           \u8FD4\u56DE\u5185\u5BB9\u5305\u62EC\u7528\u6237 OpenID\u3001\u5C0F\u7A0B\u5E8F AppID \u4EE5\u53CA\u7528\u6237 UnionID\uFF08\u6EE1\u8DB3 UnionID \u83B7\u53D6\u6761\u4EF6\u65F6\uFF09
         
+        </div>
+    
         
+        <div v-else="" >
+            
           
+        <div >
+            
             OpenID
             {{wxContext.openid}}
           
+        </div>
+    
           
+        <div >
+            
             AppID
             {{wxContext.appid}}
           
+        </div>
+    
           
+        <div v-if="{wxContext.unionid}" >
+            
             UnionID
             {{wxContext.unionid}}
           
+        </div>
+    
         
+        </div>
+    
       
       
         \u83B7\u53D6 WXContext
@@ -327,14 +368,14 @@ var require_get_wx_context = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -344,7 +385,6 @@ var require_get_wx_context2 = __commonJS({
     require_get_wx_context();
     window["__wxRoute"] = "packageCloud/pages/get-wx-context/get-wx-context";
     var page = getPage("packageCloud/pages/get-wx-context/get-wx-context");
-    page.template = "<packageCloud/pages/get-wx-context/get-wx-context />";
     page.json = `{
   "navigationBarTitleText": "WXContext"
 }`;
@@ -395,17 +435,20 @@ var require_upload_file = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/upload-file/upload-file.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageCloud/pages/upload-file/upload-file", { template: `<div>
+    var page = getPage("packageCloud/pages/upload-file/upload-file");
+    page.template = `
 
 
 
   
-        <head is="head" data="{title: 'uploadFile'}" >
+        <head :data="{title: 'uploadFile'}" >
             
 
   
     
       
+        <div v-if="{fileUploaded}" >
+            
         
           
             
@@ -427,8 +470,12 @@ var require_upload_file = __commonJS({
           
         
       
+        </div>
+    
 
       
+        <div v-else="" >
+            
         
           
             
@@ -437,17 +484,19 @@ var require_upload_file = __commonJS({
           \u9009\u62E9\u56FE\u7247
         
       
+        </div>
+    
     
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
-    </div>` });
+    `;
   }
 });
 
@@ -457,7 +506,6 @@ var require_upload_file2 = __commonJS({
     require_upload_file();
     window["__wxRoute"] = "packageCloud/pages/upload-file/upload-file";
     var page = getPage("packageCloud/pages/upload-file/upload-file");
-    page.template = "<packageCloud/pages/upload-file/upload-file />";
     page.json = `{
   "navigationBarTitleText": "\u4E0A\u4F20\u6587\u4EF6"
 }`;
@@ -539,17 +587,20 @@ var require_download_file = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/download-file/download-file.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageCloud/pages/download-file/download-file", { template: `<div>
+    var page = getPage("packageCloud/pages/download-file/download-file");
+    page.template = `
 
 
 
   
-        <head is="head" data="{title: 'downloadFile'}" >
+        <head :data="{title: 'downloadFile'}" >
             
 
   
     
       
+        <div v-if="{fileDownloaded}" >
+            
         
           
             
@@ -568,8 +619,12 @@ var require_download_file = __commonJS({
         
         
       
+        </div>
+    
 
       
+        <div v-else="" >
+            
         \u70B9\u51FB\u6309\u94AE\u5373\u53EF\u4ECE\u4E91\u7AEF\u5B58\u50A8\u4E0B\u8F7D\u6307\u5B9A\u4E91\u6587\u4EF6
         
           
@@ -586,17 +641,19 @@ var require_download_file = __commonJS({
           \u4E0B\u8F7D\u6587\u4EF6
         
       
+        </div>
+    
     
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
-    </div>` });
+    `;
   }
 });
 
@@ -606,7 +663,6 @@ var require_download_file2 = __commonJS({
     require_download_file();
     window["__wxRoute"] = "packageCloud/pages/download-file/download-file";
     var page = getPage("packageCloud/pages/download-file/download-file");
-    page.template = "<packageCloud/pages/download-file/download-file />";
     page.json = `{
   "navigationBarTitleText": "\u4E0B\u8F7D\u6587\u4EF6"
 }`;
@@ -667,17 +723,20 @@ var require_get_temp_file_url = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/get-temp-file-url/get-temp-file-url.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageCloud/pages/get-temp-file-url/get-temp-file-url", { template: `<div>
+    var page = getPage("packageCloud/pages/get-temp-file-url/get-temp-file-url");
+    page.template = `
 
 
 
   
-        <head is="head" data="{title: 'getTempFileURL'}" >
+        <head :data="{title: 'getTempFileURL'}" >
             
 
   
     
       
+        <div v-if="{fileTempURLDone}" >
+            
         
           
             
@@ -705,8 +764,12 @@ var require_get_temp_file_url = __commonJS({
         
         
       
+        </div>
+    
 
       
+        <div v-else="" >
+            
         \u70B9\u51FB\u6309\u94AE\u5373\u53EF\u6839\u636E\u6587\u4EF6 ID \u6362\u53D6\u4E34\u65F6\u7F51\u7EDC\u94FE\u63A5
         
           
@@ -723,17 +786,19 @@ var require_get_temp_file_url = __commonJS({
           \u6362\u53D6\u4E34\u65F6\u94FE\u63A5
         
       
+        </div>
+    
     
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
-    </div>` });
+    `;
   }
 });
 
@@ -743,7 +808,6 @@ var require_get_temp_file_url2 = __commonJS({
     require_get_temp_file_url();
     window["__wxRoute"] = "packageCloud/pages/get-temp-file-url/get-temp-file-url";
     var page = getPage("packageCloud/pages/get-temp-file-url/get-temp-file-url");
-    page.template = "<packageCloud/pages/get-temp-file-url/get-temp-file-url />";
     page.json = `{
   "navigationBarTitleText": "\u6362\u53D6\u4E34\u65F6\u94FE\u63A5"
 }`;
@@ -808,17 +872,20 @@ var require_delete_file = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/delete-file/delete-file.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageCloud/pages/delete-file/delete-file", { template: `<div>
+    var page = getPage("packageCloud/pages/delete-file/delete-file");
+    page.template = `
 
 
 
   
-        <head is="head" data="{title: 'deleteFile'}" >
+        <head :data="{title: 'deleteFile'}" >
             
 
   
     
       
+        <div v-if="{!fileId}" >
+            
         
           \u8FD8\u672A\u4E0A\u4F20\u8FC7\u6587\u4EF6\uFF0C\u8BF7\u5148\u70B9\u51FB\u6309\u94AE\u4E0A\u4F20
         
@@ -829,8 +896,12 @@ var require_delete_file = __commonJS({
           
         
       
+        </div>
+    
 
       
+        <div v-else="" >
+            
         \u70B9\u51FB\u6309\u94AE\u5373\u53EF\u5220\u9664\u6307\u5B9A\u6587\u4EF6
         
           
@@ -847,17 +918,19 @@ var require_delete_file = __commonJS({
           \u5220\u9664\u6587\u4EF6
         
       
+        </div>
+    
     
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
-    </div>` });
+    `;
   }
 });
 
@@ -867,7 +940,6 @@ var require_delete_file2 = __commonJS({
     require_delete_file();
     window["__wxRoute"] = "packageCloud/pages/delete-file/delete-file";
     var page = getPage("packageCloud/pages/delete-file/delete-file");
-    page.template = "<packageCloud/pages/delete-file/delete-file />";
     page.json = `{
   "navigationBarTitleText": "\u5220\u9664\u6587\u4EF6"
 }`;
@@ -935,12 +1007,13 @@ var require_cloud_file_component = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/cloud-file-component/cloud-file-component.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageCloud/pages/cloud-file-component/cloud-file-component", { template: `<div>
+    var page = getPage("packageCloud/pages/cloud-file-component/cloud-file-component");
+    page.template = `
 
 
 
   
-        <head is="head" data="{title: 'Component Support'}" >
+        <head :data="{title: 'Component Support'}" >
             
 
   
@@ -984,14 +1057,14 @@ var require_cloud_file_component = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -1001,7 +1074,6 @@ var require_cloud_file_component2 = __commonJS({
     require_cloud_file_component();
     window["__wxRoute"] = "packageCloud/pages/cloud-file-component/cloud-file-component";
     var page = getPage("packageCloud/pages/cloud-file-component/cloud-file-component");
-    page.template = "<packageCloud/pages/cloud-file-component/cloud-file-component />";
     page.json = `{
   "navigationBarTitleText": "\u7EC4\u4EF6\u652F\u6301"
 }`;
@@ -1026,12 +1098,13 @@ var require_crud = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/crud/crud.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageCloud/pages/crud/crud", { template: `<div>
+    var page = getPage("packageCloud/pages/crud/crud");
+    page.template = `
 
 
 
   
-        <head is="head" data="{title: 'CRUD'}" >
+        <head :data="{title: 'CRUD'}" >
             
 
   
@@ -1072,13 +1145,13 @@ var require_crud = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
-    </div>` });
+    `;
   }
 });
 
@@ -1088,7 +1161,6 @@ var require_crud2 = __commonJS({
     require_crud();
     window["__wxRoute"] = "packageCloud/pages/crud/crud";
     var page = getPage("packageCloud/pages/crud/crud");
-    page.template = "<packageCloud/pages/crud/crud />";
     page.json = `{
   "navigationBarTitleText": "\u57FA\u672C\u64CD\u4F5C"
 }`;
@@ -1307,12 +1379,13 @@ var require_crud_detail = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/crud-detail/crud-detail.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageCloud/pages/crud-detail/crud-detail", { template: `<div>
+    var page = getPage("packageCloud/pages/crud-detail/crud-detail");
+    page.template = `
 
 
 
   
-        <head is="head" data="{title: 'CRUD'}" >
+        <head :data="{title: 'CRUD'}" >
             
 
   
@@ -1334,13 +1407,13 @@ var require_crud_detail = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
-    </div>` });
+    `;
   }
 });
 
@@ -1350,7 +1423,6 @@ var require_crud_detail2 = __commonJS({
     require_crud_detail();
     window["__wxRoute"] = "packageCloud/pages/crud-detail/crud-detail";
     var page = getPage("packageCloud/pages/crud-detail/crud-detail");
-    page.template = "<packageCloud/pages/crud-detail/crud-detail />";
     page.json = `{
   "navigationBarTitleText": "\u57FA\u672C\u64CD\u4F5C"
 }`;
@@ -1495,12 +1567,13 @@ var require_db_permission = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/db-permission/db-permission.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageCloud/pages/db-permission/db-permission", { template: `<div>
+    var page = getPage("packageCloud/pages/db-permission/db-permission");
+    page.template = `
 
 
 
   
-        <head is="head" data="{title: 'Permission'}" >
+        <head :data="{title: 'Permission'}" >
             
 
   
@@ -1522,13 +1595,19 @@ var require_db_permission = __commonJS({
         
 
           
+        <div v-if="{currentPermissionIndex === 0}" >
+            
             
               
                 
+        <div v-for="item in tabs[currentPermissionIndex]" v-key="*this" >
+            
                   
                     {{item}}
                   
                 
+        </div>
+    
                 
               
               
@@ -1564,15 +1643,23 @@ var require_db_permission = __commonJS({
               
             
           
+        </div>
+    
 
           
+        <div v-elif="{currentPermissionIndex === 1}" >
+            
             
               
                 
+        <div v-for="item in tabs[currentPermissionIndex]" v-key="*this" >
+            
                   
                     {{item}}
                   
                 
+        </div>
+    
                 
               
               
@@ -1608,8 +1695,12 @@ var require_db_permission = __commonJS({
               
             
           
+        </div>
+    
 
           
+        <div v-elif="{currentPermissionIndex === 2}" >
+            
             
               
                 
@@ -1625,8 +1716,12 @@ var require_db_permission = __commonJS({
               
             
           
+        </div>
+    
 
           
+        <div v-elif="{currentPermissionIndex === 3}" >
+            
             
               
                 
@@ -1642,6 +1737,8 @@ var require_db_permission = __commonJS({
               
             
           
+        </div>
+    
 
         
       
@@ -1649,13 +1746,13 @@ var require_db_permission = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
-    </div>` });
+    `;
   }
 });
 
@@ -1665,7 +1762,6 @@ var require_db_permission2 = __commonJS({
     require_db_permission();
     window["__wxRoute"] = "packageCloud/pages/db-permission/db-permission";
     var page = getPage("packageCloud/pages/db-permission/db-permission");
-    page.template = "<packageCloud/pages/db-permission/db-permission />";
     page.json = `{
   "navigationBarTitleText": "\u6743\u9650\u7BA1\u7406"
 }`;
@@ -2127,12 +2223,13 @@ var require_server_date = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/server-date/server-date.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageCloud/pages/server-date/server-date", { template: `<div>
+    var page = getPage("packageCloud/pages/server-date/server-date");
+    page.template = `
 
 
 
   
-        <head is="head" data="{title: 'db.serverDate'}" >
+        <head :data="{title: 'db.serverDate'}" >
             
 
   
@@ -2140,24 +2237,44 @@ var require_server_date = __commonJS({
       
         \u670D\u52A1\u7AEF\u65F6\u95F4
         
+        <div v-if="{!serverDate}" >
+            
           \u5F88\u591A\u65F6\u5019\u6211\u4EEC\u5E0C\u671B\u8BB0\u5F55\u6570\u636E\u7684\u521B\u5EFA\u65F6\u95F4
           \u5728\u5C0F\u7A0B\u5E8F\u7AEF\u4F7F\u7528 Date \u5BF9\u8C61\u521B\u5EFA\u7684\u662F\u5BA2\u6237\u7AEF\u65F6\u95F4\uFF08\u53EF\u88AB\u4EFB\u610F\u4FEE\u6539\uFF09\uFF0C\u800C\u975E\u670D\u52A1\u7AEF\u65F6\u95F4
           \u8FD9\u65F6\u53EF\u4EE5\u4F7F\u7528\u4E91\u5F00\u53D1\u63D0\u4F9B\u7684 serverDate \u5BF9\u8C61\uFF0C\u5728\u8BF7\u6C42\u88AB\u5904\u7406\u65F6\u4F1A\u81EA\u52A8\u8F6C\u6362\u6210\u670D\u52A1\u7AEF\u65F6\u95F4
         
+        </div>
+    
         
+        <div v-else="" >
+            
           
+        <div >
+            
             \u5BA2\u6237\u7AEF\u65F6\u95F4
             {{clientDateFormatted}}
           
+        </div>
+    
           
+        <div >
+            
             \u670D\u52A1\u7AEF\u65F6\u95F4
             {{serverDateFormatted}}
           
+        </div>
+    
           
+        <div >
+            
             \u65F6\u95F4\u5DEE\u8DDD
             {{delta}} \u6BEB\u79D2
           
+        </div>
+    
         
+        </div>
+    
       
       
         \u63D2\u5165\u6570\u636E
@@ -2166,14 +2283,14 @@ var require_server_date = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -2269,7 +2386,6 @@ var require_server_date2 = __commonJS({
     require_server_date();
     window["__wxRoute"] = "packageCloud/pages/server-date/server-date";
     var page = getPage("packageCloud/pages/server-date/server-date");
-    page.template = "<packageCloud/pages/server-date/server-date />";
     page.json = `{
   "navigationBarTitleText": "\u670D\u52A1\u7AEF\u65F6\u95F4"
 }`;
@@ -2403,12 +2519,13 @@ var require_scf_database = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/scf-database/scf-database.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageCloud/pages/scf-database/scf-database", { template: `<div>
+    var page = getPage("packageCloud/pages/scf-database/scf-database");
+    page.template = `
 
 
 
   
-        <head is="head" data="{title: 'Database'}" >
+        <head :data="{title: 'Database'}" >
             
 
   
@@ -2478,13 +2595,13 @@ var require_scf_database = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
-    </div>` });
+    `;
   }
 });
 
@@ -2494,7 +2611,6 @@ var require_scf_database2 = __commonJS({
     require_scf_database();
     window["__wxRoute"] = "packageCloud/pages/scf-database/scf-database";
     var page = getPage("packageCloud/pages/scf-database/scf-database");
-    page.template = "<packageCloud/pages/scf-database/scf-database />";
     page.json = `{
   "navigationBarTitleText": "\u4E91\u51FD\u6570\u64CD\u4F5C\u6570\u636E\u5E93"
 }`;
@@ -2592,17 +2708,20 @@ var require_scf_storage = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/scf-storage/scf-storage.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageCloud/pages/scf-storage/scf-storage", { template: `<div>
+    var page = getPage("packageCloud/pages/scf-storage/scf-storage");
+    page.template = `
 
 
 
   
-        <head is="head" data="{title: 'Storage'}" >
+        <head :data="{title: 'Storage'}" >
             
 
   
     
       
+        <div v-if="{fileTempURLDone}" >
+            
         
           
             
@@ -2630,8 +2749,12 @@ var require_scf_storage = __commonJS({
         
         
       
+        </div>
+    
 
       
+        <div v-else="" >
+            
         \u4E91\u51FD\u6570\u4EA6\u53EF\u64CD\u4F5C\u6587\u4EF6\u5B58\u50A8\uFF0C\u70B9\u51FB\u6309\u94AE\u6362\u53D6\u4E34\u65F6\u94FE\u63A5
         
           
@@ -2648,17 +2771,19 @@ var require_scf_storage = __commonJS({
           \u901A\u8FC7\u4E91\u51FD\u6570\u6362\u53D6\u4E34\u65F6\u94FE\u63A5
         
       
+        </div>
+    
     
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
-    </div>` });
+    `;
   }
 });
 
@@ -2668,7 +2793,6 @@ var require_scf_storage2 = __commonJS({
     require_scf_storage();
     window["__wxRoute"] = "packageCloud/pages/scf-storage/scf-storage";
     var page = getPage("packageCloud/pages/scf-storage/scf-storage");
-    page.template = "<packageCloud/pages/scf-storage/scf-storage />";
     page.json = `{
   "navigationBarTitleText": "\u4E91\u51FD\u6570\u64CD\u4F5C\u5B58\u50A8"
 }
@@ -2734,12 +2858,13 @@ var require_scf_openapi = __commonJS({
   "miniprogram-demo/miniprogram/packageCloud/pages/scf-openapi/scf-openapi.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageCloud/pages/scf-openapi/scf-openapi", { template: `<div>
+    var page = getPage("packageCloud/pages/scf-openapi/scf-openapi");
+    page.template = `
 
 
 
   
-        <head is="head" data="{title: '\u4E91\u51FD\u6570\u4E2D\u4F7F\u7528\u5FAE\u4FE1\u5F00\u653E\u80FD\u529B'}" >
+        <head :data="{title: '\u4E91\u51FD\u6570\u4E2D\u4F7F\u7528\u5FAE\u4FE1\u5F00\u653E\u80FD\u529B'}" >
             
 
   
@@ -2819,13 +2944,13 @@ var require_scf_openapi = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
-    </div>` });
+    `;
   }
 });
 
@@ -2835,7 +2960,6 @@ var require_scf_openapi2 = __commonJS({
     require_scf_openapi();
     window["__wxRoute"] = "packageCloud/pages/scf-openapi/scf-openapi";
     var page = getPage("packageCloud/pages/scf-openapi/scf-openapi");
-    page.template = "<packageCloud/pages/scf-openapi/scf-openapi />";
     page.json = `{
   "navigationBarTitleText": "\u4E91\u8C03\u7528"
 }`;

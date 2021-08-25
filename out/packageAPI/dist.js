@@ -143,24 +143,36 @@ var require_app = __commonJS({
 // miniprogram-demo/miniprogram/common/head.wxml
 var require_head = __commonJS({
   "miniprogram-demo/miniprogram/common/head.wxml"() {
-    Vue.component("head", { template: `<div>
+    Vue.component("head", {
+      props: ["data"],
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
   
     {{title}}
     
     {{desc}}
   
-</div>` });
+</div>`
+    });
   }
 });
 
 // miniprogram-demo/miniprogram/common/foot.wxml
 var require_foot = __commonJS({
   "miniprogram-demo/miniprogram/common/foot.wxml"() {
-    Vue.component("foot", { template: `<div>
+    Vue.component("foot", {
+      props: ["data"],
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div>
   
     
   
-</div>` });
+</div>`
+    });
   }
 });
 
@@ -169,36 +181,45 @@ var require_login = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/login/login.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/login/login", { template: `<div>
+    var page2 = getPage("packageAPI/pages/login/login");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'Login'}" >
+        <head :data="{title: 'Login'}" >
             
 
   
     
       
+        <div v-if="{hasLogin === true}" >
+            
         \u5DF2\u767B\u5F55
         \u6BCF\u4E2A\u5FAE\u4FE1\u53F7\u4E2D\u4EC5\u9700\u767B\u5F55 1 \u6B21\uFF0C\u540E\u7EED\u6BCF\u6B21\u8FDB\u5165\u9875\u9762\u5373\u53EF\u6839\u636E\u5FAE\u4FE1 id \u81EA\u52A8\u62C9\u53D6\u7528\u6237\u4FE1\u606F
       
+        </div>
+    
       
+        <div v-if="{hasLogin === false}" >
+            
         \u6BCF\u4E2A\u5FAE\u4FE1\u53F7\u4E2D\u4EC5\u9700\u767B\u5F55\u4E00\u6B21
         \u5FAE\u4FE1\u767B\u5F55
       
+        </div>
+    
     
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -207,9 +228,8 @@ var require_login2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/login/login.js"() {
     require_login();
     window["__wxRoute"] = "packageAPI/pages/login/login";
-    var page = getPage("packageAPI/pages/login/login");
-    page.template = "<packageAPI/pages/login/login />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/login/login");
+    page2.json = `{
     "navigationBarTitleText": "\u5FAE\u4FE1\u767B\u5F55"
 }
 `;
@@ -247,12 +267,13 @@ var require_get_user_info = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-user-info/get-user-info.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/get-user-info/get-user-info", { template: `<div>
+    var page2 = getPage("packageAPI/pages/get-user-info/get-user-info");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'getUserInfo'}" >
+        <head :data="{title: 'getUserInfo'}" >
             
 
   
@@ -260,13 +281,21 @@ var require_get_user_info = __commonJS({
       
         \u7528\u6237\u4FE1\u606F
         
+        <div v-if="{hasUserInfo === false}" >
+            
           \u672A\u83B7\u53D6
           \u70B9\u51FB\u7EFF\u8272\u6309\u94AE\u53EF\u83B7\u53D6\u7528\u6237\u5934\u50CF\u53CA\u6635\u79F0
         
+        </div>
+    
         
+        <div v-if="{hasUserInfo === true}" >
+            
           
           {{userInfo.nickName}}
         
+        </div>
+    
       
       
         \u83B7\u53D6\u7528\u6237\u4FE1\u606F
@@ -276,14 +305,14 @@ var require_get_user_info = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -292,9 +321,8 @@ var require_get_user_info2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-user-info/get-user-info.js"() {
     require_get_user_info();
     window["__wxRoute"] = "packageAPI/pages/get-user-info/get-user-info";
-    var page = getPage("packageAPI/pages/get-user-info/get-user-info");
-    page.template = "<packageAPI/pages/get-user-info/get-user-info />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/get-user-info/get-user-info");
+    page2.json = `{
     "navigationBarTitleText": "\u83B7\u53D6\u7528\u6237\u4FE1\u606F"
 }
 `;
@@ -330,12 +358,13 @@ var require_request_payment = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/request-payment/request-payment.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/request-payment/request-payment", { template: `<div>
+    var page2 = getPage("packageAPI/pages/request-payment/request-payment");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'requestPayment'}" >
+        <head :data="{title: 'requestPayment'}" >
             
 
   
@@ -350,14 +379,14 @@ var require_request_payment = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -366,9 +395,8 @@ var require_request_payment2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/request-payment/request-payment.js"() {
     require_request_payment();
     window["__wxRoute"] = "packageAPI/pages/request-payment/request-payment";
-    var page = getPage("packageAPI/pages/request-payment/request-payment");
-    page.template = "<packageAPI/pages/request-payment/request-payment />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/request-payment/request-payment");
+    page2.json = `{
     "navigationBarTitleText": "\u53D1\u8D77\u652F\u4ED8"
 }
 `;
@@ -437,12 +465,13 @@ var require_share = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/share/share.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/share/share", { template: `<div>
+    var page2 = getPage("packageAPI/pages/share/share");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'onShareAppMessage'}" >
+        <head :data="{title: 'onShareAppMessage'}" >
             
 
   
@@ -477,14 +506,14 @@ var require_share = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -493,9 +522,8 @@ var require_share2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/share/share.js"() {
     require_share();
     window["__wxRoute"] = "packageAPI/pages/share/share";
-    var page = getPage("packageAPI/pages/share/share");
-    page.template = "<packageAPI/pages/share/share />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/share/share");
+    page2.json = `{
     "navigationBarTitleText": "\u8F6C\u53D1"
 }
 `;
@@ -519,12 +547,13 @@ var require_share_button = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/share-button/share-button.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/share-button/share-button", { template: `<div>
+    var page2 = getPage("packageAPI/pages/share-button/share-button");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'share-button'}" >
+        <head :data="{title: 'share-button'}" >
             
 
   
@@ -541,14 +570,14 @@ var require_share_button = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -557,9 +586,8 @@ var require_share_button2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/share-button/share-button.js"() {
     require_share_button();
     window["__wxRoute"] = "packageAPI/pages/share-button/share-button";
-    var page = getPage("packageAPI/pages/share-button/share-button");
-    page.template = "<packageAPI/pages/share-button/share-button />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/share-button/share-button");
+    page2.json = `{
     "navigationBarTitleText": "\u8F6C\u53D1\u6309\u94AE"
 }
 `;
@@ -588,12 +616,13 @@ var require_custom_message = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/custom-message/custom-message.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/custom-message/custom-message", { template: `<div>
+    var page2 = getPage("packageAPI/pages/custom-message/custom-message");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'customMessage'}" >
+        <head :data="{title: 'customMessage'}" >
             
 
   
@@ -608,14 +637,14 @@ var require_custom_message = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -624,9 +653,8 @@ var require_custom_message2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/custom-message/custom-message.js"() {
     require_custom_message();
     window["__wxRoute"] = "packageAPI/pages/custom-message/custom-message";
-    var page = getPage("packageAPI/pages/custom-message/custom-message");
-    page.template = "<packageAPI/pages/custom-message/custom-message />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/custom-message/custom-message");
+    page2.json = `{
     "navigationBarTitleText": "\u5BA2\u670D\u6D88\u606F"
 }
 `;
@@ -646,10 +674,34 @@ var require_template_message = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/template-message/template-message.wxml"() {
     require_head();
     require_foot();
-    Vue.component("address", { template: `<div></div>` });
-    Vue.component("time", { template: `<div></div>` });
-    Vue.component("name", { template: `<div></div>` });
-    Vue.component("serial", { template: `<div></div>` });
+    Vue.component("address", {
+      props: ["data"],
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div></div>`
+    });
+    Vue.component("time", {
+      props: ["data"],
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div></div>`
+    });
+    Vue.component("name", {
+      props: ["data"],
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div></div>`
+    });
+    Vue.component("serial", {
+      props: ["data"],
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div></div>`
+    });
   }
 });
 
@@ -658,9 +710,8 @@ var require_template_message2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/template-message/template-message.js"() {
     require_template_message();
     window["__wxRoute"] = "packageAPI/pages/template-message/template-message";
-    var page = getPage("packageAPI/pages/template-message/template-message");
-    page.template = "<packageAPI/pages/template-message/template-message />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/template-message/template-message");
+    page2.json = `{
     "navigationBarTitleText": "\u6A21\u677F\u6D88\u606F"
 }
 `;
@@ -730,7 +781,13 @@ var require_set_navigation_bar_title = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/set-navigation-bar-title/set-navigation-bar-title.wxml"() {
     require_head();
     require_foot();
-    Vue.component("title", { template: `<div></div>` });
+    Vue.component("title", {
+      props: ["data"],
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div></div>`
+    });
   }
 });
 
@@ -739,9 +796,8 @@ var require_set_navigation_bar_title2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/set-navigation-bar-title/set-navigation-bar-title.js"() {
     require_set_navigation_bar_title();
     window["__wxRoute"] = "packageAPI/pages/set-navigation-bar-title/set-navigation-bar-title";
-    var page = getPage("packageAPI/pages/set-navigation-bar-title/set-navigation-bar-title");
-    page.template = "<packageAPI/pages/set-navigation-bar-title/set-navigation-bar-title />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/set-navigation-bar-title/set-navigation-bar-title");
+    page2.json = `{
     "navigationBarTitleText": "\u8BBE\u7F6E\u9875\u9762\u6807\u9898"
 }
 `;
@@ -775,12 +831,13 @@ var require_navigation_bar_loading = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/navigation-bar-loading/navigation-bar-loading.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/navigation-bar-loading/navigation-bar-loading", { template: `<div>
+    var page2 = getPage("packageAPI/pages/navigation-bar-loading/navigation-bar-loading");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'navigationBarLoading'}" >
+        <head :data="{title: 'navigationBarLoading'}" >
             
 
   
@@ -791,14 +848,14 @@ var require_navigation_bar_loading = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -807,9 +864,8 @@ var require_navigation_bar_loading2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/navigation-bar-loading/navigation-bar-loading.js"() {
     require_navigation_bar_loading();
     window["__wxRoute"] = "packageAPI/pages/navigation-bar-loading/navigation-bar-loading";
-    var page = getPage("packageAPI/pages/navigation-bar-loading/navigation-bar-loading");
-    page.template = "<packageAPI/pages/navigation-bar-loading/navigation-bar-loading />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/navigation-bar-loading/navigation-bar-loading");
+    page2.json = `{
     "navigationBarTitleText": "\u6807\u9898\u680F\u52A0\u8F7D\u52A8\u753B"
 }
 `;
@@ -835,12 +891,13 @@ var require_navigator = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/navigator/navigator.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/navigator/navigator", { template: `<div>
+    var page2 = getPage("packageAPI/pages/navigator/navigator");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'navigateTo/Back, redirectTo'}" >
+        <head :data="{title: 'navigateTo/Back, redirectTo'}" >
             
 
   
@@ -854,14 +911,14 @@ var require_navigator = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -870,9 +927,8 @@ var require_navigator2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/navigator/navigator.js"() {
     require_navigator();
     window["__wxRoute"] = "packageAPI/pages/navigator/navigator";
-    var page = getPage("packageAPI/pages/navigator/navigator");
-    page.template = "<packageAPI/pages/navigator/navigator />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/navigator/navigator");
+    page2.json = `{
     "navigationBarTitleText": "\u9875\u9762\u8DF3\u8F6C"
 }
 `;
@@ -907,12 +963,13 @@ var require_pull_down_refresh = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/pull-down-refresh/pull-down-refresh.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/pull-down-refresh/pull-down-refresh", { template: `<div>
+    var page2 = getPage("packageAPI/pages/pull-down-refresh/pull-down-refresh");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'on/stopPullDownRefresh'}" >
+        <head :data="{title: 'on/stopPullDownRefresh'}" >
             
 
   
@@ -927,14 +984,14 @@ var require_pull_down_refresh = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -943,9 +1000,8 @@ var require_pull_down_refresh2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/pull-down-refresh/pull-down-refresh.js"() {
     require_pull_down_refresh();
     window["__wxRoute"] = "packageAPI/pages/pull-down-refresh/pull-down-refresh";
-    var page = getPage("packageAPI/pages/pull-down-refresh/pull-down-refresh");
-    page.template = "<packageAPI/pages/pull-down-refresh/pull-down-refresh />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/pull-down-refresh/pull-down-refresh");
+    page2.json = `{
     "navigationBarTitleText": "\u4E0B\u62C9\u5237\u65B0",
     "enablePullDownRefresh": true,
     "backgroundTextStyle": "@backgroundTextStyle"
@@ -982,12 +1038,13 @@ var require_animation = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/animation/animation.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/animation/animation", { template: `<div>
+    var page2 = getPage("packageAPI/pages/animation/animation");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: '\u5173\u952E\u5E27\u52A8\u753B'}" >
+        <head :data="{title: '\u5173\u952E\u5E27\u52A8\u753B'}" >
             
 
   
@@ -1006,14 +1063,14 @@ var require_animation = __commonJS({
   
   
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -1022,9 +1079,8 @@ var require_animation2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/animation/animation.js"() {
     require_animation();
     window["__wxRoute"] = "packageAPI/pages/animation/animation";
-    var page = getPage("packageAPI/pages/animation/animation");
-    page.template = "<packageAPI/pages/animation/animation />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/animation/animation");
+    page2.json = `{
     "navigationBarTitleText": "\u52A8\u753B"
 }
 `;
@@ -1079,12 +1135,13 @@ var require_action_sheet = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/action-sheet/action-sheet.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/action-sheet/action-sheet", { template: `<div>
+    var page2 = getPage("packageAPI/pages/action-sheet/action-sheet");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'action-sheet'}" >
+        <head :data="{title: 'action-sheet'}" >
             
 
   
@@ -1094,14 +1151,14 @@ var require_action_sheet = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -1110,9 +1167,8 @@ var require_action_sheet2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/action-sheet/action-sheet.js"() {
     require_action_sheet();
     window["__wxRoute"] = "packageAPI/pages/action-sheet/action-sheet";
-    var page = getPage("packageAPI/pages/action-sheet/action-sheet");
-    page.template = "<packageAPI/pages/action-sheet/action-sheet />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/action-sheet/action-sheet");
+    page2.json = `{
     "navigationBarTitleText": "\u64CD\u4F5C\u83DC\u5355"
 }
 `;
@@ -1140,12 +1196,13 @@ var require_modal = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/modal/modal.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/modal/modal", { template: `<div>
+    var page2 = getPage("packageAPI/pages/modal/modal");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'modal'}" >
+        <head :data="{title: 'modal'}" >
             
 
   
@@ -1156,14 +1213,14 @@ var require_modal = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -1172,9 +1229,8 @@ var require_modal2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/modal/modal.js"() {
     require_modal();
     window["__wxRoute"] = "packageAPI/pages/modal/modal";
-    var page = getPage("packageAPI/pages/modal/modal");
-    page.template = "<packageAPI/pages/modal/modal />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/modal/modal");
+    page2.json = `{
     "navigationBarTitleText": "\u6A21\u6001\u5F39\u7A97"
 }
 `;
@@ -1213,12 +1269,13 @@ var require_toast = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/toast/toast.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/toast/toast", { template: `<div>
+    var page2 = getPage("packageAPI/pages/toast/toast");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'toast'}" >
+        <head :data="{title: 'toast'}" >
             
 
   
@@ -1239,14 +1296,14 @@ var require_toast = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -1255,9 +1312,8 @@ var require_toast2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/toast/toast.js"() {
     require_toast();
     window["__wxRoute"] = "packageAPI/pages/toast/toast";
-    var page = getPage("packageAPI/pages/toast/toast");
-    page.template = "<packageAPI/pages/toast/toast />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/toast/toast");
+    page2.json = `{
     "navigationBarTitleText": "\u6D88\u606F\u63D0\u793A\u6846"
 }
 `;
@@ -1298,12 +1354,13 @@ var require_get_network_type = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-network-type/get-network-type.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/get-network-type/get-network-type", { template: `<div>
+    var page2 = getPage("packageAPI/pages/get-network-type/get-network-type");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'getNetworkType'}" >
+        <head :data="{title: 'getNetworkType'}" >
             
 
   
@@ -1311,12 +1368,20 @@ var require_get_network_type = __commonJS({
       
         \u7F51\u7EDC\u72B6\u6001
         
+        <div v-if="{hasNetworkType === false}" >
+            
           \u672A\u83B7\u53D6
           \u70B9\u51FB\u7EFF\u8272\u6309\u94AE\u53EF\u83B7\u53D6\u7F51\u7EDC\u72B6\u6001
         
+        </div>
+    
         
+        <div v-if="{hasNetworkType === true}" >
+            
           {{networkType}}
         
+        </div>
+    
       
       
         \u83B7\u53D6\u624B\u673A\u7F51\u7EDC\u72B6\u6001
@@ -1326,14 +1391,14 @@ var require_get_network_type = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -1342,9 +1407,8 @@ var require_get_network_type2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-network-type/get-network-type.js"() {
     require_get_network_type();
     window["__wxRoute"] = "packageAPI/pages/get-network-type/get-network-type";
-    var page = getPage("packageAPI/pages/get-network-type/get-network-type");
-    page.template = "<packageAPI/pages/get-network-type/get-network-type />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/get-network-type/get-network-type");
+    page2.json = `{
     "navigationBarTitleText": "\u83B7\u53D6\u624B\u673A\u7F51\u7EDC\u72B6\u6001"
 }
 `;
@@ -1385,12 +1449,13 @@ var require_on_network_status_change = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/on-network-status-change/on-network-status-change.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/on-network-status-change/on-network-status-change", { template: `<div>
+    var page2 = getPage("packageAPI/pages/on-network-status-change/on-network-status-change");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'onNetworkStatusChange'}" >
+        <head :data="{title: 'onNetworkStatusChange'}" >
             
 
   
@@ -1398,24 +1463,32 @@ var require_on_network_status_change = __commonJS({
       
         \u7F51\u7EDC\u72B6\u6001
         
+        <div v-if="{isConnected === false}" >
+            
           \u6CA1\u6709\u7F51\u7EDC\u8FDE\u63A5
         
+        </div>
+    
         
+        <div v-if="{isConnected === true}" >
+            
           {{networkType}}
         
+        </div>
+    
       
     
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -1424,9 +1497,8 @@ var require_on_network_status_change2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/on-network-status-change/on-network-status-change.js"() {
     require_on_network_status_change();
     window["__wxRoute"] = "packageAPI/pages/on-network-status-change/on-network-status-change";
-    var page = getPage("packageAPI/pages/on-network-status-change/on-network-status-change");
-    page.template = "<packageAPI/pages/on-network-status-change/on-network-status-change />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/on-network-status-change/on-network-status-change");
+    page2.json = `{
     "navigationBarTitleText": "\u76D1\u542C\u624B\u673A\u7F51\u7EDC\u53D8\u5316"
 }
 `;
@@ -1469,12 +1541,13 @@ var require_get_system_info = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-system-info/get-system-info.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/get-system-info/get-system-info", { template: `<div>
+    var page2 = getPage("packageAPI/pages/get-system-info/get-system-info");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'getSystemInfo'}" >
+        <head :data="{title: 'getSystemInfo'}" >
             
 
   
@@ -1544,14 +1617,14 @@ var require_get_system_info = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -1560,9 +1633,8 @@ var require_get_system_info2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-system-info/get-system-info.js"() {
     require_get_system_info();
     window["__wxRoute"] = "packageAPI/pages/get-system-info/get-system-info";
-    var page = getPage("packageAPI/pages/get-system-info/get-system-info");
-    page.template = "<packageAPI/pages/get-system-info/get-system-info />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/get-system-info/get-system-info");
+    page2.json = `{
     "navigationBarTitleText": "\u83B7\u53D6\u624B\u673A\u7CFB\u7EDF\u4FE1\u606F"
 }
 `;
@@ -1595,12 +1667,13 @@ var require_on_compass_change = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/on-compass-change/on-compass-change.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/on-compass-change/on-compass-change", { template: `<div>
+    var page2 = getPage("packageAPI/pages/on-compass-change/on-compass-change");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'onCompassChange'}" >
+        <head :data="{title: 'onCompassChange'}" >
             
 
   
@@ -1622,14 +1695,14 @@ var require_on_compass_change = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -1638,9 +1711,8 @@ var require_on_compass_change2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/on-compass-change/on-compass-change.js"() {
     require_on_compass_change();
     window["__wxRoute"] = "packageAPI/pages/on-compass-change/on-compass-change";
-    var page = getPage("packageAPI/pages/on-compass-change/on-compass-change");
-    page.template = "<packageAPI/pages/on-compass-change/on-compass-change />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/on-compass-change/on-compass-change");
+    page2.json = `{
     "navigationBarTitleText": "\u76D1\u542C\u7F57\u76D8\u6570\u636E"
 }
 `;
@@ -1698,7 +1770,13 @@ var require_make_phone_call = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/make-phone-call/make-phone-call.wxml"() {
     require_head();
     require_foot();
-    Vue.component("input", { template: `<div></div>` });
+    Vue.component("input", {
+      props: ["data"],
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div></div>`
+    });
   }
 });
 
@@ -1707,9 +1785,8 @@ var require_make_phone_call2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/make-phone-call/make-phone-call.js"() {
     require_make_phone_call();
     window["__wxRoute"] = "packageAPI/pages/make-phone-call/make-phone-call";
-    var page = getPage("packageAPI/pages/make-phone-call/make-phone-call");
-    page.template = "<packageAPI/pages/make-phone-call/make-phone-call />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/make-phone-call/make-phone-call");
+    page2.json = `{
     "navigationBarTitleText": "\u6253\u7535\u8BDD"
 }
 `;
@@ -1752,12 +1829,13 @@ var require_scan_code = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/scan-code/scan-code.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/scan-code/scan-code", { template: `<div>
+    var page2 = getPage("packageAPI/pages/scan-code/scan-code");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'scanCode'}" >
+        <head :data="{title: 'scanCode'}" >
             
 
   
@@ -1773,14 +1851,14 @@ var require_scan_code = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -1789,9 +1867,8 @@ var require_scan_code2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/scan-code/scan-code.js"() {
     require_scan_code();
     window["__wxRoute"] = "packageAPI/pages/scan-code/scan-code";
-    var page = getPage("packageAPI/pages/scan-code/scan-code");
-    page.template = "<packageAPI/pages/scan-code/scan-code />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/scan-code/scan-code");
+    page2.json = `{
     "navigationBarTitleText": "\u626B\u7801"
 }
 `;
@@ -1826,12 +1903,13 @@ var require_request = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/request/request.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/request/request", { template: `<div>
+    var page2 = getPage("packageAPI/pages/request/request");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'request'}" >
+        <head :data="{title: 'request'}" >
             
 
   
@@ -1846,14 +1924,14 @@ var require_request = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -1862,9 +1940,8 @@ var require_request2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/request/request.js"() {
     require_request();
     window["__wxRoute"] = "packageAPI/pages/request/request";
-    var page = getPage("packageAPI/pages/request/request");
-    page.template = "<packageAPI/pages/request/request />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/request/request");
+    page2.json = `{
     "navigationBarTitleText": "\u7F51\u7EDC\u8BF7\u6C42"
 }
 `;
@@ -1916,12 +1993,13 @@ var require_web_socket = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/web-socket/web-socket.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/web-socket/web-socket", { template: `<div>
+    var page2 = getPage("packageAPI/pages/web-socket/web-socket");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'WebSocket'}" >
+        <head :data="{title: 'WebSocket'}" >
             
 
   
@@ -1947,14 +2025,14 @@ var require_web_socket = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -1963,9 +2041,8 @@ var require_web_socket2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/web-socket/web-socket.js"() {
     require_web_socket();
     window["__wxRoute"] = "packageAPI/pages/web-socket/web-socket";
-    var page = getPage("packageAPI/pages/web-socket/web-socket");
-    page.template = "<packageAPI/pages/web-socket/web-socket />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/web-socket/web-socket");
+    page2.json = `{
     "navigationBarTitleText": "Web Socket"
 }
 `;
@@ -2068,12 +2145,13 @@ var require_upload_file = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/upload-file/upload-file.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/upload-file/upload-file", { template: `<div>
+    var page2 = getPage("packageAPI/pages/upload-file/upload-file");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'uploadFile'}" >
+        <head :data="{title: 'uploadFile'}" >
             
 
   
@@ -2081,30 +2159,38 @@ var require_upload_file = __commonJS({
       
 
         
+        <div v-if="{imageSrc}" >
+            
           
         
+        </div>
+    
 
         
+        <div v-else="" >
+            
           
             
             
           
           \u9009\u62E9\u56FE\u7247
         
+        </div>
+    
 
       
     
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -2113,9 +2199,8 @@ var require_upload_file2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/upload-file/upload-file.js"() {
     require_upload_file();
     window["__wxRoute"] = "packageAPI/pages/upload-file/upload-file";
-    var page = getPage("packageAPI/pages/upload-file/upload-file");
-    page.template = "<packageAPI/pages/upload-file/upload-file />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/upload-file/upload-file");
+    page2.json = `{
     "navigationBarTitleText": "\u4E0A\u4F20\u6587\u4EF6"
 }
 `;
@@ -2184,17 +2269,20 @@ var require_download_file = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/download-file/download-file.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/download-file/download-file", { template: `<div>
+    var page2 = getPage("packageAPI/pages/download-file/download-file");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'downloadFile'}" >
+        <head :data="{title: 'downloadFile'}" >
             
 
   
     
     
+        <div v-else="" >
+            
       
         
           \u70B9\u51FB\u6309\u94AE\u4E0B\u8F7D\u670D\u52A1\u7AEF\u793A\u4F8B\u56FE\u7247
@@ -2204,17 +2292,19 @@ var require_download_file = __commonJS({
         \u4E0B\u8F7D
       
     
+        </div>
+    
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -2223,9 +2313,8 @@ var require_download_file2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/download-file/download-file.js"() {
     require_download_file();
     window["__wxRoute"] = "packageAPI/pages/download-file/download-file";
-    var page = getPage("packageAPI/pages/download-file/download-file");
-    page.template = "<packageAPI/pages/download-file/download-file />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/download-file/download-file");
+    page2.json = `{
     "navigationBarTitleText": "\u4E0B\u8F7D\u6587\u4EF6"
 }
 `;
@@ -2259,12 +2348,13 @@ var require_image = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/image/image.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/image/image", { template: `<div>
+    var page2 = getPage("packageAPI/pages/image/image");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'choose/previewImage'}" >
+        <head :data="{title: 'choose/previewImage'}" >
             
 
   
@@ -2316,10 +2406,14 @@ var require_image = __commonJS({
                 
                   
                     
+        <div v-for="item in imageList" v-for-item="image" >
+            
                       
                         
                       
                     
+        </div>
+    
                   
                   
                     
@@ -2335,14 +2429,14 @@ var require_image = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -2351,9 +2445,8 @@ var require_image2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/image/image.js"() {
     require_image();
     window["__wxRoute"] = "packageAPI/pages/image/image";
-    var page = getPage("packageAPI/pages/image/image");
-    page.template = "<packageAPI/pages/image/image />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/image/image");
+    page2.json = `{
     "navigationBarTitleText": "\u56FE\u7247"
 }
 `;
@@ -2420,17 +2513,20 @@ var require_voice = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/voice/voice.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/voice/voice", { template: `<div>
+    var page2 = getPage("packageAPI/pages/voice/voice");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: '\u5F55\u97F3/\u97F3\u9891'}" >
+        <head :data="{title: '\u5F55\u97F3/\u97F3\u9891'}" >
             
 
   
     
       
+        <div v-if="{recording === false && playing === false && hasRecord === false}" >
+            
         
           {{formatedRecordTime}}
         
@@ -2442,8 +2538,12 @@ var require_voice = __commonJS({
           
         
       
+        </div>
+    
 
       
+        <div v-if="{recording === true}" >
+            
         
           {{formatedRecordTime}}
         
@@ -2455,8 +2555,12 @@ var require_voice = __commonJS({
           
         
       
+        </div>
+    
 
       
+        <div v-if="{hasRecord === true && playing === false}" >
+            
         
           {{formatedPlayTime}}
           {{formatedRecordTime}}
@@ -2471,8 +2575,12 @@ var require_voice = __commonJS({
           
         
       
+        </div>
+    
 
       
+        <div v-if="{hasRecord === true && playing === true}" >
+            
         
           {{formatedPlayTime}}
           {{formatedRecordTime}}
@@ -2489,18 +2597,20 @@ var require_voice = __commonJS({
           
         
       
+        </div>
+    
     
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -2595,9 +2705,8 @@ var require_voice2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/voice/voice.js"() {
     require_voice();
     window["__wxRoute"] = "packageAPI/pages/voice/voice";
-    var page = getPage("packageAPI/pages/voice/voice");
-    page.template = "<packageAPI/pages/voice/voice />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/voice/voice");
+    page2.json = `{
     "navigationBarTitleText": "\u5F55\u97F3"
 }
 `;
@@ -2746,30 +2855,43 @@ var require_file = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/file/file.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/file/file", { template: `<div>
+    var page2 = getPage("packageAPI/pages/file/file");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'saveFile'}" >
+        <head :data="{title: 'saveFile'}" >
             
 
   
     
       
         
+        <div v-if="{tempFilePath != ''}" >
+            
           
         
+        </div>
+    
         
+        <div v-if="{tempFilePath === '' && savedFilePath != ''}" >
+            
           
         
+        </div>
+    
         
+        <div v-if="{tempFilePath === '' && savedFilePath === ''}" >
+            
           
             
             
           
           \u8BF7\u9009\u62E9\u6587\u4EF6
         
+        </div>
+    
       
       
         \u4FDD\u5B58\u6587\u4EF6
@@ -2781,14 +2903,14 @@ var require_file = __commonJS({
   {{dialog.content}}
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -2797,9 +2919,8 @@ var require_file2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/file/file.js"() {
     require_file();
     window["__wxRoute"] = "packageAPI/pages/file/file";
-    var page = getPage("packageAPI/pages/file/file");
-    page.template = "<packageAPI/pages/file/file />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/file/file");
+    page2.json = `{
     "navigationBarTitleText": "\u6587\u4EF6"
 }
 `;
@@ -2884,12 +3005,13 @@ var require_on_accelerometer_change = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/on-accelerometer-change/on-accelerometer-change.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/on-accelerometer-change/on-accelerometer-change", { template: `<div>
+    var page2 = getPage("packageAPI/pages/on-accelerometer-change/on-accelerometer-change");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'onAccelerometerChange'}" >
+        <head :data="{title: 'onAccelerometerChange'}" >
             
 
   
@@ -2912,14 +3034,14 @@ var require_on_accelerometer_change = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -2928,9 +3050,8 @@ var require_on_accelerometer_change2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/on-accelerometer-change/on-accelerometer-change.js"() {
     require_on_accelerometer_change();
     window["__wxRoute"] = "packageAPI/pages/on-accelerometer-change/on-accelerometer-change";
-    var page = getPage("packageAPI/pages/on-accelerometer-change/on-accelerometer-change");
-    page.template = "<packageAPI/pages/on-accelerometer-change/on-accelerometer-change />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/on-accelerometer-change/on-accelerometer-change");
+    page2.json = `{
     "navigationBarTitleText": "\u76D1\u542C\u91CD\u529B\u611F\u5E94\u6570\u636E"
 }
 `;
@@ -3054,12 +3175,13 @@ var require_canvas = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/canvas/canvas.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/canvas/canvas", { template: `<div>
+    var page2 = getPage("packageAPI/pages/canvas/canvas");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'createContext'}" >
+        <head :data="{title: 'createContext'}" >
             
 
   
@@ -3067,22 +3189,26 @@ var require_canvas = __commonJS({
       
       
         
+        <div v-for="item in methods" v-for-item="method" >
+            
           {{method}}
         
+        </div>
+    
         toTempFilePath
       
     
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -3090,9 +3216,8 @@ var require_canvas = __commonJS({
 var require_example = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/canvas/example.js"(exports2, module2) {
     window["__wxRoute"] = "packageAPI/pages/canvas/example";
-    var page = getPage("packageAPI/pages/canvas/example");
-    page.template = "<packageAPI/pages/canvas/example />";
-    page.json = ``;
+    var page2 = getPage("packageAPI/pages/canvas/example");
+    page2.json = ``;
     var example = {};
     example.rotate = function(context) {
       context.beginPath();
@@ -3338,9 +3463,8 @@ var require_canvas2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/canvas/canvas.js"() {
     require_canvas();
     window["__wxRoute"] = "packageAPI/pages/canvas/canvas";
-    var page = getPage("packageAPI/pages/canvas/canvas");
-    page.template = "<packageAPI/pages/canvas/canvas />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/canvas/canvas");
+    page2.json = `{
     "navigationBarTitleText": "\u521B\u5EFA\u753B\u5E03"
 }
 `;
@@ -3390,12 +3514,13 @@ var require_background_audio = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/background-audio/background-audio.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/background-audio/background-audio", { template: `<div>
+    var page2 = getPage("packageAPI/pages/background-audio/background-audio");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'backgroundAudio'}" >
+        <head :data="{title: 'backgroundAudio'}" >
             
 
   
@@ -3410,6 +3535,8 @@ var require_background_audio = __commonJS({
     \u6CE8\u610F\uFF1A\u79BB\u5F00\u5F53\u524D\u9875\u9762\u540E\u80CC\u666F\u97F3\u4E50\u5C06\u4FDD\u6301\u64AD\u653E\uFF0C\u4F46\u9000\u51FA\u5C0F\u7A0B\u5E8F\u5C06\u505C\u6B62
     
       
+        <div v-if="{playing === true}" >
+            
         
           
         
@@ -3417,25 +3544,31 @@ var require_background_audio = __commonJS({
           
         
       
+        </div>
+    
       
+        <div v-if="{playing === false}" >
+            
         
         
           
         
       
+        </div>
+    
       
     
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -3444,9 +3577,8 @@ var require_background_audio2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/background-audio/background-audio.js"() {
     require_background_audio();
     window["__wxRoute"] = "packageAPI/pages/background-audio/background-audio";
-    var page = getPage("packageAPI/pages/background-audio/background-audio");
-    page.template = "<packageAPI/pages/background-audio/background-audio />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/background-audio/background-audio");
+    page2.json = `{
    "navigationBarTitleText": "\u80CC\u666F\u97F3\u9891"
 }
 `;
@@ -3560,12 +3692,13 @@ var require_video = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/video/video.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/video/video", { template: `<div>
+    var page2 = getPage("packageAPI/pages/video/video");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'chooseVideo'}" >
+        <head :data="{title: 'chooseVideo'}" >
             
 
   
@@ -3605,22 +3738,30 @@ var require_video = __commonJS({
 
       
         
+        <div v-if="{src === ''}" >
+            
           
             
             
           
           \u6DFB\u52A0\u89C6\u9891
         
+        </div>
+    
         
+        <div v-if="{src != ''}" >
+            
           
         
+        </div>
+    
       
     
   
 
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -3629,9 +3770,8 @@ var require_video2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/video/video.js"() {
     require_video();
     window["__wxRoute"] = "packageAPI/pages/video/video";
-    var page = getPage("packageAPI/pages/video/video");
-    page.template = "<packageAPI/pages/video/video />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/video/video");
+    page2.json = `{
     "navigationBarTitleText": "\u62CD\u6444/\u9009\u62E9\u89C6\u9891"
 }
 `;
@@ -3695,12 +3835,13 @@ var require_get_location = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-location/get-location.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/get-location/get-location", { template: `<div>
+    var page2 = getPage("packageAPI/pages/get-location/get-location");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'getLocation'}" >
+        <head :data="{title: 'getLocation'}" >
             
 
   
@@ -3708,14 +3849,22 @@ var require_get_location = __commonJS({
       
         \u5F53\u524D\u4F4D\u7F6E\u7ECF\u7EAC\u5EA6
         
+        <div v-if="{hasLocation === false}" >
+            
           \u672A\u83B7\u53D6
         
+        </div>
+    
         
+        <div v-if="{hasLocation === true}" >
+            
           
             E: {{location.longitude[0]}}\xB0{{location.longitude[1]}}\u2032
             N: {{location.latitude[0]}}\xB0{{location.latitude[1]}}\u2032
           
         
+        </div>
+    
       
       
         \u83B7\u53D6\u4F4D\u7F6E
@@ -3725,14 +3874,14 @@ var require_get_location = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -3741,9 +3890,8 @@ var require_get_location2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-location/get-location.js"() {
     require_get_location();
     window["__wxRoute"] = "packageAPI/pages/get-location/get-location";
-    var page = getPage("packageAPI/pages/get-location/get-location");
-    page.template = "<packageAPI/pages/get-location/get-location />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/get-location/get-location");
+    page2.json = `{
     "navigationBarTitleText": "\u83B7\u53D6\u4F4D\u7F6E"
 }
 `;
@@ -3785,10 +3933,34 @@ var require_open_location = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/open-location/open-location.wxml"() {
     require_head();
     require_foot();
-    Vue.component("longitude", { template: `<div></div>` });
-    Vue.component("latitude", { template: `<div></div>` });
-    Vue.component("name", { template: `<div></div>` });
-    Vue.component("address", { template: `<div></div>` });
+    Vue.component("longitude", {
+      props: ["data"],
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div></div>`
+    });
+    Vue.component("latitude", {
+      props: ["data"],
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div></div>`
+    });
+    Vue.component("name", {
+      props: ["data"],
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div></div>`
+    });
+    Vue.component("address", {
+      props: ["data"],
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div></div>`
+    });
   }
 });
 
@@ -3797,9 +3969,8 @@ var require_open_location2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/open-location/open-location.js"() {
     require_open_location();
     window["__wxRoute"] = "packageAPI/pages/open-location/open-location";
-    var page = getPage("packageAPI/pages/open-location/open-location");
-    page.template = "<packageAPI/pages/open-location/open-location />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/open-location/open-location");
+    page2.json = `{
     "navigationBarTitleText": "\u67E5\u770B\u4F4D\u7F6E"
 }
 `;
@@ -3830,12 +4001,13 @@ var require_choose_location = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/choose-location/choose-location.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/choose-location/choose-location", { template: `<div>
+    var page2 = getPage("packageAPI/pages/choose-location/choose-location");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'chooseLocation'}" >
+        <head :data="{title: 'chooseLocation'}" >
             
 
   
@@ -3843,15 +4015,23 @@ var require_choose_location = __commonJS({
       
         \u5F53\u524D\u4F4D\u7F6E\u4FE1\u606F
         
+        <div v-if="{hasLocation === false}" >
+            
           \u672A\u9009\u62E9\u4F4D\u7F6E
         
+        </div>
+    
         
+        <div v-if="{hasLocation === true}" >
+            
           {{locationAddress}}
           
             E: {{location.longitude[0]}}\xB0{{location.longitude[1]}}\u2032
             N: {{location.latitude[0]}}\xB0{{location.latitude[1]}}\u2032
           
         
+        </div>
+    
       
       
         \u9009\u62E9\u4F4D\u7F6E
@@ -3861,14 +4041,14 @@ var require_choose_location = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -3877,9 +4057,8 @@ var require_choose_location2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/choose-location/choose-location.js"() {
     require_choose_location();
     window["__wxRoute"] = "packageAPI/pages/choose-location/choose-location";
-    var page = getPage("packageAPI/pages/choose-location/choose-location");
-    page.template = "<packageAPI/pages/choose-location/choose-location />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/choose-location/choose-location");
+    page2.json = `{
   "navigationBarTitleText": "\u4F7F\u7528\u539F\u751F\u5730\u56FE\u9009\u62E9\u4F4D\u7F6E"
 }`;
     var util = require_util();
@@ -3921,8 +4100,20 @@ var require_storage = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/storage/storage.wxml"() {
     require_head();
     require_foot();
-    Vue.component("key", { template: `<div></div>` });
-    Vue.component("data", { template: `<div></div>` });
+    Vue.component("key", {
+      props: ["data"],
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div></div>`
+    });
+    Vue.component("data", {
+      props: ["data"],
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div></div>`
+    });
   }
 });
 
@@ -3931,9 +4122,8 @@ var require_storage2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/storage/storage.js"() {
     require_storage();
     window["__wxRoute"] = "packageAPI/pages/storage/storage";
-    var page = getPage("packageAPI/pages/storage/storage");
-    page.template = "<packageAPI/pages/storage/storage />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/storage/storage");
+    page2.json = `{
     "navigationBarTitleText": "\u6570\u636E\u5B58\u50A8"
 }
 `;
@@ -4036,12 +4226,13 @@ var require_get_wxml_node_info = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-wxml-node-info/get-wxml-node-info.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/get-wxml-node-info/get-wxml-node-info", { template: `<div>
+    var page2 = getPage("packageAPI/pages/get-wxml-node-info/get-wxml-node-info");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'createSelectorQuery'}" >
+        <head :data="{title: 'createSelectorQuery'}" >
             
 
   
@@ -4064,14 +4255,14 @@ var require_get_wxml_node_info = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -4080,9 +4271,8 @@ var require_get_wxml_node_info2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-wxml-node-info/get-wxml-node-info.js"() {
     require_get_wxml_node_info();
     window["__wxRoute"] = "packageAPI/pages/get-wxml-node-info/get-wxml-node-info";
-    var page = getPage("packageAPI/pages/get-wxml-node-info/get-wxml-node-info");
-    page.template = "<packageAPI/pages/get-wxml-node-info/get-wxml-node-info />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/get-wxml-node-info/get-wxml-node-info");
+    page2.json = `{
   "navigationBarTitleText": "\u83B7\u53D6WXML\u8282\u70B9\u4FE1\u606F"
 }`;
     Page({
@@ -4125,12 +4315,13 @@ var require_load_font_face = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/load-font-face/load-font-face.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/load-font-face/load-font-face", { template: `<div>
+    var page2 = getPage("packageAPI/pages/load-font-face/load-font-face");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'loadFontFace'}" >
+        <head :data="{title: 'loadFontFace'}" >
             
 
   
@@ -4147,14 +4338,14 @@ var require_load_font_face = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -4163,9 +4354,8 @@ var require_load_font_face2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/load-font-face/load-font-face.js"() {
     require_load_font_face();
     window["__wxRoute"] = "packageAPI/pages/load-font-face/load-font-face";
-    var page = getPage("packageAPI/pages/load-font-face/load-font-face");
-    page.template = "<packageAPI/pages/load-font-face/load-font-face />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/load-font-face/load-font-face");
+    page2.json = `{
     "navigationBarTitleText": "\u52A8\u6001\u52A0\u8F7D\u5B57\u4F53"
 }
 `;
@@ -4214,7 +4404,13 @@ var require_clipboard_data = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/clipboard-data/clipboard-data.wxml"() {
     require_head();
     require_foot();
-    Vue.component("key", { template: `<div></div>` });
+    Vue.component("key", {
+      props: ["data"],
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div></div>`
+    });
   }
 });
 
@@ -4223,9 +4419,8 @@ var require_clipboard_data2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/clipboard-data/clipboard-data.js"() {
     require_clipboard_data();
     window["__wxRoute"] = "packageAPI/pages/clipboard-data/clipboard-data";
-    var page = getPage("packageAPI/pages/clipboard-data/clipboard-data");
-    page.template = "<packageAPI/pages/clipboard-data/clipboard-data />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/clipboard-data/clipboard-data");
+    page2.json = `{
     "navigationBarTitleText": "\u526A\u5207\u677F"
 }
 `;
@@ -4282,7 +4477,8 @@ var require_bluetooth = __commonJS({
     require_head();
     require_foot();
     var utils = eval(`var module = {exports:{}};undefined`);
-    Vue.component("packageAPI/pages/bluetooth/bluetooth", { template: `<div>
+    var page = getPage("packageAPI/pages/bluetooth/bluetooth");
+    page.template = `
 
 
 
@@ -4296,7 +4492,7 @@ module.exports.len = function(arr) {
 
 
   
-        <head is="head" data="{title: 'bluetooth'}" >
+        <head :data="{title: 'bluetooth'}" >
             
   
     
@@ -4338,14 +4534,14 @@ module.exports.len = function(arr) {
     
   
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -4354,9 +4550,8 @@ var require_bluetooth2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/bluetooth/bluetooth.js"() {
     require_bluetooth();
     window["__wxRoute"] = "packageAPI/pages/bluetooth/bluetooth";
-    var page = getPage("packageAPI/pages/bluetooth/bluetooth");
-    page.template = "<packageAPI/pages/bluetooth/bluetooth />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/bluetooth/bluetooth");
+    page2.json = `{
    "navigationBarTitleText": "\u84DD\u7259"
 }
 `;
@@ -4602,12 +4797,13 @@ var require_screen_brightness = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/screen-brightness/screen-brightness.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/screen-brightness/screen-brightness", { template: `<div>
+    var page2 = getPage("packageAPI/pages/screen-brightness/screen-brightness");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'get/set/ScreenBrightness'}" >
+        <head :data="{title: 'get/set/ScreenBrightness'}" >
             
 
   
@@ -4624,14 +4820,14 @@ var require_screen_brightness = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -4640,9 +4836,8 @@ var require_screen_brightness2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/screen-brightness/screen-brightness.js"() {
     require_screen_brightness();
     window["__wxRoute"] = "packageAPI/pages/screen-brightness/screen-brightness";
-    var page = getPage("packageAPI/pages/screen-brightness/screen-brightness");
-    page.template = "<packageAPI/pages/screen-brightness/screen-brightness />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/screen-brightness/screen-brightness");
+    page2.json = `{
   "navigationBarTitleText": "\u5C4F\u5E55\u4EAE\u5EA6"
 }`;
     Page({
@@ -4689,12 +4884,13 @@ var require_vibrate = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/vibrate/vibrate.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/vibrate/vibrate", { template: `<div>
+    var page2 = getPage("packageAPI/pages/vibrate/vibrate");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'vibrate/Long/Short'}" >
+        <head :data="{title: 'vibrate/Long/Short'}" >
             
 
   
@@ -4707,14 +4903,14 @@ var require_vibrate = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -4723,9 +4919,8 @@ var require_vibrate2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/vibrate/vibrate.js"() {
     require_vibrate();
     window["__wxRoute"] = "packageAPI/pages/vibrate/vibrate";
-    var page = getPage("packageAPI/pages/vibrate/vibrate");
-    page.template = "<packageAPI/pages/vibrate/vibrate />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/vibrate/vibrate");
+    page2.json = `{
     "navigationBarTitleText": "\u632F\u52A8"
 }
 `;
@@ -4771,9 +4966,27 @@ var require_add_contact = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/add-contact/add-contact.wxml"() {
     require_head();
     require_foot();
-    Vue.component("lastName", { template: `<div></div>` });
-    Vue.component("firstName", { template: `<div></div>` });
-    Vue.component("mobilePhoneNumber", { template: `<div></div>` });
+    Vue.component("lastName", {
+      props: ["data"],
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div></div>`
+    });
+    Vue.component("firstName", {
+      props: ["data"],
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div></div>`
+    });
+    Vue.component("mobilePhoneNumber", {
+      props: ["data"],
+      data() {
+        return this["$props"].data;
+      },
+      template: `<div></div>`
+    });
   }
 });
 
@@ -4782,9 +4995,8 @@ var require_add_contact2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/add-contact/add-contact.js"() {
     require_add_contact();
     window["__wxRoute"] = "packageAPI/pages/add-contact/add-contact";
-    var page = getPage("packageAPI/pages/add-contact/add-contact");
-    page.template = "<packageAPI/pages/add-contact/add-contact />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/add-contact/add-contact");
+    page2.json = `{
     "navigationBarTitleText": "\u65B0\u589E\u8054\u7CFB\u4EBA"
 }
 `;
@@ -4820,12 +5032,13 @@ var require_wifi = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wifi/wifi.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/wifi/wifi", { template: `<div>
+    var page2 = getPage("packageAPI/pages/wifi/wifi");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'Wi-Fi'}" >
+        <head :data="{title: 'Wi-Fi'}" >
             
 
   
@@ -4852,14 +5065,14 @@ var require_wifi = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -4868,9 +5081,8 @@ var require_wifi2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wifi/wifi.js"() {
     require_wifi();
     window["__wxRoute"] = "packageAPI/pages/wifi/wifi";
-    var page = getPage("packageAPI/pages/wifi/wifi");
-    page.template = "<packageAPI/pages/wifi/wifi />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/wifi/wifi");
+    page2.json = `{
    "navigationBarTitleText": "Wi-Fi"
 }
 `;
@@ -4951,12 +5163,13 @@ var require_page_scroll = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/page-scroll/page-scroll.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/page-scroll/page-scroll", { template: `<div>
+    var page2 = getPage("packageAPI/pages/page-scroll/page-scroll");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'pageScrollTo'}" >
+        <head :data="{title: 'pageScrollTo'}" >
             
 
   
@@ -4972,14 +5185,14 @@ var require_page_scroll = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -4988,9 +5201,8 @@ var require_page_scroll2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/page-scroll/page-scroll.js"() {
     require_page_scroll();
     window["__wxRoute"] = "packageAPI/pages/page-scroll/page-scroll";
-    var page = getPage("packageAPI/pages/page-scroll/page-scroll");
-    page.template = "<packageAPI/pages/page-scroll/page-scroll />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/page-scroll/page-scroll");
+    page2.json = `{
   "navigationBarTitleText": "\u9875\u9762\u6EDA\u52A8"
 }`;
     Page({
@@ -5021,12 +5233,13 @@ var require_intersection_observer = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/intersection-observer/intersection-observer.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/intersection-observer/intersection-observer", { template: `<div>
+    var page2 = getPage("packageAPI/pages/intersection-observer/intersection-observer");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'intersectionObserver'}" >
+        <head :data="{title: 'intersectionObserver'}" >
             
 
   
@@ -5050,14 +5263,14 @@ var require_intersection_observer = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -5066,9 +5279,8 @@ var require_intersection_observer2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/intersection-observer/intersection-observer.js"() {
     require_intersection_observer();
     window["__wxRoute"] = "packageAPI/pages/intersection-observer/intersection-observer";
-    var page = getPage("packageAPI/pages/intersection-observer/intersection-observer");
-    page.template = "<packageAPI/pages/intersection-observer/intersection-observer />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/intersection-observer/intersection-observer");
+    page2.json = `{
   "navigationBarTitleText": "WXML\u8282\u70B9\u5E03\u5C40\u76F8\u4EA4\u72B6\u6001"
 }`;
     Page({
@@ -5103,12 +5315,13 @@ var require_capture_screen = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/capture-screen/capture-screen.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/capture-screen/capture-screen", { template: `<div>
+    var page2 = getPage("packageAPI/pages/capture-screen/capture-screen");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'onUserCaptureScreen'}" >
+        <head :data="{title: 'onUserCaptureScreen'}" >
             
 
   
@@ -5119,14 +5332,14 @@ var require_capture_screen = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -5135,9 +5348,8 @@ var require_capture_screen2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/capture-screen/capture-screen.js"() {
     require_capture_screen();
     window["__wxRoute"] = "packageAPI/pages/capture-screen/capture-screen";
-    var page = getPage("packageAPI/pages/capture-screen/capture-screen");
-    page.template = "<packageAPI/pages/capture-screen/capture-screen />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/capture-screen/capture-screen");
+    page2.json = `{
   "navigationBarTitleText": "\u7528\u6237\u622A\u5C4F\u4E8B\u4EF6"
 }`;
     Page({
@@ -5166,12 +5378,13 @@ var require_worker = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/worker/worker.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/worker/worker", { template: `<div>
+    var page2 = getPage("packageAPI/pages/worker/worker");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'Worker'}" >
+        <head :data="{title: 'Worker'}" >
             
   
   
@@ -5201,14 +5414,14 @@ var require_worker = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -5217,9 +5430,8 @@ var require_worker2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/worker/worker.js"() {
     require_worker();
     window["__wxRoute"] = "packageAPI/pages/worker/worker";
-    var page = getPage("packageAPI/pages/worker/worker");
-    page.template = "<packageAPI/pages/worker/worker />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/worker/worker");
+    page2.json = `{
    "navigationBarTitleText": "\u591A\u7EBF\u7A0BWorker"
 }
 `;
@@ -5349,12 +5561,13 @@ var require_ibeacon = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/ibeacon/ibeacon.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/ibeacon/ibeacon", { template: `<div>
+    var page2 = getPage("packageAPI/pages/ibeacon/ibeacon");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'iBeacon'}" >
+        <head :data="{title: 'iBeacon'}" >
             
 
   
@@ -5384,14 +5597,14 @@ var require_ibeacon = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -5400,9 +5613,8 @@ var require_ibeacon2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/ibeacon/ibeacon.js"() {
     require_ibeacon();
     window["__wxRoute"] = "packageAPI/pages/ibeacon/ibeacon";
-    var page = getPage("packageAPI/pages/ibeacon/ibeacon");
-    page.template = "<packageAPI/pages/ibeacon/ibeacon />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/ibeacon/ibeacon");
+    page2.json = `{
   "navigationBarTitleText": "iBeacon"
 }
 `;
@@ -5457,12 +5669,13 @@ var require_choose_address = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/choose-address/choose-address.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/choose-address/choose-address", { template: `<div>
+    var page2 = getPage("packageAPI/pages/choose-address/choose-address");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'chooseAddress'}" >
+        <head :data="{title: 'chooseAddress'}" >
             
 
   
@@ -5536,14 +5749,14 @@ var require_choose_address = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -5552,9 +5765,8 @@ var require_choose_address2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/choose-address/choose-address.js"() {
     require_choose_address();
     window["__wxRoute"] = "packageAPI/pages/choose-address/choose-address";
-    var page = getPage("packageAPI/pages/choose-address/choose-address");
-    page.template = "<packageAPI/pages/choose-address/choose-address />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/choose-address/choose-address");
+    page2.json = `{
   "navigationBarTitleText": "\u6536\u8D27\u5730\u5740"
 }`;
     Page({
@@ -5588,12 +5800,13 @@ var require_setting = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/setting/setting.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/setting/setting", { template: `<div>
+    var page2 = getPage("packageAPI/pages/setting/setting");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'open/get/Setting'}" >
+        <head :data="{title: 'open/get/Setting'}" >
             
 
   
@@ -5684,14 +5897,14 @@ var require_setting = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -5700,9 +5913,8 @@ var require_setting2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/setting/setting.js"() {
     require_setting();
     window["__wxRoute"] = "packageAPI/pages/setting/setting";
-    var page = getPage("packageAPI/pages/setting/setting");
-    page.template = "<packageAPI/pages/setting/setting />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/setting/setting");
+    page2.json = `{
   "navigationBarTitleText": "\u8BBE\u7F6E"
 }`;
     Page({
@@ -5732,12 +5944,13 @@ var require_choose_invoice_title = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/choose-invoice-title/choose-invoice-title.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/choose-invoice-title/choose-invoice-title", { template: `<div>
+    var page2 = getPage("packageAPI/pages/choose-invoice-title/choose-invoice-title");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'chooseInvoiceTitle'}" >
+        <head :data="{title: 'chooseInvoiceTitle'}" >
             
 
   
@@ -5817,14 +6030,14 @@ var require_choose_invoice_title = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -5833,9 +6046,8 @@ var require_choose_invoice_title2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/choose-invoice-title/choose-invoice-title.js"() {
     require_choose_invoice_title();
     window["__wxRoute"] = "packageAPI/pages/choose-invoice-title/choose-invoice-title";
-    var page = getPage("packageAPI/pages/choose-invoice-title/choose-invoice-title");
-    page.template = "<packageAPI/pages/choose-invoice-title/choose-invoice-title />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/choose-invoice-title/choose-invoice-title");
+    page2.json = `{
   "navigationBarTitleText": "\u83B7\u53D6\u53D1\u7968\u62AC\u5934"
 }`;
     Page({
@@ -5881,12 +6093,13 @@ var require_soter_authentication = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/soter-authentication/soter-authentication.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/soter-authentication/soter-authentication", { template: `<div>
+    var page2 = getPage("packageAPI/pages/soter-authentication/soter-authentication");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'startSoterAuthentication'}" >
+        <head :data="{title: 'startSoterAuthentication'}" >
             
 
   
@@ -5899,14 +6112,14 @@ var require_soter_authentication = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -5915,9 +6128,8 @@ var require_soter_authentication2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/soter-authentication/soter-authentication.js"() {
     require_soter_authentication();
     window["__wxRoute"] = "packageAPI/pages/soter-authentication/soter-authentication";
-    var page = getPage("packageAPI/pages/soter-authentication/soter-authentication");
-    page.template = "<packageAPI/pages/soter-authentication/soter-authentication />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/soter-authentication/soter-authentication");
+    page2.json = `{
   "navigationBarTitleText": "\u751F\u7269\u8BA4\u8BC1"
 }`;
     Page({
@@ -6002,32 +6214,37 @@ var require_subscribe_message = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/subscribe-message/subscribe-message.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/subscribe-message/subscribe-message", { template: `<div>
+    var page2 = getPage("packageAPI/pages/subscribe-message/subscribe-message");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: '\u8BA2\u9605\u6D88\u606F'}" >
+        <head :data="{title: '\u8BA2\u9605\u6D88\u606F'}" >
             
 
   
     
       
+        <div >
+            
         \u70B9\u51FB\u63D0\u4EA4\uFF0C\u8C03\u7528\u793A\u4F8B\u8BA2\u9605\u6D88\u606F
         \u63D0\u4EA4
       
+        </div>
+    
     
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -6036,9 +6253,8 @@ var require_subscribe_message2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/subscribe-message/subscribe-message.js"() {
     require_subscribe_message();
     window["__wxRoute"] = "packageAPI/pages/subscribe-message/subscribe-message";
-    var page = getPage("packageAPI/pages/subscribe-message/subscribe-message");
-    page.template = "<packageAPI/pages/subscribe-message/subscribe-message />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/subscribe-message/subscribe-message");
+    page2.json = `{
   "usingComponents": {}
 }`;
     Page({
@@ -6108,8 +6324,9 @@ var require_subscribe_message2 = __commonJS({
 // miniprogram-demo/miniprogram/packageAPI/pages/doc-web-view/doc-web-view.wxml
 var require_doc_web_view = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/doc-web-view/doc-web-view.wxml"() {
-    Vue.component("packageAPI/pages/doc-web-view/doc-web-view", { template: `<div>
-</div>` });
+    var page2 = getPage("packageAPI/pages/doc-web-view/doc-web-view");
+    page2.template = `
+`;
   }
 });
 
@@ -6118,9 +6335,8 @@ var require_doc_web_view2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/doc-web-view/doc-web-view.js"() {
     require_doc_web_view();
     window["__wxRoute"] = "packageAPI/pages/doc-web-view/doc-web-view";
-    var page = getPage("packageAPI/pages/doc-web-view/doc-web-view");
-    page.template = "<packageAPI/pages/doc-web-view/doc-web-view />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/doc-web-view/doc-web-view");
+    page2.json = `{
   "navigationBarTitleText": "\u5C0F\u7A0B\u5E8F\u63A5\u53E3\u6587\u6863"
 }`;
     Page({
@@ -6137,7 +6353,8 @@ var require_doc_web_view2 = __commonJS({
 // miniprogram-demo/miniprogram/packageAPI/pages/audio/audio.wxml
 var require_audio = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/audio/audio.wxml"() {
-    Vue.component("packageAPI/pages/audio/audio", { template: `<div>
+    var page2 = getPage("packageAPI/pages/audio/audio");
+    page2.template = `
   
 
   \u64AD\u653E
@@ -6145,7 +6362,7 @@ var require_audio = __commonJS({
   \u8BBE\u7F6E\u5F53\u524D\u64AD\u653E\u65F6\u95F4\u4E3A14\u79D2
   \u56DE\u5230\u5F00\u5934
 
-</div>` });
+`;
   }
 });
 
@@ -6154,9 +6371,8 @@ var require_audio2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/audio/audio.js"() {
     require_audio();
     window["__wxRoute"] = "packageAPI/pages/audio/audio";
-    var page = getPage("packageAPI/pages/audio/audio");
-    page.template = "<packageAPI/pages/audio/audio />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/audio/audio");
+    page2.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "\u97F3\u9891"
 
@@ -6198,12 +6414,13 @@ var require_get_battery_info = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-battery-info/get-battery-info.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/get-battery-info/get-battery-info", { template: `<div>
+    var page2 = getPage("packageAPI/pages/get-battery-info/get-battery-info");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'getBatteryInfo'}" >
+        <head :data="{title: 'getBatteryInfo'}" >
             
 
   
@@ -6232,13 +6449,13 @@ var require_get_battery_info = __commonJS({
     
   
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
-    </div>` });
+    `;
   }
 });
 
@@ -6247,9 +6464,8 @@ var require_get_battery_info2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-battery-info/get-battery-info.js"() {
     require_get_battery_info();
     window["__wxRoute"] = "packageAPI/pages/get-battery-info/get-battery-info";
-    var page = getPage("packageAPI/pages/get-battery-info/get-battery-info");
-    page.template = "<packageAPI/pages/get-battery-info/get-battery-info />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/get-battery-info/get-battery-info");
+    page2.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "\u83B7\u53D6\u624B\u673A\u8BBE\u5907\u7535\u91CF"
 
@@ -6282,15 +6498,18 @@ var require_get_performance = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-performance/get-performance.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/get-performance/get-performance", { template: `<div>
+    var page2 = getPage("packageAPI/pages/get-performance/get-performance");
+    page2.template = `
 
 
 
 
   
-        <head is="head" data="{title: 'getPerformance'}" >
+        <head :data="{title: 'getPerformance'}" >
             
   
+        <div v-if="{support}" >
+            
     
       \u83B7\u53D6\u6027\u80FD\u6570\u636E
     
@@ -6304,18 +6523,20 @@ var require_get_performance = __commonJS({
       
     
   
+        </div>
+    
   
     \u5FAE\u4FE1\u7248\u672C\u8FC7\u4F4E\uFF0C\u6682\u4E0D\u652F\u6301\u672C\u529F\u80FD
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
-    </div>` });
+    `;
   }
 });
 
@@ -6323,9 +6544,8 @@ var require_get_performance = __commonJS({
 var require_util2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-performance/util.js"(exports2, module2) {
     window["__wxRoute"] = "packageAPI/pages/get-performance/util";
-    var page = getPage("packageAPI/pages/get-performance/util");
-    page.template = "<packageAPI/pages/get-performance/util />";
-    page.json = ``;
+    var page2 = getPage("packageAPI/pages/get-performance/util");
+    page2.json = ``;
     var util = {};
     Date.prototype.Format = function(fmt) {
       var o = {
@@ -6393,9 +6613,8 @@ var require_get_performance2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-performance/get-performance.js"() {
     require_get_performance();
     window["__wxRoute"] = "packageAPI/pages/get-performance/get-performance";
-    var page = getPage("packageAPI/pages/get-performance/get-performance");
-    page.template = "<packageAPI/pages/get-performance/get-performance />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/get-performance/get-performance");
+    page2.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "\u6027\u80FD\u6570\u636E"
 
@@ -6454,12 +6673,13 @@ var require_mdns = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/mdns/mdns.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/mdns/mdns", { template: `<div>
+    var page2 = getPage("packageAPI/pages/mdns/mdns");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'mDNS'}" >
+        <head :data="{title: 'mDNS'}" >
             
   
     
@@ -6480,7 +6700,7 @@ var require_mdns = __commonJS({
   
 
         </head>
-    </div>` });
+    `;
   }
 });
 
@@ -6489,9 +6709,8 @@ var require_mdns2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/mdns/mdns.js"() {
     require_mdns();
     window["__wxRoute"] = "packageAPI/pages/mdns/mdns";
-    var page = getPage("packageAPI/pages/mdns/mdns");
-    page.template = "<packageAPI/pages/mdns/mdns />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/mdns/mdns");
+    page2.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "mDNS"
 
@@ -6612,12 +6831,13 @@ var require_udp_socket = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/udp-socket/udp-socket.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/udp-socket/udp-socket", { template: `<div>
+    var page2 = getPage("packageAPI/pages/udp-socket/udp-socket");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'startSoterAuthentication'}" >
+        <head :data="{title: 'startSoterAuthentication'}" >
             
 
   
@@ -6630,6 +6850,8 @@ var require_udp_socket = __commonJS({
       
     
     
+        <div v-else="" >
+            
       
         
           \u672C\u673A\u53D1\u9001\u6D4B\u8BD5
@@ -6641,6 +6863,8 @@ var require_udp_socket = __commonJS({
         
       
       
+        <div v-if="{mode === 'remote'}" >
+            
         
         
           
@@ -6648,23 +6872,27 @@ var require_udp_socket = __commonJS({
           
         
       
+        </div>
+    
       
         
           \u5173\u95ED UDPSocket
         
       
     
+        </div>
+    
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -6673,9 +6901,8 @@ var require_udp_socket2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/udp-socket/udp-socket.js"() {
     require_udp_socket();
     window["__wxRoute"] = "packageAPI/pages/udp-socket/udp-socket";
-    var page = getPage("packageAPI/pages/udp-socket/udp-socket");
-    page.template = "<packageAPI/pages/udp-socket/udp-socket />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/udp-socket/udp-socket");
+    page2.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "UDPSocket"
 
@@ -6772,12 +6999,13 @@ var require_two_way_bindings = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/two-way-bindings/two-way-bindings.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/two-way-bindings/two-way-bindings", { template: `<div>
+    var page2 = getPage("packageAPI/pages/two-way-bindings/two-way-bindings");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: '\u53CC\u5411\u7ED1\u5B9A'}" >
+        <head :data="{title: '\u53CC\u5411\u7ED1\u5B9A'}" >
             
 
   
@@ -6789,14 +7017,14 @@ var require_two_way_bindings = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -6805,9 +7033,8 @@ var require_two_way_bindings2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/two-way-bindings/two-way-bindings.js"() {
     require_two_way_bindings();
     window["__wxRoute"] = "packageAPI/pages/two-way-bindings/two-way-bindings";
-    var page = getPage("packageAPI/pages/two-way-bindings/two-way-bindings");
-    page.template = "<packageAPI/pages/two-way-bindings/two-way-bindings />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/two-way-bindings/two-way-bindings");
+    page2.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "two-way-bindings"
 }`;
@@ -6844,12 +7071,13 @@ var require_media_container = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/media-container/media-container.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/media-container/media-container", { template: `<div>
+    var page2 = getPage("packageAPI/pages/media-container/media-container");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: '\u97F3\u89C6\u9891\u5408\u6210'}" >
+        <head :data="{title: '\u97F3\u89C6\u9891\u5408\u6210'}" >
             
 
   
@@ -6870,6 +7098,8 @@ var require_media_container = __commonJS({
       \u5408\u6210
      
     
+        <div v-if="{targetSrc}" >
+            
       
         
         \b   \u5408\u6210\u89C6\u9891
@@ -6883,16 +7113,18 @@ var require_media_container = __commonJS({
         
       
     
+        </div>
+    
   
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -6901,9 +7133,8 @@ var require_media_container2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/media-container/media-container.js"() {
     require_media_container();
     window["__wxRoute"] = "packageAPI/pages/media-container/media-container";
-    var page = getPage("packageAPI/pages/media-container/media-container");
-    page.template = "<packageAPI/pages/media-container/media-container />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/media-container/media-container");
+    page2.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "\u97F3\u89C6\u9891\u5408\u6210"
 }`;
@@ -6992,46 +7223,67 @@ var require_get_background_fetch_data = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-background-fetch-data/get-background-fetch-data.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/get-background-fetch-data/get-background-fetch-data", { template: `<div>
+    var page2 = getPage("packageAPI/pages/get-background-fetch-data/get-background-fetch-data");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'getBackgroundFetchData'}" >
+        <head :data="{title: 'getBackgroundFetchData'}" >
             
 
   
     
       
+        <div v-if="{canIUse}" >
+            
         
           \u5468\u671F\u6027\u7F13\u5B58\u6570\u636E
           
+        <div v-if="{appid}" >
+            
+            
+        <div >
             
               OpenID
               {{openid}}
             
+        </div>
+    
+            
+        <div >
             
               AppID
               {{appid}}
             
+        </div>
+    
           
+        </div>
+    
           
+        <div >
+            
             \u5FAE\u4FE1\u5BA2\u6237\u7AEF\u6BCF\u9694 12 \u4E2A\u5C0F\u65F6\u624D\u4F1A\u53D1\u8D77\u4E00\u6B21\u8BF7\u6C42
             \u4E3A\u4E86\u65B9\u4FBF\u8C03\u8BD5\u5468\u671F\u6027\u6570\u636E\uFF0C\u53EF\u4EE5\u5728 \u5DE5\u5177 -> \u62C9\u53D6\u5468\u671F\u6027\u7F13\u5B58\u6570\u636E \u5F00\u542F
           
+        </div>
+    
         
       
+        </div>
+    
     
   
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -7040,9 +7292,8 @@ var require_get_background_fetch_data2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-background-fetch-data/get-background-fetch-data.js"() {
     require_get_background_fetch_data();
     window["__wxRoute"] = "packageAPI/pages/get-background-fetch-data/get-background-fetch-data";
-    var page = getPage("packageAPI/pages/get-background-fetch-data/get-background-fetch-data");
-    page.template = "<packageAPI/pages/get-background-fetch-data/get-background-fetch-data />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/get-background-fetch-data/get-background-fetch-data");
+    page2.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "\u5468\u671F\u6027\u66F4\u65B0\u6570\u636E"
 }`;
@@ -7106,12 +7357,13 @@ var require_get_background_prefetch_data = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-background-prefetch-data/get-background-prefetch-data.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/get-background-prefetch-data/get-background-prefetch-data", { template: `<div>
+    var page2 = getPage("packageAPI/pages/get-background-prefetch-data/get-background-prefetch-data");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'getBackgroundFetchData'}" >
+        <head :data="{title: 'getBackgroundFetchData'}" >
             
 
   
@@ -7119,36 +7371,56 @@ var require_get_background_prefetch_data = __commonJS({
       
         \u6570\u636E\u9884\u62C9\u53D6
         
+        <div v-if="{appid}" >
+            
           
+        <div >
+            
             OpenID
             {{openid}}
           
+        </div>
+    
           
+        <div >
+            
             AppID
             {{appid}}
           
+        </div>
+    
           
+        <div >
+            
             \u6570\u636E\u7F13\u5B58\u7684\u65F6\u95F4
             {{getDataTime}}
           
+        </div>
+    
         
+        </div>
+    
         
+        <div >
+            
           \u7528\u6237\u542F\u52A8\u5C0F\u7A0B\u5E8F\u65F6\uFF0C\u8C03\u7528 wx.getBackgroundFetchData() \u83B7\u53D6\u5DF2\u7F13\u5B58\u5230\u672C\u5730\u7684\u6570\u636E\u3002
           
         
+        </div>
+    
         
       
     
   
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -7157,9 +7429,8 @@ var require_get_background_prefetch_data2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/get-background-prefetch-data/get-background-prefetch-data.js"() {
     require_get_background_prefetch_data();
     window["__wxRoute"] = "packageAPI/pages/get-background-prefetch-data/get-background-prefetch-data";
-    var page = getPage("packageAPI/pages/get-background-prefetch-data/get-background-prefetch-data");
-    page.template = "<packageAPI/pages/get-background-prefetch-data/get-background-prefetch-data />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/get-background-prefetch-data/get-background-prefetch-data");
+    page2.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "\u6570\u636E\u9884\u62C9\u53D6"
 
@@ -7232,12 +7503,13 @@ var require_wxs = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wxs/wxs.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/wxs/wxs", { template: `<div>
+    var page2 = getPage("packageAPI/pages/wxs/wxs");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: 'WXS'}" >
+        <head :data="{title: 'WXS'}" >
             
 
   
@@ -7256,14 +7528,14 @@ var require_wxs = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -7272,9 +7544,8 @@ var require_wxs2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wxs/wxs.js"() {
     require_wxs();
     window["__wxRoute"] = "packageAPI/pages/wxs/wxs";
-    var page = getPage("packageAPI/pages/wxs/wxs");
-    page.template = "<packageAPI/pages/wxs/wxs />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/wxs/wxs");
+    page2.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "WXS"
 }`;
@@ -7300,13 +7571,14 @@ var require_slave = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/bluetooth/slave/slave.wxml"() {
     require_head();
     require_foot();
-    Vue.component("packageAPI/pages/bluetooth/slave/slave", { template: `<div>
+    var page2 = getPage("packageAPI/pages/bluetooth/slave/slave");
+    page2.template = `
 
 
 
 
   
-        <head is="head" data="{title: 'bluetooth'}" >
+        <head :data="{title: 'bluetooth'}" >
             
   
     \u5F53\u524D serverId {{serverId}}
@@ -7328,7 +7600,11 @@ var require_slave = __commonJS({
     
     \u8FD4\u56DE\u4E3B\u673A\u6A21\u5F0F
     
+        <div v-if="{input}" >
+            
       
+    
+        </div>
     
     
       
@@ -7340,13 +7616,13 @@ var require_slave = __commonJS({
     
   
   
-        <foot is="foot" >
+        <foot >
             
         </foot>
     
 
         </head>
-    </div>` });
+    `;
   }
 });
 
@@ -7355,9 +7631,8 @@ var require_slave2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/bluetooth/slave/slave.js"() {
     require_slave();
     window["__wxRoute"] = "packageAPI/pages/bluetooth/slave/slave";
-    var page = getPage("packageAPI/pages/bluetooth/slave/slave");
-    page.template = "<packageAPI/pages/bluetooth/slave/slave />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/bluetooth/slave/slave");
+    page2.json = `{
   "usingComponents": {}
 }`;
     var uuid3 = "0C76801A-62EB-45E5-96A8-37C8882ABB2B";
@@ -7623,12 +7898,13 @@ var require_resizable2 = __commonJS({
     require_head();
     require_foot();
     var resizable = require_resizable();
-    Vue.component("packageAPI/pages/resizable/resizable", { template: `<div>
+    var page2 = getPage("packageAPI/pages/resizable/resizable");
+    page2.template = `
 
 
 
   
-        <head is="head" data="{title: '\u5C4F\u5E55\u65CB\u8F6C'}" >
+        <head :data="{title: '\u5C4F\u5E55\u65CB\u8F6C'}" >
             
 
   
@@ -7644,14 +7920,14 @@ var require_resizable2 = __commonJS({
   
 
   
-        <foot is="foot" >
+        <foot >
             
 
         </foot>
     
         </head>
     
-</div>` });
+`;
   }
 });
 
@@ -7660,9 +7936,8 @@ var require_resizable3 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/resizable/resizable.js"() {
     require_resizable2();
     window["__wxRoute"] = "packageAPI/pages/resizable/resizable";
-    var page = getPage("packageAPI/pages/resizable/resizable");
-    page.template = "<packageAPI/pages/resizable/resizable />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/resizable/resizable");
+    page2.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "\u5C4F\u5E55\u65CB\u8F6C",
   "pageOrientation": "auto"
@@ -7728,12 +8003,13 @@ var require_movable = __commonJS({
 var require_movable2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wxs/movable.wxml"() {
     var test = require_movable();
-    Vue.component("packageAPI/pages/wxs/movable", { template: `<div><div>pages/movable/movable.wxml</div>
+    var page2 = getPage("packageAPI/pages/wxs/movable");
+    page2.template = `<div>pages/movable/movable.wxml</div>
  
 
   
 
-<div> <view bindtap='{{taptest}}'>testbindtap</view> </div></div>` });
+<div> <view bindtap='{{taptest}}'>testbindtap</view> </div>`;
   }
 });
 
@@ -7742,9 +8018,8 @@ var require_movable3 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wxs/movable.js"() {
     require_movable2();
     window["__wxRoute"] = "packageAPI/pages/wxs/movable";
-    var page = getPage("packageAPI/pages/wxs/movable");
-    page.template = "<packageAPI/pages/wxs/movable />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/wxs/movable");
+    page2.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "movable"
 }`;
@@ -7848,7 +8123,8 @@ var require_sidebar = __commonJS({
 var require_sidebar2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wxs/sidebar.wxml"() {
     var test = require_sidebar();
-    Vue.component("packageAPI/pages/wxs/sidebar", { template: `<div><div>page/one/index.wxml</div>
+    var page2 = getPage("packageAPI/pages/wxs/sidebar");
+    page2.template = `<div>page/one/index.wxml</div>
 
 
   
@@ -7870,14 +8146,18 @@ var require_sidebar2 = __commonJS({
   
      >>> \u53F3\u6ED1\u51FA\u73B0\u4FA7\u8FB9\u83DC\u5355
       
+        <div v-for="item in tabs" v-key="title" >
+            
         
           
          
         
       
+        </div>
+    
   
 
-</div>` });
+`;
   }
 });
 
@@ -7886,9 +8166,8 @@ var require_sidebar3 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wxs/sidebar.js"() {
     require_sidebar2();
     window["__wxRoute"] = "packageAPI/pages/wxs/sidebar";
-    var page = getPage("packageAPI/pages/wxs/sidebar");
-    page.template = "<packageAPI/pages/wxs/sidebar />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/wxs/sidebar");
+    page2.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "sidebar"
 }`;
@@ -7984,7 +8263,8 @@ var require_stick_top = __commonJS({
 var require_stick_top2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wxs/stick-top.wxml"() {
     var test = require_stick_top();
-    Vue.component("packageAPI/pages/wxs/stick-top", { template: `<div>
+    var page2 = getPage("packageAPI/pages/wxs/stick-top");
+    page2.template = `
 
   
     
@@ -7996,6 +8276,8 @@ var require_stick_top2 = __commonJS({
     \u6211\u7684
   
   
+        <div v-for="item in tabs" v-key="title" >
+            
     
       
       
@@ -8006,7 +8288,9 @@ var require_stick_top2 = __commonJS({
       
     
   
-</div>` });
+        </div>
+    
+`;
   }
 });
 
@@ -8015,9 +8299,8 @@ var require_stick_top3 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wxs/stick-top.js"() {
     require_stick_top2();
     window["__wxRoute"] = "packageAPI/pages/wxs/stick-top";
-    var page = getPage("packageAPI/pages/wxs/stick-top");
-    page.template = "<packageAPI/pages/wxs/stick-top />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/wxs/stick-top");
+    page2.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "stick-top"
 }`;
@@ -8147,15 +8430,20 @@ var require_nearby = __commonJS({
 var require_nearby2 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wxs/nearby.wxml"() {
     var test = require_nearby();
-    Vue.component("packageAPI/pages/wxs/nearby", { template: `<div>
+    var page2 = getPage("packageAPI/pages/wxs/nearby");
+    page2.template = `
 
 
   
+        <div v-for="item in imgUrls" >
+            
     
       
     
   
-</div>` });
+        </div>
+    
+`;
   }
 });
 
@@ -8164,9 +8452,8 @@ var require_nearby3 = __commonJS({
   "miniprogram-demo/miniprogram/packageAPI/pages/wxs/nearby.js"() {
     require_nearby2();
     window["__wxRoute"] = "packageAPI/pages/wxs/nearby";
-    var page = getPage("packageAPI/pages/wxs/nearby");
-    page.template = "<packageAPI/pages/wxs/nearby />";
-    page.json = `{
+    var page2 = getPage("packageAPI/pages/wxs/nearby");
+    page2.json = `{
   "usingComponents": {},
   "navigationBarTitleText": "nearby"
 }`;
