@@ -9331,22 +9331,3716 @@ var require_app = __commonJS({
   }
 });
 
-// taro/dist/pages/index/index.wxml
-var require_index = __commonJS({
-  "taro/dist/pages/index/index.wxml"() {
-    Vue.component("tmpl_0_container", {
-      props: ["data"],
-      watch: {
-        ["data"]: function(newVal) {
-          this.$data = newVal;
-          this.$forceUpdate();
+// taro/dist/utils.wxs
+var require_utils = __commonJS({
+  "taro/dist/utils.wxs"(exports, module) {
+    module.exports = {
+      a: function(l, n, s) {
+        var a = ["view", "catch-view", "cover-view", "static-view", "pure-view", "block", "text", "static-text", "slot", "slot-view", "label", "form", "scroll-view", "swiper", "swiper-item"];
+        var b = ["static-text", "slot", "slot-view", "label", "form", "scroll-view", "swiper", "swiper-item"];
+        if (a.indexOf(n) === -1) {
+          l = 0;
         }
+        if (b.indexOf(n) > -1) {
+          var u = s.split(",");
+          var depth = 0;
+          for (var i = 0; i < u.length; i++) {
+            if (u[i] === n)
+              depth++;
+          }
+          l = depth;
+        }
+        return "tmpl_" + l + "_" + n;
       },
+      b: function(a, b) {
+        return a === void 0 ? b : a;
+      },
+      c: function(i, prefix) {
+        var s = i.focus !== void 0 ? "focus" : "blur";
+        return prefix + i.nn + "_" + s;
+      },
+      d: function(i, v) {
+        return i === void 0 ? v : i;
+      },
+      e: function(n) {
+        return "tmpl_" + n + "_container";
+      },
+      f: function(l, n) {
+        var b = ["static-text", "slot", "slot-view", "label", "form", "scroll-view", "swiper", "swiper-item"];
+        if (b.indexOf(n) > -1) {
+          if (l)
+            l += ",";
+          l += n;
+        }
+        return l;
+      }
+    };
+  }
+});
+
+// taro/dist/base.wxml
+var require_base = __commonJS({
+  "taro/dist/base.wxml"() {
+    var xs = require_utils();
+    registerComponent("taro_tmpl", {
       data() {
-        return this["$props"].data;
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in root.cn" >
+            
+        <component is="tmpl_0_container" :data="{i:item,l:''}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_catch-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_static-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_pure-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_icon", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
       },
       template: `<div></div>`
     });
+    registerComponent("tmpl_0_progress", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_0_rich-text", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_0_static-text", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_text", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_button", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_checkbox", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_checkbox-group", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_form", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_input", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_0_input_focus", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_0_input_blur", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_0_label", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_picker", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_picker-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_picker-view-column", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_radio", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_radio-group", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_slider", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_0_switch", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_0_cover-image", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_textarea", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_0_textarea_focus", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_textarea_blur", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_cover-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_movable-area", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_movable-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_scroll-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_swiper", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_swiper-item", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_navigator", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_audio", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_0_camera", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_static-image", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_image", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_live-player", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_video", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_canvas", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_ad", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_0_web-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_block", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div id="{i.uid}" >
+            
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_map", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_slot", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_slot-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_editor", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_0_editor_focus", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_editor_blur", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_match-media", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_functional-page-navigator", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_live-pusher", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_official-account", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_0_open-data", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_0_navigation-bar", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_0_page-meta", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_voip-room", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_0_ad-custom", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_page-container", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_#text", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div >
+            
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_0_container", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_1_catch-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_1_static-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_1_pure-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_1_view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_1_static-text", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_1_text", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_1_form", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_1_label", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_1_cover-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_1_scroll-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_1_swiper", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_1_swiper-item", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_1_block", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div id="{i.uid}" >
+            
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_1_slot", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_1_slot-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_1_container", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_2_catch-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_2_static-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_2_pure-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_2_view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_2_static-text", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_2_text", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_2_form", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_2_label", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_2_cover-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_2_scroll-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_2_swiper", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_2_swiper-item", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_2_block", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div id="{i.uid}" >
+            
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_2_slot", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_2_slot-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_2_container", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_3_catch-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_3_static-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_3_pure-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_3_view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_3_static-text", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_3_text", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_3_form", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_3_label", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_3_cover-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_3_scroll-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_3_swiper", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_3_swiper-item", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_3_block", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div id="{i.uid}" >
+            
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_3_slot", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_3_slot-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_3_container", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_4_catch-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_4_static-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_4_pure-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_4_view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_4_static-text", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_4_text", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_4_label", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_4_cover-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_4_block", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div id="{i.uid}" >
+            
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_4_slot", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_4_slot-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_4_container", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_5_catch-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_5_static-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_5_pure-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_5_view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_5_static-text", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_5_text", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_5_label", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_5_cover-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_5_block", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div id="{i.uid}" >
+            
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_5_slot", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_5_slot-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_5_container", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_6_catch-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_6_static-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_6_pure-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_6_view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_6_text", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_6_cover-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_6_block", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div id="{i.uid}" >
+            
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_6_slot", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_6_slot-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_6_container", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_7_catch-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_7_static-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_7_pure-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_7_view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_7_text", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_7_cover-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_7_block", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div id="{i.uid}" >
+            
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_7_slot", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_7_slot-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_7_container", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_8_catch-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_8_static-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_8_pure-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_8_view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_8_text", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_8_cover-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_8_block", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div id="{i.uid}" >
+            
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_8_container", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_9_catch-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_9_static-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_9_pure-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_9_view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_9_text", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_9_cover-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_9_block", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div id="{i.uid}" >
+            
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_9_container", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_10_catch-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_10_static-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_10_pure-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_10_view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_10_text", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_10_cover-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_10_block", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div id="{i.uid}" >
+            
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_10_container", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_11_catch-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_11_static-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_11_pure-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_11_view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_11_text", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_11_cover-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_11_block", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div id="{i.uid}" >
+            
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_11_container", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_12_catch-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_12_static-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_12_pure-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_12_view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_12_text", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_12_cover-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_12_block", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div id="{i.uid}" >
+            
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_12_container", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_13_catch-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_13_static-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_13_pure-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_13_view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_13_text", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_13_cover-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_13_block", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div id="{i.uid}" >
+            
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_13_container", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_14_catch-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_14_static-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_14_pure-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_14_view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_14_text", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_14_cover-view", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_14_block", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div id="{i.uid}" >
+            
+        <div v-for="item in i.cn" >
+            
+        <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    
+        </div>
+    </div>`
+    });
+    registerComponent("tmpl_14_container", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div></div>`
+    });
+    registerComponent("tmpl_15_container", {
+      data() {
+        debugger;
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div v-if="{i.nn === '#text'}" >
+            
+        <component is="tmpl_0_#text" :data="{i:i}" >
+            
+        </component>
+    
+        </div>
+    
+        <div v-else="" >
+            
+        </div>
+    </div>`
+    });
+  }
+});
+
+// taro/dist/pages/index/index.wxml
+var require_index = __commonJS({
+  "taro/dist/pages/index/index.wxml"() {
+    require_base();
+    var page = getPage("pages/index/index");
+    page.template = `
+        <component is="taro_tmpl" :data="{root:root}" >
+            
+        </component>
+    `;
   }
 });
 

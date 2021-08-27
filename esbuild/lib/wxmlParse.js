@@ -65,7 +65,14 @@ function getattributes(attributes) {
         let keyText = getEvent(key)
         if (keyText == 'data' ) {
             attributesStr += `:${keyText}="${attributesObj[key]}" `
-        }else {
+        } else if (keyText == 'is') {
+            if (attributesObj[key].indexOf('(') != -1) {
+                attributesStr += `:is="${attributesObj[key]}" `
+            }else {
+                attributesStr += `is="${attributesObj[key]}" `
+            }
+        }
+        else {
             attributesStr += `${keyText}="${attributesObj[key]}" `
         }
     }
@@ -108,7 +115,6 @@ function getTemplateText(children) {
     if (children.length == 0) return ''
     for (let item of children) {
      if (item.type == 'node' && (item.name == 'template' || item.name == 'block')) {
-            console.log('item',item)
             template += getTagTemplate(item)
             continue
         }else if (item.type == 'comment') {
@@ -145,16 +151,13 @@ function getVueComponent(name,text,isPage) {
         `
     }
     return `
-     Vue.component('${name}',{
-        props:['data'],
-        watch:{
-            ['data']:function(newVal){
-                this.$data = newVal
-                this.$forceUpdate()
-            }
-        },
+     registerComponent('${name}',{
         data() {
-            return this['$props'].data 
+            debugger
+            return {
+                xs,
+                ...this['$props'].data 
+            }
         },
         template:$template$
      })
@@ -164,11 +167,7 @@ function getTemplate(filePath) {
     let importText = []
     let templates = []
     const content = f.readFile(filePath)
-    const tokens = lex(`
-    <template name="tmpl_0_container">
-  <template is="{{xs.a(0, i.nn, l)}}" data="{{i:i,cid:0,l:xs.f(l,i.nn)}}" />
-</template>
-    `)
+    const tokens = lex(content)
     const dom = parse(tokens)
     findAllTemplate(dom.children,importText,templates)
     if (templates.length == 0 ) {
