@@ -63,21 +63,14 @@ function getattributes(attributes) {
     for (let key in obj) {
         // 初始化事件的对象
         let keyText = getEvent(key)
-        if (keyText == 'data' ) {
-            attributesStr += `:${keyText}="${attributesObj[key]}" `
-        } else if (attributesObj[key] == 'eh') {
-         const nameLowerCase = keyText.toLowerCase();
-            if (nameLowerCase === 'bindlongtap') {
-                attributesStr+= `:${keyText}='bindlongpress`
+        if (/{|}/g.test(attributesObj[key])) {
+            if (key == 'data') {
+                 attributesStr += `:${keyText}="${attributesObj[key]}" `
             }else {
-                attributesStr += `${keyText}="${attributesObj[key]}" `
-            }
-        } else {
-            if (attributesObj[key].indexOf('(') != -1) {
                 attributesStr += `:${keyText}="${attributesObj[key].replace('{','').replace('}','')}" `
-            }else {
-                attributesStr += `${keyText}="${attributesObj[key].replace('{','').replace('}','')}" `
             }
+        }else {
+            attributesStr += `${keyText}="${attributesObj[key]}" `
         }
     }
     return attributesStr

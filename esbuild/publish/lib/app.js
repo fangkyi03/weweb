@@ -9,21 +9,25 @@ Vue.component('wx-button',{
   name:'wx-button',
   props:['type','data','plain','disabled','loading','name'],
   data(){
-    debugger
     return this.$props
   },
-  template:`<button class='wx-button' :disabled="disabled" :type="type"><slot></slot></button>`
+  template:`<div class='wx-button' :disabled="disabled" :type="type" :loading="loading" :plain="plain"><slot></slot></div>`
+})
+Vue.component('wx-input',{
+  name:'wxinput',
+  props:['value'],
+  template:`<input class='wx-input' :value="value" style="border:none;outline:none;"/>`
 })
 Vue.component('wx-view',{
   name:'wxview',
   template:'<div><slot></slot></div>'
 })
 Vue.component('wx-image',{
-  props:['class','i'],
+  props:['class','i','src'],
   data(){
     return this.$props
   },
-  template:`<img class='wx-image'/>`
+  template:`<div class='wx-image'/>`
 })
 window['Behavior'] = function (config) {
   return config
