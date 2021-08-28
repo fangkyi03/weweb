@@ -22,7 +22,7 @@ module.exports = (options,item) => {
           fileContent
         ])
         return {
-          contents:text,
+          contents:text.replace(/require\('\//g, `require('./`),
           loader:'js'
         }
       })

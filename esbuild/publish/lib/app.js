@@ -1,3 +1,14 @@
+var Text = () => {
+  return '<div>测试</div>'
+}
+Vue.component('text',{
+  name:'Text',
+  template:'<div>测试文本</div>'
+})
+Vue.component('view-main',{
+  name:'viewMain',
+  template:'<div><slot></slot></div>'
+})
 window['Behavior'] = function (config) {
   return config
 };

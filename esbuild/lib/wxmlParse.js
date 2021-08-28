@@ -65,16 +65,12 @@ function getattributes(attributes) {
         let keyText = getEvent(key)
         if (keyText == 'data' ) {
             attributesStr += `:${keyText}="${attributesObj[key]}" `
-        } else if (keyText == 'is') {
-            
+        } else {
             if (attributesObj[key].indexOf('(') != -1) {
-                attributesStr += `:is="${attributesObj[key].replace('{','').replace('}','')}" `
+                attributesStr += `:${keyText}="${attributesObj[key].replace('{','').replace('}','')}" `
             }else {
-                attributesStr += `is="${attributesObj[key].replace('{','').replace('}','')}" `
+                attributesStr += `${keyText}="${attributesObj[key].replace('{','').replace('}','')}" `
             }
-        }
-        else {
-            attributesStr += `${keyText}="${attributesObj[key]}" `
         }
     }
     return attributesStr
@@ -115,7 +111,7 @@ function getTemplateText(children) {
     let template = ''
     if (children.length == 0) return ''
     for (let item of children) {
-     if (item.type == 'node' && (item.name == 'template' || item.name == 'block')) {
+     if (item.type == 'node' && item.name !== 'import') {
             template += getTagTemplate(item)
             continue
         }else if (item.type == 'text') {
@@ -161,7 +157,7 @@ function getVueComponent(name,text,isPage) {
         },
         template:$template$
      })
-    `.replace('$template$','`<div>' + text + '</div>`')
+    `.replace('$template$','`<div>' + text.replace(/view/g,'view-main') + '</div>`')
 }
 function getTemplate(filePath) {
     let importText = []

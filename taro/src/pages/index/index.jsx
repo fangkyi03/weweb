@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import { View,Input } from '@tarojs/components'
+import { View,Text,Image } from '@tarojs/components'
 import './index.less'
 
 export default class Index extends Component {
@@ -33,7 +33,8 @@ export default class Index extends Component {
     return (
       <View>
         <View>测试12312</View>
-        <Input/>
+        <Text>Hello world!</Text>
+        <Image/>
       </View>
     )
   }

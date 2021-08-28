@@ -1243,7 +1243,7 @@ var require_vendors = __commonJS({
       e.d(n, "a", function() {
         return s;
       });
-      var r = e(5), i = e(23), o = e(10), u = e.n(o), a = e(12);
+      var r = e(5), i = e(24), o = e(10), u = e.n(o), a = e(12);
       function c(t2, n2) {
         if (n2 && (u()(n2) === "object" || typeof n2 === "function"))
           return n2;
@@ -1268,7 +1268,7 @@ var require_vendors = __commonJS({
       e.d(n, "a", function() {
         return i;
       });
-      var r = e(21);
+      var r = e(22);
       function i(t2, n2, e2) {
         return i = typeof Reflect !== "undefined" && Reflect.get ? Reflect.get : function(t3, n3, e3) {
           var i2 = Object(r["a"])(t3, n3);
@@ -1292,12 +1292,12 @@ var require_vendors = __commonJS({
       e.d(n, "a", function() {
         return c;
       });
-      var r = e(17);
+      var r = e(18);
       function i(t2) {
         if (Array.isArray(t2))
           return Object(r["a"])(t2);
       }
-      var o = e(22), u = e(15);
+      var o = e(23), u = e(15);
       function a() {
         throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
       }
@@ -1330,7 +1330,7 @@ var require_vendors = __commonJS({
       e.d(n, "a", function() {
         return i;
       });
-      var r = e(17);
+      var r = e(18);
       function i(t2, n2) {
         if (t2) {
           if (typeof t2 === "string")
@@ -1349,7 +1349,7 @@ var require_vendors = __commonJS({
       e.d(n, "a", function() {
         return r;
       });
-    }, function(t, n, e) {
+    }, , function(t, n, e) {
       "use strict";
       function r(t2, n2) {
         (n2 == null || n2 > t2.length) && (n2 = t2.length);
@@ -1417,7 +1417,7 @@ var require_vendors = __commonJS({
       e.d(n, "a", function() {
         return r;
       });
-    }, , function(t, n, e) {
+    }, function(t, n, e) {
       "use strict";
       var r = Object.getOwnPropertySymbols, i = Object.prototype.hasOwnProperty, o = Object.prototype.propertyIsEnumerable;
       function u(t2) {
@@ -1466,7 +1466,7 @@ var require_vendors = __commonJS({
       e.d(n, "a", function() {
         return a;
       });
-      var r = e(19);
+      var r = e(20);
       function i(t2, n2) {
         var e2 = t2 == null ? null : typeof Symbol !== "undefined" && t2[Symbol.iterator] || t2["@@iterator"];
         if (e2 != null) {
@@ -1488,7 +1488,7 @@ var require_vendors = __commonJS({
           return o2;
         }
       }
-      var o = e(15), u = e(20);
+      var o = e(15), u = e(21);
       function a(t2, n2) {
         return Object(r["a"])(t2) || i(t2, n2) || Object(o["a"])(t2, n2) || Object(u["a"])();
       }
@@ -1555,7 +1555,7 @@ var require_vendors = __commonJS({
       e.d(n, "a", function() {
         return u;
       });
-      var r = e(21), i = e(13);
+      var r = e(22), i = e(13);
       function o(t2, n2, e2, u2) {
         return o = typeof Reflect !== "undefined" && Reflect.set ? Reflect.set : function(t3, n3, e3, o2) {
           var u3, a = Object(r["a"])(t3, n3);
@@ -1585,7 +1585,7 @@ var require_vendors = __commonJS({
       e.d(n, "a", function() {
         return a;
       });
-      var r = e(19), i = e(22), o = e(15), u = e(20);
+      var r = e(20), i = e(23), o = e(15), u = e(21);
       function a(t2) {
         return Object(r["a"])(t2) || Object(i["a"])(t2) || Object(o["a"])(t2) || Object(u["a"])();
       }
@@ -1598,7 +1598,7 @@ var require_vendors = __commonJS({
       function o(t2) {
         return Function.toString.call(t2).indexOf("[native code]") !== -1;
       }
-      var u = e(23);
+      var u = e(24);
       function a(t2, n2, e2) {
         return a = Object(u["a"])() ? Reflect.construct : function(t3, n3, e3) {
           var r2 = [null];
@@ -2463,6 +2463,16 @@ var require_taro = __commonJS({
         e2.request = o2.request.bind(o2), e2.addInterceptor = o2.addInterceptor.bind(o2), e2.cleanInterceptors = o2.cleanInterceptors.bind(o2), e2.miniGlobal = e2.options.miniGlobal = t2;
       }
       t.EMPTY_ARR = le, t.EMPTY_OBJ = se, t.animationEvents = m, t.box = he, t.cacheDataGet = Ae, t.cacheDataHas = xe, t.cacheDataSet = Pe, t.capitalize = ge, t.controlledComponent = oe, t.defaultReconciler = fe, t.ensure = we, t.events = v, t.focusComponents = ae, t.getUniqueKey = Ce, t.hasOwn = Oe, t.indent = Re, t.internalComponents = ie, t.isArray = h, t.isBoolean = s, t.isBooleanStringLiteral = f, t.isFunction = l, t.isNull = c, t.isNumber = d, t.isObject = u, t.isString = o, t.isUndefined = a, t.mergeInternalComponents = Ie, t.mergeReconciler = Ne, t.nestElements = ue, t.noop = de, t.processApis = Ue, t.queryToJson = Te, t.setUniqueKeyToRoute = Be, t.singleQuote = g, t.styles = p, t.toCamelCase = be, t.toDashed = ve, t.toKebabCase = me, t.touchEvents = b, t.unbox = pe, t.unsupport = Fe, t.voidElements = ce, t.warn = ke;
+    }, 19: function(e, t, n) {
+      "use strict";
+      n.d(t, "a", function() {
+        return o;
+      }), n.d(t, "b", function() {
+        return i;
+      }), n.d(t, "c", function() {
+        return r;
+      });
+      var r = "view", i = "text", o = "image";
     }, 2: function(e, t, n) {
       "use strict";
       n.r(t), function(e2, r, i, o, a, c) {
@@ -5191,14 +5201,6 @@ var require_taro = __commonJS({
             a2();
         };
       }.call(this, n(52), n(33), n(2)["document"], n(2)["window"], n(2)["requestAnimationFrame"], n(2)["cancelAnimationFrame"]);
-    }, 24: function(e, t, n) {
-      "use strict";
-      n.d(t, "a", function() {
-        return i;
-      }), n.d(t, "b", function() {
-        return r;
-      });
-      var r = "view", i = "input";
     }, 38: function(e, t, n) {
       var r = n(2), i = r.container, o = r.SERVICE_IDENTIFIER, a = n(55).default, c = i.get(o.Hooks);
       typeof c.initNativeApi === "function" && c.initNativeApi(a), e.exports = a, e.exports.default = e.exports;
@@ -9390,7 +9392,6 @@ var require_base = __commonJS({
     var xs = require_utils();
     registerComponent("taro_tmpl", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
@@ -9408,13 +9409,14 @@ var require_base = __commonJS({
     });
     registerComponent("tmpl_0_catch-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9422,17 +9424,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_0_static-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9440,17 +9445,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_0_pure-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9458,17 +9466,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_0_view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9476,17 +9487,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_0_static-text", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9494,17 +9508,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </text>
     </div>`
     });
     registerComponent("tmpl_0_text", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9512,51 +9529,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </text>
     </div>`
-    });
-    registerComponent("tmpl_0_input", {
-      data() {
-        debugger;
-        return {
-          xs,
-          ...this["$props"].data
-        };
-      },
-      template: `<div>
-        <component :is="xs.c(i, 'tmpl_0_')" :data="{i:i}" >
-            
-        </component>
-    </div>`
-    });
-    registerComponent("tmpl_0_input_focus", {
-      data() {
-        debugger;
-        return {
-          xs,
-          ...this["$props"].data
-        };
-      },
-      template: `<div></div>`
-    });
-    registerComponent("tmpl_0_input_blur", {
-      data() {
-        debugger;
-        return {
-          xs,
-          ...this["$props"].data
-        };
-      },
-      template: `<div></div>`
     });
     registerComponent("tmpl_0_scroll-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <scroll-view-main :scroll-x="xs.b(i.scrollX,false)" :scroll-y="xs.b(i.scrollY,false)" :upper-threshold="xs.b(i.upperThreshold,50)" :lower-threshold="xs.b(i.lowerThreshold,50)" scroll-top="i.scrollTop" scroll-left="i.scrollLeft" scroll-into-view-main="i.scrollIntoView" :scroll-with-animation="xs.b(i.scrollWithAnimation,false)" :enable-back-to-top="xs.b(i.enableBackToTop,false)" @scrolltoupper="eh" @scrolltolower="eh" @scroll="eh" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" :enable-flex="xs.b(i.enableFlex,false)" :scroll-anchoring="xs.b(i.scrollAnchoring,false)" :refresher-enabled="xs.b(i.refresherEnabled,false)" :refresher-threshold="xs.b(i.refresherThreshold,45)" :refresher-default-style="xs.b(i.refresherDefaultStyle,'black')" :refresher-background="xs.b(i.refresherBackground,'#FFF')" :refresher-triggered="xs.b(i.refresherTriggered,false)" :enhanced="xs.b(i.enhanced,false)" :bounces="xs.b(i.bounces,true)" :show-scrollbar="xs.b(i.showScrollbar,true)" :paging-enabled="xs.b(i.pagingEnabled,false)" :fast-deceleration="xs.b(i.fastDeceleration,false)" @dragstart="eh" @dragging="eh" @dragend="eh" @refresherpulling="eh" @refresherrefresh="eh" @refresherrestore="eh" @refresherabort="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9564,17 +9550,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </scroll-view-main>
     </div>`
     });
     registerComponent("tmpl_0_static-image", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <image src="i.src" :mode="xs.b(i.mode,'scaleToFill')" :lazy-load="xs.b(i.lazyLoad,false)" :webp="xs.b(i.webp,false)" :show-menu-by-longpress="xs.b(i.showMenuByLongpress,false)" style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9582,17 +9571,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </image>
     </div>`
     });
     registerComponent("tmpl_0_image", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <image src="i.src" :mode="xs.b(i.mode,'scaleToFill')" :lazy-load="xs.b(i.lazyLoad,false)" @error="eh" @load="eh" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" :webp="xs.b(i.webp,false)" :show-menu-by-longpress="xs.b(i.showMenuByLongpress,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9600,11 +9592,12 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </image>
     </div>`
     });
     registerComponent("tmpl_0_#text", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
@@ -9618,7 +9611,6 @@ var require_base = __commonJS({
     });
     registerComponent("tmpl_0_container", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
@@ -9632,13 +9624,14 @@ var require_base = __commonJS({
     });
     registerComponent("tmpl_1_catch-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9646,17 +9639,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_1_static-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9664,17 +9660,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_1_pure-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9682,17 +9681,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_1_view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9700,17 +9702,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_1_static-text", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9718,17 +9723,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </text>
     </div>`
     });
     registerComponent("tmpl_1_text", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9736,17 +9744,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </text>
     </div>`
     });
     registerComponent("tmpl_1_scroll-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <scroll-view-main :scroll-x="xs.b(i.scrollX,false)" :scroll-y="xs.b(i.scrollY,false)" :upper-threshold="xs.b(i.upperThreshold,50)" :lower-threshold="xs.b(i.lowerThreshold,50)" scroll-top="i.scrollTop" scroll-left="i.scrollLeft" scroll-into-view-main="i.scrollIntoView" :scroll-with-animation="xs.b(i.scrollWithAnimation,false)" :enable-back-to-top="xs.b(i.enableBackToTop,false)" @scrolltoupper="eh" @scrolltolower="eh" @scroll="eh" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" :enable-flex="xs.b(i.enableFlex,false)" :scroll-anchoring="xs.b(i.scrollAnchoring,false)" :refresher-enabled="xs.b(i.refresherEnabled,false)" :refresher-threshold="xs.b(i.refresherThreshold,45)" :refresher-default-style="xs.b(i.refresherDefaultStyle,'black')" :refresher-background="xs.b(i.refresherBackground,'#FFF')" :refresher-triggered="xs.b(i.refresherTriggered,false)" :enhanced="xs.b(i.enhanced,false)" :bounces="xs.b(i.bounces,true)" :show-scrollbar="xs.b(i.showScrollbar,true)" :paging-enabled="xs.b(i.pagingEnabled,false)" :fast-deceleration="xs.b(i.fastDeceleration,false)" @dragstart="eh" @dragging="eh" @dragend="eh" @refresherpulling="eh" @refresherrefresh="eh" @refresherrestore="eh" @refresherabort="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9754,11 +9765,12 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </scroll-view-main>
     </div>`
     });
     registerComponent("tmpl_1_container", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
@@ -9772,13 +9784,14 @@ var require_base = __commonJS({
     });
     registerComponent("tmpl_2_catch-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9786,17 +9799,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_2_static-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9804,17 +9820,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_2_pure-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9822,17 +9841,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_2_view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9840,17 +9862,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_2_static-text", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9858,17 +9883,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </text>
     </div>`
     });
     registerComponent("tmpl_2_text", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9876,17 +9904,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </text>
     </div>`
     });
     registerComponent("tmpl_2_scroll-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <scroll-view-main :scroll-x="xs.b(i.scrollX,false)" :scroll-y="xs.b(i.scrollY,false)" :upper-threshold="xs.b(i.upperThreshold,50)" :lower-threshold="xs.b(i.lowerThreshold,50)" scroll-top="i.scrollTop" scroll-left="i.scrollLeft" scroll-into-view-main="i.scrollIntoView" :scroll-with-animation="xs.b(i.scrollWithAnimation,false)" :enable-back-to-top="xs.b(i.enableBackToTop,false)" @scrolltoupper="eh" @scrolltolower="eh" @scroll="eh" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" :enable-flex="xs.b(i.enableFlex,false)" :scroll-anchoring="xs.b(i.scrollAnchoring,false)" :refresher-enabled="xs.b(i.refresherEnabled,false)" :refresher-threshold="xs.b(i.refresherThreshold,45)" :refresher-default-style="xs.b(i.refresherDefaultStyle,'black')" :refresher-background="xs.b(i.refresherBackground,'#FFF')" :refresher-triggered="xs.b(i.refresherTriggered,false)" :enhanced="xs.b(i.enhanced,false)" :bounces="xs.b(i.bounces,true)" :show-scrollbar="xs.b(i.showScrollbar,true)" :paging-enabled="xs.b(i.pagingEnabled,false)" :fast-deceleration="xs.b(i.fastDeceleration,false)" @dragstart="eh" @dragging="eh" @dragend="eh" @refresherpulling="eh" @refresherrefresh="eh" @refresherrestore="eh" @refresherabort="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9894,11 +9925,12 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </scroll-view-main>
     </div>`
     });
     registerComponent("tmpl_2_container", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
@@ -9912,13 +9944,14 @@ var require_base = __commonJS({
     });
     registerComponent("tmpl_3_catch-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9926,17 +9959,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_3_static-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9944,17 +9980,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_3_pure-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9962,17 +10001,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_3_view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9980,17 +10022,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_3_static-text", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -9998,17 +10043,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </text>
     </div>`
     });
     registerComponent("tmpl_3_text", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10016,17 +10064,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </text>
     </div>`
     });
     registerComponent("tmpl_3_scroll-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <scroll-view-main :scroll-x="xs.b(i.scrollX,false)" :scroll-y="xs.b(i.scrollY,false)" :upper-threshold="xs.b(i.upperThreshold,50)" :lower-threshold="xs.b(i.lowerThreshold,50)" scroll-top="i.scrollTop" scroll-left="i.scrollLeft" scroll-into-view-main="i.scrollIntoView" :scroll-with-animation="xs.b(i.scrollWithAnimation,false)" :enable-back-to-top="xs.b(i.enableBackToTop,false)" @scrolltoupper="eh" @scrolltolower="eh" @scroll="eh" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" :enable-flex="xs.b(i.enableFlex,false)" :scroll-anchoring="xs.b(i.scrollAnchoring,false)" :refresher-enabled="xs.b(i.refresherEnabled,false)" :refresher-threshold="xs.b(i.refresherThreshold,45)" :refresher-default-style="xs.b(i.refresherDefaultStyle,'black')" :refresher-background="xs.b(i.refresherBackground,'#FFF')" :refresher-triggered="xs.b(i.refresherTriggered,false)" :enhanced="xs.b(i.enhanced,false)" :bounces="xs.b(i.bounces,true)" :show-scrollbar="xs.b(i.showScrollbar,true)" :paging-enabled="xs.b(i.pagingEnabled,false)" :fast-deceleration="xs.b(i.fastDeceleration,false)" @dragstart="eh" @dragging="eh" @dragend="eh" @refresherpulling="eh" @refresherrefresh="eh" @refresherrestore="eh" @refresherabort="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10034,11 +10085,12 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </scroll-view-main>
     </div>`
     });
     registerComponent("tmpl_3_container", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
@@ -10052,13 +10104,14 @@ var require_base = __commonJS({
     });
     registerComponent("tmpl_4_catch-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10066,17 +10119,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_4_static-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10084,17 +10140,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_4_pure-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10102,17 +10161,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_4_view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10120,17 +10182,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_4_static-text", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10138,17 +10203,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </text>
     </div>`
     });
     registerComponent("tmpl_4_text", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10156,11 +10224,12 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </text>
     </div>`
     });
     registerComponent("tmpl_4_container", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
@@ -10174,13 +10243,14 @@ var require_base = __commonJS({
     });
     registerComponent("tmpl_5_catch-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10188,17 +10258,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_5_static-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10206,17 +10279,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_5_pure-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10224,17 +10300,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_5_view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10242,17 +10321,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_5_static-text", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10260,17 +10342,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </text>
     </div>`
     });
     registerComponent("tmpl_5_text", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10278,11 +10363,12 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </text>
     </div>`
     });
     registerComponent("tmpl_5_container", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
@@ -10296,13 +10382,14 @@ var require_base = __commonJS({
     });
     registerComponent("tmpl_6_catch-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10310,17 +10397,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_6_static-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10328,17 +10418,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_6_pure-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10346,17 +10439,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_6_view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10364,17 +10460,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_6_text", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10382,11 +10481,12 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </text>
     </div>`
     });
     registerComponent("tmpl_6_container", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
@@ -10400,13 +10500,14 @@ var require_base = __commonJS({
     });
     registerComponent("tmpl_7_catch-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10414,17 +10515,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_7_static-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10432,17 +10536,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_7_pure-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10450,17 +10557,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_7_view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10468,17 +10578,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_7_text", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10486,11 +10599,12 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </text>
     </div>`
     });
     registerComponent("tmpl_7_container", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
@@ -10504,13 +10618,14 @@ var require_base = __commonJS({
     });
     registerComponent("tmpl_8_catch-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10518,17 +10633,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_8_static-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10536,17 +10654,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_8_pure-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10554,17 +10675,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_8_view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10572,17 +10696,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_8_text", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10590,11 +10717,12 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </text>
     </div>`
     });
     registerComponent("tmpl_8_container", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
@@ -10608,13 +10736,14 @@ var require_base = __commonJS({
     });
     registerComponent("tmpl_9_catch-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10622,17 +10751,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_9_static-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10640,17 +10772,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_9_pure-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10658,17 +10793,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_9_view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10676,17 +10814,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_9_text", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10694,11 +10835,12 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </text>
     </div>`
     });
     registerComponent("tmpl_9_container", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
@@ -10712,13 +10854,14 @@ var require_base = __commonJS({
     });
     registerComponent("tmpl_10_catch-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10726,17 +10869,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_10_static-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10744,17 +10890,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_10_pure-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10762,17 +10911,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_10_view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10780,17 +10932,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_10_text", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10798,11 +10953,12 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </text>
     </div>`
     });
     registerComponent("tmpl_10_container", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
@@ -10816,13 +10972,14 @@ var require_base = __commonJS({
     });
     registerComponent("tmpl_11_catch-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10830,17 +10987,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_11_static-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10848,17 +11008,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_11_pure-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10866,17 +11029,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_11_view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10884,17 +11050,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_11_text", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10902,11 +11071,12 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </text>
     </div>`
     });
     registerComponent("tmpl_11_container", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
@@ -10920,13 +11090,14 @@ var require_base = __commonJS({
     });
     registerComponent("tmpl_12_catch-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10934,17 +11105,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_12_static-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10952,17 +11126,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_12_pure-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10970,17 +11147,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_12_view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -10988,17 +11168,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_12_text", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -11006,11 +11189,12 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </text>
     </div>`
     });
     registerComponent("tmpl_12_container", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
@@ -11024,13 +11208,14 @@ var require_base = __commonJS({
     });
     registerComponent("tmpl_13_catch-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -11038,17 +11223,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_13_static-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -11056,17 +11244,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_13_pure-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -11074,17 +11265,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_13_view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -11092,17 +11286,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_13_text", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -11110,11 +11307,12 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </text>
     </div>`
     });
     registerComponent("tmpl_13_container", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
@@ -11128,13 +11326,14 @@ var require_base = __commonJS({
     });
     registerComponent("tmpl_14_catch-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -11142,17 +11341,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_14_static-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -11160,17 +11362,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_14_pure-view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main style="i.st" class="i.cl" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -11178,17 +11383,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_14_view", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -11196,17 +11404,20 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </view-main>
     </div>`
     });
     registerComponent("tmpl_14_text", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
+        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
         <div v-for="item in i.cn" >
             
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
@@ -11214,11 +11425,12 @@ var require_base = __commonJS({
         </component>
     
         </div>
+    
+        </text>
     </div>`
     });
     registerComponent("tmpl_14_container", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
@@ -11232,14 +11444,13 @@ var require_base = __commonJS({
     });
     registerComponent("tmpl_15_container", {
       data() {
-        debugger;
         return {
           xs,
           ...this["$props"].data
         };
       },
       template: `<div>
-        <div v-if="{i.nn" >
+        <div v-if="i.nn" >
             
         <component is="tmpl_0_#text" :data="{i:i}" >
             
@@ -11249,6 +11460,10 @@ var require_base = __commonJS({
     
         <div >
             
+        <comp i="i" l="l" >
+            
+        </comp>
+    
         </div>
     </div>`
     });
@@ -11275,7 +11490,7 @@ var require_index2 = __commonJS({
     window["__wxRoute"] = "pages/index/index";
     var page = getPage("pages/index/index");
     page.json = `{"navigationBarTitleText":"\u9996\u9875","usingComponents":{"custom-wrapper":"../../custom-wrapper","comp":"../../comp"}}`;
-    (wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([[7], { 18: function(n, e, o) {
+    (wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([[7], { 17: function(n, e, o) {
       "use strict";
       n.exports = o(62);
     }, 42: function(n, e, o) {
@@ -11284,7 +11499,7 @@ var require_index2 = __commonJS({
         o.d(e, "a", function() {
           return s;
         });
-        var t = o(3), c = o(4), r = o(7), i = o(8), l = o(14), u = o(24), a = (o(61), o(18)), s = function(e2) {
+        var t = o(3), c = o(4), r = o(7), i = o(8), l = o(14), u = o(19), a = (o(61), o(17)), s = function(e2) {
           Object(r["a"])(l2, e2);
           var o2 = Object(i["a"])(l2);
           function l2() {
@@ -11303,7 +11518,7 @@ var require_index2 = __commonJS({
           } }, { key: "componentDidUpdate", value: function(n3, e3) {
             console.log("componentDidUpdate");
           } }, { key: "render", value: function() {
-            return console.log("render"), Object(a["jsxs"])(u["b"], { children: [Object(a["jsx"])(u["b"], { children: "\u6D4B\u8BD512312" }), Object(a["jsx"])(u["a"], {})] });
+            return console.log("render"), Object(a["jsxs"])(u["c"], { children: [Object(a["jsx"])(u["c"], { children: "\u6D4B\u8BD512312" }), Object(a["jsx"])(u["b"], { children: "Hello world!" }), Object(a["jsx"])(u["a"], {})] });
           } }]), l2;
         }(l["Component"]);
       }).call(this, o(2)["window"]);

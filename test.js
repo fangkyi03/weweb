@@ -30,6 +30,9 @@ function parse(input) {
             const obj = {}
             context.slice(split[0].length).trim().replace(/' /g,`'nnn `).split('nnn ').forEach(item => {
                 const [key, value] = item.split('=')
+                if (value) {
+                    obj[key] = value.slice(1,-1)
+                }
             })
             return {
                 name: split[0],
@@ -87,17 +90,20 @@ function parse(input) {
     return ast
 }
 
-`<template name="tmpl_14_cover-view">
-  <cover-view scroll-top="{{xs.b(i.scrollTop,false)}}" bindtouchstart="eh" bindtouchmove="eh" bindtouchend="eh" bindtouchcancel="eh" bindlongpress="eh" marker-id="{{i.markerId}}" slot="{{i.slot}}" style="{{i.st}}" class="{{i.cl}}" bindtap="eh"  id="{{i.uid}}">
+parse(`<template name="tmpl_0_button">
+  <button size="{{xs.b(i.size,'default')}}" type="{{i.type}}" plain="{{xs.b(i.plain,false)}}" disabled="{{i.disabled}}" loading="{{xs.b(i.loading,false)}}" form-type="{{i.formType}}" open-type="{{i.openType}}" hover-class="{{xs.b(i.hoverClass,'button-hover')}}" hover-stop-propagation="{{xs.b(i.hoverStopPropagation,false)}}" hover-start-time="{{xs.b(i.hoverStartTime,20)}}" hover-stay-time="{{xs.b(i.hoverStayTime,70)}}" name="{{i.name}}" lang="{{xs.b(i.lang,en)}}" session-from="{{i.sessionFrom}}" send-message-title="{{i.sendMessageTitle}}" send-message-path="{{i.sendMessagePath}}" send-message-img="{{i.sendMessageImg}}" app-parameter="{{i.appParameter}}" show-message-card="{{xs.b(i.showMessageCard,false)}}" business-id="{{i.businessId}}" bindgetuserinfo="eh" bindcontact="eh" bindgetphonenumber="eh" binderror="eh" bindopensetting="eh" bindlaunchapp="eh" style="{{i.st}}" class="{{i.cl}}" bindtap="eh"  id="{{i.uid}}">
     <block wx:for="{{i.cn}}" wx:key="uid">
       <template is="{{xs.e(cid+1)}}" data="{{i:item,l:l}}" />
     </block>
-  </cover-view>
-</template>`
-parse(`<template name="taro_tmpl">
-  <block wx:for="{{root.cn}}" wx:key="uid">
-    <template is="tmpl_0_container" data="{{i:item,l:''}}" />
-  </block>
+  </button>
+</template>
+
+<template name="tmpl_0_scroll-view">
+  <scroll-view scroll-x="{{xs.b(i.scrollX,false)}}" scroll-y="{{xs.b(i.scrollY,false)}}" upper-threshold="{{xs.b(i.upperThreshold,50)}}" lower-threshold="{{xs.b(i.lowerThreshold,50)}}" scroll-top="{{i.scrollTop}}" scroll-left="{{i.scrollLeft}}" scroll-into-view="{{i.scrollIntoView}}" scroll-with-animation="{{xs.b(i.scrollWithAnimation,false)}}" enable-back-to-top="{{xs.b(i.enableBackToTop,false)}}" bindscrolltoupper="eh" bindscrolltolower="eh" bindscroll="eh" bindtouchstart="eh" bindtouchmove="eh" bindtouchend="eh" bindtouchcancel="eh" bindlongpress="eh" bindanimationstart="eh" bindanimationiteration="eh" bindanimationend="eh" bindtransitionend="eh" enable-flex="{{xs.b(i.enableFlex,false)}}" scroll-anchoring="{{xs.b(i.scrollAnchoring,false)}}" refresher-enabled="{{xs.b(i.refresherEnabled,false)}}" refresher-threshold="{{xs.b(i.refresherThreshold,45)}}" refresher-default-style="{{xs.b(i.refresherDefaultStyle,'black')}}" refresher-background="{{xs.b(i.refresherBackground,'#FFF')}}" refresher-triggered="{{xs.b(i.refresherTriggered,false)}}" enhanced="{{xs.b(i.enhanced,false)}}" bounces="{{xs.b(i.bounces,true)}}" show-scrollbar="{{xs.b(i.showScrollbar,true)}}" paging-enabled="{{xs.b(i.pagingEnabled,false)}}" fast-deceleration="{{xs.b(i.fastDeceleration,false)}}" binddragstart="eh" binddragging="eh" binddragend="eh" bindrefresherpulling="eh" bindrefresherrefresh="eh" bindrefresherrestore="eh" bindrefresherabort="eh" style="{{i.st}}" class="{{i.cl}}" bindtap="eh"  id="{{i.uid}}">
+    <block wx:for="{{i.cn}}" wx:key="uid">
+      <template is="{{xs.e(cid+1)}}" data="{{i:item,l:l}}" />
+    </block>
+  </scroll-view>
 </template>`)
 module.exports = {
     parse
