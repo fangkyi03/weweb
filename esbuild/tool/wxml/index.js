@@ -16,7 +16,7 @@ function parse(input) {
                 value: text.replace(/\s+/g, '')
             }
         }
-        const context = text.replace(/<|>|\/>/g,'').replace(/\s+/g, ' ').replace(/"/g,'').replace(/'/g,'')
+        const context = text.replace(/<|>|\/>/g,'').replace(/\s+/g, ' ').replace(/"/g,`'`)
         const split = context.split(' ')
         if (split.length === 1) {
             return {
@@ -28,9 +28,11 @@ function parse(input) {
             }
         }else {
             const obj = {}
-            split.slice(1).filter((e)=>e).forEach(item => {
+            context.slice(split[0].length).trim().replace(/' /g,`'nnn `).split('nnn ').forEach(item => {
                 const [key, value] = item.split('=')
-                obj[key] = value
+                if (value) {
+                    obj[key] = value.slice(1,-1)
+                }
             })
             return {
                 name: split[0],

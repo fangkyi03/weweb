@@ -3,7 +3,7 @@ var f = require('../core/file')
 var p = require('prettier')
 
 // 判断当前是否有事件
-function getEvent(key) {
+function getEvent(key = '') {
     if (key.indexOf('bind') != -1 ) {
         return key.replace('bind','@')
     }else {
@@ -12,7 +12,7 @@ function getEvent(key) {
 }
 
 // 删除括号
-function removeParenTheses(data) {
+function removeParenTheses(data = '') {
     return data.replace('{','').replace('}','')
 }
 // 判断当前对象是否有for循环 
@@ -66,10 +66,11 @@ function getattributes(attributes) {
         if (keyText == 'data' ) {
             attributesStr += `:${keyText}="${attributesObj[key]}" `
         } else if (keyText == 'is') {
+            
             if (attributesObj[key].indexOf('(') != -1) {
-                attributesStr += `:is="${attributesObj[key]}" `
+                attributesStr += `:is="${attributesObj[key].replace('{','').replace('}','')}" `
             }else {
-                attributesStr += `is="${attributesObj[key]}" `
+                attributesStr += `is="${attributesObj[key].replace('{','').replace('}','')}" `
             }
         }
         else {
@@ -153,7 +154,6 @@ function getVueComponent(name,text,isPage) {
     return `
      registerComponent('${name}',{
         data() {
-            debugger
             return {
                 xs,
                 ...this['$props'].data 
@@ -161,7 +161,7 @@ function getVueComponent(name,text,isPage) {
         },
         template:$template$
      })
-    `.replace('$template$','`<div> ' + text + ' </div>`')
+    `.replace('$template$','`<div>' + text + '</div>`')
 }
 function getTemplate(filePath) {
     let importText = []

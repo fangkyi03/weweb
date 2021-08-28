@@ -16,7 +16,7 @@ function parse(input) {
                 value: text.replace(/\s+/g, '')
             }
         }
-        const context = text.replace(/<|>|\/>/g,'').replace(/\s+/g, ' ').replace(/"/g,'').replace(/'/g,'')
+        const context = text.replace(/<|>|\/>/g,'').replace(/\s+/g, ' ').replace(/"/g,`'`)
         const split = context.split(' ')
         if (split.length === 1) {
             return {
@@ -28,9 +28,8 @@ function parse(input) {
             }
         }else {
             const obj = {}
-            split.slice(1).filter((e)=>e).forEach(item => {
+            context.slice(split[0].length).trim().replace(/' /g,`'nnn `).split('nnn ').forEach(item => {
                 const [key, value] = item.split('=')
-                obj[key] = value
             })
             return {
                 name: split[0],
@@ -88,12 +87,17 @@ function parse(input) {
     return ast
 }
 
-parse(`<template name="tmpl_0_catch-view">
-  <view hover-class="{{xs.b(i.hoverClass,'none')}}" hover-stop-propagation="{{xs.b(i.hoverStopPropagation,false)}}" hover-start-time="{{xs.b(i.hoverStartTime,50)}}" hover-stay-time="{{xs.b(i.hoverStayTime,400)}}" animation="{{i.animation}}" bindtouchstart="eh" bindtouchend="eh" bindtouchcancel="eh" bindlongpress="eh" bindanimationstart="eh" bindanimationiteration="eh" bindanimationend="eh" bindtransitionend="eh" style="{{i.st}}" class="{{i.cl}}" bindtap="eh" catchtouchmove="eh"  id="{{i.uid}}">
+`<template name="tmpl_14_cover-view">
+  <cover-view scroll-top="{{xs.b(i.scrollTop,false)}}" bindtouchstart="eh" bindtouchmove="eh" bindtouchend="eh" bindtouchcancel="eh" bindlongpress="eh" marker-id="{{i.markerId}}" slot="{{i.slot}}" style="{{i.st}}" class="{{i.cl}}" bindtap="eh"  id="{{i.uid}}">
     <block wx:for="{{i.cn}}" wx:key="uid">
       <template is="{{xs.e(cid+1)}}" data="{{i:item,l:l}}" />
     </block>
-  </view>
+  </cover-view>
+</template>`
+parse(`<template name="taro_tmpl">
+  <block wx:for="{{root.cn}}" wx:key="uid">
+    <template is="tmpl_0_container" data="{{i:item,l:''}}" />
+  </block>
 </template>`)
 module.exports = {
     parse
