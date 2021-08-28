@@ -9,13 +9,21 @@ Vue.component('wx-button',{
   name:'wx-button',
   props:['type','data','plain','disabled','loading','name'],
   data(){
+    debugger
     return this.$props
   },
-  template:`<button class='wx-button' disabled="false" type='primary'><slot></slot></button>`
+  template:`<button class='wx-button' :disabled="disabled" :type="type"><slot></slot></button>`
 })
 Vue.component('wx-view',{
   name:'wxview',
   template:'<div><slot></slot></div>'
+})
+Vue.component('wx-image',{
+  props:['class','i'],
+  data(){
+    return this.$props
+  },
+  template:`<img class='wx-image'/>`
 })
 window['Behavior'] = function (config) {
   return config

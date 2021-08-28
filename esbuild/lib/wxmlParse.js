@@ -88,7 +88,7 @@ function getTagName(item) {
     }else if (item.name == 'block') {
         return 'div'
     }else {
-        return item.name
+        return 'wx-' + item.name
     }
 }
 function getTagTemplate(item) {
@@ -163,7 +163,7 @@ function getVueComponent(name,text,isPage) {
         },
         template:$template$
      })
-    `.replace('$template$','`<div>' + text.replace(/view/g,'wx-view').replace('button','wx-button') + '</div>`')
+    `.replace('$template$','`<div>' + text + '</div>`')
 }
 function getTemplate(filePath) {
     let importText = []

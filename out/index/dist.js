@@ -9501,7 +9501,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" id="i.uid" >
+        <wx-text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9511,7 +9511,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </text>
+        </wx-text>
     </div>`
     });
     registerComponent("tmpl_0_text", {
@@ -9522,7 +9522,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9532,7 +9532,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </text>
+        </wx-text>
     </div>`
     });
     registerComponent("tmpl_0_button", {
@@ -9553,7 +9553,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </button>
+        </wx-button>
     </div>`
     });
     registerComponent("tmpl_0_scroll-view", {
@@ -9564,7 +9564,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <scroll-wx-view :scroll-x="xs.b(i.scrollX,false)" :scroll-y="xs.b(i.scrollY,false)" :upper-threshold="xs.b(i.upperThreshold,50)" :lower-threshold="xs.b(i.lowerThreshold,50)" scroll-top="i.scrollTop" scroll-left="i.scrollLeft" scroll-into-wx-view="i.scrollIntoView" :scroll-with-animation="xs.b(i.scrollWithAnimation,false)" :enable-back-to-top="xs.b(i.enableBackToTop,false)" @scrolltoupper="eh" @scrolltolower="eh" @scroll="eh" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" :enable-flex="xs.b(i.enableFlex,false)" :scroll-anchoring="xs.b(i.scrollAnchoring,false)" :refresher-enabled="xs.b(i.refresherEnabled,false)" :refresher-threshold="xs.b(i.refresherThreshold,45)" :refresher-default-style="xs.b(i.refresherDefaultStyle,'black')" :refresher-background="xs.b(i.refresherBackground,'#FFF')" :refresher-triggered="xs.b(i.refresherTriggered,false)" :enhanced="xs.b(i.enhanced,false)" :bounces="xs.b(i.bounces,true)" :show-scrollbar="xs.b(i.showScrollbar,true)" :paging-enabled="xs.b(i.pagingEnabled,false)" :fast-deceleration="xs.b(i.fastDeceleration,false)" @dragstart="eh" @dragging="eh" @dragend="eh" @refresherpulling="eh" @refresherrefresh="eh" @refresherrestore="eh" @refresherabort="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-scroll-view :scroll-x="xs.b(i.scrollX,false)" :scroll-y="xs.b(i.scrollY,false)" :upper-threshold="xs.b(i.upperThreshold,50)" :lower-threshold="xs.b(i.lowerThreshold,50)" scroll-top="i.scrollTop" scroll-left="i.scrollLeft" scroll-into-view="i.scrollIntoView" :scroll-with-animation="xs.b(i.scrollWithAnimation,false)" :enable-back-to-top="xs.b(i.enableBackToTop,false)" @scrolltoupper="eh" @scrolltolower="eh" @scroll="eh" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" :enable-flex="xs.b(i.enableFlex,false)" :scroll-anchoring="xs.b(i.scrollAnchoring,false)" :refresher-enabled="xs.b(i.refresherEnabled,false)" :refresher-threshold="xs.b(i.refresherThreshold,45)" :refresher-default-style="xs.b(i.refresherDefaultStyle,'black')" :refresher-background="xs.b(i.refresherBackground,'#FFF')" :refresher-triggered="xs.b(i.refresherTriggered,false)" :enhanced="xs.b(i.enhanced,false)" :bounces="xs.b(i.bounces,true)" :show-scrollbar="xs.b(i.showScrollbar,true)" :paging-enabled="xs.b(i.pagingEnabled,false)" :fast-deceleration="xs.b(i.fastDeceleration,false)" @dragstart="eh" @dragging="eh" @dragend="eh" @refresherpulling="eh" @refresherrefresh="eh" @refresherrestore="eh" @refresherabort="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9574,7 +9574,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </scroll-wx-view>
+        </wx-scroll-view>
     </div>`
     });
     registerComponent("tmpl_0_static-image", {
@@ -9585,7 +9585,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <image src="i.src" :mode="xs.b(i.mode,'scaleToFill')" :lazy-load="xs.b(i.lazyLoad,false)" :webp="xs.b(i.webp,false)" :show-menu-by-longpress="xs.b(i.showMenuByLongpress,false)" style="i.st" class="i.cl" id="i.uid" >
+        <wx-image src="i.src" :mode="xs.b(i.mode,'scaleToFill')" :lazy-load="xs.b(i.lazyLoad,false)" :webp="xs.b(i.webp,false)" :show-menu-by-longpress="xs.b(i.showMenuByLongpress,false)" style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9595,7 +9595,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </image>
+        </wx-image>
     </div>`
     });
     registerComponent("tmpl_0_image", {
@@ -9606,7 +9606,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <image src="i.src" :mode="xs.b(i.mode,'scaleToFill')" :lazy-load="xs.b(i.lazyLoad,false)" @error="eh" @load="eh" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" :webp="xs.b(i.webp,false)" :show-menu-by-longpress="xs.b(i.showMenuByLongpress,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-image src="i.src" :mode="xs.b(i.mode,'scaleToFill')" :lazy-load="xs.b(i.lazyLoad,false)" @error="eh" @load="eh" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" :webp="xs.b(i.webp,false)" :show-menu-by-longpress="xs.b(i.showMenuByLongpress,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9616,7 +9616,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </image>
+        </wx-image>
     </div>`
     });
     registerComponent("tmpl_0_#text", {
@@ -9737,7 +9737,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" id="i.uid" >
+        <wx-text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9747,7 +9747,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </text>
+        </wx-text>
     </div>`
     });
     registerComponent("tmpl_1_text", {
@@ -9758,7 +9758,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9768,7 +9768,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </text>
+        </wx-text>
     </div>`
     });
     registerComponent("tmpl_1_scroll-view", {
@@ -9779,7 +9779,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <scroll-wx-view :scroll-x="xs.b(i.scrollX,false)" :scroll-y="xs.b(i.scrollY,false)" :upper-threshold="xs.b(i.upperThreshold,50)" :lower-threshold="xs.b(i.lowerThreshold,50)" scroll-top="i.scrollTop" scroll-left="i.scrollLeft" scroll-into-wx-view="i.scrollIntoView" :scroll-with-animation="xs.b(i.scrollWithAnimation,false)" :enable-back-to-top="xs.b(i.enableBackToTop,false)" @scrolltoupper="eh" @scrolltolower="eh" @scroll="eh" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" :enable-flex="xs.b(i.enableFlex,false)" :scroll-anchoring="xs.b(i.scrollAnchoring,false)" :refresher-enabled="xs.b(i.refresherEnabled,false)" :refresher-threshold="xs.b(i.refresherThreshold,45)" :refresher-default-style="xs.b(i.refresherDefaultStyle,'black')" :refresher-background="xs.b(i.refresherBackground,'#FFF')" :refresher-triggered="xs.b(i.refresherTriggered,false)" :enhanced="xs.b(i.enhanced,false)" :bounces="xs.b(i.bounces,true)" :show-scrollbar="xs.b(i.showScrollbar,true)" :paging-enabled="xs.b(i.pagingEnabled,false)" :fast-deceleration="xs.b(i.fastDeceleration,false)" @dragstart="eh" @dragging="eh" @dragend="eh" @refresherpulling="eh" @refresherrefresh="eh" @refresherrestore="eh" @refresherabort="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-scroll-view :scroll-x="xs.b(i.scrollX,false)" :scroll-y="xs.b(i.scrollY,false)" :upper-threshold="xs.b(i.upperThreshold,50)" :lower-threshold="xs.b(i.lowerThreshold,50)" scroll-top="i.scrollTop" scroll-left="i.scrollLeft" scroll-into-view="i.scrollIntoView" :scroll-with-animation="xs.b(i.scrollWithAnimation,false)" :enable-back-to-top="xs.b(i.enableBackToTop,false)" @scrolltoupper="eh" @scrolltolower="eh" @scroll="eh" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" :enable-flex="xs.b(i.enableFlex,false)" :scroll-anchoring="xs.b(i.scrollAnchoring,false)" :refresher-enabled="xs.b(i.refresherEnabled,false)" :refresher-threshold="xs.b(i.refresherThreshold,45)" :refresher-default-style="xs.b(i.refresherDefaultStyle,'black')" :refresher-background="xs.b(i.refresherBackground,'#FFF')" :refresher-triggered="xs.b(i.refresherTriggered,false)" :enhanced="xs.b(i.enhanced,false)" :bounces="xs.b(i.bounces,true)" :show-scrollbar="xs.b(i.showScrollbar,true)" :paging-enabled="xs.b(i.pagingEnabled,false)" :fast-deceleration="xs.b(i.fastDeceleration,false)" @dragstart="eh" @dragging="eh" @dragend="eh" @refresherpulling="eh" @refresherrefresh="eh" @refresherrestore="eh" @refresherabort="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9789,7 +9789,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </scroll-wx-view>
+        </wx-scroll-view>
     </div>`
     });
     registerComponent("tmpl_1_container", {
@@ -9897,7 +9897,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" id="i.uid" >
+        <wx-text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9907,7 +9907,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </text>
+        </wx-text>
     </div>`
     });
     registerComponent("tmpl_2_text", {
@@ -9918,7 +9918,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9928,7 +9928,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </text>
+        </wx-text>
     </div>`
     });
     registerComponent("tmpl_2_scroll-view", {
@@ -9939,7 +9939,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <scroll-wx-view :scroll-x="xs.b(i.scrollX,false)" :scroll-y="xs.b(i.scrollY,false)" :upper-threshold="xs.b(i.upperThreshold,50)" :lower-threshold="xs.b(i.lowerThreshold,50)" scroll-top="i.scrollTop" scroll-left="i.scrollLeft" scroll-into-wx-view="i.scrollIntoView" :scroll-with-animation="xs.b(i.scrollWithAnimation,false)" :enable-back-to-top="xs.b(i.enableBackToTop,false)" @scrolltoupper="eh" @scrolltolower="eh" @scroll="eh" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" :enable-flex="xs.b(i.enableFlex,false)" :scroll-anchoring="xs.b(i.scrollAnchoring,false)" :refresher-enabled="xs.b(i.refresherEnabled,false)" :refresher-threshold="xs.b(i.refresherThreshold,45)" :refresher-default-style="xs.b(i.refresherDefaultStyle,'black')" :refresher-background="xs.b(i.refresherBackground,'#FFF')" :refresher-triggered="xs.b(i.refresherTriggered,false)" :enhanced="xs.b(i.enhanced,false)" :bounces="xs.b(i.bounces,true)" :show-scrollbar="xs.b(i.showScrollbar,true)" :paging-enabled="xs.b(i.pagingEnabled,false)" :fast-deceleration="xs.b(i.fastDeceleration,false)" @dragstart="eh" @dragging="eh" @dragend="eh" @refresherpulling="eh" @refresherrefresh="eh" @refresherrestore="eh" @refresherabort="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-scroll-view :scroll-x="xs.b(i.scrollX,false)" :scroll-y="xs.b(i.scrollY,false)" :upper-threshold="xs.b(i.upperThreshold,50)" :lower-threshold="xs.b(i.lowerThreshold,50)" scroll-top="i.scrollTop" scroll-left="i.scrollLeft" scroll-into-view="i.scrollIntoView" :scroll-with-animation="xs.b(i.scrollWithAnimation,false)" :enable-back-to-top="xs.b(i.enableBackToTop,false)" @scrolltoupper="eh" @scrolltolower="eh" @scroll="eh" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" :enable-flex="xs.b(i.enableFlex,false)" :scroll-anchoring="xs.b(i.scrollAnchoring,false)" :refresher-enabled="xs.b(i.refresherEnabled,false)" :refresher-threshold="xs.b(i.refresherThreshold,45)" :refresher-default-style="xs.b(i.refresherDefaultStyle,'black')" :refresher-background="xs.b(i.refresherBackground,'#FFF')" :refresher-triggered="xs.b(i.refresherTriggered,false)" :enhanced="xs.b(i.enhanced,false)" :bounces="xs.b(i.bounces,true)" :show-scrollbar="xs.b(i.showScrollbar,true)" :paging-enabled="xs.b(i.pagingEnabled,false)" :fast-deceleration="xs.b(i.fastDeceleration,false)" @dragstart="eh" @dragging="eh" @dragend="eh" @refresherpulling="eh" @refresherrefresh="eh" @refresherrestore="eh" @refresherabort="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9949,7 +9949,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </scroll-wx-view>
+        </wx-scroll-view>
     </div>`
     });
     registerComponent("tmpl_2_container", {
@@ -10057,7 +10057,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" id="i.uid" >
+        <wx-text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10067,7 +10067,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </text>
+        </wx-text>
     </div>`
     });
     registerComponent("tmpl_3_text", {
@@ -10078,7 +10078,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10088,7 +10088,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </text>
+        </wx-text>
     </div>`
     });
     registerComponent("tmpl_3_scroll-view", {
@@ -10099,7 +10099,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <scroll-wx-view :scroll-x="xs.b(i.scrollX,false)" :scroll-y="xs.b(i.scrollY,false)" :upper-threshold="xs.b(i.upperThreshold,50)" :lower-threshold="xs.b(i.lowerThreshold,50)" scroll-top="i.scrollTop" scroll-left="i.scrollLeft" scroll-into-wx-view="i.scrollIntoView" :scroll-with-animation="xs.b(i.scrollWithAnimation,false)" :enable-back-to-top="xs.b(i.enableBackToTop,false)" @scrolltoupper="eh" @scrolltolower="eh" @scroll="eh" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" :enable-flex="xs.b(i.enableFlex,false)" :scroll-anchoring="xs.b(i.scrollAnchoring,false)" :refresher-enabled="xs.b(i.refresherEnabled,false)" :refresher-threshold="xs.b(i.refresherThreshold,45)" :refresher-default-style="xs.b(i.refresherDefaultStyle,'black')" :refresher-background="xs.b(i.refresherBackground,'#FFF')" :refresher-triggered="xs.b(i.refresherTriggered,false)" :enhanced="xs.b(i.enhanced,false)" :bounces="xs.b(i.bounces,true)" :show-scrollbar="xs.b(i.showScrollbar,true)" :paging-enabled="xs.b(i.pagingEnabled,false)" :fast-deceleration="xs.b(i.fastDeceleration,false)" @dragstart="eh" @dragging="eh" @dragend="eh" @refresherpulling="eh" @refresherrefresh="eh" @refresherrestore="eh" @refresherabort="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-scroll-view :scroll-x="xs.b(i.scrollX,false)" :scroll-y="xs.b(i.scrollY,false)" :upper-threshold="xs.b(i.upperThreshold,50)" :lower-threshold="xs.b(i.lowerThreshold,50)" scroll-top="i.scrollTop" scroll-left="i.scrollLeft" scroll-into-view="i.scrollIntoView" :scroll-with-animation="xs.b(i.scrollWithAnimation,false)" :enable-back-to-top="xs.b(i.enableBackToTop,false)" @scrolltoupper="eh" @scrolltolower="eh" @scroll="eh" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" :enable-flex="xs.b(i.enableFlex,false)" :scroll-anchoring="xs.b(i.scrollAnchoring,false)" :refresher-enabled="xs.b(i.refresherEnabled,false)" :refresher-threshold="xs.b(i.refresherThreshold,45)" :refresher-default-style="xs.b(i.refresherDefaultStyle,'black')" :refresher-background="xs.b(i.refresherBackground,'#FFF')" :refresher-triggered="xs.b(i.refresherTriggered,false)" :enhanced="xs.b(i.enhanced,false)" :bounces="xs.b(i.bounces,true)" :show-scrollbar="xs.b(i.showScrollbar,true)" :paging-enabled="xs.b(i.pagingEnabled,false)" :fast-deceleration="xs.b(i.fastDeceleration,false)" @dragstart="eh" @dragging="eh" @dragend="eh" @refresherpulling="eh" @refresherrefresh="eh" @refresherrestore="eh" @refresherabort="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10109,7 +10109,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </scroll-wx-view>
+        </wx-scroll-view>
     </div>`
     });
     registerComponent("tmpl_3_container", {
@@ -10217,7 +10217,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" id="i.uid" >
+        <wx-text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10227,7 +10227,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </text>
+        </wx-text>
     </div>`
     });
     registerComponent("tmpl_4_text", {
@@ -10238,7 +10238,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10248,7 +10248,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </text>
+        </wx-text>
     </div>`
     });
     registerComponent("tmpl_4_container", {
@@ -10356,7 +10356,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" id="i.uid" >
+        <wx-text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10366,7 +10366,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </text>
+        </wx-text>
     </div>`
     });
     registerComponent("tmpl_5_text", {
@@ -10377,7 +10377,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10387,7 +10387,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </text>
+        </wx-text>
     </div>`
     });
     registerComponent("tmpl_5_container", {
@@ -10495,7 +10495,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10505,7 +10505,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </text>
+        </wx-text>
     </div>`
     });
     registerComponent("tmpl_6_container", {
@@ -10613,7 +10613,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10623,7 +10623,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </text>
+        </wx-text>
     </div>`
     });
     registerComponent("tmpl_7_container", {
@@ -10731,7 +10731,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10741,7 +10741,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </text>
+        </wx-text>
     </div>`
     });
     registerComponent("tmpl_8_container", {
@@ -10849,7 +10849,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10859,7 +10859,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </text>
+        </wx-text>
     </div>`
     });
     registerComponent("tmpl_9_container", {
@@ -10967,7 +10967,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10977,7 +10977,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </text>
+        </wx-text>
     </div>`
     });
     registerComponent("tmpl_10_container", {
@@ -11085,7 +11085,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -11095,7 +11095,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </text>
+        </wx-text>
     </div>`
     });
     registerComponent("tmpl_11_container", {
@@ -11203,7 +11203,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -11213,7 +11213,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </text>
+        </wx-text>
     </div>`
     });
     registerComponent("tmpl_12_container", {
@@ -11321,7 +11321,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -11331,7 +11331,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </text>
+        </wx-text>
     </div>`
     });
     registerComponent("tmpl_13_container", {
@@ -11439,7 +11439,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-text :selectable="xs.b(i.selectable,false)" space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -11449,7 +11449,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </text>
+        </wx-text>
     </div>`
     });
     registerComponent("tmpl_14_container", {
@@ -11483,9 +11483,9 @@ var require_base = __commonJS({
     
         <div >
             
-        <comp i="i" l="l" >
+        <wx-comp i="i" l="l" >
             
-        </comp>
+        </wx-comp>
     
         </div>
     </div>`
