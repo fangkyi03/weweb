@@ -1,58 +1,100 @@
-const template = `
-<div src='1'>
-    <div>
-        <span>12312312312312s3</span>
-        12313
-    </div>
-</div>
-`
-const input = template.replace(/[\r\n]/g, '')
-let current = 0
-let children = []
-function find() {
-    let start = -1 
-    let end = -1
-    while (current < input.length) {
-        const char = input[current]
-        if (char === '<') {
-            start = current
-
-        }else if (char === '>') {
-            end = current
-        }
-        if (start !== -1 && end !== -1) {
-            children.push({
-                text:input.slice(start, end + 1),
-                start,
-                end
-            })
-            start = -1
-            end = -1
-        }
-        current++
+function parse(input) {
+    let pos = 0
+    const ast = {
+        children:[],
+        type: 'root',
     }
-    console.log('object')
+    let current = ast
+    let isOpen = false
+    let isClose = false
+    let openPos = 0
+    let text = ''
+    function getTagNameOfAttr(text,type) {
+        if (type == 'text') {
+            return {
+                type: 'text',
+                value: text.replace(/\s+/g, '')
+            }
+        }
+        const context = text.replace(/<|>|\/>/g,'').replace(/\s+/g, ' ').replace(/"/g,'').replace(/'/g,'')
+        const split = context.split(' ')
+        if (split.length === 1) {
+            return {
+                name: split[0],
+                attributes:{},
+                children:[],
+                parent:current,
+                type
+            }
+        }else {
+            const obj = {}
+            split.slice(1).filter((e)=>e).forEach(item => {
+                const [key, value] = item.split('=')
+                obj[key] = value
+            })
+            return {
+                name: split[0],
+                attributes:obj,
+                children:[],
+                parent:current,
+                type
+            }
+        }
+    }
+    function addChildren(text,type) {
+        const child = getTagNameOfAttr(text,type)
+        current.children.push(child)
+        return child
+    }
+    while (pos < input.length) {
+        if (input[pos] === '<') {
+            let index = input.slice(pos).indexOf('>')
+            // 判断当前是否是闭合标签
+            if (input[pos + 1] === '/') {
+                if (isClose) {
+                    addChildren(text,'text')
+                    text = ''
+                }
+                isClose = false
+                current = current.parent
+                pos += index
+            }else if (input.substr(pos,index + 1).indexOf('/') > -1) { // 判断是否是自闭合标签
+                addChildren(input.substr(pos,index + 1),'node')
+                pos += index 
+            }
+            else {
+                if (isClose) {
+                    addChildren(text,'text')
+                    text = ''
+                }
+                isOpen = true
+                isClose = false
+                openPos = pos
+            }
+        }else if (input[pos] === '>' && isOpen) {
+            if (input[pos - 1] === '/') {
+              current = current.parent
+            }else {
+                isOpen = false
+                isClose = true
+                let child = addChildren(input.slice(openPos + 1, pos),'node')
+                current = child
+            }
+        }else if (isClose){
+            text += input[pos]
+        }
+        pos += 1
+    }
+    return ast
 }
 
-find() 
-// function find() {
-//     const stack = []
-//     const result = []
-//     let left = -1
-//     let right = -1
-//     while (current < input.length) {
-//         const char = input[current]
-//         if (char === '<') {
-//             stack.push(current)
-//         } else if (char === '>') {
-//             const start = stack.pop()
-//             if (stack.length === 0) {
-//                 result.push(input.slice(start, current + 1))
-//             }
-//         }
-//         current++
-//     }
-//     return result
-// }
-
-// find()
+parse(`<template name="tmpl_0_catch-view">
+  <view hover-class="{{xs.b(i.hoverClass,'none')}}" hover-stop-propagation="{{xs.b(i.hoverStopPropagation,false)}}" hover-start-time="{{xs.b(i.hoverStartTime,50)}}" hover-stay-time="{{xs.b(i.hoverStayTime,400)}}" animation="{{i.animation}}" bindtouchstart="eh" bindtouchend="eh" bindtouchcancel="eh" bindlongpress="eh" bindanimationstart="eh" bindanimationiteration="eh" bindanimationend="eh" bindtransitionend="eh" style="{{i.st}}" class="{{i.cl}}" bindtap="eh" catchtouchmove="eh"  id="{{i.uid}}">
+    <block wx:for="{{i.cn}}" wx:key="uid">
+      <template is="{{xs.e(cid+1)}}" data="{{i:item,l:l}}" />
+    </block>
+  </view>
+</template>`)
+module.exports = {
+    parse
+}

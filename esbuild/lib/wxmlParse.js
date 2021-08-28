@@ -1,4 +1,4 @@
-var {lex,parse} = require('../tool/wxml')
+var {parse} = require('../tool/wxml')
 var f = require('../core/file')
 var p = require('prettier')
 
@@ -117,8 +117,8 @@ function getTemplateText(children) {
      if (item.type == 'node' && (item.name == 'template' || item.name == 'block')) {
             template += getTagTemplate(item)
             continue
-        }else if (item.type == 'comment') {
-            template += '<div>' + item.data + '</div>'
+        }else if (item.type == 'text') {
+            template += item.value
         }
         template += getTemplateText(item.children || [])
     }
@@ -161,14 +161,13 @@ function getVueComponent(name,text,isPage) {
         },
         template:$template$
      })
-    `.replace('$template$','`<div>' + text + '</div>`')
+    `.replace('$template$','`<div> ' + text + ' </div>`')
 }
 function getTemplate(filePath) {
     let importText = []
     let templates = []
     const content = f.readFile(filePath)
-    const tokens = lex(content)
-    const dom = parse(tokens)
+    const dom = parse(content)
     findAllTemplate(dom.children,importText,templates)
     if (templates.length == 0 ) {
         const templateText = getTemplateText(dom.children)

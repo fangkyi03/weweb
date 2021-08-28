@@ -1,7 +1,7 @@
 window['Behavior'] = function (config) {
   return config
 };
-window['registerComponent'] = (name,template) => {
+window['registerComponent'] = (name,{template,data}) => {
   Vue.component(name,{
     props:['data'],
     watch:{
@@ -10,7 +10,8 @@ window['registerComponent'] = (name,template) => {
             this.$forceUpdate()
         }
     },
-    ...template
+    data,
+    template
   })
 }
 

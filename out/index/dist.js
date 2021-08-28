@@ -9390,15 +9390,15 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in root.cn" >
             
-        <component is="tmpl_0_container" :data="{i:item,l:''}" >
+        <component is="tmpl_0_container" :data="{i:item,l:}" >
             
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_catch-view", {
       data() {
@@ -9408,7 +9408,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9416,7 +9416,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_static-view", {
       data() {
@@ -9426,7 +9426,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9434,7 +9434,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_pure-view", {
       data() {
@@ -9444,7 +9444,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9452,7 +9452,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_view", {
       data() {
@@ -9462,7 +9462,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9470,7 +9470,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_icon", {
       data() {
@@ -9480,7 +9480,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div>  </div>`
     });
     registerComponent("tmpl_0_progress", {
       data() {
@@ -9490,7 +9490,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div>  </div>`
     });
     registerComponent("tmpl_0_rich-text", {
       data() {
@@ -9500,7 +9500,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div>  </div>`
     });
     registerComponent("tmpl_0_static-text", {
       data() {
@@ -9510,7 +9510,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9518,7 +9518,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_text", {
       data() {
@@ -9528,7 +9528,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9536,7 +9536,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_button", {
       data() {
@@ -9546,7 +9546,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9554,7 +9554,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_checkbox", {
       data() {
@@ -9564,7 +9564,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9572,7 +9572,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_checkbox-group", {
       data() {
@@ -9582,7 +9582,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9590,7 +9590,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_form", {
       data() {
@@ -9600,7 +9600,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9608,7 +9608,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_input", {
       data() {
@@ -9618,7 +9618,11 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div> 
+        <component :is="{xs.c(i," :data="{i:i}" >
+            
+        </component>
+     </div>`
     });
     registerComponent("tmpl_0_input_focus", {
       data() {
@@ -9628,7 +9632,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div>  </div>`
     });
     registerComponent("tmpl_0_input_blur", {
       data() {
@@ -9638,7 +9642,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div>  </div>`
     });
     registerComponent("tmpl_0_label", {
       data() {
@@ -9648,7 +9652,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9656,7 +9660,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_picker", {
       data() {
@@ -9666,7 +9670,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9674,7 +9678,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_picker-view", {
       data() {
@@ -9684,7 +9688,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9692,7 +9696,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_picker-view-column", {
       data() {
@@ -9702,7 +9706,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9710,7 +9714,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_radio", {
       data() {
@@ -9720,7 +9724,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9728,7 +9732,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_radio-group", {
       data() {
@@ -9738,7 +9742,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9746,7 +9750,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_slider", {
       data() {
@@ -9756,7 +9760,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div>  </div>`
     });
     registerComponent("tmpl_0_switch", {
       data() {
@@ -9766,7 +9770,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div>  </div>`
     });
     registerComponent("tmpl_0_cover-image", {
       data() {
@@ -9776,7 +9780,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9784,7 +9788,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_textarea", {
       data() {
@@ -9794,7 +9798,11 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div> 
+        <component :is="{xs.c(i," :data="{i:i,cid:cid}" >
+            
+        </component>
+     </div>`
     });
     registerComponent("tmpl_0_textarea_focus", {
       data() {
@@ -9804,7 +9812,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9812,7 +9820,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_textarea_blur", {
       data() {
@@ -9822,7 +9830,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9830,7 +9838,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_cover-view", {
       data() {
@@ -9840,7 +9848,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9848,7 +9856,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_movable-area", {
       data() {
@@ -9858,7 +9866,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9866,7 +9874,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_movable-view", {
       data() {
@@ -9876,7 +9884,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9884,7 +9892,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_scroll-view", {
       data() {
@@ -9894,7 +9902,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9902,7 +9910,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_swiper", {
       data() {
@@ -9912,7 +9920,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9920,7 +9928,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_swiper-item", {
       data() {
@@ -9930,7 +9938,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9938,7 +9946,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_navigator", {
       data() {
@@ -9948,7 +9956,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9956,7 +9964,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_audio", {
       data() {
@@ -9966,7 +9974,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div>  </div>`
     });
     registerComponent("tmpl_0_camera", {
       data() {
@@ -9976,7 +9984,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -9984,7 +9992,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_static-image", {
       data() {
@@ -9994,7 +10002,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10002,7 +10010,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_image", {
       data() {
@@ -10012,7 +10020,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10020,7 +10028,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_live-player", {
       data() {
@@ -10030,7 +10038,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10038,7 +10046,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_video", {
       data() {
@@ -10048,7 +10056,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10056,7 +10064,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_canvas", {
       data() {
@@ -10066,7 +10074,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10074,7 +10082,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_ad", {
       data() {
@@ -10084,7 +10092,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div>  </div>`
     });
     registerComponent("tmpl_0_web-view", {
       data() {
@@ -10094,7 +10102,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10102,7 +10110,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_block", {
       data() {
@@ -10112,7 +10120,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div id="{i.uid}" >
             
         <div v-for="item in i.cn" >
@@ -10124,7 +10132,7 @@ var require_base = __commonJS({
         </div>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_map", {
       data() {
@@ -10134,7 +10142,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10142,7 +10150,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_slot", {
       data() {
@@ -10152,7 +10160,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10160,7 +10168,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_slot-view", {
       data() {
@@ -10170,7 +10178,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10178,7 +10186,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_editor", {
       data() {
@@ -10188,7 +10196,11 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div> 
+        <component :is="{xs.c(i," :data="{i:i,cid:cid}" >
+            
+        </component>
+     </div>`
     });
     registerComponent("tmpl_0_editor_focus", {
       data() {
@@ -10198,7 +10210,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10206,7 +10218,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_editor_blur", {
       data() {
@@ -10216,7 +10228,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10224,7 +10236,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_match-media", {
       data() {
@@ -10234,7 +10246,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10242,7 +10254,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_functional-page-navigator", {
       data() {
@@ -10252,7 +10264,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10260,7 +10272,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_live-pusher", {
       data() {
@@ -10270,7 +10282,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10278,7 +10290,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_official-account", {
       data() {
@@ -10288,7 +10300,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div>  </div>`
     });
     registerComponent("tmpl_0_open-data", {
       data() {
@@ -10298,7 +10310,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div>  </div>`
     });
     registerComponent("tmpl_0_navigation-bar", {
       data() {
@@ -10308,7 +10320,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div>  </div>`
     });
     registerComponent("tmpl_0_page-meta", {
       data() {
@@ -10318,7 +10330,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10326,7 +10338,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_voip-room", {
       data() {
@@ -10336,7 +10348,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div>  </div>`
     });
     registerComponent("tmpl_0_ad-custom", {
       data() {
@@ -10346,7 +10358,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10354,7 +10366,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_page-container", {
       data() {
@@ -10364,7 +10376,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10372,7 +10384,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_#text", {
       data() {
@@ -10382,11 +10394,11 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div >
-            
+            {{i.v}}
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_0_container", {
       data() {
@@ -10396,7 +10408,11 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div> 
+        <component :is="{xs.a(0," :data="{i:i,cid:0,l:xs.f(l,i.nn)}" >
+            
+        </component>
+     </div>`
     });
     registerComponent("tmpl_1_catch-view", {
       data() {
@@ -10406,7 +10422,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10414,7 +10430,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_1_static-view", {
       data() {
@@ -10424,7 +10440,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10432,7 +10448,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_1_pure-view", {
       data() {
@@ -10442,7 +10458,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10450,7 +10466,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_1_view", {
       data() {
@@ -10460,7 +10476,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10468,7 +10484,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_1_static-text", {
       data() {
@@ -10478,7 +10494,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10486,7 +10502,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_1_text", {
       data() {
@@ -10496,7 +10512,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10504,7 +10520,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_1_form", {
       data() {
@@ -10514,7 +10530,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10522,7 +10538,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_1_label", {
       data() {
@@ -10532,7 +10548,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10540,7 +10556,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_1_cover-view", {
       data() {
@@ -10550,7 +10566,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10558,7 +10574,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_1_scroll-view", {
       data() {
@@ -10568,7 +10584,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10576,7 +10592,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_1_swiper", {
       data() {
@@ -10586,7 +10602,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10594,7 +10610,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_1_swiper-item", {
       data() {
@@ -10604,7 +10620,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10612,7 +10628,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_1_block", {
       data() {
@@ -10622,7 +10638,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div id="{i.uid}" >
             
         <div v-for="item in i.cn" >
@@ -10634,7 +10650,7 @@ var require_base = __commonJS({
         </div>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_1_slot", {
       data() {
@@ -10644,7 +10660,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10652,7 +10668,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_1_slot-view", {
       data() {
@@ -10662,7 +10678,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10670,7 +10686,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_1_container", {
       data() {
@@ -10680,7 +10696,11 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div> 
+        <component :is="{xs.a(1," :data="{i:i,cid:1,l:xs.f(l,i.nn)}" >
+            
+        </component>
+     </div>`
     });
     registerComponent("tmpl_2_catch-view", {
       data() {
@@ -10690,7 +10710,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10698,7 +10718,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_2_static-view", {
       data() {
@@ -10708,7 +10728,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10716,7 +10736,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_2_pure-view", {
       data() {
@@ -10726,7 +10746,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10734,7 +10754,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_2_view", {
       data() {
@@ -10744,7 +10764,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10752,7 +10772,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_2_static-text", {
       data() {
@@ -10762,7 +10782,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10770,7 +10790,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_2_text", {
       data() {
@@ -10780,7 +10800,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10788,7 +10808,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_2_form", {
       data() {
@@ -10798,7 +10818,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10806,7 +10826,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_2_label", {
       data() {
@@ -10816,7 +10836,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10824,7 +10844,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_2_cover-view", {
       data() {
@@ -10834,7 +10854,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10842,7 +10862,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_2_scroll-view", {
       data() {
@@ -10852,7 +10872,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10860,7 +10880,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_2_swiper", {
       data() {
@@ -10870,7 +10890,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10878,7 +10898,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_2_swiper-item", {
       data() {
@@ -10888,7 +10908,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10896,7 +10916,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_2_block", {
       data() {
@@ -10906,7 +10926,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div id="{i.uid}" >
             
         <div v-for="item in i.cn" >
@@ -10918,7 +10938,7 @@ var require_base = __commonJS({
         </div>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_2_slot", {
       data() {
@@ -10928,7 +10948,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10936,7 +10956,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_2_slot-view", {
       data() {
@@ -10946,7 +10966,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10954,7 +10974,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_2_container", {
       data() {
@@ -10964,7 +10984,11 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div> 
+        <component :is="{xs.a(2," :data="{i:i,cid:2,l:xs.f(l,i.nn)}" >
+            
+        </component>
+     </div>`
     });
     registerComponent("tmpl_3_catch-view", {
       data() {
@@ -10974,7 +10998,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -10982,7 +11006,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_3_static-view", {
       data() {
@@ -10992,7 +11016,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11000,7 +11024,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_3_pure-view", {
       data() {
@@ -11010,7 +11034,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11018,7 +11042,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_3_view", {
       data() {
@@ -11028,7 +11052,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11036,7 +11060,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_3_static-text", {
       data() {
@@ -11046,7 +11070,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11054,7 +11078,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_3_text", {
       data() {
@@ -11064,7 +11088,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11072,7 +11096,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_3_form", {
       data() {
@@ -11082,7 +11106,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11090,7 +11114,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_3_label", {
       data() {
@@ -11100,7 +11124,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11108,7 +11132,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_3_cover-view", {
       data() {
@@ -11118,7 +11142,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11126,7 +11150,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_3_scroll-view", {
       data() {
@@ -11136,7 +11160,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11144,7 +11168,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_3_swiper", {
       data() {
@@ -11154,7 +11178,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11162,7 +11186,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_3_swiper-item", {
       data() {
@@ -11172,7 +11196,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11180,7 +11204,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_3_block", {
       data() {
@@ -11190,7 +11214,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div id="{i.uid}" >
             
         <div v-for="item in i.cn" >
@@ -11202,7 +11226,7 @@ var require_base = __commonJS({
         </div>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_3_slot", {
       data() {
@@ -11212,7 +11236,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11220,7 +11244,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_3_slot-view", {
       data() {
@@ -11230,7 +11254,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11238,7 +11262,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_3_container", {
       data() {
@@ -11248,7 +11272,11 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div> 
+        <component :is="{xs.a(3," :data="{i:i,cid:3,l:xs.f(l,i.nn)}" >
+            
+        </component>
+     </div>`
     });
     registerComponent("tmpl_4_catch-view", {
       data() {
@@ -11258,7 +11286,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11266,7 +11294,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_4_static-view", {
       data() {
@@ -11276,7 +11304,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11284,7 +11312,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_4_pure-view", {
       data() {
@@ -11294,7 +11322,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11302,7 +11330,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_4_view", {
       data() {
@@ -11312,7 +11340,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11320,7 +11348,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_4_static-text", {
       data() {
@@ -11330,7 +11358,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11338,7 +11366,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_4_text", {
       data() {
@@ -11348,7 +11376,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11356,7 +11384,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_4_label", {
       data() {
@@ -11366,7 +11394,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11374,7 +11402,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_4_cover-view", {
       data() {
@@ -11384,7 +11412,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11392,7 +11420,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_4_block", {
       data() {
@@ -11402,7 +11430,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div id="{i.uid}" >
             
         <div v-for="item in i.cn" >
@@ -11414,7 +11442,7 @@ var require_base = __commonJS({
         </div>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_4_slot", {
       data() {
@@ -11424,7 +11452,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11432,7 +11460,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_4_slot-view", {
       data() {
@@ -11442,7 +11470,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11450,7 +11478,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_4_container", {
       data() {
@@ -11460,7 +11488,11 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div> 
+        <component :is="{xs.a(4," :data="{i:i,cid:4,l:xs.f(l,i.nn)}" >
+            
+        </component>
+     </div>`
     });
     registerComponent("tmpl_5_catch-view", {
       data() {
@@ -11470,7 +11502,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11478,7 +11510,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_5_static-view", {
       data() {
@@ -11488,7 +11520,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11496,7 +11528,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_5_pure-view", {
       data() {
@@ -11506,7 +11538,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11514,7 +11546,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_5_view", {
       data() {
@@ -11524,7 +11556,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11532,7 +11564,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_5_static-text", {
       data() {
@@ -11542,7 +11574,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11550,7 +11582,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_5_text", {
       data() {
@@ -11560,7 +11592,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11568,7 +11600,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_5_label", {
       data() {
@@ -11578,7 +11610,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11586,7 +11618,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_5_cover-view", {
       data() {
@@ -11596,7 +11628,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11604,7 +11636,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_5_block", {
       data() {
@@ -11614,7 +11646,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div id="{i.uid}" >
             
         <div v-for="item in i.cn" >
@@ -11626,7 +11658,7 @@ var require_base = __commonJS({
         </div>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_5_slot", {
       data() {
@@ -11636,7 +11668,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11644,7 +11676,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_5_slot-view", {
       data() {
@@ -11654,7 +11686,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11662,7 +11694,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_5_container", {
       data() {
@@ -11672,7 +11704,11 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div> 
+        <component :is="{xs.a(5," :data="{i:i,cid:5,l:xs.f(l,i.nn)}" >
+            
+        </component>
+     </div>`
     });
     registerComponent("tmpl_6_catch-view", {
       data() {
@@ -11682,7 +11718,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11690,7 +11726,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_6_static-view", {
       data() {
@@ -11700,7 +11736,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11708,7 +11744,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_6_pure-view", {
       data() {
@@ -11718,7 +11754,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11726,7 +11762,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_6_view", {
       data() {
@@ -11736,7 +11772,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11744,7 +11780,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_6_text", {
       data() {
@@ -11754,7 +11790,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11762,7 +11798,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_6_cover-view", {
       data() {
@@ -11772,7 +11808,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11780,7 +11816,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_6_block", {
       data() {
@@ -11790,7 +11826,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div id="{i.uid}" >
             
         <div v-for="item in i.cn" >
@@ -11802,7 +11838,7 @@ var require_base = __commonJS({
         </div>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_6_slot", {
       data() {
@@ -11812,7 +11848,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11820,7 +11856,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_6_slot-view", {
       data() {
@@ -11830,7 +11866,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11838,7 +11874,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_6_container", {
       data() {
@@ -11848,7 +11884,11 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div> 
+        <component :is="{xs.a(6," :data="{i:i,cid:6,l:xs.f(l,i.nn)}" >
+            
+        </component>
+     </div>`
     });
     registerComponent("tmpl_7_catch-view", {
       data() {
@@ -11858,7 +11898,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11866,7 +11906,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_7_static-view", {
       data() {
@@ -11876,7 +11916,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11884,7 +11924,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_7_pure-view", {
       data() {
@@ -11894,7 +11934,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11902,7 +11942,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_7_view", {
       data() {
@@ -11912,7 +11952,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11920,7 +11960,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_7_text", {
       data() {
@@ -11930,7 +11970,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11938,7 +11978,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_7_cover-view", {
       data() {
@@ -11948,7 +11988,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11956,7 +11996,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_7_block", {
       data() {
@@ -11966,7 +12006,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div id="{i.uid}" >
             
         <div v-for="item in i.cn" >
@@ -11978,7 +12018,7 @@ var require_base = __commonJS({
         </div>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_7_slot", {
       data() {
@@ -11988,7 +12028,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -11996,7 +12036,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_7_slot-view", {
       data() {
@@ -12006,7 +12046,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12014,7 +12054,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_7_container", {
       data() {
@@ -12024,7 +12064,11 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div> 
+        <component :is="{xs.a(7," :data="{i:i,cid:7,l:xs.f(l,i.nn)}" >
+            
+        </component>
+     </div>`
     });
     registerComponent("tmpl_8_catch-view", {
       data() {
@@ -12034,7 +12078,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12042,7 +12086,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_8_static-view", {
       data() {
@@ -12052,7 +12096,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12060,7 +12104,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_8_pure-view", {
       data() {
@@ -12070,7 +12114,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12078,7 +12122,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_8_view", {
       data() {
@@ -12088,7 +12132,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12096,7 +12140,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_8_text", {
       data() {
@@ -12106,7 +12150,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12114,7 +12158,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_8_cover-view", {
       data() {
@@ -12124,7 +12168,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12132,7 +12176,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_8_block", {
       data() {
@@ -12142,7 +12186,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div id="{i.uid}" >
             
         <div v-for="item in i.cn" >
@@ -12154,7 +12198,7 @@ var require_base = __commonJS({
         </div>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_8_container", {
       data() {
@@ -12164,7 +12208,11 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div> 
+        <component :is="{xs.a(8," :data="{i:i,cid:8,l:xs.f(l,i.nn)}" >
+            
+        </component>
+     </div>`
     });
     registerComponent("tmpl_9_catch-view", {
       data() {
@@ -12174,7 +12222,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12182,7 +12230,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_9_static-view", {
       data() {
@@ -12192,7 +12240,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12200,7 +12248,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_9_pure-view", {
       data() {
@@ -12210,7 +12258,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12218,7 +12266,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_9_view", {
       data() {
@@ -12228,7 +12276,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12236,7 +12284,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_9_text", {
       data() {
@@ -12246,7 +12294,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12254,7 +12302,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_9_cover-view", {
       data() {
@@ -12264,7 +12312,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12272,7 +12320,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_9_block", {
       data() {
@@ -12282,7 +12330,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div id="{i.uid}" >
             
         <div v-for="item in i.cn" >
@@ -12294,7 +12342,7 @@ var require_base = __commonJS({
         </div>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_9_container", {
       data() {
@@ -12304,7 +12352,11 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div> 
+        <component :is="{xs.a(9," :data="{i:i,cid:9,l:xs.f(l,i.nn)}" >
+            
+        </component>
+     </div>`
     });
     registerComponent("tmpl_10_catch-view", {
       data() {
@@ -12314,7 +12366,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12322,7 +12374,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_10_static-view", {
       data() {
@@ -12332,7 +12384,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12340,7 +12392,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_10_pure-view", {
       data() {
@@ -12350,7 +12402,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12358,7 +12410,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_10_view", {
       data() {
@@ -12368,7 +12420,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12376,7 +12428,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_10_text", {
       data() {
@@ -12386,7 +12438,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12394,7 +12446,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_10_cover-view", {
       data() {
@@ -12404,7 +12456,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12412,7 +12464,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_10_block", {
       data() {
@@ -12422,7 +12474,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div id="{i.uid}" >
             
         <div v-for="item in i.cn" >
@@ -12434,7 +12486,7 @@ var require_base = __commonJS({
         </div>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_10_container", {
       data() {
@@ -12444,7 +12496,11 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div> 
+        <component :is="{xs.a(10," :data="{i:i,cid:10,l:xs.f(l,i.nn)}" >
+            
+        </component>
+     </div>`
     });
     registerComponent("tmpl_11_catch-view", {
       data() {
@@ -12454,7 +12510,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12462,7 +12518,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_11_static-view", {
       data() {
@@ -12472,7 +12528,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12480,7 +12536,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_11_pure-view", {
       data() {
@@ -12490,7 +12546,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12498,7 +12554,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_11_view", {
       data() {
@@ -12508,7 +12564,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12516,7 +12572,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_11_text", {
       data() {
@@ -12526,7 +12582,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12534,7 +12590,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_11_cover-view", {
       data() {
@@ -12544,7 +12600,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12552,7 +12608,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_11_block", {
       data() {
@@ -12562,7 +12618,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div id="{i.uid}" >
             
         <div v-for="item in i.cn" >
@@ -12574,7 +12630,7 @@ var require_base = __commonJS({
         </div>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_11_container", {
       data() {
@@ -12584,7 +12640,11 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div> 
+        <component :is="{xs.a(11," :data="{i:i,cid:11,l:xs.f(l,i.nn)}" >
+            
+        </component>
+     </div>`
     });
     registerComponent("tmpl_12_catch-view", {
       data() {
@@ -12594,7 +12654,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12602,7 +12662,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_12_static-view", {
       data() {
@@ -12612,7 +12672,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12620,7 +12680,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_12_pure-view", {
       data() {
@@ -12630,7 +12690,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12638,7 +12698,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_12_view", {
       data() {
@@ -12648,7 +12708,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12656,7 +12716,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_12_text", {
       data() {
@@ -12666,7 +12726,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12674,7 +12734,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_12_cover-view", {
       data() {
@@ -12684,7 +12744,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12692,7 +12752,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_12_block", {
       data() {
@@ -12702,7 +12762,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div id="{i.uid}" >
             
         <div v-for="item in i.cn" >
@@ -12714,7 +12774,7 @@ var require_base = __commonJS({
         </div>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_12_container", {
       data() {
@@ -12724,7 +12784,11 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div> 
+        <component :is="{xs.a(12," :data="{i:i,cid:12,l:xs.f(l,i.nn)}" >
+            
+        </component>
+     </div>`
     });
     registerComponent("tmpl_13_catch-view", {
       data() {
@@ -12734,7 +12798,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12742,7 +12806,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_13_static-view", {
       data() {
@@ -12752,7 +12816,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12760,7 +12824,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_13_pure-view", {
       data() {
@@ -12770,7 +12834,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12778,7 +12842,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_13_view", {
       data() {
@@ -12788,7 +12852,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12796,7 +12860,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_13_text", {
       data() {
@@ -12806,7 +12870,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12814,7 +12878,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_13_cover-view", {
       data() {
@@ -12824,7 +12888,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12832,7 +12896,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_13_block", {
       data() {
@@ -12842,7 +12906,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div id="{i.uid}" >
             
         <div v-for="item in i.cn" >
@@ -12854,7 +12918,7 @@ var require_base = __commonJS({
         </div>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_13_container", {
       data() {
@@ -12864,7 +12928,11 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div> 
+        <component :is="{xs.a(13," :data="{i:i,cid:13,l:xs.f(l,i.nn)}" >
+            
+        </component>
+     </div>`
     });
     registerComponent("tmpl_14_catch-view", {
       data() {
@@ -12874,7 +12942,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12882,7 +12950,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_14_static-view", {
       data() {
@@ -12892,7 +12960,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12900,7 +12968,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_14_pure-view", {
       data() {
@@ -12910,7 +12978,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12918,7 +12986,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_14_view", {
       data() {
@@ -12928,7 +12996,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12936,7 +13004,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_14_text", {
       data() {
@@ -12946,7 +13014,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12954,7 +13022,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_14_cover-view", {
       data() {
@@ -12964,7 +13032,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div v-for="item in i.cn" >
             
         <component :is="{xs.e(cid+1)}" :data="{i:item,l:l}" >
@@ -12972,7 +13040,7 @@ var require_base = __commonJS({
         </component>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_14_block", {
       data() {
@@ -12982,7 +13050,7 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
+      template: `<div> 
         <div id="{i.uid}" >
             
         <div v-for="item in i.cn" >
@@ -12994,7 +13062,7 @@ var require_base = __commonJS({
         </div>
     
         </div>
-    </div>`
+     </div>`
     });
     registerComponent("tmpl_14_container", {
       data() {
@@ -13004,7 +13072,11 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div></div>`
+      template: `<div> 
+        <component :is="{xs.a(14," :data="{i:i,cid:14,l:xs.f(l,i.nn)}" >
+            
+        </component>
+     </div>`
     });
     registerComponent("tmpl_15_container", {
       data() {
@@ -13014,8 +13086,8 @@ var require_base = __commonJS({
           ...this["$props"].data
         };
       },
-      template: `<div>
-        <div v-if="{i.nn === '#text'}" >
+      template: `<div> 
+        <div v-if="{i.nn" ="" >
             
         <component is="tmpl_0_#text" :data="{i:i}" >
             
@@ -13023,10 +13095,10 @@ var require_base = __commonJS({
     
         </div>
     
-        <div v-else="" >
+        <div >
             
         </div>
-    </div>`
+     </div>`
     });
   }
 });
