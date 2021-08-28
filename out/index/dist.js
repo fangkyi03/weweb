@@ -38,6 +38,10 @@ var require_index = __commonJS({
     
         </wx-view>
     
+        <wx-view v-if="show" >
+            \u6D4B\u8BD5
+        </wx-view>
+    
         </wx-view>
     </div>`;
   }
@@ -60,7 +64,8 @@ var require_index2 = __commonJS({
         canIUseOpenData: {},
         canIUseGetUserProfile: {},
         canIUse: false,
-        hasUserInfo: false
+        hasUserInfo: false,
+        show: false
       },
       bindViewTap() {
         wx.navigateTo({
@@ -87,7 +92,7 @@ var require_index2 = __commonJS({
         });
       },
       test() {
-        this.setData({ motto: Math.random() * 1231231231 });
+        this.setData({ motto: Math.random() * 1231231231, show: !this.show });
       },
       getUserInfo(e) {
         console.log(e);
@@ -109,7 +114,7 @@ var require_logs = __commonJS({
             
         <wx-view class="container log-list" >
             
-        <div v-for="item in logs" v-for-item="log" >
+        <div v-for="item in logs" v-for-item="log" key="timeStamp" >
             
         <wx-text class="log-item" >
             {{index+1}}.{{log.date}}

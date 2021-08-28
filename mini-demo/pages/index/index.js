@@ -10,6 +10,7 @@ Page({
     canIUseGetUserProfile:{},
     canIUse:false,
     hasUserInfo: false,
+    show:false
   },
   // 事件处理函数
   bindViewTap() {
@@ -38,7 +39,7 @@ Page({
     })
   },
   test(){
-    this.setData({motto:Math.random() * 1231231231})
+    this.setData({motto:Math.random() * 1231231231,show:!this.show})
   },
   getUserInfo(e) {
     // 不推荐使用getUserInfo获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息

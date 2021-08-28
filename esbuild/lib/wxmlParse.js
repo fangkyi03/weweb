@@ -23,7 +23,7 @@ function getattributesObj(attributes) {
         delete attributes['v-for-key']
         return {
             'v-for': `${item} in ${items}`,
-            ':key': key,
+            'key': key,
             ...attributes,
         }
     } else if (attributes['v-for']) {
@@ -33,9 +33,17 @@ function getattributesObj(attributes) {
         return {
             ...attributes,
             'v-for':`item in ${items}`,
-            ':key':key
+            'key':key
         }
-    } else {
+    } else if (attributes['wx-if']) {
+        const items = removeParenTheses(attributes['wx-if'])
+        delete attributes['wx-if']
+        return {
+            ...attributes,
+            'v-if':`${items}`
+        }
+    }
+    else {
         return attributes
     }
 }
@@ -56,7 +64,7 @@ function getattributes(attributes) {
     let obj = getInitAttr(attributes)
     // 获取for循环过滤以后的属性
     const attributesObj = getattributesObj(obj)
-    for (let key in obj) {
+    for (let key in attributesObj) {
         // 初始化事件的对象
         let keyText = getEvent(key)
         if (/{|}/g.test(attributesObj[key])) {

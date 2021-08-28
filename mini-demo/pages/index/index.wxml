@@ -2,4 +2,7 @@
   <view class="usermotto" :bindtap='test'>
     <text class="user-motto">{{motto}}</text>
   </view>
+  <view wx-if='show'>
+    测试
+  </view>
 </view>
