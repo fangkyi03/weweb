@@ -139,7 +139,7 @@ function getVueComponent(name,text,isPage) {
     if (isPage) {
         return `
             const page = getPage('${name}')
-            page.template = \`${text}\`
+            page.template = \`<div>${text}</div>\`
         `
     }
     return `

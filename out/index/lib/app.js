@@ -29,6 +29,10 @@ Vue.component('wx-input',{
 })
 Vue.component('wx-view',{
   name:'wxview',
+  data(){
+    debugger
+    return {}
+  },
   template:'<div><slot></slot></div>'
 })
 Vue.component('wx-image',{
@@ -46,7 +50,24 @@ window['registerComponent'] = (name,{template,data}) => {
     props:['data'],
     watch:{
         ['data']:function(newVal){
-            this.$data = newVal
+            Object.keys(newVal).forEach((e) => {
+              const keys = e.split(".");
+              if (keys.length > 1) {
+                keys.reduce((a,b,i)=> {
+                  if (!a) {
+                    return this.$data[b]
+                  }else {
+                    const newB = b.replace('[','').replace(']','')
+                    if (i === keys.length - 1) {
+                      a[newB] = newVal[e]
+                    }
+                    return a[newB]
+                  }
+                },'')
+              }else {
+                this.$data[e] = newVal[e]
+              }
+            });
             this.$forceUpdate()
         }
     },

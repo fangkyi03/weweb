@@ -1,4 +1,5 @@
-function parse(input) {
+function parse(str) {
+    let input = str.replace(/[\r\n]/g, '')
     let pos = 0
     const ast = {
         children:[],
@@ -9,6 +10,7 @@ function parse(input) {
     let isClose = false
     let openPos = 0
     let text = ''
+    let char = ''
     function getTagNameOfAttr(text,type) {
         if (type == 'text') {
             return {
@@ -49,6 +51,7 @@ function parse(input) {
         return child
     }
     while (pos < input.length) {
+        char = input.slice(pos)
         if (input[pos] === '<') {
             let index = input.slice(pos).indexOf('>')
             // 判断当前是否是闭合标签
@@ -61,7 +64,7 @@ function parse(input) {
                 current = current.parent
                 pos += index
             }else if (input.substr(pos,index + 1).indexOf('/') > -1) { // 判断是否是自闭合标签
-                addChildren(input.substr(pos,index + 1),'node')
+                current = addChildren(input.substr(pos,index + 1),'node')
                 pos += index 
             }
             else {
@@ -90,21 +93,7 @@ function parse(input) {
     return ast
 }
 
-parse(`<template name="tmpl_0_button">
-  <button size="{{xs.b(i.size,'default')}}" type="{{i.type}}" plain="{{xs.b(i.plain,false)}}" disabled="{{i.disabled}}" loading="{{xs.b(i.loading,false)}}" form-type="{{i.formType}}" open-type="{{i.openType}}" hover-class="{{xs.b(i.hoverClass,'button-hover')}}" hover-stop-propagation="{{xs.b(i.hoverStopPropagation,false)}}" hover-start-time="{{xs.b(i.hoverStartTime,20)}}" hover-stay-time="{{xs.b(i.hoverStayTime,70)}}" name="{{i.name}}" lang="{{xs.b(i.lang,en)}}" session-from="{{i.sessionFrom}}" send-message-title="{{i.sendMessageTitle}}" send-message-path="{{i.sendMessagePath}}" send-message-img="{{i.sendMessageImg}}" app-parameter="{{i.appParameter}}" show-message-card="{{xs.b(i.showMessageCard,false)}}" business-id="{{i.businessId}}" bindgetuserinfo="eh" bindcontact="eh" bindgetphonenumber="eh" binderror="eh" bindopensetting="eh" bindlaunchapp="eh" style="{{i.st}}" class="{{i.cl}}" bindtap="eh"  id="{{i.uid}}">
-    <block wx:for="{{i.cn}}" wx:key="uid">
-      <template is="{{xs.e(cid+1)}}" data="{{i:item,l:l}}" />
-    </block>
-  </button>
-</template>
-
-<template name="tmpl_0_scroll-view">
-  <scroll-view scroll-x="{{xs.b(i.scrollX,false)}}" scroll-y="{{xs.b(i.scrollY,false)}}" upper-threshold="{{xs.b(i.upperThreshold,50)}}" lower-threshold="{{xs.b(i.lowerThreshold,50)}}" scroll-top="{{i.scrollTop}}" scroll-left="{{i.scrollLeft}}" scroll-into-view="{{i.scrollIntoView}}" scroll-with-animation="{{xs.b(i.scrollWithAnimation,false)}}" enable-back-to-top="{{xs.b(i.enableBackToTop,false)}}" bindscrolltoupper="eh" bindscrolltolower="eh" bindscroll="eh" bindtouchstart="eh" bindtouchmove="eh" bindtouchend="eh" bindtouchcancel="eh" bindlongpress="eh" bindanimationstart="eh" bindanimationiteration="eh" bindanimationend="eh" bindtransitionend="eh" enable-flex="{{xs.b(i.enableFlex,false)}}" scroll-anchoring="{{xs.b(i.scrollAnchoring,false)}}" refresher-enabled="{{xs.b(i.refresherEnabled,false)}}" refresher-threshold="{{xs.b(i.refresherThreshold,45)}}" refresher-default-style="{{xs.b(i.refresherDefaultStyle,'black')}}" refresher-background="{{xs.b(i.refresherBackground,'#FFF')}}" refresher-triggered="{{xs.b(i.refresherTriggered,false)}}" enhanced="{{xs.b(i.enhanced,false)}}" bounces="{{xs.b(i.bounces,true)}}" show-scrollbar="{{xs.b(i.showScrollbar,true)}}" paging-enabled="{{xs.b(i.pagingEnabled,false)}}" fast-deceleration="{{xs.b(i.fastDeceleration,false)}}" binddragstart="eh" binddragging="eh" binddragend="eh" bindrefresherpulling="eh" bindrefresherrefresh="eh" bindrefresherrestore="eh" bindrefresherabort="eh" style="{{i.st}}" class="{{i.cl}}" bindtap="eh"  id="{{i.uid}}">
-    <block wx:for="{{i.cn}}" wx:key="uid">
-      <template is="{{xs.e(cid+1)}}" data="{{i:item,l:l}}" />
-    </block>
-  </scroll-view>
-</template>`)
+parse(`<view class="index-desc"><navigator url="pages/doc-web-view/doc-web-view" class="weui-agree__link">小程序开发文档</navigator>。</view>`)
 module.exports = {
     parse
 }

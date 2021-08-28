@@ -1,4 +1,5 @@
-function parse(input) {
+function parse(str) {
+    let input = str.replace(/[\r\n]/g, '')
     let pos = 0
     const ast = {
         children:[],
@@ -9,6 +10,7 @@ function parse(input) {
     let isClose = false
     let openPos = 0
     let text = ''
+    let char = ''
     function getTagNameOfAttr(text,type) {
         if (type == 'text') {
             return {
@@ -49,6 +51,7 @@ function parse(input) {
         return child
     }
     while (pos < input.length) {
+        char = input.slice(pos)
         if (input[pos] === '<') {
             let index = input.slice(pos).indexOf('>')
             // 判断当前是否是闭合标签
@@ -61,7 +64,7 @@ function parse(input) {
                 current = current.parent
                 pos += index
             }else if (input.substr(pos,index + 1).indexOf('/') > -1) { // 判断是否是自闭合标签
-                addChildren(input.substr(pos,index + 1),'node')
+                current = addChildren(input.substr(pos,index + 1),'node')
                 pos += index 
             }
             else {

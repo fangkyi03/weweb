@@ -8,7 +8,8 @@ export default class Index extends Component {
     super(props)
     this.state = {
       text: 'Hello World',
-      number:0
+      number:0,
+      showView:false
     }
   }
   componentWillMount () {
@@ -41,13 +42,13 @@ export default class Index extends Component {
    }
    
    onAdd = () => {
-    console.log('点击')
      this.setState({
+       showView:!this.state.showView,
        number:this.state.number+1
      })
    }
   render () {
-    console.log('render')
+    console.log('render',this.state)
     return (
       <View>
         <View>测试12312</View>
@@ -55,6 +56,7 @@ export default class Index extends Component {
         <Image/>
         <Button type='primary' onClick={this.onAdd}>{this.state.number}</Button>
         <Input value='测试111'/>
+        {this.state.showView ? <Text>测试</Text> : <Input value='输出'/>}
       </View>
     )
   }
