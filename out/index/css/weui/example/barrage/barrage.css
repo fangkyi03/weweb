@@ -1,0 +1,10 @@
+/* miniprogram-demo/miniprogram/page/weui/example/barrage/barrage.wxss */
+.barrage {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  box-sizing: border-box;
+}
+.video {
+  width: 100%;
+}

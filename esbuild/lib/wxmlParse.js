@@ -65,6 +65,13 @@ function getattributes(attributes) {
         let keyText = getEvent(key)
         if (keyText == 'data' ) {
             attributesStr += `:${keyText}="${attributesObj[key]}" `
+        } else if (attributesObj[key] == 'eh') {
+         const nameLowerCase = keyText.toLowerCase();
+            if (nameLowerCase === 'bindlongtap') {
+                attributesStr+= `:${keyText}='bindlongpress`
+            }else {
+                attributesStr += `${keyText}="${attributesObj[key]}" `
+            }
         } else {
             if (attributesObj[key].indexOf('(') != -1) {
                 attributesStr += `:${keyText}="${attributesObj[key].replace('{','').replace('}','')}" `
@@ -78,7 +85,6 @@ function getattributes(attributes) {
 function getTagName(item) {
     if (item.name == 'template' && item.attributes.is) {
         return 'component'
-        // return item.attributes.is
     }else if (item.name == 'block') {
         return 'div'
     }else {
@@ -157,7 +163,7 @@ function getVueComponent(name,text,isPage) {
         },
         template:$template$
      })
-    `.replace('$template$','`<div>' + text.replace(/view/g,'view-main') + '</div>`')
+    `.replace('$template$','`<div>' + text.replace(/view/g,'wx-view').replace('button','wx-button') + '</div>`')
 }
 function getTemplate(filePath) {
     let importText = []

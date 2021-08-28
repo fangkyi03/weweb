@@ -1,12 +1,20 @@
 var Text = () => {
   return '<div>测试</div>'
 }
-Vue.component('text',{
-  name:'Text',
-  template:'<div>测试文本</div>'
+var en = false
+var eh = (e) => {
+  console.log('data',e)
+}
+Vue.component('wx-button',{
+  name:'wx-button',
+  props:['type','data','plain','disabled','loading','name'],
+  data(){
+    return this.$props
+  },
+  template:`<button class='wx-button' disabled="false" type='primary'><slot></slot></button>`
 })
-Vue.component('view-main',{
-  name:'viewMain',
+Vue.component('wx-view',{
+  name:'wxview',
   template:'<div><slot></slot></div>'
 })
 window['Behavior'] = function (config) {

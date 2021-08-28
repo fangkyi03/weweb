@@ -1232,7 +1232,7 @@ var require_vendors = __commonJS({
       e.d(n, "a", function() {
         return i;
       });
-      var r = e(16);
+      var r = e(17);
       function i(t2, n2) {
         if (typeof n2 !== "function" && n2 !== null)
           throw new TypeError("Super expression must either be null or a function");
@@ -1292,12 +1292,12 @@ var require_vendors = __commonJS({
       e.d(n, "a", function() {
         return c;
       });
-      var r = e(18);
+      var r = e(19);
       function i(t2) {
         if (Array.isArray(t2))
           return Object(r["a"])(t2);
       }
-      var o = e(23), u = e(15);
+      var o = e(23), u = e(16);
       function a() {
         throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
       }
@@ -1325,12 +1325,12 @@ var require_vendors = __commonJS({
     }, function(t, n, e) {
       "use strict";
       t.exports = e(56);
-    }, function(t, n, e) {
+    }, , function(t, n, e) {
       "use strict";
       e.d(n, "a", function() {
         return i;
       });
-      var r = e(18);
+      var r = e(19);
       function i(t2, n2) {
         if (t2) {
           if (typeof t2 === "string")
@@ -1360,7 +1360,7 @@ var require_vendors = __commonJS({
       e.d(n, "a", function() {
         return r;
       });
-    }, , function(t, n, e) {
+    }, function(t, n, e) {
       "use strict";
       function r(t2) {
         if (Array.isArray(t2))
@@ -1488,7 +1488,7 @@ var require_vendors = __commonJS({
           return o2;
         }
       }
-      var o = e(15), u = e(21);
+      var o = e(16), u = e(21);
       function a(t2, n2) {
         return Object(r["a"])(t2) || i(t2, n2) || Object(o["a"])(t2, n2) || Object(u["a"])();
       }
@@ -1585,7 +1585,7 @@ var require_vendors = __commonJS({
       e.d(n, "a", function() {
         return a;
       });
-      var r = e(20), i = e(23), o = e(15), u = e(21);
+      var r = e(20), i = e(23), o = e(16), u = e(21);
       function a(t2) {
         return Object(r["a"])(t2) || Object(i["a"])(t2) || Object(o["a"])(t2) || Object(u["a"])();
       }
@@ -1594,7 +1594,7 @@ var require_vendors = __commonJS({
       e.d(n, "a", function() {
         return c;
       });
-      var r = e(5), i = e(16);
+      var r = e(5), i = e(17);
       function o(t2) {
         return Function.toString.call(t2).indexOf("[native code]") !== -1;
       }
@@ -2463,16 +2463,18 @@ var require_taro = __commonJS({
         e2.request = o2.request.bind(o2), e2.addInterceptor = o2.addInterceptor.bind(o2), e2.cleanInterceptors = o2.cleanInterceptors.bind(o2), e2.miniGlobal = e2.options.miniGlobal = t2;
       }
       t.EMPTY_ARR = le, t.EMPTY_OBJ = se, t.animationEvents = m, t.box = he, t.cacheDataGet = Ae, t.cacheDataHas = xe, t.cacheDataSet = Pe, t.capitalize = ge, t.controlledComponent = oe, t.defaultReconciler = fe, t.ensure = we, t.events = v, t.focusComponents = ae, t.getUniqueKey = Ce, t.hasOwn = Oe, t.indent = Re, t.internalComponents = ie, t.isArray = h, t.isBoolean = s, t.isBooleanStringLiteral = f, t.isFunction = l, t.isNull = c, t.isNumber = d, t.isObject = u, t.isString = o, t.isUndefined = a, t.mergeInternalComponents = Ie, t.mergeReconciler = Ne, t.nestElements = ue, t.noop = de, t.processApis = Ue, t.queryToJson = Te, t.setUniqueKeyToRoute = Be, t.singleQuote = g, t.styles = p, t.toCamelCase = be, t.toDashed = ve, t.toKebabCase = me, t.touchEvents = b, t.unbox = pe, t.unsupport = Fe, t.voidElements = ce, t.warn = ke;
-    }, 19: function(e, t, n) {
+    }, 18: function(e, t, n) {
       "use strict";
       n.d(t, "a", function() {
         return o;
       }), n.d(t, "b", function() {
-        return i;
+        return a;
       }), n.d(t, "c", function() {
+        return i;
+      }), n.d(t, "d", function() {
         return r;
       });
-      var r = "view", i = "text", o = "image";
+      var r = "view", i = "text", o = "button", a = "image";
     }, 2: function(e, t, n) {
       "use strict";
       n.r(t), function(e2, r, i, o, a, c) {
@@ -9415,7 +9417,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9425,7 +9427,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_0_static-view", {
@@ -9436,7 +9438,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9446,7 +9448,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_0_pure-view", {
@@ -9457,7 +9459,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main style="i.st" class="i.cl" id="i.uid" >
+        <wx-view style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9467,7 +9469,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_0_view", {
@@ -9478,7 +9480,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9488,7 +9490,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_0_static-text", {
@@ -9533,7 +9535,7 @@ var require_base = __commonJS({
         </text>
     </div>`
     });
-    registerComponent("tmpl_0_scroll-view", {
+    registerComponent("tmpl_0_button", {
       data() {
         return {
           xs,
@@ -9541,7 +9543,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <scroll-view-main :scroll-x="xs.b(i.scrollX,false)" :scroll-y="xs.b(i.scrollY,false)" :upper-threshold="xs.b(i.upperThreshold,50)" :lower-threshold="xs.b(i.lowerThreshold,50)" scroll-top="i.scrollTop" scroll-left="i.scrollLeft" scroll-into-view-main="i.scrollIntoView" :scroll-with-animation="xs.b(i.scrollWithAnimation,false)" :enable-back-to-top="xs.b(i.enableBackToTop,false)" @scrolltoupper="eh" @scrolltolower="eh" @scroll="eh" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" :enable-flex="xs.b(i.enableFlex,false)" :scroll-anchoring="xs.b(i.scrollAnchoring,false)" :refresher-enabled="xs.b(i.refresherEnabled,false)" :refresher-threshold="xs.b(i.refresherThreshold,45)" :refresher-default-style="xs.b(i.refresherDefaultStyle,'black')" :refresher-background="xs.b(i.refresherBackground,'#FFF')" :refresher-triggered="xs.b(i.refresherTriggered,false)" :enhanced="xs.b(i.enhanced,false)" :bounces="xs.b(i.bounces,true)" :show-scrollbar="xs.b(i.showScrollbar,true)" :paging-enabled="xs.b(i.pagingEnabled,false)" :fast-deceleration="xs.b(i.fastDeceleration,false)" @dragstart="eh" @dragging="eh" @dragend="eh" @refresherpulling="eh" @refresherrefresh="eh" @refresherrestore="eh" @refresherabort="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-button :size="xs.b(i.size,'default')" type="i.type" :plain="xs.b(i.plain,false)" disabled="i.disabled" :loading="xs.b(i.loading,false)" form-type="i.formType" open-type="i.openType" :hover-class="xs.b(i.hoverClass,'button-hover')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,20)" :hover-stay-time="xs.b(i.hoverStayTime,70)" name="i.name" :lang="xs.b(i.lang,en)" session-from="i.sessionFrom" send-message-title="i.sendMessageTitle" send-message-path="i.sendMessagePath" send-message-img="i.sendMessageImg" app-parameter="i.appParameter" :show-message-card="xs.b(i.showMessageCard,false)" business-id="i.businessId" @getuserinfo="eh" @contact="eh" @getphonenumber="eh" @error="eh" @opensetting="eh" @launchapp="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9551,7 +9553,28 @@ var require_base = __commonJS({
     
         </div>
     
-        </scroll-view-main>
+        </button>
+    </div>`
+    });
+    registerComponent("tmpl_0_scroll-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <scroll-wx-view :scroll-x="xs.b(i.scrollX,false)" :scroll-y="xs.b(i.scrollY,false)" :upper-threshold="xs.b(i.upperThreshold,50)" :lower-threshold="xs.b(i.lowerThreshold,50)" scroll-top="i.scrollTop" scroll-left="i.scrollLeft" scroll-into-wx-view="i.scrollIntoView" :scroll-with-animation="xs.b(i.scrollWithAnimation,false)" :enable-back-to-top="xs.b(i.enableBackToTop,false)" @scrolltoupper="eh" @scrolltolower="eh" @scroll="eh" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" :enable-flex="xs.b(i.enableFlex,false)" :scroll-anchoring="xs.b(i.scrollAnchoring,false)" :refresher-enabled="xs.b(i.refresherEnabled,false)" :refresher-threshold="xs.b(i.refresherThreshold,45)" :refresher-default-style="xs.b(i.refresherDefaultStyle,'black')" :refresher-background="xs.b(i.refresherBackground,'#FFF')" :refresher-triggered="xs.b(i.refresherTriggered,false)" :enhanced="xs.b(i.enhanced,false)" :bounces="xs.b(i.bounces,true)" :show-scrollbar="xs.b(i.showScrollbar,true)" :paging-enabled="xs.b(i.pagingEnabled,false)" :fast-deceleration="xs.b(i.fastDeceleration,false)" @dragstart="eh" @dragging="eh" @dragend="eh" @refresherpulling="eh" @refresherrefresh="eh" @refresherrestore="eh" @refresherabort="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+            
+        <div v-for="item in i.cn" >
+            
+        <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
+            
+        </component>
+    
+        </div>
+    
+        </scroll-wx-view>
     </div>`
     });
     registerComponent("tmpl_0_static-image", {
@@ -9630,7 +9653,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9640,7 +9663,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_1_static-view", {
@@ -9651,7 +9674,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9661,7 +9684,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_1_pure-view", {
@@ -9672,7 +9695,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main style="i.st" class="i.cl" id="i.uid" >
+        <wx-view style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9682,7 +9705,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_1_view", {
@@ -9693,7 +9716,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9703,7 +9726,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_1_static-text", {
@@ -9756,7 +9779,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <scroll-view-main :scroll-x="xs.b(i.scrollX,false)" :scroll-y="xs.b(i.scrollY,false)" :upper-threshold="xs.b(i.upperThreshold,50)" :lower-threshold="xs.b(i.lowerThreshold,50)" scroll-top="i.scrollTop" scroll-left="i.scrollLeft" scroll-into-view-main="i.scrollIntoView" :scroll-with-animation="xs.b(i.scrollWithAnimation,false)" :enable-back-to-top="xs.b(i.enableBackToTop,false)" @scrolltoupper="eh" @scrolltolower="eh" @scroll="eh" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" :enable-flex="xs.b(i.enableFlex,false)" :scroll-anchoring="xs.b(i.scrollAnchoring,false)" :refresher-enabled="xs.b(i.refresherEnabled,false)" :refresher-threshold="xs.b(i.refresherThreshold,45)" :refresher-default-style="xs.b(i.refresherDefaultStyle,'black')" :refresher-background="xs.b(i.refresherBackground,'#FFF')" :refresher-triggered="xs.b(i.refresherTriggered,false)" :enhanced="xs.b(i.enhanced,false)" :bounces="xs.b(i.bounces,true)" :show-scrollbar="xs.b(i.showScrollbar,true)" :paging-enabled="xs.b(i.pagingEnabled,false)" :fast-deceleration="xs.b(i.fastDeceleration,false)" @dragstart="eh" @dragging="eh" @dragend="eh" @refresherpulling="eh" @refresherrefresh="eh" @refresherrestore="eh" @refresherabort="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <scroll-wx-view :scroll-x="xs.b(i.scrollX,false)" :scroll-y="xs.b(i.scrollY,false)" :upper-threshold="xs.b(i.upperThreshold,50)" :lower-threshold="xs.b(i.lowerThreshold,50)" scroll-top="i.scrollTop" scroll-left="i.scrollLeft" scroll-into-wx-view="i.scrollIntoView" :scroll-with-animation="xs.b(i.scrollWithAnimation,false)" :enable-back-to-top="xs.b(i.enableBackToTop,false)" @scrolltoupper="eh" @scrolltolower="eh" @scroll="eh" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" :enable-flex="xs.b(i.enableFlex,false)" :scroll-anchoring="xs.b(i.scrollAnchoring,false)" :refresher-enabled="xs.b(i.refresherEnabled,false)" :refresher-threshold="xs.b(i.refresherThreshold,45)" :refresher-default-style="xs.b(i.refresherDefaultStyle,'black')" :refresher-background="xs.b(i.refresherBackground,'#FFF')" :refresher-triggered="xs.b(i.refresherTriggered,false)" :enhanced="xs.b(i.enhanced,false)" :bounces="xs.b(i.bounces,true)" :show-scrollbar="xs.b(i.showScrollbar,true)" :paging-enabled="xs.b(i.pagingEnabled,false)" :fast-deceleration="xs.b(i.fastDeceleration,false)" @dragstart="eh" @dragging="eh" @dragend="eh" @refresherpulling="eh" @refresherrefresh="eh" @refresherrestore="eh" @refresherabort="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9766,7 +9789,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </scroll-view-main>
+        </scroll-wx-view>
     </div>`
     });
     registerComponent("tmpl_1_container", {
@@ -9790,7 +9813,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9800,7 +9823,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_2_static-view", {
@@ -9811,7 +9834,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9821,7 +9844,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_2_pure-view", {
@@ -9832,7 +9855,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main style="i.st" class="i.cl" id="i.uid" >
+        <wx-view style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9842,7 +9865,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_2_view", {
@@ -9853,7 +9876,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9863,7 +9886,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_2_static-text", {
@@ -9916,7 +9939,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <scroll-view-main :scroll-x="xs.b(i.scrollX,false)" :scroll-y="xs.b(i.scrollY,false)" :upper-threshold="xs.b(i.upperThreshold,50)" :lower-threshold="xs.b(i.lowerThreshold,50)" scroll-top="i.scrollTop" scroll-left="i.scrollLeft" scroll-into-view-main="i.scrollIntoView" :scroll-with-animation="xs.b(i.scrollWithAnimation,false)" :enable-back-to-top="xs.b(i.enableBackToTop,false)" @scrolltoupper="eh" @scrolltolower="eh" @scroll="eh" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" :enable-flex="xs.b(i.enableFlex,false)" :scroll-anchoring="xs.b(i.scrollAnchoring,false)" :refresher-enabled="xs.b(i.refresherEnabled,false)" :refresher-threshold="xs.b(i.refresherThreshold,45)" :refresher-default-style="xs.b(i.refresherDefaultStyle,'black')" :refresher-background="xs.b(i.refresherBackground,'#FFF')" :refresher-triggered="xs.b(i.refresherTriggered,false)" :enhanced="xs.b(i.enhanced,false)" :bounces="xs.b(i.bounces,true)" :show-scrollbar="xs.b(i.showScrollbar,true)" :paging-enabled="xs.b(i.pagingEnabled,false)" :fast-deceleration="xs.b(i.fastDeceleration,false)" @dragstart="eh" @dragging="eh" @dragend="eh" @refresherpulling="eh" @refresherrefresh="eh" @refresherrestore="eh" @refresherabort="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <scroll-wx-view :scroll-x="xs.b(i.scrollX,false)" :scroll-y="xs.b(i.scrollY,false)" :upper-threshold="xs.b(i.upperThreshold,50)" :lower-threshold="xs.b(i.lowerThreshold,50)" scroll-top="i.scrollTop" scroll-left="i.scrollLeft" scroll-into-wx-view="i.scrollIntoView" :scroll-with-animation="xs.b(i.scrollWithAnimation,false)" :enable-back-to-top="xs.b(i.enableBackToTop,false)" @scrolltoupper="eh" @scrolltolower="eh" @scroll="eh" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" :enable-flex="xs.b(i.enableFlex,false)" :scroll-anchoring="xs.b(i.scrollAnchoring,false)" :refresher-enabled="xs.b(i.refresherEnabled,false)" :refresher-threshold="xs.b(i.refresherThreshold,45)" :refresher-default-style="xs.b(i.refresherDefaultStyle,'black')" :refresher-background="xs.b(i.refresherBackground,'#FFF')" :refresher-triggered="xs.b(i.refresherTriggered,false)" :enhanced="xs.b(i.enhanced,false)" :bounces="xs.b(i.bounces,true)" :show-scrollbar="xs.b(i.showScrollbar,true)" :paging-enabled="xs.b(i.pagingEnabled,false)" :fast-deceleration="xs.b(i.fastDeceleration,false)" @dragstart="eh" @dragging="eh" @dragend="eh" @refresherpulling="eh" @refresherrefresh="eh" @refresherrestore="eh" @refresherabort="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9926,7 +9949,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </scroll-view-main>
+        </scroll-wx-view>
     </div>`
     });
     registerComponent("tmpl_2_container", {
@@ -9950,7 +9973,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9960,7 +9983,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_3_static-view", {
@@ -9971,7 +9994,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -9981,7 +10004,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_3_pure-view", {
@@ -9992,7 +10015,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main style="i.st" class="i.cl" id="i.uid" >
+        <wx-view style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10002,7 +10025,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_3_view", {
@@ -10013,7 +10036,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10023,7 +10046,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_3_static-text", {
@@ -10076,7 +10099,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <scroll-view-main :scroll-x="xs.b(i.scrollX,false)" :scroll-y="xs.b(i.scrollY,false)" :upper-threshold="xs.b(i.upperThreshold,50)" :lower-threshold="xs.b(i.lowerThreshold,50)" scroll-top="i.scrollTop" scroll-left="i.scrollLeft" scroll-into-view-main="i.scrollIntoView" :scroll-with-animation="xs.b(i.scrollWithAnimation,false)" :enable-back-to-top="xs.b(i.enableBackToTop,false)" @scrolltoupper="eh" @scrolltolower="eh" @scroll="eh" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" :enable-flex="xs.b(i.enableFlex,false)" :scroll-anchoring="xs.b(i.scrollAnchoring,false)" :refresher-enabled="xs.b(i.refresherEnabled,false)" :refresher-threshold="xs.b(i.refresherThreshold,45)" :refresher-default-style="xs.b(i.refresherDefaultStyle,'black')" :refresher-background="xs.b(i.refresherBackground,'#FFF')" :refresher-triggered="xs.b(i.refresherTriggered,false)" :enhanced="xs.b(i.enhanced,false)" :bounces="xs.b(i.bounces,true)" :show-scrollbar="xs.b(i.showScrollbar,true)" :paging-enabled="xs.b(i.pagingEnabled,false)" :fast-deceleration="xs.b(i.fastDeceleration,false)" @dragstart="eh" @dragging="eh" @dragend="eh" @refresherpulling="eh" @refresherrefresh="eh" @refresherrestore="eh" @refresherabort="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <scroll-wx-view :scroll-x="xs.b(i.scrollX,false)" :scroll-y="xs.b(i.scrollY,false)" :upper-threshold="xs.b(i.upperThreshold,50)" :lower-threshold="xs.b(i.lowerThreshold,50)" scroll-top="i.scrollTop" scroll-left="i.scrollLeft" scroll-into-wx-view="i.scrollIntoView" :scroll-with-animation="xs.b(i.scrollWithAnimation,false)" :enable-back-to-top="xs.b(i.enableBackToTop,false)" @scrolltoupper="eh" @scrolltolower="eh" @scroll="eh" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" :enable-flex="xs.b(i.enableFlex,false)" :scroll-anchoring="xs.b(i.scrollAnchoring,false)" :refresher-enabled="xs.b(i.refresherEnabled,false)" :refresher-threshold="xs.b(i.refresherThreshold,45)" :refresher-default-style="xs.b(i.refresherDefaultStyle,'black')" :refresher-background="xs.b(i.refresherBackground,'#FFF')" :refresher-triggered="xs.b(i.refresherTriggered,false)" :enhanced="xs.b(i.enhanced,false)" :bounces="xs.b(i.bounces,true)" :show-scrollbar="xs.b(i.showScrollbar,true)" :paging-enabled="xs.b(i.pagingEnabled,false)" :fast-deceleration="xs.b(i.fastDeceleration,false)" @dragstart="eh" @dragging="eh" @dragend="eh" @refresherpulling="eh" @refresherrefresh="eh" @refresherrestore="eh" @refresherabort="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10086,7 +10109,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </scroll-view-main>
+        </scroll-wx-view>
     </div>`
     });
     registerComponent("tmpl_3_container", {
@@ -10110,7 +10133,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10120,7 +10143,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_4_static-view", {
@@ -10131,7 +10154,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10141,7 +10164,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_4_pure-view", {
@@ -10152,7 +10175,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main style="i.st" class="i.cl" id="i.uid" >
+        <wx-view style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10162,7 +10185,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_4_view", {
@@ -10173,7 +10196,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10183,7 +10206,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_4_static-text", {
@@ -10249,7 +10272,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10259,7 +10282,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_5_static-view", {
@@ -10270,7 +10293,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10280,7 +10303,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_5_pure-view", {
@@ -10291,7 +10314,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main style="i.st" class="i.cl" id="i.uid" >
+        <wx-view style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10301,7 +10324,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_5_view", {
@@ -10312,7 +10335,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10322,7 +10345,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_5_static-text", {
@@ -10388,7 +10411,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10398,7 +10421,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_6_static-view", {
@@ -10409,7 +10432,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10419,7 +10442,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_6_pure-view", {
@@ -10430,7 +10453,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main style="i.st" class="i.cl" id="i.uid" >
+        <wx-view style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10440,7 +10463,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_6_view", {
@@ -10451,7 +10474,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10461,7 +10484,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_6_text", {
@@ -10506,7 +10529,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10516,7 +10539,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_7_static-view", {
@@ -10527,7 +10550,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10537,7 +10560,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_7_pure-view", {
@@ -10548,7 +10571,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main style="i.st" class="i.cl" id="i.uid" >
+        <wx-view style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10558,7 +10581,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_7_view", {
@@ -10569,7 +10592,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10579,7 +10602,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_7_text", {
@@ -10624,7 +10647,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10634,7 +10657,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_8_static-view", {
@@ -10645,7 +10668,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10655,7 +10678,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_8_pure-view", {
@@ -10666,7 +10689,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main style="i.st" class="i.cl" id="i.uid" >
+        <wx-view style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10676,7 +10699,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_8_view", {
@@ -10687,7 +10710,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10697,7 +10720,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_8_text", {
@@ -10742,7 +10765,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10752,7 +10775,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_9_static-view", {
@@ -10763,7 +10786,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10773,7 +10796,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_9_pure-view", {
@@ -10784,7 +10807,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main style="i.st" class="i.cl" id="i.uid" >
+        <wx-view style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10794,7 +10817,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_9_view", {
@@ -10805,7 +10828,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10815,7 +10838,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_9_text", {
@@ -10860,7 +10883,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10870,7 +10893,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_10_static-view", {
@@ -10881,7 +10904,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10891,7 +10914,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_10_pure-view", {
@@ -10902,7 +10925,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main style="i.st" class="i.cl" id="i.uid" >
+        <wx-view style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10912,7 +10935,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_10_view", {
@@ -10923,7 +10946,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10933,7 +10956,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_10_text", {
@@ -10978,7 +11001,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -10988,7 +11011,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_11_static-view", {
@@ -10999,7 +11022,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -11009,7 +11032,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_11_pure-view", {
@@ -11020,7 +11043,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main style="i.st" class="i.cl" id="i.uid" >
+        <wx-view style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -11030,7 +11053,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_11_view", {
@@ -11041,7 +11064,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -11051,7 +11074,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_11_text", {
@@ -11096,7 +11119,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -11106,7 +11129,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_12_static-view", {
@@ -11117,7 +11140,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -11127,7 +11150,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_12_pure-view", {
@@ -11138,7 +11161,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main style="i.st" class="i.cl" id="i.uid" >
+        <wx-view style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -11148,7 +11171,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_12_view", {
@@ -11159,7 +11182,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -11169,7 +11192,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_12_text", {
@@ -11214,7 +11237,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -11224,7 +11247,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_13_static-view", {
@@ -11235,7 +11258,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -11245,7 +11268,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_13_pure-view", {
@@ -11256,7 +11279,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main style="i.st" class="i.cl" id="i.uid" >
+        <wx-view style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -11266,7 +11289,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_13_view", {
@@ -11277,7 +11300,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -11287,7 +11310,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_13_text", {
@@ -11332,7 +11355,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" catchtouchmove="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -11342,7 +11365,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_14_static-view", {
@@ -11353,7 +11376,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -11363,7 +11386,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_14_pure-view", {
@@ -11374,7 +11397,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main style="i.st" class="i.cl" id="i.uid" >
+        <wx-view style="i.st" class="i.cl" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -11384,7 +11407,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_14_view", {
@@ -11395,7 +11418,7 @@ var require_base = __commonJS({
         };
       },
       template: `<div>
-        <view-main :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
+        <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" animation="i.animation" @touchstart="eh" @touchmove="eh" @touchend="eh" @touchcancel="eh" @longpress="eh" @animationstart="eh" @animationiteration="eh" @animationend="eh" @transitionend="eh" style="i.st" class="i.cl" @tap="eh" id="i.uid" >
             
         <div v-for="item in i.cn" >
             
@@ -11405,7 +11428,7 @@ var require_base = __commonJS({
     
         </div>
     
-        </view-main>
+        </wx-view>
     </div>`
     });
     registerComponent("tmpl_14_text", {
@@ -11490,23 +11513,23 @@ var require_index2 = __commonJS({
     window["__wxRoute"] = "pages/index/index";
     var page = getPage("pages/index/index");
     page.json = `{"navigationBarTitleText":"\u9996\u9875","usingComponents":{"custom-wrapper":"../../custom-wrapper","comp":"../../comp"}}`;
-    (wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([[7], { 17: function(n, e, o) {
+    (wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([[7], { 15: function(e, n, o) {
       "use strict";
-      n.exports = o(62);
-    }, 42: function(n, e, o) {
+      e.exports = o(62);
+    }, 42: function(e, n, o) {
       "use strict";
-      (function(n2) {
-        o.d(e, "a", function() {
+      (function(e2) {
+        o.d(n, "a", function() {
           return s;
         });
-        var t = o(3), c = o(4), r = o(7), i = o(8), l = o(14), u = o(19), a = (o(61), o(17)), s = function(e2) {
-          Object(r["a"])(l2, e2);
+        var t = o(3), c = o(4), r = o(7), i = o(8), l = o(14), u = o(18), a = (o(61), o(15)), s = function(n2) {
+          Object(r["a"])(l2, n2);
           var o2 = Object(i["a"])(l2);
           function l2() {
             return Object(t["a"])(this, l2), o2.apply(this, arguments);
           }
           return Object(c["a"])(l2, [{ key: "componentWillMount", value: function() {
-            console.log("componentWillMount", n2);
+            console.log("componentWillMount", e2);
           } }, { key: "componentDidMount", value: function() {
             console.log("componentDidMount");
           } }, { key: "componentWillUnmount", value: function() {
@@ -11515,38 +11538,38 @@ var require_index2 = __commonJS({
             console.log("componentDidShow");
           } }, { key: "componentDidHide", value: function() {
             console.log("componentDidHide");
-          } }, { key: "componentDidUpdate", value: function(n3, e3) {
+          } }, { key: "componentDidUpdate", value: function(e3, n3) {
             console.log("componentDidUpdate");
           } }, { key: "render", value: function() {
-            return console.log("render"), Object(a["jsxs"])(u["c"], { children: [Object(a["jsx"])(u["c"], { children: "\u6D4B\u8BD512312" }), Object(a["jsx"])(u["b"], { children: "Hello world!" }), Object(a["jsx"])(u["a"], {})] });
+            return console.log("render"), Object(a["jsxs"])(u["d"], { children: [Object(a["jsx"])(u["d"], { children: "\u6D4B\u8BD512312" }), Object(a["jsx"])(u["c"], { children: "Hello world!" }), Object(a["jsx"])(u["b"], {}), Object(a["jsx"])(u["a"], { type: "primary", children: "\u6D4B\u8BD51" })] });
           } }]), l2;
         }(l["Component"]);
       }).call(this, o(2)["window"]);
-    }, 60: function(n, e, o) {
+    }, 60: function(e, n, o) {
       "use strict";
-      o.r(e);
+      o.r(n);
       var t = o(2), c = o(42), r = { navigationBarTitleText: "\u9996\u9875" };
       Page(Object(t["createPageConfig"])(c["a"], "pages/index/index", { root: { cn: [] } }, r || {}));
-    }, 61: function(n, e, o) {
-    }, 62: function(n, e, o) {
+    }, 61: function(e, n, o) {
+    }, 62: function(e, n, o) {
       "use strict";
       o(25);
       var t = o(14), c = 60103;
-      if (e.Fragment = 60107, typeof Symbol === "function" && Symbol.for) {
+      if (n.Fragment = 60107, typeof Symbol === "function" && Symbol.for) {
         var r = Symbol.for;
-        c = r("react.element"), e.Fragment = r("react.fragment");
+        c = r("react.element"), n.Fragment = r("react.fragment");
       }
       var i = t.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, l = Object.prototype.hasOwnProperty, u = { key: true, ref: true, __self: true, __source: true };
-      function a(n2, e2, o2) {
+      function a(e2, n2, o2) {
         var t2, r2 = {}, a2 = null, s = null;
-        for (t2 in o2 !== void 0 && (a2 = "" + o2), e2.key !== void 0 && (a2 = "" + e2.key), e2.ref !== void 0 && (s = e2.ref), e2)
-          l.call(e2, t2) && !u.hasOwnProperty(t2) && (r2[t2] = e2[t2]);
-        if (n2 && n2.defaultProps)
-          for (t2 in e2 = n2.defaultProps, e2)
-            r2[t2] === void 0 && (r2[t2] = e2[t2]);
-        return { $$typeof: c, type: n2, key: a2, ref: s, props: r2, _owner: i.current };
+        for (t2 in o2 !== void 0 && (a2 = "" + o2), n2.key !== void 0 && (a2 = "" + n2.key), n2.ref !== void 0 && (s = n2.ref), n2)
+          l.call(n2, t2) && !u.hasOwnProperty(t2) && (r2[t2] = n2[t2]);
+        if (e2 && e2.defaultProps)
+          for (t2 in n2 = e2.defaultProps, n2)
+            r2[t2] === void 0 && (r2[t2] = n2[t2]);
+        return { $$typeof: c, type: e2, key: a2, ref: s, props: r2, _owner: i.current };
       }
-      e.jsx = a, e.jsxs = a;
+      n.jsx = a, n.jsxs = a;
     } }, [[60, 0, 1, 2]]]);
   }
 });
