@@ -28,19 +28,24 @@ Vue.component('wx-input',{
   template:`<input class='wx-input' :value="value" style="border:none;outline:none;"/>`
 })
 Vue.component('wx-view',{
+  props:{
+    bindtap:{
+      type:Function,
+      default:()=>null
+    }
+  },
   name:'wxview',
   data(){
-    debugger
     return {}
   },
-  template:'<div><slot></slot></div>'
+  template:'<div @click="bindtap"><slot></slot></div>'
 })
 Vue.component('wx-image',{
   props:['class','i','src'],
   data(){
     return this.$props
   },
-  template:`<div class='wx-image'/>`
+  template:`<div class='wx-image' v-bind:style="{backgroundImage:'url(src)'}"/>`
 })
 window['Behavior'] = function (config) {
   return config

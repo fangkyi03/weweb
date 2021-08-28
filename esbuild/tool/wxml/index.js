@@ -64,7 +64,7 @@ function parse(str) {
                 current = current.parent
                 pos += index
             }else if (input.substr(pos,index + 1).indexOf('/') > -1) { // 判断是否是自闭合标签
-                current = addChildren(input.substr(pos,index + 1),'node')
+                addChildren(input.substr(pos,index + 1),'node')
                 pos += index 
             }
             else {

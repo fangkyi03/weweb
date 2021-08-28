@@ -1,0 +1,5 @@
+<view class="container">
+  <view class="usermotto" :bindtap='test'>
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>

@@ -7,5 +7,8 @@ const esbuild = require('./core/esbuild')
 //     targetPath:path.join(__dirname,'../taro/dist')
 // })
 esbuild.init({
-    targetPath:path.join(__dirname,'../miniprogram-demo/miniprogram')
+    targetPath:path.join(__dirname,'../mini-demo')
 })
+// esbuild.init({
+//     targetPath:path.join(__dirname,'../miniprogram-demo/miniprogram')
+// })

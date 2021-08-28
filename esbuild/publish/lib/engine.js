@@ -29,15 +29,13 @@ function getRouter() {
         name: e.split("/").join("-"),
         template: _pageObj[e].template,
         data() {
-          return _pageObj[e].view.data;
+          return _pageObj[e].view.data
         },
-        beforeCreate() {
-          Vue.prototype.eh = _pageObj[e].view.eh
-        },
-        mounted() {
-          _pageObj[e].view.setData = (data) => {
-            Object.keys(data).forEach((e) => {
-              const keys = e.split(".");
+        methods: {
+          ...{..._pageObj[e].view,data:_pageObj[e].view.data},
+          setData(data) {
+            Object.keys(data).forEach((el) => {
+              const keys = el.split(".");
               if (keys.length > 1) {
                 keys.reduce((a,b,i)=> {
                   if (!a) {
@@ -45,21 +43,27 @@ function getRouter() {
                   }else {
                     const newB = b.replace('[','').replace(']','')
                     if (i === keys.length - 1) {
-                      a[newB] = data[e]
+                      a[newB] = data[el]
                     }
                     return a[newB]
                   }
                 },'')
               }else {
-                this.$data[e] = data[e]
+                this.$data[el] = data[el]
               }
             });
             this.$forceUpdate();
-          };
-          const view = _pageObj[e].view;
-          onCreate(view);
-          onLoad(view);
-          onShow(view)
+          }
+        },
+        beforeCreate() {
+          Vue.prototype.eh = _pageObj[e].view.eh
+          _pageObj[e].view.setData = this.setData
+        },
+        mounted() {
+          console.log('this',this)
+          onCreate(this);
+          onLoad(this);
+          onShow(this)
         },
       },
     };
