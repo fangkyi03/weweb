@@ -4,12 +4,24 @@ import './index.less'
 
 export default class Index extends Component {
 
+  constructor(props) {
+    super(props)
+    this.state = {
+      text: 'Hello World',
+      number:0
+    }
+  }
   componentWillMount () {
     console.log('componentWillMount',window)
    }
 
   componentDidMount () {
     console.log('componentDidMount')
+    setTimeout(()=>{
+      this.setState({
+        text:'ceshi1231231'
+      })
+    },2000)
    }
 
   componentWillUnmount () { 
@@ -28,14 +40,20 @@ export default class Index extends Component {
      console.log('componentDidUpdate')
    }
    
+   onAdd = () => {
+    console.log('点击')
+     this.setState({
+       number:this.state.number+1
+     })
+   }
   render () {
     console.log('render')
     return (
       <View>
         <View>测试12312</View>
-        <Text>Hello world!</Text>
+        <Text>{this.state.text}</Text>
         <Image/>
-        <Button type='primary'>测试1</Button>
+        <Button type='primary' onClick={this.onAdd}>{this.state.number}</Button>
         <Input value='测试111'/>
       </View>
     )

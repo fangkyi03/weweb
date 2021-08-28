@@ -7,11 +7,20 @@ var eh = (e) => {
 }
 Vue.component('wx-button',{
   name:'wx-button',
-  props:['type','data','plain','disabled','loading','name'],
+  props:['type','data','plain','disabled','loading','name','bindtap','id'],
   data(){
     return this.$props
   },
-  template:`<div class='wx-button' :disabled="disabled" :type="type" :loading="loading" :plain="plain"><slot></slot></div>`
+  methods:{
+    onClick(e) {
+      Object.defineProperty(e,'type',{
+        value:'tap',
+        writable:true,
+      })
+      this.eh(e)
+    }
+  },
+  template:`<div class='wx-button' @click='onClick' :disabled="disabled" :type="type" :loading="loading" :plain="plain" :id='id'><slot></slot></div>`
 })
 Vue.component('wx-input',{
   name:'wxinput',

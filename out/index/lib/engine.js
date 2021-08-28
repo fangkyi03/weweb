@@ -27,10 +27,12 @@ function getRouter() {
       path: "/" + e,
       component: {
         name: e.split("/").join("-"),
-        // template:'<div>测试</div>',
         template: _pageObj[e].template,
         data() {
           return _pageObj[e].view.data;
+        },
+        beforeCreate() {
+          Vue.prototype.eh = _pageObj[e].view.eh
         },
         mounted() {
           _pageObj[e].view.setData = (data) => {
