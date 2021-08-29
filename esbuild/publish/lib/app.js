@@ -2,12 +2,9 @@ var Text = () => {
   return '<div>测试</div>'
 }
 var en = false
-var eh = (e) => {
-  console.log('data',e)
-}
 Vue.component('wx-button',{
   name:'wx-button',
-  props:['type','data','plain','disabled','loading','name','bindtap','id'],
+  props:['type','data','plain','disabled','loading','name','tap','id'],
   data(){
     return this.$props
   },
@@ -17,7 +14,7 @@ Vue.component('wx-button',{
         value:'tap',
         writable:true,
       })
-      this.eh(e)
+      this.tap && this.tap(e)
     }
   },
   template:`<div class='wx-button' @click='onClick' :disabled="disabled" :type="type" :loading="loading" :plain="plain" :id='id'><slot></slot></div>`
@@ -29,7 +26,7 @@ Vue.component('wx-input',{
 })
 Vue.component('wx-view',{
   props:{
-    bindtap:{
+    tap:{
       type:Function,
       default:()=>null
     }
@@ -38,7 +35,16 @@ Vue.component('wx-view',{
   data(){
     return {}
   },
-  template:'<div @click="bindtap"><slot></slot></div>'
+  methods:{
+    onClick(e) {
+      Object.defineProperty(e,'type',{
+        value:'tap',
+        writable:true,
+      })
+      this.tap && this.tap(e)
+    }
+  },
+  template:'<div @click="onClick"><slot></slot></div>'
 })
 Vue.component('wx-image',{
   props:['class','i','src'],

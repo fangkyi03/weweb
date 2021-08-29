@@ -32,7 +32,7 @@ function getRouter() {
           return _pageObj[e].view.data
         },
         methods: {
-          ...{..._pageObj[e].view,data:_pageObj[e].view.data},
+          ..._pageObj[e].view,
           setData(data) {
             Object.keys(data).forEach((el) => {
               const keys = el.split(".");
@@ -56,14 +56,13 @@ function getRouter() {
           }
         },
         beforeCreate() {
-          Vue.prototype.eh = _pageObj[e].view.eh
-          _pageObj[e].view.setData = this.setData
+            Vue.prototype.eh = _pageObj[e].view.eh
         },
         mounted() {
-          console.log('this',this)
-          onCreate(this);
-          onLoad(this);
-          onShow(this)
+          _pageObj[e].view['setData'] = this.setData
+          onCreate(_pageObj[e].view);
+          onLoad(_pageObj[e].view);
+          onShow(_pageObj[e].view)
         },
       },
     };

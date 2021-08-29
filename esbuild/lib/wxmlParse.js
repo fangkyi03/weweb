@@ -4,7 +4,7 @@ var p = require('prettier')
 
 // 判断当前是否有事件
 function getEvent(key = '') {
-    return key
+    return key.replace(/:bind|bind/g,':')
 }
 
 // 删除括号
