@@ -1,1 +1,4 @@
-/* taro-vue2/dist/pages/index/index.wxss */
+/* taro/dist/pages/index/index.wxss */
+.a {
+  background-color: red;
+}

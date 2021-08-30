@@ -63,11 +63,7 @@ function parse(str) {
                 isClose = false
                 current = current.parent
                 pos += index
-            }else if (input.substr(pos,index + 1).indexOf('/') > -1) { // 判断是否是自闭合标签
-                current = addChildren(input.substr(pos,index + 1),'node')
-                pos += index 
-            }
-            else {
+            } else if (input[pos + 1] !== '') {
                 if (isClose) {
                     addChildren(text,'text')
                     text = ''
@@ -75,7 +71,10 @@ function parse(str) {
                 isOpen = true
                 isClose = false
                 openPos = pos
-            }
+            }else if (input.substr(pos,20).indexOf('/') > -1) { // 判断是否是自闭合标签
+                current = addChildren(input.substr(pos,index + 1),'node')
+                pos += index 
+            } 
         }else if (input[pos] === '>' && isOpen) {
             if (input[pos - 1] === '/') {
               current = current.parent
@@ -93,7 +92,29 @@ function parse(str) {
     return ast
 }
 
-parse(`<view class="index-desc"><navigator url="pages/doc-web-view/doc-web-view" class="weui-agree__link">小程序开发文档</navigator>。</view>`)
+parse(`
+<wxs module="_h">
+  var elements = {};
+  module.exports = {
+    v: function(value) {
+      return value !== undefined ? value : '';
+    },
+    tid: function (type, ancestor) {
+      var items = ancestor.split(',');
+      var depth = 1;
+
+      for (var i = 0; i < items.length; i++) {
+        if (type === items[i]) {
+          depth = depth + 1;
+        }
+      }
+
+      var id = 'REMAX_TPL_' + depth + '_' + type;
+      return id;
+    }
+  };
+</wxs>
+`)
 module.exports = {
     parse
 }

@@ -1,7 +1,8 @@
 var {parse} = require('../tool/wxml')
 var f = require('../core/file')
 var p = require('prettier')
-
+var path = require('path')
+var modules = []
 // 判断当前是否有事件
 function getEvent(key = '') {
     return key.replace(/:bind|bind/g,':')
@@ -100,14 +101,17 @@ function getTagTemplate(item) {
 // 获取wxs文件模板
 function getWXS(wxs) {
   if (wxs.attributes.src) {
+    modules.push(wxs.attributes.module)
     return `
         var ${wxs.attributes.module} = require('${wxs.attributes.src}')
     `
+  }else {
+    const data = "`var module = {exports:{}};" + wxs.attributes.src + "`";
+    modules.push(wxs.attributes.module)
+    return `
+        var ${wxs.attributes.module} = eval(${data})
+    `;
   }
-  const data = "`var module = {exports:{}};" + wxs.attributes.src + "`";
-  return `
-    var ${wxs.attributes.module} = eval(${data})
-  `;
 }
 
 function getTemplateText(children) {
@@ -125,10 +129,18 @@ function getTemplateText(children) {
     return template
 }
 
+function getImportPath(str) {
+    if (str[0] == '/') {
+        const config = JSON.parse(process.env.config)
+        return path.join(config.targetPath,str)
+    }else {
+        return str
+    }
+}
 function findAllTemplate(children,importText,templates) {
     for (let item of children ) {
         if (item.name == 'import' && item.attributes.src) {
-            importText.push(`require('${item.attributes.src}')`)
+            importText.push(`require('${getImportPath(item.attributes.src)}')`)
             continue
         }
         if (item.type == 'node') {
@@ -154,7 +166,7 @@ function getVueComponent(name,text,isPage) {
      registerComponent('${name}',{
         data() {
             return {
-                xs,
+                ${modules.toString()},
                 ...this['$props'].data 
             }
         },
@@ -165,6 +177,7 @@ function getVueComponent(name,text,isPage) {
 function getTemplate(filePath) {
     let importText = []
     let templates = []
+    modules = []
     const content = f.readFile(filePath)
     const dom = parse(content)
     findAllTemplate(dom.children,importText,templates)
