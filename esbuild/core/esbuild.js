@@ -51,7 +51,7 @@ function buildJS(item,config) {
         bundle:true,
         format:'esm',
         watch:true,
-        // minify:true,
+        minify:true,
         plugins:[esbuildPlugin(config,item)],
         outfile:item.outfile,
     })

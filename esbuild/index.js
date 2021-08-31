@@ -1,11 +1,11 @@
 const path = require('path')
 const esbuild = require('./core/esbuild')
-// esbuild.init({
-//     targetPath:path.join(__dirname,'../remax/dist')
-// })
 esbuild.init({
-    targetPath:path.join(__dirname,'../taro/dist')
+    targetPath:path.join(__dirname,'../remax/dist')
 })
+// esbuild.init({
+//     targetPath:path.join(__dirname,'../taro/dist')
+// })
 // esbuild.init({
 //     targetPath:path.join(__dirname,'../taro-redux/dist')
 // })

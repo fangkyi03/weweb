@@ -1,120 +1,110 @@
 function parse(str) {
-    let input = str.replace(/[\r\n]/g, '')
-    let pos = 0
-    const ast = {
-        children:[],
-        type: 'root',
-    }
-    let current = ast
-    let isOpen = false
-    let isClose = false
-    let openPos = 0
-    let text = ''
-    let char = ''
-    function getTagNameOfAttr(text,type) {
-        if (type == 'text') {
-            return {
-                type: 'text',
-                value: text.replace(/\s+/g, '')
+  let input = str.replace(/[\r\n]/g, "");
+  let pos = 0;
+  const ast = {
+    children: [],
+    parent: {},
+    type: "root",
+  };
+  let current = ast;
+  let isOpen = false;
+  let isClose = false;
+  let openPos = 0;
+  let text = "";
+  let char = "";
+  function getAttr(str) {
+    const content = str.toLowerCase();
+    const firstEmpty = content.indexOf(' ')
+    const name = content.slice(0, firstEmpty + 1)
+    if (firstEmpty === -1) {
+      return {
+        name:content,
+        attr:{},
+        state:'success'
+      }
+    } else {
+        const attr = {};
+        const attrStr = content.slice(firstEmpty + 1).replace(/^\s+|\s+$/g, "");
+        const attrArr = attrStr.trim().match(/[a-zA-Z0-9\-]+=\"(.*?)\"/)
+        const state = attrArr.every((item) => {
+            const [key, value] = item.split(`="`);
+            if (value) {
+                const first = value[0]
+                const end = value[value.length - 1]
+                if ((first === '"' && end === '"') || (first === "'" && end === "'")) {
+                    attr[key] = value
+                    return true
+                }
             }
-        }
-        const context = text.replace(/<|>|\/>/g,'').replace(/\s+/g, ' ').replace(/"/g,`'`)
-        const split = context.split(' ')
-        if (split.length === 1) {
+            return false
+        });
+        if (!state) {
             return {
-                name: split[0],
-                attributes:{},
-                children:[],
-                parent:current,
-                type
+                state:'fail'
             }
         }else {
-            const obj = {}
-            context.slice(split[0].length).trim().replace(/' /g,`'nnn `).split('nnn ').forEach(item => {
-                const [key, value] = item.split('=')
-                if (value) {
-                    obj[key] = value.slice(1,-1)
-                }
-            })
             return {
-                name: split[0],
-                attributes:obj,
-                children:[],
-                parent:current,
-                type
+                name,
+                attr,
+                state:'success'
             }
         }
     }
-    function addChildren(text,type) {
-        const child = getTagNameOfAttr(text,type)
-        current.children.push(child)
-        return child
+  }
+  function addNode({name,attr,type} = {}) {
+    const obj = {
+        type,
+        children: [],
+        attr,
+        name
     }
-    while (pos < input.length) {
-        char = input.slice(pos)
-        if (input[pos] === '<') {
-            let index = input.slice(pos).indexOf('>')
-            // 判断当前是否是闭合标签
-            if (input[pos + 1] === '/') {
-                if (isClose) {
-                    addChildren(text,'text')
-                    text = ''
-                }
-                isClose = false
-                current = current.parent
-                pos += index
-            } else if (input[pos + 1] !== '') {
-                if (isClose) {
-                    addChildren(text,'text')
-                    text = ''
-                }
-                isOpen = true
-                isClose = false
-                openPos = pos
-            }else if (input.substr(pos,20).indexOf('/') > -1) { // 判断是否是自闭合标签
-                current = addChildren(input.substr(pos,index + 1),'node')
-                pos += index 
-            } 
-        }else if (input[pos] === '>' && isOpen) {
-            if (input[pos - 1] === '/') {
-              current = current.parent
-            }else {
-                isOpen = false
-                isClose = true
-                let child = addChildren(input.slice(openPos + 1, pos),'node')
-                current = child
-            }
-        }else if (isClose){
-            text += input[pos]
+    current.children.push(obj);
+    current = obj
+  }
+  while (pos < input.length) {
+    char = input.slice(pos);
+    // 1.如果< 先出来的话 这个时候 要先判断
+    // 下一个>的位置 其次要判断在>的位置中是否还有出现过<这个符号 如果有的话 说明当前找的>还不是闭合
+    // 如果没有出现过< 说明是闭合的
+    // 如果是闭合的话 就要把当前的节点添加到父节点中
+    // 2.将<> 两者之间的数值提取出来 再去判断一下属性是否符合要求 如果符合就说明是完全闭合 如果不符合说明是表达式而不是jsx
+    // 如果是表达式的话 就要把表达式提取出来 并且把表达式添加到父节点中
+    // 其次如果是闭合的话 就把>与<中间的内容部分提取出来 这部分内容肯定是文本节点
+    // 3.如果是文本节点的话 就把文本节点添加到父节点中
+    if (input[pos] == "<") {
+      const findNextRight = input.slice(pos + 1).indexOf(">");
+      // 如果当前找到了下一个> 则提取中间的属性判断是否符合要求
+      if (findNextRight != -1) {
+        const {state,name,attr} = getAttr(input.slice(pos + 1, pos + findNextRight + 1));
+        if (state == 'fail') {       
+            left = pos   
+            pos += findNextRight + 1;
+        }else {
+            pos += findNextRight + 1;
+            left = -1
+            addNode({name,attr,type:'node'});
         }
-        pos += 1
+      }
+    }else if (input[pos] == ">") {
+        if (left != -1) {
+            const {state,name,attr} = getAttr(input.slice(left + 1, pos ));
+            console.log('object')
+        }
     }
-    return ast
+    pos +=1
+  }
+  return ast;
 }
 
 parse(`
-<wxs module="_h">
-  var elements = {};
-  module.exports = {
-    v: function(value) {
-      return value !== undefined ? value : '';
-    },
-    tid: function (type, ancestor) {
-      var items = ancestor.split(',');
-      var depth = 1;
-
-      for (var i = 0; i < items.length; i++) {
-        if (type === items[i]) {
-          depth = depth + 1;
-        }
-      }
-
-      var id = 'REMAX_TPL_' + depth + '_' + type;
-      return id;
-    }
-  };
+<div class="a =='1' ? 1 : 2" >
+<wxs>
+ var _h = () => {
+     return s > 1 ? x < 1: 0
+ }
 </wxs>
-`)
+</div>
+`);
 module.exports = {
-    parse
-}
+  parse,
+};
