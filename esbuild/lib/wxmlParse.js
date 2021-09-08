@@ -1,4 +1,4 @@
-var {parse} = require('../tool/wxml')
+var {parse,htmlParser2} = require('../tool/wxml')
 var f = require('../core/file')
 var p = require('prettier')
 var path = require('path')
@@ -13,45 +13,45 @@ function removeParenTheses(data = '') {
     return data.replace('{','').replace('}','')
 }
 // 判断当前对象是否有for循环 
-function getattributesObj(attributes) {
-    // delete attributes.is
-    if (attributes['v-for-items']) {
-        const items = removeParenTheses(attributes['v-for-items'])
-        const item = removeParenTheses(attributes['v-for-item'] || 'item') 
-        const key = removeParenTheses(attributes['v-for-key'] || 'key') 
-        delete attributes['v-for-items']
-        delete attributes['v-for-item']
-        delete attributes['v-for-key']
+function getattribsObj(attribs) {
+    // delete attribs.is
+    if (attribs['v-for-items']) {
+        const items = removeParenTheses(attribs['v-for-items'])
+        const item = removeParenTheses(attribs['v-for-item'] || 'item') 
+        const key = removeParenTheses(attribs['v-for-key'] || 'key') 
+        delete attribs['v-for-items']
+        delete attribs['v-for-item']
+        delete attribs['v-for-key']
         return {
             'v-for': `${item} in ${items}`,
             'key': key,
-            ...attributes,
+            ...attribs,
         }
-    } else if (attributes['v-for']) {
-        const items = removeParenTheses(attributes['v-for'])
-        const key = removeParenTheses(attributes['v-key'] || 'key') 
-        delete attributes['v-key']
+    } else if (attribs['v-for']) {
+        const items = removeParenTheses(attribs['v-for'])
+        const key = removeParenTheses(attribs['v-key'] || 'key') 
+        delete attribs['v-key']
         return {
-            ...attributes,
+            ...attribs,
             'v-for':`item in ${items}`,
             'key':key
         }
-    } else if (attributes['wx-if']) {
-        const items = removeParenTheses(attributes['wx-if'])
-        delete attributes['wx-if']
+    } else if (attribs['wx-if']) {
+        const items = removeParenTheses(attribs['wx-if'])
+        delete attribs['wx-if']
         return {
-            ...attributes,
+            ...attribs,
             'v-if':`${items}`
         }
     }
     else {
-        return attributes
+        return attribs
     }
 }
 
-function getInitAttr (attributes) {
+function getInitAttr (attribs) {
     // 将所有wx:开头的属性转换为v-开头
-    const json = JSON.parse(JSON.stringify(attributes).replace(/wx:/g,'v-'))
+    const json = JSON.parse(JSON.stringify(attribs).replace(/wx:/g,'v-'))
     const obj = {}
     Object.keys(json).forEach((key)=>{
         obj[key] = json[key].replace('{{','{').replace('}}','}')
@@ -59,31 +59,33 @@ function getInitAttr (attributes) {
     return obj
 }
 
-function getattributes(attributes) {
-    let attributesStr = ''
+function getattribs(attribs) {
+    let attribsStr = ''
     // 获取初始化的属性对象
-    let obj = getInitAttr(attributes)
+    let obj = getInitAttr(attribs)
     // 获取for循环过滤以后的属性
-    const attributesObj = getattributesObj(obj)
-    for (let key in attributesObj) {
+    const attribsObj = getattribsObj(obj)
+    for (let key in attribsObj) {
         // 初始化事件的对象
         let keyText = getEvent(key)
-        if (/{|}/g.test(attributesObj[key])) {
+        if (/{|}/g.test(attribsObj[key])) {
             if (key == 'data') {
-                 attributesStr += `:${keyText}="${attributesObj[key]}" `
+                 attribsStr += `:${keyText}="${attribsObj[key]}" `
             }else {
-                attributesStr += `:${keyText}="${attributesObj[key].replace('{','').replace('}','')}" `
+                attribsStr += `:${keyText}="${attribsObj[key].replace('{','').replace('}','')}" `
             }
         }else {
-            attributesStr += `${keyText}="${attributesObj[key]}" `
+            attribsStr += `${keyText}="${attribsObj[key]}" `
         }
     }
-    return attributesStr
+    return attribsStr
 }
 function getTagName(item) {
-    if (item.name == 'template' && item.attributes.is) {
+    if (item.name == 'template' && item.attribs.is) {
         return 'component'
-    }else if (item.name == 'block') {
+    }else if (item.name == 'template' && item.attribs.name) {
+        return 'wx-view'
+    } else if (item.name == 'block') {
         return 'div'
     }else {
         return 'wx-' + item.name
@@ -92,7 +94,7 @@ function getTagName(item) {
 function getTagTemplate(item) {
     const tagName = getTagName(item)
     return `
-        <${tagName} ${getattributes(item.attributes)}>
+        <${tagName} ${getattribs(item.attribs)}>
             ${getTemplateText(item.children)}
         </${tagName}>
     `
@@ -100,16 +102,16 @@ function getTagTemplate(item) {
 
 // 获取wxs文件模板
 function getWXS(wxs) {
-  if (wxs.attributes.src) {
-    modules.push(wxs.attributes.module)
+  if (wxs.attribs.src) {
+    modules.push(wxs.attribs.module)
     return `
-        var ${wxs.attributes.module} = require('${wxs.attributes.src}')
+        var ${wxs.attribs.module} = require('${wxs.attribs.src}')
     `
   }else {
-    const data = "`var module = {exports:{}};" + wxs.attributes.src + "`";
-    modules.push(wxs.attributes.module)
+    const data = "`var module = {exports:{}};" + wxs.attribs.src + "`";
+    modules.push(wxs.attribs.module)
     return `
-        var ${wxs.attributes.module} = eval(${data})
+        var ${wxs.attribs.module} = eval(${data})
     `;
   }
 }
@@ -118,7 +120,7 @@ function getTemplateText(children) {
     let template = ''
     if (children.length == 0) return ''
     for (let item of children) {
-     if (item.type == 'node' && item.name !== 'import') {
+     if (item.type == 'tag' && item.name !== 'import') {
             template += getTagTemplate(item)
             continue
         }else if (item.type == 'text') {
@@ -139,14 +141,14 @@ function getImportPath(str) {
 }
 function findAllTemplate(children,importText,templates) {
     for (let item of children ) {
-        if (item.name == 'import' && item.attributes.src) {
-            importText.push(`require('${getImportPath(item.attributes.src)}')`)
+        if (item.name == 'import' && item.attribs.src) {
+            importText.push(`require('${getImportPath(item.attribs.src)}')`)
             continue
         }
-        if (item.type == 'node') {
+        if (item.type == 'tag') {
             if (item.name == 'wxs' ) {
                 importText.push(getWXS(item))
-            }else if (item.attributes.name) {
+            }else if (item.attribs.name) {
                 templates.push(item)
             }
             continue
@@ -179,7 +181,7 @@ function getTemplate(filePath) {
     let templates = []
     modules = []
     const content = f.readFile(filePath)
-    const dom = parse(content)
+    const dom = htmlParser2(content)
     findAllTemplate(dom.children,importText,templates)
     if (templates.length == 0 ) {
         const templateText = getTemplateText(dom.children)
@@ -190,7 +192,7 @@ function getTemplate(filePath) {
     }else {
        let templateText = ''
        templates.forEach((e)=> {
-           templateText += getVueComponent(e.attributes.name,getTemplateText(e.children),false)
+           templateText += getVueComponent(e.attribs.name,getTemplateText(e.children),false)
        })
        return `
           ${importText.join('\n')}

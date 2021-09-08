@@ -1,0 +1,294 @@
+/* ../ztesa-wechat-ynx/dist/pages/my/index.wxss */
+.index-module__header___1xov7,
+.index-module__main___vhls5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.index-module__header___1xov7 {
+  padding: 20rpx;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #fff;
+}
+.index-module__userInfo___3xO_s,
+.index-module__userLogo___1fp-D {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.index-module__userLogo___1fp-D {
+  width: 100%;
+  height: 196rpx;
+}
+.index-module__userLogo___1fp-D image:first-child {
+  border-radius: 50rpx;
+}
+.index-module__userLogo___1fp-D .index-module__certifationText___clGrf {
+  width: 121rpx;
+  text-align: center;
+  height: 35rpx;
+  background: -webkit-linear-gradient(325deg, #ffeec5 0%, #f8e58f 100%);
+  background: -o-linear-gradient(325deg, #ffeec5 0%, #f8e58f 100%);
+  background: linear-gradient(125deg, #ffeec5 0%, #f8e58f 100%);
+  border-radius: 22rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #572e05;
+  line-height: 35rpx;
+}
+.index-module__bannerGroup___2yIhI,
+.index-module__normalUserLogo___1rgFs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.index-module__normalUserLogo___1rgFs {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100rpx;
+  border-radius: 50rpx;
+  background: #d8d8d8;
+  height: 100rpx;
+}
+.index-module__normalUserLogo___1rgFs image {
+  width: 50rpx;
+  height: 60rpx;
+}
+.index-module__bannerGroup___2yIhI {
+  height: 160rpx;
+}
+.index-module__body___3v6sD {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 20rpx;
+}
+.index-module__body___3v6sD,
+.index-module__myOrderHeader___1P0O_,
+.index-module__order___26R7B {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.index-module__order___26R7B {
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #fff;
+  padding: 20rpx 20rpx 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.index-module__myOrderHeader___1P0O_ {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-size: 28rpx;
+  color: #666;
+}
+.index-module__line___1hrYm {
+  width: 10rpx;
+  height: 30rpx;
+  background: #00be39;
+  border-radius: 5rpx;
+}
+.index-module__myOrderMenu___1rLew,
+.index-module__teamListItem___2Mj9n .index-module__teamListTop___3fuqT {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.index-module__iconText___epfF3 {
+  font-size: 28rpx;
+  color: #333;
+}
+.index-module__jumpList___1kiAh {
+  margin-top: 20rpx;
+  border-radius: 14rpx !important;
+}
+.index-module__bigDot___1P8dv,
+.index-module__smallDot___1HYyO {
+  position: absolute;
+  right: -10rpx;
+  top: 0;
+  width: 56rpx;
+  height: 30rpx;
+  border-radius: 15rpx;
+  background: #fc733e;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 20rpx;
+  color: #fff;
+  padding: 5rpx;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.index-module__smallDot___1HYyO {
+  width: 30rpx;
+}
+.index-module__phone___3f-Sh {
+  font-size: 28rpx;
+  color: #00be39;
+  font-weight: 700;
+}
+.index-module__bold___n5waK {
+  font-weight: 700 !important;
+  color: #666 !important;
+}
+.index-module__teamListItem___2Mj9n {
+  height: 232rpx;
+  background: #fff;
+  border-radius: 14rpx;
+  margin-top: 20rpx;
+}
+.index-module__teamListItem___2Mj9n .index-module__teamListTop___3fuqT {
+  margin-top: 20rpx;
+}
+.index-module__teamListItem___2Mj9n .index-module__teamListTop___3fuqT .index-module__addressText___1P8cF {
+  margin-left: 20rpx;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 39rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #666;
+  line-height: 40rpx;
+}
+.index-module__teamListItem___2Mj9n .index-module__teamListTop___3fuqT image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+.index-module__teamListItem___2Mj9n .index-module__teamListTop___3fuqT .index-module__teamTitle___1OTKf {
+  height: 30rpx;
+  font-size: 22rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #666;
+  line-height: 30rpx;
+  margin-right: 20rpx;
+}
+.index-module__teamListItem___2Mj9n .index-module__teamListBottom___36cB2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40rpx;
+}
+.index-module__teamListItem___2Mj9n .index-module__teamListBottom___36cB2 .index-module__teamIconItem___3W2tQ {
+  text-align: center;
+  padding: 20;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.index-module__teamListItem___2Mj9n .index-module__teamListBottom___36cB2 .index-module__teamIconItem___3W2tQ image {
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 20rpx;
+}
+.index-module__teamListItem___2Mj9n .index-module__teamListBottom___36cB2 .index-module__teamIconItem___3W2tQ .index-module__teamIconText___3cKtL {
+  height: 33rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #333;
+  line-height: 33rpx;
+}
+.index-module__member___18txG {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-size: 28rpx;
+  line-height: 86rpx;
+  border-radius: 14rpx;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+.index-module__integra___21zyi,
+.index-module__memText___1scNq,
+.index-module__member___18txG {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.index-module__memText___1scNq {
+  color: #fff;
+}
+.index-module__integra___21zyi {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-size: 28rpx;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  line-height: 86rpx;
+  border-radius: 14rpx;
+  vertical-align: middle;
+  margin: 20rpx 0;
+}

@@ -12,14 +12,14 @@ function getPageConfig (config) {
             outdir:'./out/index/css',
             children:appJSON.pages
         },
-        ...(appJSON.subpackages || []).map((e)=>{
-            return {
-                path:e.root,
-                children:e.pages,
-                outdir:config.outdir + '/' + e.root + '/css/pages',
-                outfile:config.outdir + '/' + e.root + '/dist.js'
-            }
-        })
+        // ...(appJSON.subpackages || []).map((e)=>{
+        //     return {
+        //         path:e.root,
+        //         children:e.pages,
+        //         outdir:config.outdir + '/' + e.root + '/css/pages',
+        //         outfile:config.outdir + '/' + e.root + '/dist.js'
+        //     }
+        // })
     ]
     return pages.map((e)=>{
         let text = ''
@@ -50,8 +50,8 @@ function buildJS(item,config) {
         stdin:item.stdin,
         bundle:true,
         format:'esm',
-        watch:true,
-        minify:true,
+        // watch:true,
+        // minify:true,
         plugins:[esbuildPlugin(config,item)],
         outfile:item.outfile,
     })

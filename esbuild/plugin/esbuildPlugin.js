@@ -42,6 +42,7 @@ module.exports = (options,item) => {
       })
       build.onLoad({ filter: /\.wxml$/ }, async (args) => {
         const text = wxmlParse.getTemplate(args.path,options)
+        console.log('text',text);
         return {
           contents: text,
           loader: "js",

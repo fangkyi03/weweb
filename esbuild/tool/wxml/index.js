@@ -1,3 +1,4 @@
+const htmlparser2 = require('htmlparser2')
 function parse(str) {
     let input = str.replace(/[\r\n]/g, '')
     let pos = 0
@@ -93,6 +94,12 @@ function parse(str) {
     return ast
 }
 
+function htmlParser2(content) {
+    const dom = htmlparser2.parseDocument(content)
+    return dom 
+}
+
 module.exports = {
-    parse
+    parse,
+    htmlParser2
 }

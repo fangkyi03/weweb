@@ -1,0 +1,102 @@
+/* ../ztesa-wechat-ynx/dist/pages/massInformation/index.wxss */
+.index-module__info___3zQF8,
+.index-module__main___2S42c {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.index-module__main___2S42c {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 22rpx;
+  margin-right: 22rpx;
+  margin-top: 22rpx;
+}
+.index-module__info___3zQF8 {
+  background: #3cc461;
+  width: 100%;
+  -webkit-box-shadow: 0 20rpx 30rpx 0 rgba(50, 185, 94, .4);
+  box-shadow: 0 20rpx 30rpx 0 rgba(50, 185, 94, .4);
+  border-radius: 17rpx;
+  padding: 20rpx;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.index-module__body___3a9mM,
+.index-module__info___3zQF8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.index-module__logo____uTWX,
+.index-module__logo____uTWX image {
+  width: 116rpx;
+  height: 116rpx;
+  border-radius: 58rpx;
+}
+.index-module__right___q69h3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+.index-module__foot___3vxKN,
+.index-module__qrCode___omN3N,
+.index-module__user___KgZ1D {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.index-module__foot___3vxKN {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.index-module__qrCode___omN3N,
+.index-module__user___KgZ1D {
+  font-size: 28rpx;
+}
+.index-module__user___KgZ1D {
+  margin-top: 40rpx;
+  color: #999;
+}
+.index-module__user___KgZ1D image {
+  width: 42rpx;
+  height: 42rpx;
+  margin-right: 10rpx;
+}
+.index-module__qrCode___omN3N {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #666;
+  font-weight: 700;
+}
+.index-module__qrCode___omN3N view {
+  margin-top: 20rpx;
+}
+.index-module__img___2BhxV,
+.index-module__img___2BhxV image {
+  width: 226rpx;
+  height: 226rpx;
+}
