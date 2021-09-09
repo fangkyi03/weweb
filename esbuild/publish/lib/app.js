@@ -110,6 +110,7 @@ window['getPage'] = (files) => {
 }
 
 window['App'] = (config) => {
+  // config.onLaunch && config.onLaunch()
   console.log('app初始化',config)
 };
 window['Page'] = window['Component'] = (viewConfig) => {

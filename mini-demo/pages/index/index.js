@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
+    text: 'Hello World',
     userInfo: {},
     canIUseOpenData:{},
     canIUseGetUserProfile:{},
@@ -39,7 +39,7 @@ Page({
     })
   },
   test(){
-    this.setData({motto:Math.random() * 1231231231,show:!this.show})
+    this.setData({text:Math.random() * 1231231231,show:!this.show})
   },
   getUserInfo(e) {
     // 不推荐使用getUserInfo获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息
