@@ -1305,7 +1305,7 @@ var require_vendors = __commonJS({
       e.d(n, "a", function() {
         return r;
       });
-    }, function(t, n, e) {
+    }, , function(t, n, e) {
       "use strict";
       e.d(n, "a", function() {
         return c;
@@ -1322,7 +1322,7 @@ var require_vendors = __commonJS({
       function c(t2) {
         return i(t2) || Object(o["a"])(t2) || Object(u["a"])(t2) || a();
       }
-    }, , , function(t, n, e) {
+    }, , function(t, n, e) {
       "use strict";
       t.exports = e(56);
     }, function(t, n, e) {
@@ -2587,7 +2587,7 @@ var require_taro = __commonJS({
         }), n.d(t, "window", function() {
           return mi;
         });
-        var u = n(31), s = n(28), l = n.n(s), d = n(35), f = n(36), h = n(13), p = n(9), v = n(5), b = n(43), m = n(37), g = n(10), y = n(7), O = n(8), j = n(12), w = n(3), k = n(4), T = n(6), E = n(1), _ = n(0);
+        var u = n(31), s = n(28), l = n.n(s), d = n(35), f = n(36), h = n(14), p = n(9), v = n(5), b = n(43), m = n(37), g = n(10), y = n(7), O = n(8), j = n(12), w = n(3), k = n(4), T = n(6), E = n(1), _ = n(0);
         function C(e3, t2, n2, r2) {
           var i2, o2 = arguments.length, a2 = o2 < 3 ? t2 : r2 === null ? r2 = Object.getOwnPropertyDescriptor(t2, n2) : r2;
           if ((typeof Reflect === "undefined" ? "undefined" : Object(T["a"])(Reflect)) === "object" && typeof Reflect.decorate === "function")
@@ -11554,7 +11554,7 @@ var require_index2 = __commonJS({
     window["__wxRoute"] = "pages/index/index";
     var page = getPage("pages/index/index");
     page.json = `{"navigationBarTitleText":"\u9996\u9875","usingComponents":{"custom-wrapper":"../../custom-wrapper","comp":"../../comp"}}`;
-    (wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([[7], { 14: function(e, t, n) {
+    (wx["webpackJsonp"] = wx["webpackJsonp"] || []).push([[7], { 13: function(e, t, n) {
       "use strict";
       e.exports = n(62);
     }, 42: function(e, t, n) {
@@ -11563,7 +11563,7 @@ var require_index2 = __commonJS({
         n.d(t, "a", function() {
           return f;
         });
-        var o = n(3), c = n(4), i = n(10), r = n(7), s = n(8), a = n(12), l = n(16), u = n(15), p = (n(61), n(14)), f = function(t2) {
+        var o = n(3), c = n(4), i = n(10), r = n(7), s = n(8), a = n(12), l = n(16), u = n(15), p = (n(61), n(13)), f = function(t2) {
           Object(r["a"])(l2, t2);
           var n2 = Object(s["a"])(l2);
           function l2(e3) {
@@ -11588,7 +11588,9 @@ var require_index2 = __commonJS({
           } }, { key: "componentDidUpdate", value: function(e3, t3) {
             console.log("componentDidUpdate");
           } }, { key: "render", value: function() {
-            return console.log("\u8F93\u51FArender"), Object(p["jsxs"])(u["e"], { children: [Object(p["jsx"])(u["e"], { children: "2123" }), Object(p["jsx"])(u["d"], { children: this.state.text }), Object(p["jsx"])(u["b"], { src: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201804%2F28%2F20180428114906_ulvqd.jpg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1632765222&t=7ec7538a03a046f3361749b9bf47bae5" }), Object(p["jsx"])(u["a"], { type: "primary", onClick: this.onAdd, children: this.state.number }), Object(p["jsx"])(u["c"], { value: "\u6D4B\u8BD5111" }), this.state.showView ? Object(p["jsx"])(u["d"], { children: "\u6D4B\u8BD5" }) : Object(p["jsx"])(u["c"], { value: "\u8F93\u51FA" })] });
+            return console.log("\u8F93\u51FArender"), Object(p["jsxs"])(u["e"], { children: [Object(p["jsx"])(u["e"], { children: "2123" }), Object(p["jsx"])(u["a"], { onClick: function() {
+              return console.log("\u6D4B\u8BD5");
+            }, type: "warn", children: "\u6D4B\u8BD5\u5F00\u53D1\u5B8C\u6210" }), Object(p["jsx"])(u["d"], { children: this.state.text }), Object(p["jsx"])(u["b"], { src: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201804%2F28%2F20180428114906_ulvqd.jpg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1632765222&t=7ec7538a03a046f3361749b9bf47bae5" }), Object(p["jsx"])(u["a"], { type: "primary", onClick: this.onAdd, children: this.state.number }), Object(p["jsx"])(u["c"], { value: "\u6D4B\u8BD5111" }), this.state.showView ? Object(p["jsx"])(u["d"], { children: "\u6D4B\u8BD5" }) : Object(p["jsx"])(u["c"], { value: "\u8F93\u51FA" })] });
           } }]), l2;
         }(l["Component"]);
       }).call(this, n(2)["window"]);
