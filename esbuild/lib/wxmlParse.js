@@ -84,7 +84,7 @@ function getTagName(item) {
     if (item.name == 'template' && item.attribs.is) {
         return 'component'
     }else if (item.name == 'template' && item.attribs.name) {
-        return 'wx-view'
+        return item.attribs.name
     } else if (item.name == 'block') {
         return 'div'
     }else {
@@ -124,7 +124,7 @@ function getTemplateText(children) {
             template += getTagTemplate(item)
             continue
         }else if (item.type == 'text') {
-            template += item.value
+            template += item.data
         }
         template += getTemplateText(item.children || [])
     }
@@ -143,6 +143,7 @@ function findAllTemplate(children,importText,templates) {
     for (let item of children ) {
         if (item.name == 'import' && item.attribs.src) {
             importText.push(`require('${getImportPath(item.attribs.src)}')`)
+            findAllTemplate(item.children || [],importText,templates)
             continue
         }
         if (item.type == 'tag') {
@@ -181,7 +182,7 @@ function getTemplate(filePath) {
     let templates = []
     modules = []
     const content = f.readFile(filePath)
-    const dom = htmlParser2(content)
+    const dom = parse(content)
     findAllTemplate(dom.children,importText,templates)
     if (templates.length == 0 ) {
         const templateText = getTemplateText(dom.children)

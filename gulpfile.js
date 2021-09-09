@@ -5,16 +5,9 @@ var fs = require('fs')
 var JsConfuser = require("js-confuser");
 var browserify = require('browserify')
 var less = require('less')
-const syntax = require('postcss-less');
-var postcss = require('postcss')
 var through2 = require('through2')
 var prettier = require('prettier')
-var LessAutoprefix = require('less-plugin-autoprefix');
-var autoprefix = new LessAutoprefix({ browsers: ['Chrome > 20'] });
 const b = browserify({basedir:process.cwd(),commondir:true,browserField:false})
-// var browserify = require('gulp-browserify');
-var uglify = require('gulp-uglify')
-//调用js文件合并插件
 
 // 初始化定义配置
 var rootPath = null

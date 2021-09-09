@@ -16,7 +16,7 @@ function parse(str) {
         if (type == 'text') {
             return {
                 type: 'text',
-                value: text.replace(/\s+/g, '')
+                data: text.replace(/\s+/g, '')
             }
         }
         const context = text.replace(/<|>|\/>/g,'').replace(/\s+/g, ' ').replace(/"/g,`'`)
@@ -24,7 +24,7 @@ function parse(str) {
         if (split.length === 1) {
             return {
                 name: split[0],
-                attributes:{},
+                attribs:{},
                 children:[],
                 parent:current,
                 type
@@ -39,7 +39,7 @@ function parse(str) {
             })
             return {
                 name: split[0],
-                attributes:obj,
+                attribs:obj,
                 children:[],
                 parent:current,
                 type
@@ -65,7 +65,7 @@ function parse(str) {
                 current = current.parent
                 pos += index
             }else if (input.substr(pos,index + 1).indexOf('/') > -1) { // 判断是否是自闭合标签
-                addChildren(input.substr(pos,index + 1),'node')
+                addChildren(input.substr(pos,index + 1),'tag')
                 pos += index 
             }
             else {
@@ -83,7 +83,7 @@ function parse(str) {
             }else {
                 isOpen = false
                 isClose = true
-                let child = addChildren(input.slice(openPos + 1, pos),'node')
+                let child = addChildren(input.slice(openPos + 1, pos),'tag')
                 current = child
             }
         }else if (isClose){

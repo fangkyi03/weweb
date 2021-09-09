@@ -9394,1604 +9394,2143 @@ var require_utils = __commonJS({
 var require_base = __commonJS({
   "taro/dist/base.wxml"() {
     var xs = require_utils();
-    var page = getPage("base");
-    page.template = `<div>
-        <wx-wxs module="xs" src="./utils.wxs" >
-            undefined
-        <wx-view name="taro_tmpl" >
-            undefined
+    registerComponent("taro_tmpl", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <div v-for="item in root.cn" key="uid" >
-            undefined
+            
         <component is="tmpl_0_container" :data="{i:item,l:''}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_0_catch-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_0_catch-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" catchtouchmove="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_0_static-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_0_static-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_0_pure-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_0_pure-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_0_view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_0_view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchmove="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_0_static-text" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_0_static-text", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-text :selectable="xs.b(i.selectable,false)" :space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-text>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_0_text" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_0_text", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-text :selectable="xs.b(i.selectable,false)" :space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-text>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_0_button" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_0_button", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-button :size="xs.b(i.size,'default')" :type="i.type" :plain="xs.b(i.plain,false)" :disabled="i.disabled" :loading="xs.b(i.loading,false)" :form-type="i.formType" :open-type="i.openType" :hover-class="xs.b(i.hoverClass,'button-hover')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,20)" :hover-stay-time="xs.b(i.hoverStayTime,70)" :name="i.name" :lang="xs.b(i.lang,en)" :session-from="i.sessionFrom" :send-message-title="i.sendMessageTitle" :send-message-path="i.sendMessagePath" :send-message-img="i.sendMessageImg" :app-parameter="i.appParameter" :show-message-card="xs.b(i.showMessageCard,false)" :business-id="i.businessId" :getuserinfo="eh" :contact="eh" :getphonenumber="eh" :error="eh" :opensetting="eh" :launchapp="eh" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-button>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_0_input" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_0_input", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <component :is="xs.c(i, 'tmpl_0_')" :data="{i:i}" >
-            undefined
+            
         </component>
-    undefined
-        <wx-view name="tmpl_0_input_focus" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_0_input_focus", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-input :value="i.value" :type="xs.b(i.type,'')" :password="xs.b(i.password,false)" :placeholder="i.placeholder" :placeholder-style="i.placeholderStyle" :placeholder-class="xs.b(i.placeholderClass,'input-placeholder')" :disabled="i.disabled" :maxlength="xs.b(i.maxlength,140)" :cursor-spacing="xs.b(i.cursorSpacing,0)" :focus="xs.b(i.focus,false)" :confirm-type="xs.b(i.confirmType,'done')" :confirm-hold="xs.b(i.confirmHold,false)" :cursor="xs.b(i.cursor,i.value.length)" :selection-start="xs.b(i.selectionStart,-1)" :selection-end="xs.b(i.selectionEnd,-1)" :input="eh" :focus="eh" :blur="eh" :confirm="eh" :name="i.name" :always-embed="xs.b(i.alwaysEmbed,false)" :adjust-position="xs.b(i.adjustPosition,true)" :hold-keyboard="xs.b(i.holdKeyboard,false)" :keyboardheightchange="eh" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
             
         </wx-input>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_0_input_blur" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_0_input_blur", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-input :value="i.value" :type="xs.b(i.type,'')" :password="xs.b(i.password,false)" :placeholder="i.placeholder" :placeholder-style="i.placeholderStyle" :placeholder-class="xs.b(i.placeholderClass,'input-placeholder')" :disabled="i.disabled" :maxlength="xs.b(i.maxlength,140)" :cursor-spacing="xs.b(i.cursorSpacing,0)" :confirm-type="xs.b(i.confirmType,'done')" :confirm-hold="xs.b(i.confirmHold,false)" :cursor="xs.b(i.cursor,i.value.length)" :selection-start="xs.b(i.selectionStart,-1)" :selection-end="xs.b(i.selectionEnd,-1)" :input="eh" :focus="eh" :blur="eh" :confirm="eh" :name="i.name" :always-embed="xs.b(i.alwaysEmbed,false)" :adjust-position="xs.b(i.adjustPosition,true)" :hold-keyboard="xs.b(i.holdKeyboard,false)" :keyboardheightchange="eh" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
             
         </wx-input>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_0_scroll-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_0_scroll-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-scroll-view :scroll-x="xs.b(i.scrollX,false)" :scroll-y="xs.b(i.scrollY,false)" :upper-threshold="xs.b(i.upperThreshold,50)" :lower-threshold="xs.b(i.lowerThreshold,50)" :scroll-top="i.scrollTop" :scroll-left="i.scrollLeft" :scroll-into-view="i.scrollIntoView" :scroll-with-animation="xs.b(i.scrollWithAnimation,false)" :enable-back-to-top="xs.b(i.enableBackToTop,false)" :scrolltoupper="eh" :scrolltolower="eh" :scroll="eh" :touchstart="eh" :touchmove="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :enable-flex="xs.b(i.enableFlex,false)" :scroll-anchoring="xs.b(i.scrollAnchoring,false)" :refresher-enabled="xs.b(i.refresherEnabled,false)" :refresher-threshold="xs.b(i.refresherThreshold,45)" :refresher-default-style="xs.b(i.refresherDefaultStyle,'black')" :refresher-background="xs.b(i.refresherBackground,'#FFF')" :refresher-triggered="xs.b(i.refresherTriggered,false)" :enhanced="xs.b(i.enhanced,false)" :bounces="xs.b(i.bounces,true)" :show-scrollbar="xs.b(i.showScrollbar,true)" :paging-enabled="xs.b(i.pagingEnabled,false)" :fast-deceleration="xs.b(i.fastDeceleration,false)" :dragstart="eh" :dragging="eh" :dragend="eh" :refresherpulling="eh" :refresherrefresh="eh" :refresherrestore="eh" :refresherabort="eh" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-scroll-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_0_static-image" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_0_static-image", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-image :src="i.src" :mode="xs.b(i.mode,'scaleToFill')" :lazy-load="xs.b(i.lazyLoad,false)" :webp="xs.b(i.webp,false)" :show-menu-by-longpress="xs.b(i.showMenuByLongpress,false)" :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-image>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_0_image" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_0_image", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-image :src="i.src" :mode="xs.b(i.mode,'scaleToFill')" :lazy-load="xs.b(i.lazyLoad,false)" :error="eh" :load="eh" :touchstart="eh" :touchmove="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :webp="xs.b(i.webp,false)" :show-menu-by-longpress="xs.b(i.showMenuByLongpress,false)" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-image>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_0_#text" :data="{i:i}" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_0_#text", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <div >
-            undefined
+            {{i.v}}
         </div>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_0_container" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_0_container", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <component :is="xs.a(0, i.nn, l)" :data="{i:i,cid:0,l:xs.f(l,i.nn)}" >
-            undefined
+            
         </component>
-    undefined
-        <wx-view name="tmpl_1_catch-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_1_catch-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" catchtouchmove="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_1_static-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_1_static-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_1_pure-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_1_pure-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_1_view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_1_view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchmove="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_1_static-text" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_1_static-text", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-text :selectable="xs.b(i.selectable,false)" :space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-text>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_1_text" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_1_text", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-text :selectable="xs.b(i.selectable,false)" :space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-text>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_1_scroll-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_1_scroll-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-scroll-view :scroll-x="xs.b(i.scrollX,false)" :scroll-y="xs.b(i.scrollY,false)" :upper-threshold="xs.b(i.upperThreshold,50)" :lower-threshold="xs.b(i.lowerThreshold,50)" :scroll-top="i.scrollTop" :scroll-left="i.scrollLeft" :scroll-into-view="i.scrollIntoView" :scroll-with-animation="xs.b(i.scrollWithAnimation,false)" :enable-back-to-top="xs.b(i.enableBackToTop,false)" :scrolltoupper="eh" :scrolltolower="eh" :scroll="eh" :touchstart="eh" :touchmove="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :enable-flex="xs.b(i.enableFlex,false)" :scroll-anchoring="xs.b(i.scrollAnchoring,false)" :refresher-enabled="xs.b(i.refresherEnabled,false)" :refresher-threshold="xs.b(i.refresherThreshold,45)" :refresher-default-style="xs.b(i.refresherDefaultStyle,'black')" :refresher-background="xs.b(i.refresherBackground,'#FFF')" :refresher-triggered="xs.b(i.refresherTriggered,false)" :enhanced="xs.b(i.enhanced,false)" :bounces="xs.b(i.bounces,true)" :show-scrollbar="xs.b(i.showScrollbar,true)" :paging-enabled="xs.b(i.pagingEnabled,false)" :fast-deceleration="xs.b(i.fastDeceleration,false)" :dragstart="eh" :dragging="eh" :dragend="eh" :refresherpulling="eh" :refresherrefresh="eh" :refresherrestore="eh" :refresherabort="eh" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-scroll-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_1_container" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_1_container", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <component :is="xs.a(1, i.nn, l)" :data="{i:i,cid:1,l:xs.f(l,i.nn)}" >
-            undefined
+            
         </component>
-    undefined
-        <wx-view name="tmpl_2_catch-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_2_catch-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" catchtouchmove="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_2_static-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_2_static-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_2_pure-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_2_pure-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_2_view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_2_view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchmove="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_2_static-text" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_2_static-text", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-text :selectable="xs.b(i.selectable,false)" :space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-text>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_2_text" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_2_text", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-text :selectable="xs.b(i.selectable,false)" :space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-text>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_2_scroll-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_2_scroll-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-scroll-view :scroll-x="xs.b(i.scrollX,false)" :scroll-y="xs.b(i.scrollY,false)" :upper-threshold="xs.b(i.upperThreshold,50)" :lower-threshold="xs.b(i.lowerThreshold,50)" :scroll-top="i.scrollTop" :scroll-left="i.scrollLeft" :scroll-into-view="i.scrollIntoView" :scroll-with-animation="xs.b(i.scrollWithAnimation,false)" :enable-back-to-top="xs.b(i.enableBackToTop,false)" :scrolltoupper="eh" :scrolltolower="eh" :scroll="eh" :touchstart="eh" :touchmove="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :enable-flex="xs.b(i.enableFlex,false)" :scroll-anchoring="xs.b(i.scrollAnchoring,false)" :refresher-enabled="xs.b(i.refresherEnabled,false)" :refresher-threshold="xs.b(i.refresherThreshold,45)" :refresher-default-style="xs.b(i.refresherDefaultStyle,'black')" :refresher-background="xs.b(i.refresherBackground,'#FFF')" :refresher-triggered="xs.b(i.refresherTriggered,false)" :enhanced="xs.b(i.enhanced,false)" :bounces="xs.b(i.bounces,true)" :show-scrollbar="xs.b(i.showScrollbar,true)" :paging-enabled="xs.b(i.pagingEnabled,false)" :fast-deceleration="xs.b(i.fastDeceleration,false)" :dragstart="eh" :dragging="eh" :dragend="eh" :refresherpulling="eh" :refresherrefresh="eh" :refresherrestore="eh" :refresherabort="eh" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-scroll-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_2_container" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_2_container", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <component :is="xs.a(2, i.nn, l)" :data="{i:i,cid:2,l:xs.f(l,i.nn)}" >
-            undefined
+            
         </component>
-    undefined
-        <wx-view name="tmpl_3_catch-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_3_catch-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" catchtouchmove="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_3_static-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_3_static-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_3_pure-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_3_pure-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_3_view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_3_view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchmove="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_3_static-text" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_3_static-text", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-text :selectable="xs.b(i.selectable,false)" :space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-text>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_3_text" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_3_text", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-text :selectable="xs.b(i.selectable,false)" :space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-text>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_3_scroll-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_3_scroll-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-scroll-view :scroll-x="xs.b(i.scrollX,false)" :scroll-y="xs.b(i.scrollY,false)" :upper-threshold="xs.b(i.upperThreshold,50)" :lower-threshold="xs.b(i.lowerThreshold,50)" :scroll-top="i.scrollTop" :scroll-left="i.scrollLeft" :scroll-into-view="i.scrollIntoView" :scroll-with-animation="xs.b(i.scrollWithAnimation,false)" :enable-back-to-top="xs.b(i.enableBackToTop,false)" :scrolltoupper="eh" :scrolltolower="eh" :scroll="eh" :touchstart="eh" :touchmove="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :enable-flex="xs.b(i.enableFlex,false)" :scroll-anchoring="xs.b(i.scrollAnchoring,false)" :refresher-enabled="xs.b(i.refresherEnabled,false)" :refresher-threshold="xs.b(i.refresherThreshold,45)" :refresher-default-style="xs.b(i.refresherDefaultStyle,'black')" :refresher-background="xs.b(i.refresherBackground,'#FFF')" :refresher-triggered="xs.b(i.refresherTriggered,false)" :enhanced="xs.b(i.enhanced,false)" :bounces="xs.b(i.bounces,true)" :show-scrollbar="xs.b(i.showScrollbar,true)" :paging-enabled="xs.b(i.pagingEnabled,false)" :fast-deceleration="xs.b(i.fastDeceleration,false)" :dragstart="eh" :dragging="eh" :dragend="eh" :refresherpulling="eh" :refresherrefresh="eh" :refresherrestore="eh" :refresherabort="eh" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-scroll-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_3_container" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_3_container", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <component :is="xs.a(3, i.nn, l)" :data="{i:i,cid:3,l:xs.f(l,i.nn)}" >
-            undefined
+            
         </component>
-    undefined
-        <wx-view name="tmpl_4_catch-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_4_catch-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" catchtouchmove="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_4_static-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_4_static-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_4_pure-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_4_pure-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_4_view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_4_view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchmove="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_4_static-text" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_4_static-text", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-text :selectable="xs.b(i.selectable,false)" :space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-text>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_4_text" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_4_text", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-text :selectable="xs.b(i.selectable,false)" :space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-text>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_4_container" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_4_container", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <component :is="xs.a(4, i.nn, l)" :data="{i:i,cid:4,l:xs.f(l,i.nn)}" >
-            undefined
+            
         </component>
-    undefined
-        <wx-view name="tmpl_5_catch-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_5_catch-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" catchtouchmove="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_5_static-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_5_static-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_5_pure-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_5_pure-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_5_view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_5_view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchmove="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_5_static-text" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_5_static-text", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-text :selectable="xs.b(i.selectable,false)" :space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-text>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_5_text" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_5_text", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-text :selectable="xs.b(i.selectable,false)" :space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-text>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_5_container" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_5_container", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <component :is="xs.a(5, i.nn, l)" :data="{i:i,cid:5,l:xs.f(l,i.nn)}" >
-            undefined
+            
         </component>
-    undefined
-        <wx-view name="tmpl_6_catch-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_6_catch-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" catchtouchmove="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_6_static-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_6_static-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_6_pure-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_6_pure-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_6_view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_6_view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchmove="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_6_text" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_6_text", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-text :selectable="xs.b(i.selectable,false)" :space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-text>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_6_container" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_6_container", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <component :is="xs.a(6, i.nn, l)" :data="{i:i,cid:6,l:xs.f(l,i.nn)}" >
-            undefined
+            
         </component>
-    undefined
-        <wx-view name="tmpl_7_catch-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_7_catch-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" catchtouchmove="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_7_static-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_7_static-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_7_pure-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_7_pure-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_7_view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_7_view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchmove="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_7_text" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_7_text", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-text :selectable="xs.b(i.selectable,false)" :space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-text>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_7_container" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_7_container", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <component :is="xs.a(7, i.nn, l)" :data="{i:i,cid:7,l:xs.f(l,i.nn)}" >
-            undefined
+            
         </component>
-    undefined
-        <wx-view name="tmpl_8_catch-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_8_catch-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" catchtouchmove="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_8_static-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_8_static-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_8_pure-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_8_pure-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_8_view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_8_view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchmove="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_8_text" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_8_text", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-text :selectable="xs.b(i.selectable,false)" :space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-text>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_8_container" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_8_container", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <component :is="xs.a(8, i.nn, l)" :data="{i:i,cid:8,l:xs.f(l,i.nn)}" >
-            undefined
+            
         </component>
-    undefined
-        <wx-view name="tmpl_9_catch-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_9_catch-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" catchtouchmove="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_9_static-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_9_static-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_9_pure-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_9_pure-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_9_view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_9_view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchmove="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_9_text" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_9_text", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-text :selectable="xs.b(i.selectable,false)" :space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-text>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_9_container" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_9_container", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <component :is="xs.a(9, i.nn, l)" :data="{i:i,cid:9,l:xs.f(l,i.nn)}" >
-            undefined
+            
         </component>
-    undefined
-        <wx-view name="tmpl_10_catch-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_10_catch-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" catchtouchmove="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_10_static-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_10_static-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_10_pure-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_10_pure-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_10_view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_10_view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchmove="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_10_text" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_10_text", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-text :selectable="xs.b(i.selectable,false)" :space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-text>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_10_container" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_10_container", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <component :is="xs.a(10, i.nn, l)" :data="{i:i,cid:10,l:xs.f(l,i.nn)}" >
-            undefined
+            
         </component>
-    undefined
-        <wx-view name="tmpl_11_catch-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_11_catch-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" catchtouchmove="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_11_static-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_11_static-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_11_pure-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_11_pure-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_11_view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_11_view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchmove="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_11_text" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_11_text", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-text :selectable="xs.b(i.selectable,false)" :space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-text>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_11_container" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_11_container", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <component :is="xs.a(11, i.nn, l)" :data="{i:i,cid:11,l:xs.f(l,i.nn)}" >
-            undefined
+            
         </component>
-    undefined
-        <wx-view name="tmpl_12_catch-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_12_catch-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" catchtouchmove="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_12_static-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_12_static-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_12_pure-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_12_pure-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_12_view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_12_view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchmove="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_12_text" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_12_text", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-text :selectable="xs.b(i.selectable,false)" :space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-text>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_12_container" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_12_container", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <component :is="xs.a(12, i.nn, l)" :data="{i:i,cid:12,l:xs.f(l,i.nn)}" >
-            undefined
+            
         </component>
-    undefined
-        <wx-view name="tmpl_13_catch-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_13_catch-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" catchtouchmove="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_13_static-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_13_static-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_13_pure-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_13_pure-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_13_view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_13_view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchmove="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_13_text" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_13_text", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-text :selectable="xs.b(i.selectable,false)" :space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-text>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_13_container" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_13_container", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <component :is="xs.a(13, i.nn, l)" :data="{i:i,cid:13,l:xs.f(l,i.nn)}" >
-            undefined
+            
         </component>
-    undefined
-        <wx-view name="tmpl_14_catch-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_14_catch-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" catchtouchmove="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_14_static-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_14_static-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_14_pure-view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_14_pure-view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :style="i.st" :class="i.cl" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_14_view" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_14_view", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-view :hover-class="xs.b(i.hoverClass,'none')" :hover-stop-propagation="xs.b(i.hoverStopPropagation,false)" :hover-start-time="xs.b(i.hoverStartTime,50)" :hover-stay-time="xs.b(i.hoverStayTime,400)" :animation="i.animation" :touchstart="eh" :touchmove="eh" :touchend="eh" :touchcancel="eh" :longpress="eh" :animationstart="eh" :animationiteration="eh" :animationend="eh" :transitionend="eh" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-view>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_14_text" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_14_text", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <wx-text :selectable="xs.b(i.selectable,false)" :space="i.space" :decode="xs.b(i.decode,false)" :user-select="xs.b(i.userSelect,false)" :style="i.st" :class="i.cl" :tap="eh" :id="i.uid" >
-            undefined
+            
         <div v-for="item in i.cn" key="uid" >
-            undefined
+            
         <component :is="xs.e(cid+1)" :data="{i:item,l:l}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
+    
         </wx-text>
-    undefined
-        </wx-view>
-    undefined
-        <wx-view name="tmpl_14_container" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_14_container", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
         <component :is="xs.a(14, i.nn, l)" :data="{i:i,cid:14,l:xs.f(l,i.nn)}" >
-            undefined
+            
         </component>
-    undefined
-        <wx-view name="tmpl_15_container" >
-            undefined
-        <div :v-if="i.nn === '#text'" >
-            undefined
+    </div>`
+    });
+    registerComponent("tmpl_15_container", {
+      data() {
+        return {
+          xs,
+          ...this["$props"].data
+        };
+      },
+      template: `<div>
+        <div :v-if="i.nn" >
+            
         <component is="tmpl_0_#text" :data="{i:i}" >
-            undefined
+            
         </component>
     
         </div>
-    undefined
-        <div v-else="" >
-            undefined
+    
+        <div >
+            
         <wx-comp :i="i" :l="l" >
-            undefined
+            
         </wx-comp>
     
         </div>
-    undefined
-        </wx-view>
-    undefined
-        </wx-view>
-    
-        </wx-view>
-    
-        </wx-view>
-    
-        </wx-view>
-    
-        </wx-view>
-    
-        </wx-view>
-    
-        </wx-view>
-    
-        </wx-view>
-    
-        </wx-view>
-    
-        </wx-view>
-    
-        </wx-view>
-    
-        </wx-view>
-    
-        </wx-view>
-    
-        </wx-view>
-    
-        </wx-view>
-    
-        </wx-view>
-    
-        </wx-wxs>
-    </div>`;
+    </div>`
+    });
   }
 });
 
@@ -11000,7 +11539,7 @@ var require_index = __commonJS({
   "taro/dist/pages/index/index.wxml"() {
     require_base();
     var page = getPage("pages/index/index");
-    page.template = `<div>undefined
+    page.template = `<div>
         <component is="taro_tmpl" :data="{root:root}" >
             
         </component>
