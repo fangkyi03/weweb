@@ -50,7 +50,8 @@
     "sass": "^1.38.0",
     "through": "^2.3.8",
     "through2": "^4.0.2",
-    "uglify-js": "^3.14.1"
+    "uglify-js": "^3.14.1",
+    "wxml-parse": "^0.2.2"
   },
   "devDependencies": {
     "prettier": "2.3.2"
