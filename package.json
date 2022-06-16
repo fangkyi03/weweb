@@ -5,7 +5,8 @@
   "main": "dist.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "esbuild": "node esbuild"
+    "esbuild": "node esbuild",
+    "taro": "cd ./taro && npm run build:weapp"
   },
   "browserslist": [
     "last 3 versions",

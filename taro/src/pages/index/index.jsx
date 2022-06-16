@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import { View,Text,Image,Button,Input } from '@tarojs/components'
+import { View, Text, Image, Button, Input } from '@tarojs/components'
 import './index.less'
 
 export default class Index extends Component {
@@ -8,49 +8,51 @@ export default class Index extends Component {
     super(props)
     this.state = {
       text: 'Hello World',
-      number:0,
-      showView:false
+      number: 0,
+      showView: false
     }
   }
-  componentWillMount () {
-    console.log('componentWillMount',window)
-   }
+  componentWillMount() {
+    console.log('componentWillMount', window)
+  }
 
-  componentDidMount () {
+  componentDidMount() {
     console.log('componentDidMount')
-    setTimeout(()=>{
+    setTimeout(() => {
       this.setState({
-        text:'ceshi1231231'
+        text: 'ceshi1231231'
       })
-    },2000)
-   }
+    }, 2000)
+  }
 
-  componentWillUnmount () { 
+  componentWillUnmount() {
     console.log('componentWillUnmount')
   }
 
-  componentDidShow () { 
+  componentDidShow() {
     console.log('componentDidShow')
-   }
+  }
 
-  componentDidHide () {
+  componentDidHide() {
     console.log('componentDidHide')
-   }
+  }
 
-   componentDidUpdate(prevProps, prevState) {
-     console.log('componentDidUpdate')
-   }
-   
-   onAdd = () => {
-     this.setState({
-       showView:!this.state.showView,
-       number:this.state.number+1
-     })
-   }
-  render () {
+  componentDidUpdate(prevProps, prevState) {
+    console.log('componentDidUpdate')
+  }
+
+  onAdd = () => {
+    this.setState({
+      showView: !this.state.showView,
+      number: this.state.number + 1
+    })
+  }
+  render() {
     console.log('输出render')
     return (
-        <View></View>
+      <View>
+        <Button>测试</Button>
+      </View>
     )
   }
 }
